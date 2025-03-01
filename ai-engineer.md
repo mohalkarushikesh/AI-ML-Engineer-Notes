@@ -2,7 +2,8 @@ Courses in Machine Learning and AI:
 
 1. **Mathematical Foundations of Machine Learning**
    - Essential Linear Algebra and Calculus Hands-On in NumPy, TensorFlow, and PyTorch
-
+   - https://github.com/jonkrohn/ML-foundations
+   
 2. **Python for Data Science and Machine Learning Bootcamp**
    - Learn how to use NumPy, Pandas, Seaborn, Matplotlib, Plotly, Scikit-Learn, Machine Learning, Tensorflow, and more!
 
