@@ -6,7 +6,8 @@ Courses in Machine Learning and AI:
    
 2. **Python for Data Science and Machine Learning Bootcamp**
    - Learn how to use NumPy, Pandas, Seaborn, Matplotlib, Plotly, Scikit-Learn, Machine Learning, Tensorflow, and more!
-
+   - https://github.com/miguelfzafra/Python-for-Data-Science-and-Machine-Learning-Bootcamp
+   
 3. **Machine Learning A-Z: AI, Python & R + ChatGPT Prize [2025]**
    - Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included.
 
