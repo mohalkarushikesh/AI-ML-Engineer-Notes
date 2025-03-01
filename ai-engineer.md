@@ -14,6 +14,7 @@ Courses in Machine Learning and AI:
    
 4. **Deep Learning A-Z 2025: Neural Networks, AI & ChatGPT Prize**
    - Learn to create Deep Learning models in Python from two Machine Learning, Data Science experts. Code templates included.
+   - https://github.com/dalalbhargav07/Deep-Learning-A-Z
 
 5. **NLP - Natural Language Processing with Python**
    - Learn to use Machine Learning, Spacy, NLTK, SciKit-Learn, Deep Learning, and more to conduct Natural Language Processing
