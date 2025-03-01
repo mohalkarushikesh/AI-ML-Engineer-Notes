@@ -10,7 +10,8 @@ Courses in Machine Learning and AI:
    
 3. **Machine Learning A-Z: AI, Python & R + ChatGPT Prize [2025]**
    - Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included.
-
+   - https://github.com/Ashleshk/Machine-Learning-A-Z-hands-on-Python-And-R-in-data-Science
+   
 4. **Deep Learning A-Z 2025: Neural Networks, AI & ChatGPT Prize**
    - Learn to create Deep Learning models in Python from two Machine Learning, Data Science experts. Code templates included.
 
