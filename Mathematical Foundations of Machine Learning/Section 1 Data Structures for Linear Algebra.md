@@ -11,13 +11,14 @@ segment 1: DS for LA
     - johnkrohn.com/deepTF1
     - johnkrohn.com/convTF1
     history
-    Tensors
-    Scalars
-    vectors and vector transposition
+    Tensors: Tensors : ML genralization of vector and matrices to any no of dimentions (3D, ND)
+    Scalars: 0D
+    vectors: 1D
+    vector transposition
     norms and unit vectors
     basis, orthogonal and orthonormal vectors
     arrays in numpy
-    matrices
+    matrices: 2D
     tensors in tensorflow and pytorch 
 
 
@@ -38,4 +39,9 @@ segment 1: DS for LA
   Intro to statistics & Data structures 
   optimization
 
+scalar Tensors: 
+  no dimentions 
+  single no 
+  denoted in lowercase 
+  
 
