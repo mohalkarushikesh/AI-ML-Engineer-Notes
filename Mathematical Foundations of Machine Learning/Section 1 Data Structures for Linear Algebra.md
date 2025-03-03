@@ -10,10 +10,13 @@ segment 1: DS for LA
     There are only three options in linear algebra : one, no, or infinite solutions.
     - johnkrohn.com/deepTF1
     - johnkrohn.com/convTF1
+    practice: plotting a system of linear equation 
     history
     Tensors: Tensors : ML genralization of vector and matrices to any no of dimentions (3D, ND)
     Scalars: 0D
-    vectors: 1D
+      creation : practice 
+    vectors: 1D array of numbers
+      creation : practice    
     vector transposition
     norms and unit vectors
     basis, orthogonal and orthonormal vectors
