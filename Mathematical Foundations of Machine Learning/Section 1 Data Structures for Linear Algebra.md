@@ -44,6 +44,13 @@
   - Orthonormal vectors: are orthogonal vectors and all have unit norm (ex: basis vector)
   - Arrays in NumPy
   - High Rank Tensors: 4 tensors are common for images
+    ```
+    Number of images in training batch, e.g., 32
+    Image height in pixels, e.g., 28 for MNIST digits
+    Image width in pixels, e.g., 28
+    Number of color channels, e.g., 3 for full-color images (RGB)
+    images_pt = torch.zeros([32, 28, 28, 3])
+    ```
 
 **Matrices/Matrix**:
 - **Definition**: A matrix is a Two-dimentional array of numbers.
