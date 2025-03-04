@@ -43,6 +43,7 @@
   - Orthogonal vectors: x and y are orthogonal vectors if xTy=0 (are at 90 degree angle to each other)
   - Orthonormal vectors: are orthogonal vectors and all have unit norm (ex: basis vector)
   - Arrays in NumPy
+  - High Rank Tensors: 4 tensors are common for images
 
 **Matrices/Matrix**:
 - **Definition**: A matrix is a Two-dimentional array of numbers.
