@@ -44,8 +44,10 @@
   - Orthonormal vectors: are orthogonal vectors and all have unit norm (ex: basis vector)
   - Arrays in NumPy
 
-**Matrices**:
-- **Definition**: A matrix is a 2D array of numbers.
+**Matrices/Matrix**:
+- **Definition**: A matrix is a Two-dimentional array of numbers.
+- denoted uppercase, italics, bold ex: X
+- height is given priority ahead of width in notation i.e: (Nrow, Ncol)
 
 **Tensors in Programming**:
 - **Libraries**: TensorFlow and PyTorch
