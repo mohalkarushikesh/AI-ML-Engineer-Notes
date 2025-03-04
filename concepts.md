@@ -171,7 +171,7 @@
 **Applications**: Information retrieval, question answering (e.g., customer support).  
 **Visual Aid**: [Placeholder: Flowchart showing retrieval → augmentation → generation.]
 
-![alt text]({1D034363-B0D5-4775-A278-FD2CE65BA1F3}.png)
+![image](https://github.com/user-attachments/assets/fa72da90-635e-40af-92c8-a39ab4b34276)
 
 ---
 
