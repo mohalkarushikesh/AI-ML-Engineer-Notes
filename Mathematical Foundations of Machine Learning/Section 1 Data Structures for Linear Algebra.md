@@ -38,9 +38,10 @@
     - L1 Norm: also known as the Euclidean norm, is a way to measure the distance between a vector and the origin
     - L2 Norm: the sum of absolute norm of all the components of a vector.It's also know as Manhattan norm or the Taxicab norm, squared L2 norm equals simply x^Tx
     - Max Norm: also known as the "L∞ norm", is a mathematical concept that measures the "size" of a vector by taking the absolute value of its largest component
-  - Unit vector: A vector that has magnitude of 1 is a unit vector 
-  - Orthogonal vectors
-  - Orthonormal vectors
+  - Unit vector: A vector that has magnitude of 1 is a unit vector
+  - Basis vector: can be scaled to represent any vector in a given vector space (typically use unit vectors alog axes of vector space)
+  - Orthogonal vectors: x and y are orthogonal vectors if xTy=0 (are at 90 degree angle to each other)
+  - Orthonormal vectors: are orthogonal vectors and all have unit norm (ex: basis vector)
   - Arrays in NumPy
 
 **Matrices**:
