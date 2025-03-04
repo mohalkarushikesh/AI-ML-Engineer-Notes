@@ -14,7 +14,7 @@ for ex:
   0 - rows 
   1 - columns 
   all the operations can be applied with reduction along all or a selection of axes (max, min, mean, product)
-The Dot Product: 
+The Dot Product: (multiplication(should have same length) and then sum them up)
   two vectors with same length let's say x.y
  the dot product is uniquitous in deep learning it is performed at the every artificial neuron in a deep neural network which may be made up of millions (or orders of magnitude more)of these neurons 
 Solving Linear Systems
