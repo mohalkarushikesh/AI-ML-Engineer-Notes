@@ -30,11 +30,11 @@
 - **Practice**: Creation exercises
 
 **Vectors**:
-- **Definition**: A vector is a 1D array of numbers.
+- **Definition**: A vector is a one-dimentional array of numbers.vector represent a magnitude and direction from origin
 - **Practice**: Creation exercises
 - **Other Concepts**:
   - Vector transposition:  switching the vector's columns and rows
-  - norms
+  - norms: functions that quantify vector magnitude
   - unit vectors
   - orthogonal vectors
   - orthonormal vectors
