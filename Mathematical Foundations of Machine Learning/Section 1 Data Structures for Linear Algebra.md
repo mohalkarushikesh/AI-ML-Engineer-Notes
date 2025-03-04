@@ -21,7 +21,7 @@
 ### History and Key Concepts
 
 **Tensors**:
-- **Definition**: Tensors are multidimensional arrays that generalize scalars, vectors, and matrices to higher dimensions.
+- **Definition**: Tensors are **multidimensional arrays** that generalize scalars, vectors, and matrices to higher dimensions.
 - **Applications**: Used to represent data with complex structures and perform operations in fields like physics, engineering, and computer science, especially in machine learning and deep learning.
 
 **Scalars**:
@@ -51,7 +51,7 @@
 
 **Tensors in Programming**:
 - **Libraries**: TensorFlow and PyTorch
-
+- Generic Tensor notation: uppercase, bold, italics, sans sherf e.g. X
 ---
 
 ### Contemporary Applications
