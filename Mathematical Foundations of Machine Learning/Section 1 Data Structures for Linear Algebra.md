@@ -34,11 +34,11 @@
 - **Practice**: Creation exercises
 - **Other Concepts**:
   - Vector transposition:  switching the vector's columns and rows
-  - norms: functions that quantify vector magnitude
-  - unit vectors
-  - orthogonal vectors
-  - orthonormal vectors
-  - arrays in NumPy
+  - Norms: also known as the Euclidean norm, is a way to measure the distance between a vector and the origin
+  - Unit vector: A vector that has magnitude of 1 is a unit vector 
+  - Orthogonal vectors
+  - Orthonormal vectors
+  - Arrays in NumPy
 
 **Matrices**:
 - **Definition**: A matrix is a 2D array of numbers.
