@@ -32,7 +32,13 @@
 **Vectors**:
 - **Definition**: A vector is a 1D array of numbers.
 - **Practice**: Creation exercises
-- **Other Concepts**: Vector transposition, norms, unit vectors, basis, orthogonal and orthonormal vectors, arrays in NumPy
+- **Other Concepts**:
+  - Vector transposition:  switching the vector's columns and rows
+  - norms
+  - unit vectors
+  - orthogonal vectors
+  - orthonormal vectors
+  - arrays in NumPy
 
 **Matrices**:
 - **Definition**: A matrix is a 2D array of numbers.
