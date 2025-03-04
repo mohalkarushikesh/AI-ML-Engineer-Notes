@@ -1,50 +1,74 @@
-###  Algebra is aithmetic that includes non=numerical entities like X
+### Algebra
 
-https://github.com/jonkrohn/ML-foundations
+- **Definition**: Algebra is arithmetic that includes non-numerical entities like \(x\).
+- **Example**: \(2x + 5 = 25\)
 
-segment 1: DS for LA
-  - What is algebra is
-      Algebra is aithmetic that includes non-numerical entities like X ex: 2x+5=25
-  
-  Linear Algebra: Solving for unknowns within system of linear equations
-    There are only three options in linear algebra : one, no, or infinite solutions.
-    - johnkrohn.com/deepTF1
-    - johnkrohn.com/convTF1
-    practice: plotting a system of linear equation 
-    history
-    Tensors: Tensors : ML genralization of vector and matrices to any no of dimentions (3D, ND)
-    Scalars: 0D
-      creation : practice 
-    vectors: 1D array of numbers
-      creation : practice    
-    vector transposition
-    norms and unit vectors
-    basis, orthogonal and orthonormal vectors
-    arrays in numpy
-    matrices: 2D
-    tensors in tensorflow and pytorch 
+---
 
+### Linear Algebra
 
-  contempory applications
-  - solving for unknowns in ML algos, including deep learning
-  - Reducing dimentionality (e.g principal component analysis)
-  - Ranking results (e.g with eigen vector)
-  - Recommenders (e.g singular value decomposition, SVD)
-  - Natural language processing (eg SVD, matrix factorization)
-    - Topic modeling
-    - semantic analysis 
-  
-  Intro to LA
-  LA 2: Matrix operations
-  Calculus 1: Limits & Derivaties
-  Calculus 2: partial derivaties & Integrals
-  probability & information Theory 
-  Intro to statistics & Data structures 
-  optimization
+**Definition**: Linear algebra is the study of vectors and matrices and the operations that can be performed on them. There are only three options in linear algebra: one, no, or infinite solutions.
 
-scalar Tensors: 
-  no dimentions 
-  single no 
-  denoted in lowercase 
-  
+**External Resources**:
+- [Deep Learning Course by Jon Krohn](https://johnkrohn.com/deepTF1)
+- [Convolutional Neural Networks by Jon Krohn](https://johnkrohn.com/convTF1)
 
+**Practice**:
+- Plotting a system of linear equations
+
+---
+
+### History and Key Concepts
+
+**Tensors**:
+- **Definition**: Tensors are multidimensional arrays that generalize scalars, vectors, and matrices to higher dimensions.
+- **Applications**: Used to represent data with complex structures and perform operations in fields like physics, engineering, and computer science, especially in machine learning and deep learning.
+
+**Scalars**:
+- **Definition**: A scalar is a single number that represents magnitude but has no direction.
+- **Applications**: Used to measure quantities like temperature, mass, and speed.
+- **Practice**: Creation exercises
+
+**Vectors**:
+- **Definition**: A vector is a 1D array of numbers.
+- **Practice**: Creation exercises
+- **Other Concepts**: Vector transposition, norms, unit vectors, basis, orthogonal and orthonormal vectors, arrays in NumPy
+
+**Matrices**:
+- **Definition**: A matrix is a 2D array of numbers.
+
+**Tensors in Programming**:
+- **Libraries**: TensorFlow and PyTorch
+
+---
+
+### Contemporary Applications
+
+- **Solving for Unknowns**: In machine learning algorithms, including deep learning
+- **Reducing Dimensionality**: E.g., Principal Component Analysis (PCA)
+- **Ranking Results**: E.g., Eigenvector
+- **Recommenders**: E.g., Singular Value Decomposition (SVD)
+- **Natural Language Processing**:
+  - Topic modeling
+  - Semantic analysis
+
+---
+
+### Course Structure
+
+1. **Introduction to Linear Algebra**
+2. **Linear Algebra II: Matrix Operations**
+3. **Calculus I: Limits & Derivatives**
+4. **Calculus II: Partial Derivatives & Integrals**
+5. **Probability & Information Theory**
+6. **Introduction to Statistics & Data Structures**
+7. **Optimization**
+
+---
+
+**Scalar Tensors**:
+- **Definition**: No dimensions, single number, denoted in lowercase
+
+---
+
+I hope this helps! Let me know if you need further enhancements or clarifications.
