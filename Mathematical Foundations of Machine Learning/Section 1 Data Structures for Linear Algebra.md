@@ -34,7 +34,10 @@
 - **Practice**: Creation exercises
 - **Other Concepts**:
   - Vector transposition:  switching the vector's columns and rows
-  - Norms: also known as the Euclidean norm, is a way to measure the distance between a vector and the origin
+  - Norms: function that measures the size of a vector, matrix or tesor. It's a way to quantify the magnitude of vector
+    - L1 Norm: also known as the Euclidean norm, is a way to measure the distance between a vector and the origin
+    - L2 Norm: the sum of absolute norm of all the components of a vector.It's also know as Manhattan norm or the Taxicab norm, squared L2 norm equals simply x^Tx
+    - Max Norm: also known as the "L∞ norm", is a mathematical concept that measures the "size" of a vector by taking the absolute value of its largest component
   - Unit vector: A vector that has magnitude of 1 is a unit vector 
   - Orthogonal vectors
   - Orthonormal vectors
