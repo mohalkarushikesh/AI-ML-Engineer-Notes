@@ -19,5 +19,7 @@ that is all columns of matrix must be linearly independent
 ![image](https://github.com/user-attachments/assets/b4e7c7e2-b7f9-4fee-a5cc-928c32fb079c)
 
 Digonal Matrices: Non-Zero elements along with diagonal, zeros elsewhere else ex: indentity matrix 
-  
+  Properties of Orthogonal Matrix
+  i.e., A-1 = AT. The product of A and its transpose is an identity matrix. i.e., AAT = ATA = I.   
+  Determinant is det(A) = ±1.
 Orthogonal Matrices
