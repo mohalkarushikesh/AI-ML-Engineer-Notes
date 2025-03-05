@@ -12,7 +12,12 @@ Symmetric Matrices : special matrix case with following properties
 Identity Matrices: every element along main diagonal is 1
   all other elements are 0 
   
-Matrix Inversion
+Matrix Inversion: The inverse of a matrix is another matrix, which by multiplying with the given matrix gives the identity matrix
+denoted as X-1
+only applied if the matirx isn't singular 
+that is all columns of matrix must be linearly independent
+![image](https://github.com/user-attachments/assets/b4e7c7e2-b7f9-4fee-a5cc-928c32fb079c)
 
-Digonal Matrices
+Digonal Matrices: Non-Zero elements along with diagonal, zeros elsewhere else ex: indentity matrix 
+  
 Orthogonal Matrices
