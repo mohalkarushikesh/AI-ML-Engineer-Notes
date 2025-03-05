@@ -33,7 +33,7 @@
 - **Definition**: Only non-zero elements are along the main diagonal; all other elements are zero.  
   Example: Identity matrix.
 
----
+**5. Orthogonal Matrices**: Dot-product of any two columms is zero 
 
 ### Properties of Orthogonal Matrices
 - The inverse of an orthogonal matrix equals its transpose: 𝐴-1=𝐴𝑇
