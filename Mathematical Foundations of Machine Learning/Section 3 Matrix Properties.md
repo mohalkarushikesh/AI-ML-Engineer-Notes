@@ -33,7 +33,9 @@
 - **Definition**: Only non-zero elements are along the main diagonal; all other elements are zero.  
   Example: Identity matrix.
 
-**5. Orthogonal Matrices**: Dot-product of any two columms is zero 
+**5. Orthogonal Matrices**: A square matrix is orthogonal if its columns (or rows) are perpendicular (orthogonal) to each other, and each column (or row) has a unit length (norm of one). This implies that the transpose of the matrix is equal to its inverse: 𝐴𝑇=𝐴−1
+
+**6. Orthonormal Matrices**: A matrix is orthonormal if its columns (or rows) are both orthogonal (dot product between any two columns or rows is zero) and have unit norm (length of one).
 
 ### Properties of Orthogonal Matrices
 - The inverse of an orthogonal matrix equals its transpose: 𝐴-1=𝐴𝑇
