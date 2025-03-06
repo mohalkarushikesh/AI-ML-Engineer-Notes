@@ -1,20 +1,52 @@
+Below is a reorganized version of your AI Notes, structured according to parent topics for clarity and logical flow. I've grouped related subtopics under their respective parent topics (e.g., Machine Learning, NLP, Computer Vision) while preserving the original content and intent. I've also integrated "Torque Clustering" into the appropriate section and ensured the Table of Contents reflects the new structure.
+
+---
+
 # AI Notes
 
 **Purpose**: These notes provide a structured overview of Artificial Intelligence concepts, focusing on key definitions, techniques, and applications for quick reference.
 
 ## Table of Contents
-- [Artificial Intelligence (AI)](#artificial-intelligence-ai)
-- [Machine Learning (ML)](#machine-learning-ml)
-- [Transformers](#transformers)
-- [Natural Language Processing (NLP)](#natural-language-processing-nlp)
-- [Computer Vision](#computer-vision)
-- [Generative AI](#generative-ai)
-- [Large Language Models (LLMs)](#large-language-models-llms)
-- [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-- [LangChain](#langchain)
-- [Machine Learning and NLP Libraries](#machine-learning-and-nlp-libraries)
-- [Hugging Face](#hugging-face)
-- [Core Concepts](#core-concepts)
+- [AI Notes](#ai-notes)
+  - [Table of Contents](#table-of-contents)
+  - [Artificial Intelligence (AI)](#artificial-intelligence-ai)
+  - [Machine Learning (ML)](#machine-learning-ml)
+    - [Supervised Learning](#supervised-learning)
+    - [Unsupervised Learning](#unsupervised-learning)
+    - [Reinforcement Learning](#reinforcement-learning)
+    - [Deep Learning](#deep-learning)
+      - [Neural Networks](#neural-networks)
+        - [Convolutional Neural Networks (CNNs)](#convolutional-neural-networks-cnns)
+        - [Recurrent Neural Networks (RNNs)](#recurrent-neural-networks-rnns)
+        - [Autoencoders](#autoencoders)
+        - [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
+    - [Torque Clustering](#torque-clustering)
+  - [Transformers](#transformers)
+  - [Natural Language Processing (NLP)](#natural-language-processing-nlp)
+    - [Natural Language Understanding (NLU)](#natural-language-understanding-nlu)
+    - [Natural Language Generation (NLG)](#natural-language-generation-nlg)
+    - [Additional NLP Techniques](#additional-nlp-techniques)
+  - [Computer Vision](#computer-vision)
+    - [Key Techniques](#key-techniques)
+  - [Generative AI](#generative-ai)
+  - [Large Language Models (LLMs)](#large-language-models-llms)
+  - [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
+  - [LangChain](#langchain)
+  - [Machine Learning and NLP Libraries](#machine-learning-and-nlp-libraries)
+    - [ML Frameworks](#ml-frameworks)
+  - [Hugging Face](#hugging-face)
+  - [Core Concepts](#core-concepts)
+    - [Self-Attention](#self-attention)
+    - [Attention Mechanism](#attention-mechanism)
+    - [Bidirectional Encoder Representations from Transformers (BERT)](#bidirectional-encoder-representations-from-transformers-bert)
+    - [Generative Pre-trained Transformer (GPT)](#generative-pre-trained-transformer-gpt)
+    - [Transfer Learning](#transfer-learning)
+    - [Fine-Tuning](#fine-tuning)
+    - [Hyperparameter Tuning](#hyperparameter-tuning)
+    - [Gradient Descent](#gradient-descent)
+    - [Backpropagation](#backpropagation)
+    - [Data Augmentation](#data-augmentation)
+    - [Notes on Reorganization](#notes-on-reorganization)
 
 ---
 
@@ -87,6 +119,12 @@
 **Key Concepts**: Generator, discriminator, adversarial training.  
 **Example**: Creating realistic human faces with StyleGAN.  
 **Applications**: Image synthesis, data augmentation (e.g., synthetic training data).
+
+### Torque Clustering
+**Definition**: An autonomous machine learning method inspired by the physics of torque.  
+**Key Concepts**: Mass, distance relationships, parameter-free clustering.  
+**Example**: Identifying patterns in large datasets without predefined labels.  
+**Applications**: Unsupervised pattern discovery, large-scale data analysis.
 
 ---
 
@@ -171,7 +209,7 @@
 **Applications**: Information retrieval, question answering (e.g., customer support).  
 **Visual Aid**: [Placeholder: Flowchart showing retrieval → augmentation → generation.]
 
-![image](https://github.com/user-attachments/assets/fa72da90-635e-40af-92c8-a39ab4b34276)
+![alt text]({1D034363-B0D5-4775-A278-FD2CE65BA1F3}.png)
 
 ---
 
@@ -275,3 +313,11 @@
 **Applications**: Image recognition, NLP (e.g., synonym replacement).
 
 ---
+
+### Notes on Reorganization
+- **Parent Topics**: Major sections (e.g., Machine Learning, NLP, Computer Vision) are now top-level headings, with subtopics nested beneath them.
+- **Torque Clustering**: Added under Machine Learning as an unsupervised learning technique, given its autonomous, parameter-free nature.
+- **Core Concepts**: Kept as a standalone section since these concepts span multiple parent topics (e.g., Backpropagation applies to Deep Learning, Attention to Transformers and NLP).
+- **Consistency**: Ensured uniform formatting and logical hierarchy (e.g., Deep Learning under ML, CNNs under Neural Networks).
+
+Let me know if you'd like further refinements!
