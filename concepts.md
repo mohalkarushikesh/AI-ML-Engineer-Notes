@@ -209,7 +209,7 @@ Below is a reorganized version of your AI Notes, structured according to parent 
 **Applications**: Information retrieval, question answering (e.g., customer support).  
 **Visual Aid**: [Placeholder: Flowchart showing retrieval → augmentation → generation.]
 
-![alt text]({1D034363-B0D5-4775-A278-FD2CE65BA1F3}.png)
+![image](https://github.com/user-attachments/assets/cbf188b8-9fe5-4bfc-a039-c2517bbc53b9)
 
 ---
 
