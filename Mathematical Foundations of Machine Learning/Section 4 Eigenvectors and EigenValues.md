@@ -16,14 +16,45 @@ seesion : use tensors  in python and solve the system of equations and indentity
   matrix inversion: aovids overdetermination, underdetermination, no solutions, infinite solutions
 4. Eigen decomposition
   1. applying matrices
-    
   2. affine transformations
-  3. eigen vectors
-  4. eigen values
-  5. matrix determinants
-  6. matrix decomposition
-  7. applications of eigen decomposition
-8. matrix operations for machine learning
-9. 
+### What are Affine Transformations?
+Affine transformations are a set of functions that preserve points, straight lines, and planes. These transformations also maintain the relative proportions of figures, though angles and lengths might not always stay the same. In simpler terms, affine transformations ensure that "straightness" and "parallelism" are preserved.
+
+### Types of Affine Transformations
+Affine transformations include several familiar operations:
+1. **Translation:** Shifting an object from one location to another (like moving an image across a screen).
+2. **Scaling:** Enlarging or shrinking an object while keeping its shape proportional.
+3. **Rotation:** Rotating an object around a fixed point or axis.
+4. **Reflection:** Flipping an object over a line or plane (like a mirror image).
+5. **Shear:** Skewing an object in one direction, like tilting a rectangle into a parallelogram.
+
+### Mathematical Representation
+Affine transformations can be represented using matrices. In 2D, it often looks like this:
+
+![image](https://github.com/user-attachments/assets/7397e3eb-00b5-4206-bb8e-ab94d9876219)
+
+
+Here:
+- (a, b, c, d): Define how the shape is scaled, rotated, or sheared.
+- (e, f): Represent translation (shifting the object).
+
+In 3D, affine transformations use 4x4 matrices and include operations in the \(z\)-axis.
+
+### Applications
+Affine transformations are widely used in:
+- **Computer Graphics:** For scaling, rotating, and translating images or 3D models.
+- **Image Processing:** Aligning or transforming images.
+- **Robotics:** Mapping movements in space.
+- **Machine Learning:** Working with data transformations in certain algorithms.
+
+    check blog post: affine transformations in python, including how apply them on images as well as vectors
+
+  4. eigen vectors
+  5. eigen values
+  6. matrix determinants
+  7. matrix decomposition
+  8. applications of eigen decomposition
+9. matrix operations for machine learning
+10. 
 
 
