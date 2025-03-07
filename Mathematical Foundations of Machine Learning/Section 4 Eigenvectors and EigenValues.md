@@ -12,8 +12,18 @@ seesion : use tensors  in python and solve the system of equations and indentity
     e. Natural language processing (SVD, matrix factorization)
       1. Topic modeling
       2. semantic analysis
+
+  matrix inversion: aovids overdetermination, underdetermination, no solutions, infinite solutions
 4. Eigen decomposition
-5. matrix operations for machine learning
-6. 
+  1. applying matrices
+    
+  2. affine transformations
+  3. eigen vectors
+  4. eigen values
+  5. matrix determinants
+  6. matrix decomposition
+  7. applications of eigen decomposition
+8. matrix operations for machine learning
+9. 
 
 
