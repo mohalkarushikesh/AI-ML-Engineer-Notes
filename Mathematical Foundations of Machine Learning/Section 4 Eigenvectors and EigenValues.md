@@ -52,17 +52,24 @@ Affine transformations are widely used in:
 
   4. Eigenvector: A vector that doesn't change its direction during a transformation, only its magnitude (scaled by the eigenvalue).
   - eigen in german typical in english translation: charateristics vector
+   red vector : vertical
+   blue vector: horizontal
+   Flipping matrix: red and blue vector is eigen vector 
+   Shearing matrix: blue vector is eigen vector for shearing matrix => blue vector having eigen value = 1
   5. Eigenvalue: A scalar value that shows how much a vector is stretched or squished during a transformation.
   - is scalar that simply scales the eigen vector v 
 ![image](https://github.com/user-attachments/assets/8b35dd4c-0fda-46eb-a9a2-24d6d58d264c)
 
 ![{C8E1DBA3-154D-4BA9-8983-ECA8D7337540}](https://github.com/user-attachments/assets/4dc954d5-99a4-4978-a347-55aa11fb4da7)
 
+      
+   
 
   6. matrix determinants
   7. matrix decomposition
   8. applications of eigen decomposition
+
 9. matrix operations for machine learning
-10. 
+10.Limits 
 
 
