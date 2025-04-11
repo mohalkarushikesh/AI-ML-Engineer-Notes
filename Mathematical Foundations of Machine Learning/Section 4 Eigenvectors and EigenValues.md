@@ -82,6 +82,7 @@ a matrix of eigenvectors
       - Genralizing Determinants: Recursion
    38. Determinants and Eigen values
       - dex(X) = product of all eigenvalues of X
+      - 
    40. Eigen decomposition
    41. applications of eigen decomposition
 
