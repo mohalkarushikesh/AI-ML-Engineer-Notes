@@ -56,17 +56,33 @@ Affine transformations are widely used in:
    blue vector: horizontal
    Flipping matrix: red and blue vector is eigen vector 
    Shearing matrix: blue vector is eigen vector for shearing matrix => blue vector having eigen value = 1
+   eigen values can also have negative sign, having same eigen vector but it's eigen value = -1
   5. Eigenvalue: A scalar value that shows how much a vector is stretched or squished during a transformation.
-  - is scalar that simply scales the eigen vector v 
+  - is scalar that simply scales the eigen vector v
+    Eigenvectors and eigenvalues can be derived algebraically (e.g., with the QR algorithm, which was independently developed in the 1950s by both Vera Kublanovskaya and John Francis), however this is outside scope of the ML Foundations series. We'll cheat with NumPy eig() method, which returns a tuple of:
+
+a vector of eigenvalues
+a matrix of eigenvectors
 ![image](https://github.com/user-attachments/assets/8b35dd4c-0fda-46eb-a9a2-24d6d58d264c)
 
 ![{C8E1DBA3-154D-4BA9-8983-ECA8D7337540}](https://github.com/user-attachments/assets/4dc954d5-99a4-4978-a347-55aa11fb4da7)
 
       
    
-
-  36. matrix determinants
-  40. Eigen decomposition
-  41. applications of eigen decomposition
+   36. matrix determinants
+      - Map square Matrix to scalar
+      - Enable us to determine wheather the matrix can be inverted
+      - if det(X) = 0 => Matrix X-1(inverse) can't be computed because X-1 has 1/dex(X) = 1/0 => 1. No solution or 2. Infinite solution
+      - Easy to calculate 2*2 Matrix
+         - Determinant of 2*2 Matrix
+         - |a   b|
+         - |c   d|
+         - |X| = a * d - b * c
+   37. Determinants of larger matrices
+      - Genralizing Determinants: Recursion
+   38. Determinants and Eigen values
+      - dex(X) = product of all eigenvalues of X
+   40. Eigen decomposition
+   41. applications of eigen decomposition
 
 
