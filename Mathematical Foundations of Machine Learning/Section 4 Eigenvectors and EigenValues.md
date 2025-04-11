@@ -5,14 +5,14 @@ seesion : use tensors  in python and solve the system of equations and indentity
 ### review introductory linear algebra
   1. What is Linear Algebra?: Linear algebra is the branch of mathematics that focuses on solving for unknowns within systems of **linear equations**. It deals with concepts such as **vectors, matrices, determinants,      eigenvalues**, and **eigenvectors**, which are essential in many computational fields.
   2. Modern Applications of Linear Algebra
-    a. Solving for Unknowns in Machine Learning Algorithms: Linear algebra plays a crucial role in **machine learning** and **deep learning**, where it helps in solving optimization problems, performing **matrix operations**, and manipulating high-dimensional data.
-    b. Dimensionality Reduction: Dimensionality reduction techniques like **Principal Component Analysis (PCA)** leverage linear algebra to transform high-dimensional data into a lower-dimensional space while preserving important information.
-    c. Ranking Results: Ranking algorithms rely on **eigenvector calculations**, such as those used in **Google's PageRank algorithm** (Saaty & Hu, 1998). This helps in determining the importance of webpages in search engine results.
-    d. Recommender Systems: Recommendation systems use **Singular Value Decomposition (SVD)** to break down matrices and identify patterns in user preferences, enabling personalized recommendations.
-    e. Natural Language Processing (NLP)
+     2.1 Solving for Unknowns in Machine Learning Algorithms: Linear algebra plays a crucial role in **machine learning** and **deep learning**, where it helps in solving optimization problems, performing **matrix operations**, and manipulating high-dimensional data.
+     2.2 Dimensionality Reduction: Dimensionality reduction techniques like **Principal Component Analysis (PCA)** leverage linear algebra to transform high-dimensional data into a lower-dimensional space while preserving important information.
+     2.3 Ranking Results: Ranking algorithms rely on **eigenvector calculations**, such as those used in **Google's PageRank algorithm** (Saaty & Hu, 1998). This helps in determining the importance of webpages in search engine results.
+     2.4 Recommender Systems: Recommendation systems use **Singular Value Decomposition (SVD)** to break down matrices and identify patterns in user preferences, enabling personalized recommendations.
+     2.5 Natural Language Processing (NLP)
 Linear algebra is fundamental in NLP, with applications in **matrix factorization** techniques for various tasks, including:
-    - **Topic Modeling**: Techniques like Latent Semantic Analysis (LSA) use SVD to extract hidden topics in textual data.
-    - **Semantic Analysis**: Matrix factorization helps in capturing relationships between words, improving language understanding in AI models.
+        - **Topic Modeling**: Techniques like Latent Semantic Analysis (LSA) use SVD to extract hidden topics in textual data.
+        - **Semantic Analysis**: Matrix factorization helps in capturing relationships between words, improving language understanding in AI models.
 
   matrix inversion: aovids overdetermination, underdetermination, no solutions, infinite solutions
 4. Eigen decomposition
