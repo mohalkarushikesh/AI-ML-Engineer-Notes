@@ -18,7 +18,7 @@ seesion : use tensors  in python and solve the system of equations and indentity
 4. Eigen decomposition
   1. applying matrices
   2. affine transformations
-### What are Affine Transformations?
+34. ### What are Affine Transformations?
 Affine transformations are a set of functions that preserve points, straight lines, and planes. These transformations also maintain the relative proportions of figures, though angles and lengths might not always stay the same. In simpler terms, affine transformations ensure that "straightness" and "parallelism" are preserved.
 
 ### Types of Affine Transformations
@@ -65,11 +65,8 @@ Affine transformations are widely used in:
       
    
 
-  6. matrix determinants
-  7. matrix decomposition
-  8. applications of eigen decomposition
-
-9. matrix operations for machine learning
-10.Limits 
+  36. matrix determinants
+  40. Eigen decomposition
+  41. applications of eigen decomposition
 
 
