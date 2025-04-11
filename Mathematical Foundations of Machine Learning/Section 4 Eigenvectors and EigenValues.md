@@ -2,8 +2,8 @@ Linear algebra 2 : matrix application
 
 seesion : use tensors  in python and solve the system of equations and indentity meaninful patterns in data 
 
-1. review introductory linear algebra
-  1. What is Linear Algebra?: Linear algebra is the branch of mathematics that focuses on solving for unknowns within systems of **linear equations**. It deals with concepts such as **vectors, matrices, determinants, eigenvalues**, and **eigenvectors**, which are essential in many computational fields.
+### review introductory linear algebra
+  1. What is Linear Algebra?: Linear algebra is the branch of mathematics that focuses on solving for unknowns within systems of **linear equations**. It deals with concepts such as **vectors, matrices, determinants,      eigenvalues**, and **eigenvectors**, which are essential in many computational fields.
   2. Modern Applications of Linear Algebra
     a. Solving for Unknowns in Machine Learning Algorithms: Linear algebra plays a crucial role in **machine learning** and **deep learning**, where it helps in solving optimization problems, performing **matrix operations**, and manipulating high-dimensional data.
     b. Dimensionality Reduction: Dimensionality reduction techniques like **Principal Component Analysis (PCA)** leverage linear algebra to transform high-dimensional data into a lower-dimensional space while preserving important information.
