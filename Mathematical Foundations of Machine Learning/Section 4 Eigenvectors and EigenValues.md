@@ -69,21 +69,22 @@ a matrix of eigenvectors
 
       
    
-   36. matrix determinants
+   36. **matrix determinants**
       - Map square Matrix to scalar
       - Enable us to determine wheather the matrix can be inverted
-      - if det(X) = 0 => Matrix X-1(inverse) can't be computed because X-1 has 1/dex(X) = 1/0 => 1. No solution or 2. Infinite solution
+      - if det(X) = 0 => Matrix X-1(inverse) can't be computed because X-1 has 1/dex(X) = 1/0 => will result in No solution or Infinite solution
       - Easy to calculate 2*2 Matrix
          - Determinant of 2*2 Matrix
          - |a   b|
          - |c   d|
          - |X| = a * d - b * c
-   37. Determinants of larger matrices
+   37. **Determinants of larger matrices**
       - Genralizing Determinants: Recursion
-   38. Determinants and Eigen values
+   39. **Determinants and Eigen values**
       - dex(X) = product of all eigenvalues of X
-      - 
-   40. Eigen decomposition
-   41. applications of eigen decomposition
-
+      - Determinand & Eigen values relationship: if any one of the eigen values in zero then the product of the eigen values must be zero and determinant also must be zero
+   40. **Eigen decomposition**
+      - formula:  
+   41. **applications of eigen decomposition**
+      -  
 
