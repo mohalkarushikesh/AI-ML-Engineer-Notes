@@ -8,7 +8,9 @@
   - For a single-variable function, the gradient is equivalent to the derivative.
   - For a multi-variable function, the gradient is a vector containing partial derivatives with respect to each input variable.
 
-In the context of machine learning:
+- In the context of machine learning:
   - Gradients are used to compute how the parameters (like m and b in your case) should be updated to minimize the loss function.
   - Optimizers like SGD rely on gradients to move parameters in the direction that reduces the loss.
 - For example: If a loss function is f(x, y), its gradient at a point (x, y) is: $$ \nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right) $$
+
+- 
