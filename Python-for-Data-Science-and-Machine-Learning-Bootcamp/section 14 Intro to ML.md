@@ -21,16 +21,15 @@ Supervised learning is widely used in scenarios where historical data helps pred
 
 ---
 
-Data Acquisition
-       ↓
-   Data Cleaning ----------------→ Test Data
+Data Acquisition  
+       ↓  
+   Data Cleaning ----------------→ Test Data  
        ↓                               ↓                    
-Model Training & Building              ↓
-       ↑ ↓                             ↓
-   Model Testing  <--------------------
-       ↓                              
-   Model Deployment
-
+Model Training & Building              ↓  
+       ↑ ↓                             ↓  
+   Model Testing  <--------------------  
+       ↓  
+   Model Deployment  
 ---
 
 ## **Machine Learning Process**
