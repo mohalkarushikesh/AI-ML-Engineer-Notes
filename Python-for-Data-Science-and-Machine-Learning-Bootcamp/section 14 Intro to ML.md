@@ -1,5 +1,3 @@
----
-
 **Supervised Learning**
 
 Supervised learning algorithms are trained using labeled examples where the desired output is known. 
