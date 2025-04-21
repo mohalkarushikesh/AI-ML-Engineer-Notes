@@ -115,3 +115,17 @@ When evaluating regression tasks, several metrics help assess the accuracy and r
      where \(\bar{y}\) is the mean of the actual values.
 
 ---
+
+available estimations
+model.fit
+supervised learning : model.fit(X, y) where x = data & y = labels
+  model.predict(X_new)
+  model.proba()
+  model.score()
+unsupervised learning : model.fit(X) where x = data 
+  model.predict()
+  model.transform(): new data into new basis 
+  model.fit_tranform(): 
+
+choosing algorithm (cheatsheet)
+![img](https://scikit-learn.org/1.4/_static/ml_map.png)
