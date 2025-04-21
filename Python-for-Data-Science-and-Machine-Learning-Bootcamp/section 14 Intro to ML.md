@@ -1,67 +1,105 @@
-**Supervised Learning**
+## **Supervised Learning**
 
 Supervised learning algorithms are trained using labeled examples where the desired output is known. 
 
-For example:
+### **Examples**
 - A segment of text could have a category label such as:
-  - Spam vs. Legitimate Email
-  - Positive vs. Negative Movie Review
+  - **Spam vs. Legitimate Email**
+  - **Positive vs. Negative Movie Review**
 
-How it works:
-- The network receives a set of inputs along with corresponding correct outputs.
-- The algorithm learns by comparing its actual output with the correct outputs to identify errors.
-- It then modifies the model accordingly.
+### **How It Works**
+1. The network receives a set of inputs along with corresponding correct outputs.
+2. The algorithm learns by comparing its actual output with the correct outputs to identify errors.
+3. The model adjusts itself to reduce errors by modifying its parameters accordingly.
 
-Applications:
-- Supervised learning is commonly used in scenarios where historical data is used to predict likely future events.
+### **Applications**
+Supervised learning is widely used in scenarios where historical data helps predict future outcomes. Examples include:
+- Email filtering
+- Sentiment analysis
+- Stock price prediction
+- Fraud detection
 
 ---
 
-**Machine Learning Process**
+## **Machine Learning Process**
 
-1. **Data Acquisition**: Collecting relevant data.
-2. **Data Cleaning**: Ensuring the data is free of errors and inconsistencies.
-3. **Model Training and Building**: Creating the model by learning patterns in the training data.
-4. **Model Testing**: Evaluating the model's performance using test data.
-5. **Model Deployment**: Implementing the model in real-world applications.
+1. **Data Acquisition**: Collect relevant and high-quality data.
+2. **Data Cleaning**: Process the data to remove inconsistencies, errors, or missing values.
+3. **Model Training and Building**: Use the training data to teach the model patterns and relationships.
+4. **Model Testing**: Validate the model's performance on unseen test data.
+5. **Model Deployment**: Deploy the final model to real-world environments for practical use.
 
 ![ML-ProcessS](https://cdn.elearningindustry.com/wp-content/uploads/2017/05/73348f2f23b70566eef2d9f10f9fe22c-768x438.png)
 
 ---
 
-**Data Sets**
+## **Data Sets**
 
-Machine learning involves three key sets of data:
-- **Training Data**: Used to train the model.
-- **Validation Data**: Helps adjust model parameters.
-- **Test Data**: Used to evaluate the final performance of the model.
+In machine learning, three key datasets are used:
+
+- **Training Data**: Used to train the model by allowing it to learn patterns and relationships.
+- **Validation Data**: Helps fine-tune model parameters and avoid overfitting.
+- **Test Data**: Provides a final unbiased evaluation of the model's performance.
 
 ---
 
-**Evaluating Performance (Classification)**
+## **Evaluating Performance**
 
-Performance metrics evaluate how well the model performs, especially in classification problems.
+Performance metrics are crucial to assess how well a machine learning model performs.
 
-**Key Metrics**:
+### **Key Metrics for Classification**
+
 1. **Accuracy**:
-   - The number of correct predictions divided by the total number of predictions.
-   - Useful when target classes are well-balanced.
-   - Not ideal for unbalanced classes.
+   - Formula:  
+     $$Accuracy = \frac{{\text{Number of Correct Predictions}}}{{\text{Total Number of Predictions}}}$$
+   - Useful for well-balanced datasets.
+   - Not suitable for imbalanced datasets (e.g., detecting rare diseases).
 
-2. **Recall**:
-   - The ability of the model to find all relevant cases within the dataset.
+2. **Recall (Sensitivity)**:
+   - Measures the model's ability to find all relevant positive cases.
+   - Formula:  
+     $$Recall = \frac{{\text{True Positives}}}{{\text{True Positives + False Negatives}}}$$
 
 3. **Precision**:
-   - The ability of the classification model to identify only relevant data points.
+   - Indicates how many of the predicted positive results are actually relevant.
+   - Formula:  
+     $$Precision = \frac{{\text{True Positives}}}{{\text{True Positives + False Positives}}}$$
 
 4. **F1-Score**:
-   - Combines precision and recall to provide a balanced metric.
+   - The harmonic mean of precision and recall.
    - Formula:  
      $$F1 = 2 * \frac{{\text{Precision} \cdot \text{Recall}}}{{\text{Precision} + \text{Recall}}}$$
-   - Useful in scenarios requiring an optimal blend of precision and recall.
+   - Ideal for imbalanced datasets where both precision and recall are important.
 
 ---
 
-**Binary Classification: Confusion Matrix**
+## **Binary Classification: Confusion Matrix**
 
-The confusion matrix is commonly used in binary classification tasks to evaluate model performance. It provides detailed insight into prediction results across different classes.
+The confusion matrix evaluates a classification model by visualizing prediction results. It consists of:
+
+| **Actual\Predicted** | **Positive** | **Negative** |
+|-----------------------|--------------|--------------|
+| **Positive**          | True Positive (TP) | False Negative (FN) |
+| **Negative**          | False Positive (FP) | True Negative (TN) |
+
+---
+
+## **Evaluating Performance: Regression**
+
+For regression tasks, we use different performance metrics:
+
+1. **Mean Absolute Error (MAE)**:
+   - Measures the average magnitude of errors between predicted and actual values.
+
+2. **Mean Squared Error (MSE)**:
+   - Penalizes larger errors more than MAE by squaring the differences.
+
+3. **Root Mean Squared Error (RMSE)**:
+   - Square root of MSE; gives errors in the same units as the target variable.
+
+4. **R² Score (Coefficient of Determination)**:
+   - Indicates the proportion of variance in the target variable explained by the model.
+   - Formula:  
+     $$R^2 = 1 - \frac{{\text{Sum of Squared Residuals (SSR)}}}{{\text{Total Sum of Squares (TSS)}}}$$
+
+---
