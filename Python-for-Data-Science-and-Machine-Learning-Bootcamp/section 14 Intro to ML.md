@@ -18,18 +18,9 @@ Supervised learning is widely used in scenarios where historical data helps pred
 - Sentiment analysis
 - Stock price prediction
 - Fraud detection
+  
+![image](https://github.com/user-attachments/assets/cd3ba68c-29f1-4e23-8710-b93488d99884)
 
----
-
-Data Acquisition  
-       ↓  
-   Data Cleaning ----------------→ Test Data  
-       ↓                               ↓                    
-Model Training & Building              ↓  
-       ↑ ↓                             ↓  
-   Model Testing  <--------------------  
-       ↓  
-   Model Deployment  
 ---
 
 ## **Machine Learning Process**
