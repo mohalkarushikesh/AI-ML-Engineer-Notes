@@ -116,16 +116,52 @@ When evaluating regression tasks, several metrics help assess the accuracy and r
 
 ---
 
-available estimations
-model.fit
-supervised learning : model.fit(X, y) where x = data & y = labels
-  model.predict(X_new)
-  model.proba()
-  model.score()
-unsupervised learning : model.fit(X) where x = data 
-  model.predict()
-  model.transform(): new data into new basis 
-  model.fit_tranform(): 
+### **Available Estimations in Machine Learning**
 
-choosing algorithm (cheatsheet)
+#### **Supervised Learning**
+Supervised learning involves training the model using labeled data, where both the input data \( X \) and corresponding output labels \( y \) are provided.
+
+**Key Methods**:
+1. **model.fit(X, y)**:
+   - Trains the model using \( X \) (input data) and \( y \) (labels).
+   - Example: Training a classification model to distinguish between spam and legitimate emails.
+
+2. **model.predict(X_new)**:
+   - Predicts labels for new data \( X_{new} \).
+   - Example: Predicting whether an email is spam or not based on unseen inputs.
+
+3. **model.predict_proba(X)**:
+   - Provides the probability estimates for each class.
+   - Example: For spam detection, it might output probabilities like 0.9 for "Spam" and 0.1 for "Not Spam."
+
+4. **model.score(X, y)**:
+   - Evaluates the performance of the model, returning a score (e.g., accuracy).
+   - Example: Measuring how accurately the model predicts spam emails compared to actual labels.
+
+---
+
+#### **Unsupervised Learning**
+Unsupervised learning involves working with unlabeled data, where the goal is to uncover hidden patterns or structures.
+
+**Key Methods**:
+1. **model.fit(X)**:
+   - Fits the model to the dataset \( X \), identifying patterns or clusters.
+   - Example: Grouping customers based on purchasing behavior.
+
+2. **model.predict(X_new)**:
+   - Assigns labels or clusters to new data \( X_{new} \) based on the learned patterns.
+   - Example: Categorizing new customers into existing clusters.
+
+3. **model.transform(X)**:
+   - Transforms the data \( X \) into a new basis, reducing dimensions or changing representations.
+   - Example: Applying Principal Component Analysis (PCA) to reduce the number of features.
+
+4. **model.fit_transform(X)**:
+   - Combines fitting and transforming into a single step for efficiency.
+   - Fits the model to \( X \) and simultaneously transforms the data.
+   - Example: Clustering and reducing dimensionality in one operation.
+
+---
+
+#### Choosing Algorithm (cheatsheet)
 ![img](https://scikit-learn.org/1.4/_static/ml_map.png)
