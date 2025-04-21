@@ -86,20 +86,30 @@ The confusion matrix evaluates a classification model by visualizing prediction 
 
 ## **Evaluating Performance: Regression**
 
-For regression tasks, we use different performance metrics:
+When evaluating regression tasks, several metrics help assess the accuracy and reliability of the model's predictions:
 
 1. **Mean Absolute Error (MAE)**:
-   - Measures the average magnitude of errors between predicted and actual values.
+   - MAE calculates the average magnitude of errors in predictions, without considering their direction (positive or negative).
+   - Formula:  
+     $$MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$  
+     where \(y_i\) is the actual value, \(\hat{y}_i\) is the predicted value, and \(n\) is the total number of data points.
 
 2. **Mean Squared Error (MSE)**:
-   - Penalizes larger errors more than MAE by squaring the differences.
+   - MSE measures the average squared difference between actual and predicted values, penalizing larger errors more significantly.
+   - Formula:  
+     $$MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$  
 
 3. **Root Mean Squared Error (RMSE)**:
-   - Square root of MSE; gives errors in the same units as the target variable.
+   - RMSE is the square root of MSE, providing an error metric in the same units as the target variable.
+   - Formula:  
+     $$RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}$$  
 
 4. **R² Score (Coefficient of Determination)**:
-   - Indicates the proportion of variance in the target variable explained by the model.
+   - R² represents the proportion of variance in the dependent variable that is predictable from the independent variables.
    - Formula:  
-     $$R^2 = 1 - \frac{{\text{Sum of Squared Residuals (SSR)}}}{{\text{Total Sum of Squares (TSS)}}}$$
+     $$R^2 = 1 - \frac{{\text{Sum of Squared Residuals (SSR)}}}{{\text{Total Sum of Squares (TSS)}}}$$  
+     or equivalently:  
+     $$R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$$  
+     where \(\bar{y}\) is the mean of the actual values.
 
 ---
