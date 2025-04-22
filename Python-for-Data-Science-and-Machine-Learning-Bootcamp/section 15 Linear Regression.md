@@ -140,16 +140,73 @@ Linear regression is widely applied in:
 
 ---
 
-imports pandas, numpy, matplotlib, seaborn 
+### **Common Library Imports**
+When starting a project in Python for data analysis or machine learning, the following libraries are essential:
+```python
+import pandas as pd    # For data manipulation and analysis
+import numpy as np     # For numerical computations
+import matplotlib.pyplot as plt    # For creating visualizations
+import seaborn as sns  # For advanced visualizations
+```
 
-sns.pairplot (pass whole dataframe)
-sns.distplot (pass column)
+---
 
-shift + tab : documentation 
+### **Visualization with Seaborn**
+1. **`sns.pairplot()`**:
+   - Visualizes pairwise relationships between all numerical columns in the DataFrame.
+   - **Syntax**:
+     ```python
+     sns.pairplot(df)  # Pass the entire DataFrame
+     plt.show()
+     ```
+   - **Use Case**:
+     Ideal for exploring correlations and distributions between multiple features in a dataset.
 
-Regression evaluation Metrics
-here are most common methods
-1. Mean absolute error: easy to uderstand, because it's the avg error 
-2. Mean square error
-3. Root mean square error
-   all of these loss functions, because we want to minimize them 
+2. **`sns.distplot()`**:
+   - Plots the distribution (histogram + kernel density estimate) of a single variable.
+   - **Syntax**:
+     ```python
+     sns.distplot(df['ColumnName'])  # Pass the column to visualize
+     plt.show()
+     ```
+   - **Use Case**:
+     Useful for examining the spread, skewness, and variability of a single feature.
+
+---
+
+### **Quick Documentation Shortcut**
+Use `Shift + Tab` in Jupyter Notebook or any compatible IDE to access function documentation and parameter details.
+- Example: Highlight the function `sns.pairplot` and press **Shift + Tab** to quickly view available parameters and their descriptions.
+
+---
+
+### **Regression Evaluation Metrics**
+In regression problems, evaluating the model's performance is crucial. Below are the most common metrics used:
+
+1. **Mean Absolute Error (MAE)**:
+   - The average absolute difference between predicted and actual values.
+   - **Why Use It?**:
+     - Easy to interpret since it directly measures the average error in the same units as the target variable.
+   - **Formula**:  
+     $$MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$  
+   - **Minimization Goal**: Models strive to minimize this value.
+
+2. **Mean Squared Error (MSE)**:
+   - The average of squared differences between predicted and actual values.
+   - **Why Use It?**:
+     - Penalizes larger errors more heavily, making it sensitive to outliers.
+   - **Formula**:  
+     $$MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$  
+   - **Minimization Goal**: Lower values indicate better model accuracy.
+
+3. **Root Mean Squared Error (RMSE)**:
+   - Square root of MSE; provides errors in the same units as the target variable.
+   - **Why Use It?**:
+     - More intuitive than MSE as it is expressed in the same units as the data.
+   - **Formula**:  
+     $$RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}$$  
+
+---
+
+### **Key Insight**
+All of the above metrics are considered **loss functions**. In machine learning, the goal is to **minimize these loss functions** to improve model accuracy and reliability.
