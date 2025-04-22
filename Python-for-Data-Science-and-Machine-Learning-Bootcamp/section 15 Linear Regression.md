@@ -37,3 +37,10 @@ Linear regression is widely applied in:
 4. There is minimal multicollinearity (in the case of multiple independent variables).
 
 ---
+
+imports pandas, numpy, matplotlib, seaborn 
+
+sns.pairplot (pass whole dataframe)
+sns.distplot (pass column)
+
+shift + tab : documentation 
