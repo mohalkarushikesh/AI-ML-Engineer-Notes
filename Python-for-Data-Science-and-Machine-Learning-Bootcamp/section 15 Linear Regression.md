@@ -146,3 +146,10 @@ sns.pairplot (pass whole dataframe)
 sns.distplot (pass column)
 
 shift + tab : documentation 
+
+Regression evaluation Metrics
+here are most common methods
+1. Mean absolute error: easy to uderstand, because it's the avg error 
+2. Mean square error
+3. Root mean square error
+   all of these loss functions, because we want to minimize them 
