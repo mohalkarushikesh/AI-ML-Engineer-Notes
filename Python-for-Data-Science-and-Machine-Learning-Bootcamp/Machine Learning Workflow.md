@@ -1,7 +1,3 @@
-Certainly! Here's a markdown-formatted version of your outlined steps for a machine learning workflow:
-
----
-
 # Machine Learning Workflow
 
 ## 1. Data Acquisition
@@ -86,4 +82,3 @@ Certainly! Here's a markdown-formatted version of your outlined steps for a mach
 
 ---
 
-This layout should make it easier to understand and reference your workflow. If you'd like further adjustments or help with any section, feel free to let me know!
