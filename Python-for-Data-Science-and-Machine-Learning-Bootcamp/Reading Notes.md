@@ -204,4 +204,7 @@ Learning rate is a crucial hyperparameter that determines the step size in each 
 
 ![LR](https://miro.medium.com/v2/resize:fit:604/format:webp/1*IgmACHtWHHqGTISYMWQyXw.png)
 
+Feature scaling in machine learning
+
+
 
