@@ -21,3 +21,5 @@ A table used to evaluate the performance of a classification algorithm, containi
 ### Error Rates
 - **Misclassification Rate (Error Rate)**: The proportion of incorrect predictions out of the total predictions.  
   $$\text{Error Rate} = \frac{FP + FN}{Total Predictions}$$
+
+Kaggle competions 
