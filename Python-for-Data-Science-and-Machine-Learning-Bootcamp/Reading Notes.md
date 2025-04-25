@@ -70,40 +70,6 @@ Model learns from labeled data, meaning each input (data) has a corresponding ou
 - **Analogy**: Student learning math with a teacher  
 - **Goal**: Learn a function to map inputs to outputs  
 
-#### Unsupervised learning:
-The data does not have labels. The model is only given the inputs and must find patterns and relationships between them.
-
-- **Example**: Images of different animals  
-- **Analogy**: Person classifying fruits in a basket based on color without knowing their names  
-- **Goal**: Find patterns and groupings in data  
-
-#### Reinforcement learning:
-Involves an agent (model) which learns from trial and error while interacting with an environment. The agent receives rewards for good actions and penalties for bad actions.
-
-- **Example**: A video game  
-- **Analogy**: Teaching a pet a new trick  
-- **Goal**: Learn through rewards and penalties  
-
----
-
-### Cost Function
-Cost function (aka loss function or error function):
-
-1. For **Linear Regression**:  
-   **MSE (Mean Squared Error)**: Measures the differences between the actual and predicted values, squares them (to avoid negative differences), and averages them over the dataset.
-
-   ![MSE](https://miro.medium.com/v2/resize:fit:828/format:webp/1*B1UvTTDIfIa5hjupQS61YA.png)
-
-3. For **Classification**:  
-   **Logarithmic loss (Cross Entropy Loss)**: Measures the error in classifying between categories.
-
-   ![LRL/CEL](https://miro.medium.com/v2/resize:fit:828/format:webp/1*aVBNdQsTaJwz7iyaeOtN4g.png)
-   
----
-
-### Gradient Descent
-Gradient Descent is an analytical method used to find the optimal values for parameters (i.e., coefficients).
-
 ---
 
 ```python
@@ -148,6 +114,40 @@ print(f"Predicted prices: {y_pred}")
 print(f"Actual prices: {y_test.values}")
 print(f"Mean Squared Error: {mse:.2f}")
 ```
+
+#### Unsupervised learning:
+The data does not have labels. The model is only given the inputs and must find patterns and relationships between them.
+
+- **Example**: Images of different animals  
+- **Analogy**: Person classifying fruits in a basket based on color without knowing their names  
+- **Goal**: Find patterns and groupings in data  
+
+#### Reinforcement learning:
+Involves an agent (model) which learns from trial and error while interacting with an environment. The agent receives rewards for good actions and penalties for bad actions.
+
+- **Example**: A video game  
+- **Analogy**: Teaching a pet a new trick  
+- **Goal**: Learn through rewards and penalties  
+
+---
+
+### Cost Function
+Cost function (aka loss function or error function):
+
+1. For **Linear Regression**:  
+   **MSE (Mean Squared Error)**: Measures the differences between the actual and predicted values, squares them (to avoid negative differences), and averages them over the dataset.
+
+   ![MSE](https://miro.medium.com/v2/resize:fit:828/format:webp/1*B1UvTTDIfIa5hjupQS61YA.png)
+
+3. For **Classification**:  
+   **Logarithmic loss (Cross Entropy Loss)**: Measures the error in classifying between categories.
+
+   ![LRL/CEL](https://miro.medium.com/v2/resize:fit:828/format:webp/1*aVBNdQsTaJwz7iyaeOtN4g.png)
+   
+---
+
+### Gradient Descent
+Gradient Descent is an analytical method used to find the optimal values for parameters (i.e., coefficients).
 
 ---
 
