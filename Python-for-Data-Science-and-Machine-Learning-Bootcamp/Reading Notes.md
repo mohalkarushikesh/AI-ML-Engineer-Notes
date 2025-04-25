@@ -172,5 +172,36 @@ Represents the relationship between independent variable (input) and dependent v
 Uses multiple features (variables) to predict the output.  
 ![MLR](https://miro.medium.com/v2/resize:fit:828/format:webp/1*MtqZ3ukoUwlG2NgvliOkBg.png)
 ```
+### Limitations of Linear Regression
+1. **Assumption of Linearity**: Linear regression assumes a straight-line relationship between dependent and independent variables. However, real-world data is rarely linearly separable, and this assumption often leads to inaccuracies.
+2. **Prone to Noise and Overfitting**: When the number of observations is less than the number of features, linear regression can result in overfitting, making the model excessively noisy.
+3. **Prone to Outliers**: Outliers—data points that don't have clear relationships with other points—can significantly impact the accuracy of the model.
+
+---
+
+### Gradient Descent
+Gradient Descent is an optimization algorithm used to minimize the cost function by iteratively updating parameters (coefficients). It works by gradually moving towards the optimal solution by following the slope of the cost function.
+
+**Analogy**: Imagine you’re on a mountain and want to reach the lowest point (valley). In this case:
+- The mountain represents the cost function.
+- The goal is to minimize the cost and reach the valley.
+- Each step represents minimizing the parameters (coefficients).
+
+#### How Gradient Descent Works
+1. **Initialize Parameters**: Start by assigning random values to parameters (coefficients).
+2. **Compute the Cost Function**: Calculate the error between the predicted values and actual values, often using Mean Squared Error (MSE).
+3. **Calculate Gradient (Slope)**: Compute the slope of the cost function with respect to each parameter. The slope indicates the direction to adjust parameters to reduce the cost.
+4. **Update Parameters**: Adjust the parameters using a learning rate, which controls the size of the steps.
+5. **Repeat**: Continue the process until the parameters converge, meaning further updates make minimal improvements.
+
+---
+
+### Importance of Learning Rate
+Learning rate is a crucial hyperparameter that determines the step size in each iteration, controlling how much the coefficients change.
+
+- **Small Learning Rate**: Leads to slow convergence, but ensures precision.
+- **Large Learning Rate**: Allows faster convergence but risks overshooting the optimal solution, preventing the model from finding the minimum.
+
+![LR](https://miro.medium.com/v2/resize:fit:604/format:webp/1*IgmACHtWHHqGTISYMWQyXw.png)
 
 
