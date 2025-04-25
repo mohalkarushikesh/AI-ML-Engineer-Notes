@@ -1,4 +1,4 @@
-
+### ML Process 
 1. Data Acquisition
 
 2. Data cleaning (EDA)
@@ -61,7 +61,7 @@
 
 ---
 
-### ML
+### ML (https://medium.com/@RobuRishabh/introduction-to-machine-learning-555b0f1b62f5)
 
 #### Supervised learning:
 Model learns from labeled data, meaning each input (data) has a corresponding output (label). The model learns the relationship between the inputs and outputs and can predict the outputs for new, unseen data.
@@ -92,9 +92,13 @@ Cost function (aka loss function or error function):
 1. For **Linear Regression**:  
    **MSE (Mean Squared Error)**: Measures the differences between the actual and predicted values, squares them (to avoid negative differences), and averages them over the dataset.
 
-2. For **Classification**:  
+   ![MSE](https://miro.medium.com/v2/resize:fit:828/format:webp/1*B1UvTTDIfIa5hjupQS61YA.png)
+
+3. For **Classification**:  
    **Logarithmic loss (Cross Entropy Loss)**: Measures the error in classifying between categories.
 
+   ![LRL/CEL](https://miro.medium.com/v2/resize:fit:828/format:webp/1*aVBNdQsTaJwz7iyaeOtN4g.png)
+   
 ---
 
 ### Gradient Descent
@@ -168,3 +172,5 @@ Represents the relationship between independent variable (input) and dependent v
 Uses multiple features (variables) to predict the output.  
 ![MLR](https://miro.medium.com/v2/resize:fit:828/format:webp/1*MtqZ3ukoUwlG2NgvliOkBg.png)
 ```
+
+
