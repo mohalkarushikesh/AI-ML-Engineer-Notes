@@ -171,7 +171,7 @@ Represents the relationship between independent variable (input) and dependent v
 #### Multivariable Linear Regression:
 Uses multiple features (variables) to predict the output.  
 ![MLR](https://miro.medium.com/v2/resize:fit:828/format:webp/1*MtqZ3ukoUwlG2NgvliOkBg.png)
-```
+
 ### Limitations of Linear Regression
 1. **Assumption of Linearity**: Linear regression assumes a straight-line relationship between dependent and independent variables. However, real-world data is rarely linearly separable, and this assumption often leads to inaccuracies.
 2. **Prone to Noise and Overfitting**: When the number of observations is less than the number of features, linear regression can result in overfitting, making the model excessively noisy.
