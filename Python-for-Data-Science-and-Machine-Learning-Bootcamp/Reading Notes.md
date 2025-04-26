@@ -204,7 +204,71 @@ Learning rate is a crucial hyperparameter that determines the step size in each 
 
 ![LR](https://miro.medium.com/v2/resize:fit:604/format:webp/1*IgmACHtWHHqGTISYMWQyXw.png)
 
-Feature scaling in machine learning
+---
+# Feature Scaling in Machine Learning
 
+When working with machine learning algorithms, the features (input variables) can often have different scales. For instance, if one feature is measured in kilometers and another in meters, the range of values can differ significantly. Feature scaling helps normalize or standardize these features, ensuring that the model treats them equally during training.
 
+## Why Feature Scaling Is Important
+- Many machine learning algorithms, especially those based on distance or gradient descent, are sensitive to the scale of the input features.
+- **Example: Gradient Descent**  
+  - The convergence of gradient descent is faster when features are on a similar scale.  
+  - Without scaling, features with larger ranges dominate the optimization process, making it inefficient.
+
+## Types of Feature Scaling
+### 1. Min-Max Normalization (Rescaling)
+- Scales data to a fixed range, typically between 0 and 1.
+- Each feature's minimum value becomes 0, and its maximum value becomes 1.  
+  ![min-max-normalization](https://miro.medium.com/v2/resize:fit:640/format:webp/1*DzBToad2rbpOtu_Rb6w6GA.png)
+
+Where:  
+- \( X \) is the original feature value,  
+- \( X_{min} \), \( X_{max} \) are the minimum and maximum values of that feature.  
+
+#### When to Use Min-Max Scaling?
+- Use Min-Max scaling when the distribution of your data does not contain extreme outliers and is relatively uniform.
+- Commonly used in algorithms like KNN, which are based on distances between data points.
+
+### 2. Standardization (Z-score Scaling)
+- Transforms the data to have a mean of 0 and a standard deviation of 1.
+- Centers the data by subtracting the mean, then scales by dividing by the standard deviation.  
+  ![standardization](https://miro.medium.com/v2/resize:fit:640/format:webp/1*VH7hl_zqIVU69KD1YYKTbA.png)
+
+Where:  
+- \( X \) is the original feature value,  
+- \( \mu \) is the mean of the feature,  
+- \( \sigma \) is the standard deviation of the feature.  
+
+#### When to Use Standardization?
+- Useful when your data has outliers or when the distribution of features is not uniform.
+- Widely used in algorithms relying on the Gaussian distribution (e.g., logistic regression, linear regression, support vector machines).
+
+## When Is Feature Scaling Not Necessary?
+- **Tree-Based Models**: Decision Trees and Random Forests do not require feature scaling since they rely on data splitting points and are insensitive to the relative scales of features.
+- **Naive Bayes**: Insensitive to feature scaling because it relies on probabilities rather than distance or magnitude.
+
+## Using Min-Max Scaling with Scikit-learn
+```python
+from sklearn.preprocessing import MinMaxScaler
+import numpy as np
+
+# Original data
+data = np.array([[50, 30], [60, 90], [70, 100]])
+# Initialize MinMaxScaler
+scaler = MinMaxScaler()
+# Scale the data
+scaled_data = scaler.fit_transform(data)
+print("Scaled Data using Min-Max Scaling:\n", scaled_data)
+```
+
+## Using Standardization with Scikit-learn
+```python
+from sklearn.preprocessing import StandardScaler
+
+# Initialize StandardScaler
+scaler = StandardScaler()
+# Scale the data
+scaled_data = scaler.fit_transform(data)
+print("Scaled Data using Standardization:\n", scaled_data)
+```
 
