@@ -134,7 +134,7 @@ Involves an agent (model) which learns from trial and error while interacting wi
 ### Cost Function
 Cost function (aka loss function or error function):
 
-1. For **Linear Regression**:  
+1. For **Linear Regression (aka ordinary least squares)**:  
    **MSE (Mean Squared Error)**: Measures the differences between the actual and predicted values, squares them (to avoid negative differences), and averages them over the dataset.
 
    ![MSE](https://miro.medium.com/v2/resize:fit:828/format:webp/1*B1UvTTDIfIa5hjupQS61YA.png)
