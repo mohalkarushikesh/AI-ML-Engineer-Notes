@@ -1,0 +1,3 @@
+- Before the introduction of the Transformer model, the dominant architectures for sequence-to-sequence tasks, like machine translation, were based on Recurrent Neural Networks (RNNs),
+- specifically Long Short-Term Memory (LSTM) networks. These models process data sequentially, reading input element by element. The Transformer, on the other hand, utilizes a parallel,
+- attention-based mechanism, making it more efficient for handling long sequences and capturing complex relationships between elements
