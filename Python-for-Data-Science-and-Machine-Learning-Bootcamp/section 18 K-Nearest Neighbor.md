@@ -2,10 +2,12 @@
 
 K-Nearest Neighbors (KNN) is a powerful and intuitive supervised learning algorithm used for both **classification** and **regression tasks**. The fundamental idea is to predict the correct class or value for test data points by finding **K nearest training points** based on distance.
 
-### **Key Idea**
+### **Key Idea to choose a value of k **
 KNN predicts the category or value by:
 1. **Calculating distances** between the test data point and all training points.
 2. **Selecting K closest points** (neighbors).
+- sqrt(n), where n is the total number of data points 
+- odd value of k is selected to avoid confusion between two classes of data
 3. Determining the category or mean value among those neighbors.
 
 For **classification**, KNN picks the category with the majority vote among K neighbors. For **regression**, it takes the mean value.
