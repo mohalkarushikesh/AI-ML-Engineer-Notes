@@ -4,7 +4,7 @@
 
 #### **📌 Equation**
 
-\[Y = \beta_0 + \beta_1X + \epsilon\]
+$$Y = \beta_0 + \beta_1X + \epsilon$$
 
 Where:
 - \(Y\) → Dependent variable (target)
@@ -61,9 +61,9 @@ Used for predicting **continuous numerical values**.
 - Unlike Linear Regression, it models data using the **logistic (sigmoid) function** to restrict predictions between 0 and 1.
 
 #### **📌 Equation**
-\[
-p(Y=1) = \frac{1}{1+e^{-(\beta_0 + \beta_1X)}}
-\]
+
+$$p(Y=1) = \frac{1}{1+e^{-(\beta_0 + \beta_1X)}}$$
+
 Where:
 - \(p(Y=1)\) → Probability that the outcome belongs to class 1
 - \(\beta_0, \beta_1\) → Model parameters
