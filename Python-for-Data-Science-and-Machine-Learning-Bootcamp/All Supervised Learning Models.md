@@ -29,7 +29,16 @@ Used for predicting **continuous numerical values**.
    - Example: Modeling **growth rate** of bacteria over time.
 4. **Ridge Regression (L2 Regularization)** → Helps handle **multicollinearity** by shrinking large coefficients.
    - Example: Predicting **stock prices** with multiple correlated financial factors.
-
+5. **Lasso Regression (L1 Regularization)** → Shrinks some coefficients to **zero**, helping in **feature selection**.
+   - Example: Selecting **key factors** affecting **customer satisfaction**.
+6. **Elastic Net Regression** → Combination of **Ridge & Lasso**, balancing feature selection & coefficient shrinkage.
+   - Example: **Predicting sales revenue** with multiple interrelated factors.
+7. **Stepwise Regression** → Adds/removes predictors systematically based on significance.
+   - Example: **Medical diagnosis models** where only important patient data is selected.
+8. **Quantile Regression** → Estimates percentiles instead of mean values.
+   - Example: **House price estimation for different market segments**.
+9. **Bayesian Regression** → Uses probability distributions to estimate coefficients.
+   - Example: **Weather forecasting with uncertain data**.
 ---
 
 ### **🔹 Evaluation Metrics**
@@ -126,6 +135,17 @@ Used in tasks where instances must be classified based on **similarity to known 
 
 ---
 
+### **🔹 Types of K-Nearest Neighbor **
+1. **KNN for Classification** → Assigns labels based on the majority of nearest neighbors.
+   - Example: **Handwritten digit recognition**.
+2. **KNN for Regression** → Estimates a continuous value by averaging nearest neighbors.
+   - Example: **Predicting temperature based on nearby weather stations**.
+3. **Weighted KNN** → Gives more influence to closer neighbors using weighted distance.
+   - Example: **Personalized recommendation systems**.
+4. **KNN for Clustering (unsupervised learning)** → Groups similar data points together.
+   - Example: **Customer segmentation in marketing**.
+
+---
 ### **🔹 Evaluation Metrics**
 1. **Accuracy** → Correct classifications.
 2. **Confusion Matrix** → Breakdown of correct and incorrect predictions.
