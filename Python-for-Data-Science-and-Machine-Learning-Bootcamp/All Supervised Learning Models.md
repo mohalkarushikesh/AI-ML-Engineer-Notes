@@ -175,3 +175,247 @@ Used in tasks where instances must be classified based on **similarity to known 
 - A new fruit is classified **based on the closest K samples** in the dataset.
 
 ---
+
+## **1️⃣ Decision Tree**
+**📌 What It Is:**  
+A hierarchical model that splits data into branches using decision rules based on feature values.
+
+**📌 Equation:**  
+The impurity measure for splitting nodes (Gini Index or Entropy) is calculated as:
+
+- **Gini Index** (for classification):
+
+$$Gini = 1 - \sum_{i=1}^{C} p_i^2$$
+
+- **Entropy** (alternative impurity measure):
+
+$$Entropy = - \sum_{i=1}^{C} p_i \log_2 p_i$$
+
+Where \( p_i \) is the probability of class \( i \).
+
+**📌 Use Case:**  
+Used in **classification and regression tasks** where rule-based decisions work well.  
+Example: **Fraud detection in banking**.
+
+**📌 Types:**  
+1. **Classification Trees** → Predicts discrete labels (e.g., Yes/No).  
+2. **Regression Trees** → Predicts continuous values.  
+
+**📌 Special Property:**  
+Uses **pruning techniques** to prevent overfitting.
+
+**📌 Evaluation Metrics:**  
+- **Accuracy, Precision, Recall** (classification).  
+- **Mean Squared Error (MSE)** (regression).  
+
+**📌 Example:**  
+Predicting **loan default risks** based on income, credit score, and loan amount.
+
+---
+
+## **2️⃣ Random Forest**
+**📌 What It Is:**  
+An ensemble learning model that builds multiple decision trees and averages their predictions.
+
+**📌 Equation:**  
+For classification, final prediction is based on majority voting:
+
+$$Prediction = \text{Mode}(\hat{y}_1, \hat{y}_2, ..., \hat{y}_n)$$
+
+For regression, it is based on the mean value:
+
+$$Prediction = \frac{1}{N} \sum_{i=1}^{N} \hat{y}_i$$
+
+Where \( \hat{y}_i \) represents predictions from individual trees.
+
+**📌 Use Case:**  
+Used for **high-dimensional datasets** where individual decision trees may overfit.  
+Example: **Predicting customer churn in telecom**.
+
+**📌 Special Property:**  
+Uses **Bootstrap Aggregating (Bagging)** to improve stability.
+
+**📌 Evaluation Metrics:**  
+- **Accuracy, ROC-AUC** for classification.  
+- **MSE, RMSE** for regression.  
+
+**📌 Example:**  
+Predicting whether an **email is spam or not**, using multiple word features.
+
+---
+
+## **3️⃣ Support Vector Machine (SVM)**
+**📌 What It Is:**  
+A model that finds the **optimal hyperplane** for separating classes.
+
+**📌 Equation:**  
+A hyperplane is defined as:
+
+$$wX + b = 0$$
+
+Where:
+- \( w \) = Weight vector  
+- \( X \) = Feature vector  
+- \( b \) = Bias term
+
+For classification, the goal is to **maximize the margin**:
+
+$$\min \frac{1}{2} ||w||^2 \quad \text{subject to} \quad y_i(wX_i + b) \geq 1$$
+
+**📌 Use Case:**  
+Used in **text classification, bioinformatics, and image recognition**.  
+Example: **Classifying cancer cells as benign or malignant**.
+
+**📌 Types:**  
+1. **Linear SVM** → Best for **linearly separable data**.  
+2. **Non-Linear SVM** → Uses **Kernel Trick** for complex patterns.  
+
+**📌 Special Property:**  
+Maximizes **margin** to separate classes effectively.
+
+**📌 Evaluation Metrics:**  
+- **Precision, Recall, F1-score**.  
+- **Hinge Loss** measures boundary correctness.
+
+**📌 Example:**  
+Classifying **customer reviews** as positive or negative.
+
+---
+
+## **4️⃣ Naïve Bayes**
+**📌 What It Is:**  
+A probabilistic model based on **Bayes’ Theorem**.
+
+**📌 Equation:**  
+Bayes’ Theorem is given by:
+
+$$P(A|B) = \frac{P(B|A) P(A)}{P(B)}$$
+
+For classification:
+
+$$P(Y|X) = \frac{P(X|Y) P(Y)}{P(X)}$$
+
+Where:
+- \( P(A|B) \) = Posterior probability  
+- \( P(B|A) \) = Likelihood  
+- \( P(A) \) = Prior probability  
+- \( P(B) \) = Evidence
+
+**📌 Use Case:**  
+Works well for **text classification, sentiment analysis, and spam filtering**.  
+Example: **Detecting fake news articles based on text frequency**.
+
+**📌 Types:**  
+1. **Gaussian Naïve Bayes** → Assumes normal distribution for continuous data.  
+2. **Multinomial Naïve Bayes** → Best for word frequency data.  
+3. **Bernoulli Naïve Bayes** → Used for binary feature sets.
+
+**📌 Special Property:**  
+Assumes **independence between features** for fast computation.
+
+**📌 Evaluation Metrics:**  
+- **Log-Loss (Negative Log Likelihood)**.  
+- **Accuracy, Precision, Recall**.
+
+**📌 Example:**  
+Classifying **news articles as real or fake** based on word occurrences.
+
+---
+
+## **5️⃣ K-Means Clustering**
+**📌 What It Is:**  
+An unsupervised algorithm that groups similar data points into **K clusters**.
+
+**📌 Equation:**  
+The cluster centroids are updated iteratively:
+
+$$C_k = \frac{1}{N} \sum_{i=1}^{N} X_i$$
+
+Where:
+- \( C_k \) = Centroid of cluster \( k \)  
+- \( X_i \) = Data point assigned to cluster  
+- \( N \) = Number of data points in the cluster
+
+**📌 Use Case:**  
+Used in **customer segmentation, anomaly detection, and recommendation systems**.  
+Example: **Grouping customers based on spending habits**.
+
+**📌 Special Property:**  
+Uses **Euclidean Distance** for cluster assignment:
+
+$$d = \sqrt{(X_2 - X_1)^2 + (Y_2 - Y_1)^2}$$
+
+**📌 Evaluation Metrics:**  
+- **Silhouette Score** → Measures cluster cohesion.  
+- **WCSS (Within Cluster Sum of Squares)** → Measures intra-cluster variance.
+
+**📌 Example:**  
+Segmenting **customers into high-spenders, mid-range, and budget shoppers**.
+
+---
+
+## **6️⃣ Principal Component Analysis (PCA)**
+**📌 What It Is:**  
+A dimensionality reduction technique that removes redundancy while preserving variance.
+
+**📌 Equation:**  
+Eigenvalue decomposition of covariance matrix:
+
+$$X' = W X$$
+
+Where:
+- \( W \) = Transformation matrix  
+- \( X \) = Original dataset  
+- \( X' \) = Reduced feature representation
+
+**📌 Use Case:**  
+Used for **reducing dataset size** while retaining variance.  
+Example: **Facial recognition in security systems**.
+
+**📌 Special Property:**  
+- Converts correlated features into a set of **independent principal components**.  
+- Retains **maximum variance** in fewer dimensions.
+
+**📌 Evaluation Metrics:**  
+- **Explained Variance Ratio** → Indicates information retained.  
+- **Reconstruction Error** → Measures loss after compression.
+
+**📌 Example:**  
+Compressing **high-resolution images** into fewer dimensions.
+
+---
+
+## **7️⃣ Neural Networks (Deep Learning)**
+**📌 What It Is:**  
+A powerful model that mimics the human brain using layers of interconnected neurons.
+
+**📌 Equation:**  
+A neural network's forward propagation is calculated as:
+
+$$Z = W X + b$$
+
+Activation function:
+
+$$A = \sigma(Z)$$
+
+Where:
+- \( W \) = Weights  
+- \( X \) = Input data  
+- \( b \) = Bias  
+- \( \sigma \) = Activation function (ReLU, Sigmoid, Softmax)
+
+**📌 Use Case:**  
+Used in **image recognition, speech processing, and language translation**.  
+Example: **Predicting handwritten digits in OCR systems**.
+
+**📌 Special Property:**  
+Uses **backpropagation and gradient descent** for learning.
+
+**📌 Evaluation Metrics:**  
+- **Cross-Entropy Loss** (classification).  
+- **MSE** (regression).  
+
+**📌 Example:**  
+Generating **realistic human faces** in AI-powered image synthesis.
+
+---
