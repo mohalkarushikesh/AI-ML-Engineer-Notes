@@ -3,9 +3,9 @@
 - It assumes a **linear relationship** between independent (\(X\)) and dependent (\(Y\)) variables.
 
 #### **📌 Equation**
-\[
-Y = \beta_0 + \beta_1X + \epsilon
-\]
+
+\[Y = \beta_0 + \beta_1X + \epsilon\]
+
 Where:
 - \(Y\) → Dependent variable (target)
 - \(X\) → Independent variable (input)
