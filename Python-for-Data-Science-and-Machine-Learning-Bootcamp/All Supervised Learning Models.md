@@ -114,6 +114,20 @@ Used for classification problems, typically **binary (Yes/No, True/False) classi
 
 #### **📌 How It Works**
 1. **Calculate distances** between test data and stored data points (Euclidean, Manhattan, Hamming).
+Here’s the equation for **K-Nearest Neighbor (KNN)**:
+   1. The distance between two points \( A(X_1, Y_1) \) and \( B(X_2, Y_2) \) is often computed using the **Euclidean Distance** formula:
+   
+   \[d = \sqrt{(X_2 - X_1)^2 + (Y_2 - Y_1)^2}\]
+
+   Other distance metrics include:
+   2. **Manhattan Distance**:
+   
+   \[d = |X_2 - X_1| + |Y_2 - Y_1|\]
+   
+   3. **Hamming Distance** (for categorical data):
+   
+   \[d = \sum (X_i \neq Y_i)\]
+
 2. **Select K nearest points**:
    - **K ≈ sqrt(n)** (where \(n\) is the number of data points).
    - **Odd K** is preferred to avoid ties between two classes.
