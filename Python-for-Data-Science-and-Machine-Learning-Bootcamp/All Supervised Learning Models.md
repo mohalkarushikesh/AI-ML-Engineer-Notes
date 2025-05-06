@@ -1,3 +1,49 @@
+Here’s your **ultra-short Machine Learning (ML) algorithms cheatsheet** 🚀:
+
+### **Supervised Learning**
+1️⃣ **Linear Regression** → Predicts continuous values.  
+   _Ex:_ House price prediction.  
+
+
+2️⃣ **Logistic Regression** → Predicts probabilities for classification.  
+   _Ex:_ Spam detection.  
+
+
+3️⃣ **Decision Tree** → Splits data into rules for classification.  
+   _Ex:_ Loan approval system.  
+
+
+4️⃣ **Random Forest** → Multiple decision trees for better predictions.  
+   _Ex:_ Fraud detection.  
+
+
+5️⃣ **Support Vector Machine (SVM)** → Finds optimal boundary for separation.  
+   _Ex:_ Cancer cell classification.  
+
+
+6️⃣ **Naïve Bayes** → Probabilistic classification using Bayes’ theorem.  
+   _Ex:_ Sentiment analysis.  
+
+
+7️⃣ **K-Nearest Neighbor (KNN)** → Classifies based on closest neighbors.  
+   _Ex:_ Handwritten digit recognition.  
+
+
+### **Unsupervised Learning**
+8️⃣ **K-Means Clustering** → Groups similar data points into clusters.  
+   _Ex:_ Customer segmentation.  
+
+
+9️⃣ **Principal Component Analysis (PCA)** → Reduces dataset size while keeping variance.  
+   _Ex:_ Face recognition.  
+
+
+### **Deep Learning**
+🔟 **Neural Networks** → Layers of artificial neurons for complex patterns.  
+   _Ex:_ Image recognition & NLP.  
+
+---
+
 ### **Linear Regression**
 - **Predicts continuous values** by fitting a straight line to the data.
 - It assumes a **linear relationship** between independent (\(X\)) and dependent (\(Y\)) variables.
