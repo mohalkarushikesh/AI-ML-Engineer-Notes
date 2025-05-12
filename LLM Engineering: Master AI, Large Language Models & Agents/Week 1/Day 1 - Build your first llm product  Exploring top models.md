@@ -21,7 +21,7 @@ day 1 : LLM Engineering
 	open-ai >> settings (make payment) >> billings 
 		dashborads >> API keys
 
-5. create the .env file
+5. create the .env file for stroring API keys safely 
 	vim .env
   OPENAI_API_KEY=sk-proj-(paste-key-here)
 
