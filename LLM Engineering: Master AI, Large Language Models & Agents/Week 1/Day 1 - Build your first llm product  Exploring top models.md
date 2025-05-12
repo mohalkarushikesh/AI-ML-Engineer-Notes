@@ -16,7 +16,8 @@ day 1 : LLM Engineering
   Download/Install Anaconda => setup
      conda env create -f environment.yml
 
-4. create a openai key (free api key : https://github.com/dan1471/FREE-openai-api-keys) format: OPENAI_API_KEY=sk-proj-efghijkl5678mnopabcd1234efghijkl5678mnop
+4. Setting up OpenAI API Keys
+ - create a openai key (free api key : https://github.com/dan1471/FREE-openai-api-keys) format: OPENAI_API_KEY=sk-proj-efghijkl5678mnopabcd1234efghijkl5678mnop
 	open-ai >> settings (make payment) >> billings 
 		dashborads >> API keys
 
