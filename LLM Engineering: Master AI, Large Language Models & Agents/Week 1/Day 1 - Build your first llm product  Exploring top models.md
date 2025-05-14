@@ -18,7 +18,9 @@ day 1 : LLM Engineering
 
 4. Setting up OpenAI API Keys
  - create a openai key (free api key : https://github.com/dan1471/FREE-openai-api-keys) format: OPENAI_API_KEY=sk-proj-efghijkl5678mnopabcd1234efghijkl5678mnop
-	open-ai >> settings (make payment) >> billings 
+	GPT API from open-ai >> settings (make payment) >> billings
+	Cloude-API
+	Gemini-API
 		dashborads >> API keys
 
 5. create the .env file for stroring API keys safely 
@@ -27,6 +29,13 @@ day 1 : LLM Engineering
 
 6. activate your environment run jypyter lab
 	jupyter lab
+
+Creating AI Webpage Summarizer 
+
+
+Types of prompts
+	system prompt
+ 	user prompt	 
 
 
 
