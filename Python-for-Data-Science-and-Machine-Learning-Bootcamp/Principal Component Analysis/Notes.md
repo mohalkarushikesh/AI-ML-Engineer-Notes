@@ -6,7 +6,6 @@ inorder to identify the underlying structure of those variables
   - Actually lines are perpandicular to each other in n-dimentional space 
 - n-Dimentional Spaces is the variable sample space 
   - There are as many dimentions as there are variables, so the dataset with 4 variables the sample space is 4 dimentional 
-
 ![image](https://github.com/user-attachments/assets/8b7b0dd5-0043-414f-be57-90ac96dca72d)
 - Components are linear transformation that chooses the variable system for dataset such that the greatest variance of the dataset
   comes to lie on the first axis 
