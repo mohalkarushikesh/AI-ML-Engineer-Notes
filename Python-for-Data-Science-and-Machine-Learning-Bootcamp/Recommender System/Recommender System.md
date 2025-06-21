@@ -1,6 +1,29 @@
-**Recommender System**
-- The most common types of recommender systems are Content-Based and Collaborative filtering (CF)
-- Content Based : recommender systems focus on the attributes of the items and give you recommendations based on similarity between them
-- Collaborative Filtering: produces recommedations based on the knowlege of user's attitude to items that it is uses the 'wisdom of the crowd' to recommend items.
-- In general CF is more commonly used than CB systems because it usually gives better resuls and is relatively easy to understand (from overall implementation perspective)
-- The algorithm has ability to do feature learning on its own which means that it can start to learn for itself what features to use 
+## 📚 Recommender System
+
+Recommender systems suggest items to users based on various signals such as preferences, behavior, or item attributes. The two most common types are:
+
+### 🔹 Content-Based Filtering (CB)
+- Focuses on the **attributes of items**.
+- Recommends items that are similar to those the user liked in the past.
+- Relies heavily on metadata, such as genre, tags, or features.
+- Example: Recommending similar books based on topics or author style.
+
+### 🔹 Collaborative Filtering (CF)
+- Makes recommendations using the **"wisdom of the crowd"**.
+- Learns from the **interactions between users and items** (e.g., ratings, likes, purchases).
+- Does **feature learning automatically**, reducing manual effort in feature engineering.
+- Generally more effective and scalable than content-based systems.
+
+---
+
+## 🧠 Types of Collaborative Filtering
+
+### 🔸 Memory-Based Collaborative Filtering
+- Uses similarity metrics (e.g., **cosine similarity**, Pearson correlation) to find like-minded users or similar items.
+- Often implemented using **User-User** or **Item-Item** similarity matrices.
+
+### 🔸 Model-Based Collaborative Filtering
+- Uses machine learning techniques to **learn latent features** from user-item interactions.
+- Commonly implemented with **SVD (Singular Value Decomposition)**, Matrix Factorization, or deep learning models.
+
+---
