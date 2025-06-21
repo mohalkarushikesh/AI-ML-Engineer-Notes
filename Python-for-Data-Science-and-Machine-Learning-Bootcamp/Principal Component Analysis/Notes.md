@@ -15,6 +15,6 @@ inorder to identify the underlying structure of those variables
 ![image](https://github.com/user-attachments/assets/f6497092-5c6b-43a1-b719-6e0acc596452)
 - Note that components are uncorrelated, since in the sample space they are othogonal to each other 
 - we can continue this analysis in hiher dimentions 
-![image](https://github.com/user-attachments/assets/e3a13763-938e-490c-906e-de8756c5f6d6)
+![image](https://github.com/user-attachments/assets/363e978c-a6ee-4e48-ba81-89fe4ccb7efd)
 - if we continue this technique on a dataset with the large no of variables, we can compress the amount of explained variation to just a few components 
 - The most challenging part of the PCA is interpreting the components 
