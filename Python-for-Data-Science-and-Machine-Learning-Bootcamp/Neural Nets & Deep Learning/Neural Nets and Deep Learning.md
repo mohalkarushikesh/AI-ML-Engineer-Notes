@@ -21,20 +21,14 @@
   $$y = x_1 + x_2$$
 
 - Add weights:  
-  $$
-  y = x_1 w_1 + x_2 w_2
-  $$
+  $$y = x_1 w_1 + x_2 w_2$$
 
 - Add bias term \( b \):  
-  $$
-  y = x_1 w_1 + x_2 w_2 + b
-  $$  
+  $$y = x_1 w_1 + x_2 w_2 + b$$  
   This allows shifting the decision boundary away from the origin.
 
 - If:  
-  $$
-  b = -10,\quad z = xw + b
-  $$  
+  $$b = -10,\quad z = xw + b$$  
   Then output won’t activate unless \( xw > 10 \), hence the term **bias**.
 
 <img src="https://github.com/user-attachments/assets/1b874724-b211-4054-8e58-67cc60e56081" alt="alt text" style="width:50%; height:250;">
@@ -106,18 +100,12 @@ Used to introduce non-linearity and control outputs
 
 - Each layer computes:
 
-  $$
-  z = w \cdot x + b
-  $$
-  $$
-  a = \sigma(z)
-  $$
+  $$z = w \cdot x + b$$
+  $$a = \sigma(z)$$
 
 - Final prediction:
 
-  $$
-  \hat{y} = a^{(L)}
-  $$
+  $$\hat{y} = a^{(L)}$$
 
 ---
 
