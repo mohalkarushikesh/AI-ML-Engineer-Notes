@@ -18,20 +18,28 @@
 ### **2. Perceptron Math Refresher**
 
 - Without weights:  
-  $$y = x_1 + x_2$$
+  $$
+  y = x_1 + x_2
+  $$
 
 - Add weights:  
-  $$y = x_1w_1 + x_2w_2$$
+  $$
+  y = x_1 w_1 + x_2 w_2
+  $$
 
 - Add bias term \( b \):  
-  $$y = x_1w_1 + x_2w_2 + b$$  
+  $$
+  y = x_1 w_1 + x_2 w_2 + b
+  $$  
   This allows shifting the decision boundary away from the origin.
 
 - If:  
-  $$b = -10,\ z = xw + b$$  
+  $$
+  b = -10,\quad z = xw + b
+  $$  
   Then output won’t activate unless \( xw > 10 \), hence the term **bias**.
 
-<img src="https://github.com/user-attachments/assets/3f0d1aac-71c3-4cc4-bc24-0c1990bd4ba4" alt="alt text" style="width:50%; height:250;">
+<img src="image.png" alt="alt text" style="width:50%; height:250;">
 
 ---
 
@@ -51,21 +59,22 @@
 
 ### **4. Activation Functions**
 
-Used to introduce non-linearity and control outputs:
+Used to introduce non-linearity and control outputs
 
-| Function    | Formula / Logic                          | Output Range | Notes                                 |
-|-------------|-------------------------------------------|---------------|----------------------------------------|
-| **Step**    | Outputs 0 or 1                            | 0 or 1        | Not commonly used in modern networks   |
-| **Sigmoid** | \( \frac{1}{1 + e^{-z}} \)                | (0, 1)        | Good for binary classification         |
-| **Tanh**    | \( \tanh(z) \)                            | (-1, 1)       | Zero-centered alternative to sigmoid   |
-| **ReLU**    | \( \max(0, z) \)                          | [0, ∞)        | Prevents vanishing gradient, fast      |
-| **Softmax** | \( \frac{e^{z_i}}{\sum_k e^{z_k}} \)      | (0, 1), sum=1 | Used for multi-class classification    |
+| Function    | Formula                          | Output Range | Notes                                 |
+|-------------|-----------------------------------|---------------|----------------------------------------|
+| **Step**    | Outputs 0 or 1                    | 0 or 1        | Not commonly used in modern networks   |
+| **Sigmoid** | $\frac{1}{1 + e^{-z}}$            | (0, 1)        | Good for binary classification         |
 
-**Sigmoid** : 
-<img src="https://github.com/user-attachments/assets/d5a7ea11-ec03-4979-8773-e36a321f2a44" alt="Sigmoid activation function" style="width:50%; height:250px;">
+<img src="image-2.png" alt="alt text" style="width:50%; height:250;">
 
-**Tanh** : 
-<img src="https://github.com/user-attachments/assets/6c9925da-467d-4f36-9abb-46f7818efadf" alt="Tanh activation function" style="width:50%; height:250px;">
+| **Tanh**    | $\tanh(z)$                        | (-1, 1)       | Zero-centered alternative to sigmoid   |
+
+<img src="image-3.png" alt="alt text" style="width:50%; height:250;">
+
+| **ReLU**    | $\max(0, z)$                      | [0, ∞)        | Prevents vanishing gradient, fast      |
+| **Softmax** | $\frac{e^{z_i}}{\sum_k e^{z_k}}$  | (0, 1), sum=1 | Used for multi-class classification    |
+
 
 ---
 
@@ -74,19 +83,18 @@ Used to introduce non-linearity and control outputs:
 #### **Non-Exclusive Classes** (multi-label)
 
 - Each data point can belong to multiple categories (e.g. “beach”, “family”, “vacation”):
-  
 
-<img src="https://github.com/user-attachments/assets/c6548f53-167e-485d-b808-749fdc5908a9" alt="alt text" style="width:50%; height:250;">
-<img src="https://github.com/user-attachments/assets/d61561bf-529c-4da6-ad9a-bbe40e77c72d" alt="alt text" style="width:50%; height:250;">
-<img src="https://github.com/user-attachments/assets/013ff5c1-65d8-4a5b-859d-ed59d49b0c05" alt="alt text" style="width:50%; height:250;">
+<img src="image-5.png" alt="alt text" style="width:50%; height:250;">
+<img src="image-6.png" alt="alt text" style="width:50%; height:250;">
+<img src="image-7.png" alt="alt text" style="width:50%; height:250;">
 
 #### **Mutually Exclusive Classes** (single-label)
 
-- Each input is assigned only one class label (e.g. “dog” **or** “cat”, not both)
-- **Softmax Activation** ensures only one class is assigned with highest probability  
-  Example output: `[Red: 0.1, Green: 0.6, Blue: 0.3]`
+- Each input is assigned only one class label
+- **Softmax Activation** ensures only one class is assigned the highest probability  
+  Example: `[Red: 0.1, Green: 0.6, Blue: 0.3]`
 
-<img src="https://github.com/user-attachments/assets/5db7e83c-6009-4cde-ae1b-84b5af213d60" alt="alt text" style="width:50%; height:250;">
+<img src="image-4.png" alt="alt text" style="width:50%; height:250;">
 
 #### **One-Hot Encoding**:
 - Converts labels into vectors  
@@ -96,32 +104,91 @@ Used to introduce non-linearity and control outputs:
 
 ### **6. Training the Network**
 
-- **Forward Propagation**: Input flows through each layer
-- **Cost/Loss Functions**:
-  - Binary Cross-Entropy
-  - Categorical Cross-Entropy
-  - Mean Squared Error (MSE), etc.
-- **Backpropagation**: Adjusts weights based on loss gradients
-- **Gradient Descent**: Optimization to minimize error
+#### 🧠 Forward Propagation
+
+- Each layer computes:
+
+  $$
+  z = w \cdot x + b
+  $$
+  $$
+  a = \sigma(z)
+  $$
+
+- Final prediction:
+
+  $$
+  \hat{y} = a^{(L)}
+  $$
 
 ---
 
-### **7. TensorFlow & Keras Implementation**
+#### 📉 Loss / Cost Functions
 
-Use **TensorFlow 2.x** and **Keras** for creating and training neural networks.
+- **Binary Cross-Entropy**:  
+  $$
+  \mathcal{L} = -[y \log(a) + (1 - y) \log(1 - a)]
+  $$
 
-#### Key Components:
-- **Layers**: `Dense`, `Dropout`, `Activation`
-- **Optimizers**: `adam`, `sgd`, `rmsprop`
-- **Metrics**: `accuracy`, `loss`
-- **Callbacks**: `EarlyStopping`, `ModelCheckpoint`
+- **Categorical Cross-Entropy**:  
+  $$
+  \mathcal{L} = -\sum_{i=1}^{C} y_i \log(p_i)
+  $$
 
-#### Visualization:
-- **TensorBoard** – for tracking metrics, graphs, and more.
+- **Mean Squared Error (MSE)**:  
+  $$
+  \mathcal{L} = \frac{1}{n} \sum_{i=1}^{n} (y_i - a_i)^2
+  $$
 
 ---
 
-### ⚙️ Example (Keras Classification)
+#### 🔁 Backpropagation
+
+Computes gradients using the **chain rule**:
+
+$$
+\frac{\partial \mathcal{L}}{\partial w}, \quad \frac{\partial \mathcal{L}}{\partial b}
+$$
+
+---
+
+#### ⚙️ Gradient Descent
+
+Weight update rule:
+
+$$
+w := w - \eta \cdot \frac{\partial \mathcal{L}}{\partial w}
+$$
+
+Where:
+- \( \eta \) = learning rate
+- Step size determines convergence speed vs stability
+
+---
+
+#### 🤖 Adam Optimizer
+
+Adaptive technique combining:
+- Momentum
+- Per-parameter learning rates
+
+**Reference**: *Kingma & Ba, 2015*
+
+---
+
+### ✅ Summary Table
+
+| Step | Description |
+|------|-------------|
+| Forward Propagation | Compute outputs layer by layer |
+| Loss Function | Quantify prediction error |
+| Backpropagation | Compute gradients |
+| Gradient Descent | Update weights to reduce loss |
+| Adam Optimizer | Efficient, adaptive optimization |
+
+---
+
+### **7. TensorFlow & Keras Example**
 
 ```python
 from tensorflow.keras.models import Sequential
