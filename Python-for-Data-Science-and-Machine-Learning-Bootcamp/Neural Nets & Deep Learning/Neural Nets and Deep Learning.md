@@ -132,17 +132,58 @@ $$
 
 ---
 
-#### ⚙️ Gradient Descent
+### ⚙️ Gradient Descent – In Depth
 
-Weight update rule:
+Gradient Descent is an **optimization algorithm** used to minimize a function—most often the **loss function** in machine learning and deep learning.
 
-$$
-w := w - \eta \cdot \frac{\partial \mathcal{L}}{\partial w}
-$$
+In our context, the function we want to minimize is the **loss** $\mathcal{L}$, which measures how far off the model’s predictions are from the true values.
 
-Where:
-- $$\( \eta \)$$ = learning rate
-- Step size determines convergence speed vs stability
+---
+
+### 🔁 The Update Rule
+
+$$w := w - \eta \cdot \frac{\partial \mathcal{L}}{\partial w}$$
+
+Let’s break this down:
+
+| Term | Meaning |
+|------|---------|
+| **$w$** | The current weight (parameter) of the model |
+| **$\frac{\partial \mathcal{L}}{\partial w}$** | The **gradient**: how much the loss changes with respect to the weight |
+| **$\eta$** | The **learning rate**: a small positive scalar that controls how big a step we take |
+| **$w :=$** | Notation for updating the weight (i.e., “replace $w$ with this new value”) |
+
+---
+
+### 📉 Why Subtract the Gradient?
+
+Imagine you're standing on a mountain in the fog, trying to reach the bottom. You can’t see it—but you can feel the slope beneath your feet. You take a small step in the direction that goes *downhill most steeply*. This is exactly what subtracting the gradient does:  
+- The gradient points in the **direction of steepest ascent**,  
+- So we **subtract** it to move *downhill* toward the minimum of the loss.
+
+---
+
+### 🧭 Role of Learning Rate ($\eta$)
+
+- If $\eta$ is **too small**, learning is **very slow**—like taking baby steps.
+- If $\eta$ is **too large**, you might **overshoot** the minimum—or even diverge and make things worse.
+- The ideal $\eta$ gives a smooth, steady descent to the lowest point.
+
+---
+
+### 📈 Intuition With a Plot
+
+If you plotted your loss $\mathcal{L}(w)$ against the weight $w$:
+
+- You’d see a curve—maybe a bowl shape.
+- The goal is to reach the **bottom** of the bowl where loss is minimized.
+- Each update nudges your position slightly closer to the bottom.
+
+---
+
+### 💡 Final Thoughts
+
+Gradient descent is powerful but not magic—it relies on careful tuning of the learning rate and may get stuck in local minima in complex models. That's why enhancements like **momentum**, **RMSProp**, and **Adam** were developed.
 
 ---
 
