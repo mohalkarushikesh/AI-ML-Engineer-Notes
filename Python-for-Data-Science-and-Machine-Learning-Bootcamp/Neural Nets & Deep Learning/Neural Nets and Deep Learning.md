@@ -61,9 +61,12 @@ Used to introduce non-linearity and control outputs:
 | **ReLU**    | \( \max(0, z) \)                          | [0, ∞)        | Prevents vanishing gradient, fast      |
 | **Softmax** | \( \frac{e^{z_i}}{\sum_k e^{z_k}} \)      | (0, 1), sum=1 | Used for multi-class classification    |
 
-**Sigmoid** : <img src="https://github.com/user-attachments/assets/d5a7ea11-ec03-4979-8773-e36a321f2a44" alt="alt text" style="width:50%; height:250;">
+**Sigmoid** : 
+<img src="https://github.com/user-attachments/assets/d5a7ea11-ec03-4979-8773-e36a321f2a44" alt="Sigmoid activation function" style="width:50%; height:250px;">
 
-**Tanh** : <img src="https://github.com/user-attachments/assets/6c9925da-467d-4f36-9abb-46f7818efadf" alt="alt text" style="width:50%; height:250;">
+**Tanh** : 
+<img src="https://github.com/user-attachments/assets/6c9925da-467d-4f36-9abb-46f7818efadf" alt="Tanh activation function" style="width:50%; height:250px;">
+
 ---
 
 ### **5. Multi-Class Classification**
