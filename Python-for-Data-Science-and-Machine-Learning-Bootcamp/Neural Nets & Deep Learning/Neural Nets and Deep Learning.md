@@ -112,19 +112,13 @@ Used to introduce non-linearity and control outputs
 #### 📉 Loss / Cost Functions
 
 - **Binary Cross-Entropy**:  
-  $$
-  \mathcal{L} = -[y \log(a) + (1 - y) \log(1 - a)]
-  $$
+  $$\mathcal{L} = -[y \log(a) + (1 - y) \log(1 - a)]$$
 
 - **Categorical Cross-Entropy**:  
-  $$
-  \mathcal{L} = -\sum_{i=1}^{C} y_i \log(p_i)
-  $$
+  $$\mathcal{L} = -\sum_{i=1}^{C} y_i \log(p_i)$$
 
 - **Mean Squared Error (MSE)**:  
-  $$
-  \mathcal{L} = \frac{1}{n} \sum_{i=1}^{n} (y_i - a_i)^2
-  $$
+  $$\mathcal{L} = \frac{1}{n} \sum_{i=1}^{n} (y_i - a_i)^2$$
 
 ---
 
