@@ -31,7 +31,7 @@
   $$b = -10,\ z = xw + b$$  
   Then output won’t activate unless \( xw > 10 \), hence the term **bias**.
 
-<img src="![image](https://github.com/user-attachments/assets/3f0d1aac-71c3-4cc4-bc24-0c1990bd4ba4)" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/3f0d1aac-71c3-4cc4-bc24-0c1990bd4ba4" alt="alt text" style="width:50%; height:250;">
 
 ---
 
