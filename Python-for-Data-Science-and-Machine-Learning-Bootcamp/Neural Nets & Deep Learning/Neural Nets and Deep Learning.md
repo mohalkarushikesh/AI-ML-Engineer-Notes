@@ -37,7 +37,7 @@
   $$  
   Then output won’t activate unless \( xw > 10 \), hence the term **bias**.
 
-<img src="image.png" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/1b874724-b211-4054-8e58-67cc60e56081" alt="alt text" style="width:50%; height:250;">
 
 ---
 
@@ -64,11 +64,11 @@ Used to introduce non-linearity and control outputs
 | **Step**    | Outputs 0 or 1                    | 0 or 1        | Not commonly used in modern networks   |
 | **Sigmoid** | $\frac{1}{1 + e^{-z}}$            | (0, 1)        | Good for binary classification         |
 
-<img src="image-2.png" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/4b06ff6b-08b0-41df-aa48-d7bbe21f3db7" alt="alt text" style="width:50%; height:250;">
 
 | **Tanh**    | $\tanh(z)$                        | (-1, 1)       | Zero-centered alternative to sigmoid   |
 
-<img src="image-3.png" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/b156b57a-6813-4a05-8b10-26db2f12c49f" alt="alt text" style="width:50%; height:250;">
 
 | **ReLU**    | $\max(0, z)$                      | [0, ∞)        | Prevents vanishing gradient, fast      |
 | **Softmax** | $\frac{e^{z_i}}{\sum_k e^{z_k}}$  | (0, 1), sum=1 | Used for multi-class classification    |
@@ -82,9 +82,9 @@ Used to introduce non-linearity and control outputs
 
 - Each data point can belong to multiple categories (e.g. “beach”, “family”, “vacation”):
 
-<img src="image-5.png" alt="alt text" style="width:50%; height:250;">
-<img src="image-6.png" alt="alt text" style="width:50%; height:250;">
-<img src="image-7.png" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/10e18dde-8572-4c54-b143-bdaa9124aaac" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/b80c6054-a8fc-434c-8603-e3a7ba3b8a45" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/01fe0a25-2370-4421-8a21-a6dd00e6163b" alt="alt text" style="width:50%; height:250;">
 
 #### **Mutually Exclusive Classes** (single-label)
 
@@ -92,7 +92,7 @@ Used to introduce non-linearity and control outputs
 - **Softmax Activation** ensures only one class is assigned the highest probability  
   Example: `[Red: 0.1, Green: 0.6, Blue: 0.3]`
 
-<img src="image-4.png" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/24d9c320-1b0d-4aa4-b1a6-32a24b490ef8" alt="alt text" style="width:50%; height:250;">
 
 #### **One-Hot Encoding**:
 - Converts labels into vectors  
