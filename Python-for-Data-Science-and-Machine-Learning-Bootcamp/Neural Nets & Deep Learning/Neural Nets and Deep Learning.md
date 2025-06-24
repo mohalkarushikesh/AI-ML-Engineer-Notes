@@ -111,14 +111,66 @@ Used to introduce non-linearity and control outputs
 
 #### 📉 Loss / Cost Functions
 
-- **Binary Cross-Entropy**:  
-  $$\mathcal{L} = -[y \log(a) + (1 - y) \log(1 - a)]$$
+### 🔹 **1. Binary Cross-Entropy**
 
-- **Categorical Cross-Entropy**:  
-  $$\mathcal{L} = -\sum_{i=1}^{C} y_i \log(p_i)$$
+$$\mathcal{L} = -[y \log(a) + (1 - y) \log(1 - a)]$$
 
-- **Mean Squared Error (MSE)**:  
-  $$\mathcal{L} = \frac{1}{n} \sum_{i=1}^{n} (y_i - a_i)^2$$
+#### ✅ When to use:
+- **Binary classification tasks**, where the output is 0 or 1 (e.g., spam or not spam).
+- The model outputs a **probability** \( a \in (0, 1) \) using a **sigmoid** activation.
+
+#### 🧠 Intuition:
+- If the true label \( y = 1 \), the loss becomes \( -\log(a) \)
+- If \( y = 0 \), the loss becomes \( -\log(1 - a) \)
+- The function **punishes incorrect confident predictions** (e.g., predicting 0.01 when the truth is 1)
+
+#### 📌 Characteristics:
+- Output is always non-negative
+- Highly sensitive to prediction confidence
+- As prediction approaches true value, loss tends toward 0
+
+---
+
+### 🔹 **2. Categorical Cross-Entropy**
+
+$$\mathcal{L} = -\sum_{i=1}^{C} y_i \log(p_i)$$
+
+#### ✅ When to use:
+- **Multi-class classification** where only **one class is correct**
+- Model outputs a **vector of probabilities** across \( C \) classes using **Softmax** activation
+
+#### 🧠 Intuition:
+- Only one \( y_i \) is 1 (true class), rest are 0
+- So the sum reduces to: \( -\log(\text{probability of the correct class}) \)
+- Encourages the model to assign high probability to the correct class
+
+#### 📌 Characteristics:
+- Assumes **one-hot encoding** of labels
+- Loss decreases as predicted probability of true class increases
+- Generalization of binary cross-entropy for >2 classes
+
+---
+
+### 🔹 **3. Mean Squared Error (MSE)**
+
+$$\mathcal{L} = \frac{1}{n} \sum_{i=1}^{n} (y_i - a_i)^2$$
+
+#### ✅ When to use:
+- **Regression problems**, where the output is a continuous value
+- You want to minimize the **average squared difference** between prediction and ground truth
+
+#### 🧠 Intuition:
+- Penalizes large errors more heavily than small ones
+- Squaring the error keeps all values positive and amplifies larger deviations
+
+#### 📌 Characteristics:
+- Smooth and easy to compute
+- Sensitive to outliers (because of the squared term)
+- Not ideal for classification (cross-entropy performs better there)
+
+---
+
+Each of these loss functions plays a key role in shaping how a neural network learns. Choosing the **right one for your problem type** is crucial for successful model training.
 
 ---
 
