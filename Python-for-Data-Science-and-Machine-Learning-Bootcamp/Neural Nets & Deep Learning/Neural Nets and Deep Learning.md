@@ -141,7 +141,7 @@ w := w - \eta \cdot \frac{\partial \mathcal{L}}{\partial w}
 $$
 
 Where:
-- \( \eta \) = learning rate
+- $$\( \eta \)$$ = learning rate
 - Step size determines convergence speed vs stability
 
 ---
