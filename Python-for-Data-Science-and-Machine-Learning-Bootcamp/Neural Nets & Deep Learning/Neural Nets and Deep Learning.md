@@ -18,9 +18,7 @@
 ### **2. Perceptron Math Refresher**
 
 - Without weights:  
-  $$
-  y = x_1 + x_2
-  $$
+  $$y = x_1 + x_2$$
 
 - Add weights:  
   $$
