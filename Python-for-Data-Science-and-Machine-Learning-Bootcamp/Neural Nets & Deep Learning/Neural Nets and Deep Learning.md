@@ -57,16 +57,12 @@ Used to introduce non-linearity and control outputs:
 |-------------|-------------------------------------------|---------------|----------------------------------------|
 | **Step**    | Outputs 0 or 1                            | 0 or 1        | Not commonly used in modern networks   |
 | **Sigmoid** | \( \frac{1}{1 + e^{-z}} \)                | (0, 1)        | Good for binary classification         |
-
-<img src="https://github.com/user-attachments/assets/d5a7ea11-ec03-4979-8773-e36a321f2a44" alt="alt text" style="width:50%; height:250;">
-
 | **Tanh**    | \( \tanh(z) \)                            | (-1, 1)       | Zero-centered alternative to sigmoid   |
-
-<img src="https://github.com/user-attachments/assets/6c9925da-467d-4f36-9abb-46f7818efadf" alt="alt text" style="width:50%; height:250;">
-
 | **ReLU**    | \( \max(0, z) \)                          | [0, ∞)        | Prevents vanishing gradient, fast      |
 | **Softmax** | \( \frac{e^{z_i}}{\sum_k e^{z_k}} \)      | (0, 1), sum=1 | Used for multi-class classification    |
 
+Sigmoid : <img src="https://github.com/user-attachments/assets/d5a7ea11-ec03-4979-8773-e36a321f2a44" alt="alt text" style="width:50%; height:250;">
+Tanh : <img src="https://github.com/user-attachments/assets/6c9925da-467d-4f36-9abb-46f7818efadf" alt="alt text" style="width:50%; height:250;">
 ---
 
 ### **5. Multi-Class Classification**
