@@ -58,10 +58,10 @@ Used to introduce non-linearity and control outputs:
 | **Step**    | Outputs 0 or 1                            | 0 or 1        | Not commonly used in modern networks   |
 | **Sigmoid** | \( \frac{1}{1 + e^{-z}} \)                | (0, 1)        | Good for binary classification         |
 
-<img src="image-2.png" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/d5a7ea11-ec03-4979-8773-e36a321f2a44" alt="alt text" style="width:50%; height:250;">
 
 | **Tanh**    | \( \tanh(z) \)                            | (-1, 1)       | Zero-centered alternative to sigmoid   |
-<img src="imag-3.png" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/6c9925da-467d-4f36-9abb-46f7818efadf" alt="alt text" style="width:50%; height:250;">
 | **ReLU**    | \( \max(0, z) \)                          | [0, ∞)        | Prevents vanishing gradient, fast      |
 | **Softmax** | \( \frac{e^{z_i}}{\sum_k e^{z_k}} \)      | (0, 1), sum=1 | Used for multi-class classification    |
 
@@ -74,9 +74,9 @@ Used to introduce non-linearity and control outputs:
 - Each data point can belong to multiple categories (e.g. “beach”, “family”, “vacation”):
   
 
-<img src="image-5.png" alt="alt text" style="width:50%; height:250;">
-<img src="image-6.png" alt="alt text" style="width:50%; height:250;">
-<img src="image-7.png" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/c6548f53-167e-485d-b808-749fdc5908a9" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/d61561bf-529c-4da6-ad9a-bbe40e77c72d" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/013ff5c1-65d8-4a5b-859d-ed59d49b0c05" alt="alt text" style="width:50%; height:250;">
 
 #### **Mutually Exclusive Classes** (single-label)
 
@@ -84,7 +84,7 @@ Used to introduce non-linearity and control outputs:
 - **Softmax Activation** ensures only one class is assigned with highest probability  
   Example output: `[Red: 0.1, Green: 0.6, Blue: 0.3]`
 
-<img src="image-4.png" alt="alt text" style="width:50%; height:250;">
+<img src="https://github.com/user-attachments/assets/5db7e83c-6009-4cde-ae1b-84b5af213d60" alt="alt text" style="width:50%; height:250;">
 
 #### **One-Hot Encoding**:
 - Converts labels into vectors  
