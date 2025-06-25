@@ -198,9 +198,7 @@ Think of it as **error attribution**: it tells each neuron how much it contribut
 Let’s define a few basics:
 
 - **Activations in layer \( l \):**  
-  $$
-  a^l
-  $$
+  $$ a^l $$
 
 - **Weights connecting layer \( l-1 \) to \( l \):**  
   $$
