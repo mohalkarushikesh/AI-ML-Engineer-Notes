@@ -120,8 +120,8 @@
   - The model outputs a **probability** \( a \in (0, 1) \) using a **sigmoid** activation.
 
   #### 🧠 Intuition:
-  - If the true label \( y = 1 \), the loss becomes \( -\log(a) \)
-  - If \( y = 0 \), the loss becomes \( -\log(1 - a) \)
+  - If the true label \( y = 1 \), the loss becomes $-\log(a)$
+  - If \( y = 0 \), the loss becomes  $-\log(1 - a)$
   - The function **punishes incorrect confident predictions** (e.g., predicting 0.01 when the truth is 1)
 
   #### 📌 Characteristics:
@@ -140,8 +140,8 @@
   - Model outputs a **vector of probabilities** across \( C \) classes using **Softmax** activation
 
   #### 🧠 Intuition:
-  - Only one \( y_i \) is 1 (true class), rest are 0
-  - So the sum reduces to: \( -\log(\text{probability of the correct class}) \)
+  - Only one $y_i$ is 1 (true class), rest are 0
+  - So the sum reduces to: $-\log(\text{probability of the correct class})$
   - Encourages the model to assign high probability to the correct class
 
   #### 📌 Characteristics:
@@ -197,23 +197,17 @@
 
   Let’s define a few basics:
 
-  - **Activations in layer \( l \):**  
-    $a^l$
+  - **Activations in layer \( l \):** $a^l$
 
-  - **Weights connecting layer \( l-1 \) to \( l \):**  
-    $w^l$
+  - **Weights connecting layer \( l-1 \) to \( l \):** $w^l$
 
-  - **Bias vector for layer \( l \):**  
-    $b^l$
+  - **Bias vector for layer \( l \):** $b^l$
 
-  - **Weighted input to layer \( l \):**  
-    $z^l = w^l a^{l-1} + b^l$
+  - **Weighted input to layer \( l \):**  $z^l = w^l a^{l-1} + b^l$
 
-  - **Activation function (e.g., ReLU, sigmoid):**  
-    $\sigma(z)$
+  - **Activation function (e.g., ReLU, sigmoid):** $\sigma(z)$
 
-  - **Loss function:**  
-    $\mathcal{L}(a^L, y)$
+  - **Loss function:** $\mathcal{L}(a^L, y)$
 
   ---
 
@@ -222,49 +216,32 @@
   ### 1. **Forward Propagation**
 
   For each layer \( l \):
-  - Weighted sum:  
-    $z^l = w^l a^{l-1} + b^l$
-  - Activation:  
-    $a^l = \sigma(z^l)$
+  - Weighted sum: $z^l = w^l a^{l-1} + b^l$
+  - Activation: $a^l = \sigma(z^l)$
 
   ---
 
   ### 2. **Compute Output Layer Error**
 
   At the output layer \( L \), compute:
-  - Error:  
-    $$
-    \delta^L = \nabla_a \mathcal{L}(a^L, y) \odot \sigma'(z^L)
-    $$
+  - Error: $\delta^L = \nabla_a \mathcal{L}(a^L, y) \odot \sigma'(z^L)$
+
   Where:
+  - Derivative of loss wrt output activations $a_a \mathcal{L}$
 
-  - Derivative of loss wrt output activations
-  $$
-  a_a \mathcal{L} 
-  $$
-
-  - Element-wise multiplication
-  $$ 
-  \odot 
-  $$ 
-  - Derivative of the activation function at layer \( L \)
-  $$
-  \sigma'(z^L) 
-  $$
+  - Element-wise multiplication $\odot$ 
+  
+  - Derivative of the activation function at layer \( L \) $\sigma'(z^L)$
 
   For **mean squared error**:
-  $$
-  \delta^L = (a^L - y) \odot \sigma'(z^L)
-  $$
+  $\delta^L = (a^L - y) \odot \sigma'(z^L)$
 
   ---
 
   ### 3. **Backpropagate the Error**
 
   For any hidden layer $l$ (from $L-1$ to 1):
-  $$
-  \delta^l = ((w^{l+1})^T \delta^{l+1}) \odot \sigma'(z^l)
-  $$
+  $\delta^l = ((w^{l+1})^T \delta^{l+1}) \odot \sigma'(z^l)$
 
   - Multiply the upstream error by the transpose of the weights,
   - Then element-wise multiply with the derivative of the activation at that layer.
