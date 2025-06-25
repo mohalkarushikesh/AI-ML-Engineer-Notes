@@ -45,9 +45,7 @@ Focusing on the last layers:
 ### 🔹 Loss Function (e.g. MSE)
 
 If cost function is:
-$$
-\mathcal{L} = \frac{1}{2} (a^L - y)^2
-$$
+$\mathcal{L} = \frac{1}{2} (a^L - y)^2$
 
 Then we compute how sensitive this is to weight changes.
 
@@ -91,14 +89,10 @@ $\delta^l = \left( (w^{l+1})^T \delta^{l+1} \right) \odot \sigma'(z^l)$
 Now compute gradients for updating:
 
 - Weight gradient:
-  $$
-  \frac{\partial \mathcal{L}}{\partial w^l} = \delta^l \cdot (a^{l-1})^T
-  $$
+  $\frac{\partial \mathcal{L}}{\partial w^l} = \delta^l \cdot (a^{l-1})^T$
 
 - Bias gradient:
-  $$
-  \frac{\partial \mathcal{L}}{\partial b^l} = \delta^l
-  $$
+  $\frac{\partial \mathcal{L}}{\partial b^l} = \delta^l$
 
 ---
 
