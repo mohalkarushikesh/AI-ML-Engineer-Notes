@@ -60,11 +60,7 @@ $$
 $$
 
 If using MSE:
-$$
-\nabla_a \mathcal{L} = (a^L - y)
-\quad \Rightarrow \quad
-\delta^L = (a^L - y) \odot \sigma'(z^L)
-$$
+$\nabla_a \mathcal{L} = (a^L - y) \quad \Rightarrow \quad \delta^L = (a^L - y) \odot \sigma'(z^L)$
 
 Here:
 - $\odot$ = **Hadamard product** (element-wise multiplication)
