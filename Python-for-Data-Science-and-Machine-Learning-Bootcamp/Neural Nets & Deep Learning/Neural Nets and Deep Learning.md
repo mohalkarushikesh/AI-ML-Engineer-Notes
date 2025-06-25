@@ -176,11 +176,131 @@ Each of these loss functions plays a key role in shaping how a neural network le
 
 #### 🔁 Backpropagation
 
-Computes gradients using the **chain rule**:
+## 🔁 What Is Backpropagation?
+
+Backpropagation is a **recursive algorithm** used during training to compute the **gradient of the loss function** with respect to all the weights and biases in the network.
+
+Think of it as **error attribution**: it tells each neuron how much it contributed to the final prediction error, so we can update the weights accordingly.
+
+---
+
+## 🧠 Intuition Before Math
+
+1. **Forward Pass**: Compute outputs from inputs layer by layer.
+2. **Compute Loss**: Compare prediction $\hat{y}$ with true output $y$ using a loss function $\mathcal{L}$.
+3. **Backward Pass**: Starting from the output, propagate the error *back* through the network using the chain rule.
+4. **Update Weights**: Adjust each weight using **gradient descent**.
+
+---
+
+## 📐 Notation Setup
+
+Let’s define a few basics:
+
+- \( a^l \): Activations in layer \( l \)
+- \( w^l \): Weights connecting layer \( l-1 \) to \( l \)
+- \( b^l \): Bias vector for layer \( l \)
+- \( z^l = w^l a^{l-1} + b^l \): Weighted input to layer \( l \)
+- \( \sigma \): Activation function (e.g., ReLU, sigmoid)
+- \( \mathcal{L} \): Loss function
+
+---
+
+## 🔬 Step-by-Step Math
+
+### 1. **Forward Propagation**
+
+For each layer \( l \):
+- Weighted sum:  
+  $$
+  z^l = w^l a^{l-1} + b^l
+  $$
+- Activation:  
+  $$
+  a^l = \sigma(z^l)
+  $$
+
+---
+
+### 2. **Compute Output Layer Error**
+
+At the output layer \( L \), compute:
+- Error:  
+  $$
+  \delta^L = \nabla_a \mathcal{L}(a^L, y) \odot \sigma'(z^L)
+  $$
+Where:
+- \( \nabla_a \mathcal{L} \): Derivative of loss wrt output activations
+- \( \odot \): Element-wise multiplication
+- \( \sigma'(z^L) \): Derivative of the activation function at layer \( L \)
+
+For **mean squared error**:
+$$
+\delta^L = (a^L - y) \odot \sigma'(z^L)
+$$
+
+---
+
+### 3. **Backpropagate the Error**
+
+For any hidden layer \( l \) (from \( L-1 \) to 1):
+$$
+\delta^l = ((w^{l+1})^T \delta^{l+1}) \odot \sigma'(z^l)
+$$
+
+- Multiply the upstream error by the transpose of the weights,
+- Then element-wise multiply with the derivative of the activation at that layer.
+
+---
+
+### 4. **Compute Gradients**
+
+Now that we have \( \delta^l \), compute:
+- Gradient w.r.t. weights:
+  $$
+  \frac{\partial \mathcal{L}}{\partial w^l} = \delta^l (a^{l-1})^T
+  $$
+
+- Gradient w.r.t. bias:
+  $$
+  \frac{\partial \mathcal{L}}{\partial b^l} = \delta^l
+  $$
+
+---
+
+### 5. **Update Parameters**
+
+Using gradient descent:
 
 $$
-\frac{\partial \mathcal{L}}{\partial w}, \quad \frac{\partial \mathcal{L}}{\partial b}
+w^l := w^l - \eta \cdot \frac{\partial \mathcal{L}}{\partial w^l}
 $$
+
+$$
+b^l := b^l - \eta \cdot \frac{\partial \mathcal{L}}{\partial b^l}
+$$
+
+Where \( \eta \) is the learning rate.
+
+---
+
+## 🔁 Loop During Training
+
+For each batch of data:
+- Perform **forward pass**
+- Calculate **loss**
+- Run **backpropagation**
+- Apply **gradient descent updates**
+
+Repeat over many **epochs**.
+
+---
+
+## 🔎 Final Notes
+
+- Backpropagation uses **chain rule** to efficiently compute gradients
+- It works with any differentiable activation/loss function
+- With large networks, frameworks like TensorFlow/PyTorch handle this **automatically** via autodiff
 
 ---
 
