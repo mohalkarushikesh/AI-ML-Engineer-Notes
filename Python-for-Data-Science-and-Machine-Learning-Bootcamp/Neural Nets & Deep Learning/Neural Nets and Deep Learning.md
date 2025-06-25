@@ -263,7 +263,6 @@ $$
 $$ 
 \odot 
 $$ 
-
 - Derivative of the activation function at layer \( L \)
 $$
 \sigma'(z^L) 
