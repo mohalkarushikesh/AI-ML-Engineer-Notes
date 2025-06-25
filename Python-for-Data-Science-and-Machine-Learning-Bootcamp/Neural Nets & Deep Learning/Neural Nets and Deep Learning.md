@@ -223,13 +223,9 @@
 
   For each layer \( l \):
   - Weighted sum:  
-    $$
-    z^l = w^l a^{l-1} + b^l
-    $$
+    $z^l = w^l a^{l-1} + b^l$
   - Activation:  
-    $$
-    a^l = \sigma(z^l)
-    $$
+    $a^l = \sigma(z^l)$
 
   ---
 
@@ -280,14 +276,10 @@
   Now that we have $\delta^l$, compute:
 
   - Gradient w.r.t. weights:
-    $$
-    \frac{\partial \mathcal{L}}{\partial w^l} = \delta^l (a^{l-1})^T
-    $$
+    $\frac{\partial \mathcal{L}}{\partial w^l} = \delta^l (a^{l-1})^T$
 
   - Gradient w.r.t. bias:
-    $$
-    \frac{\partial \mathcal{L}}{\partial b^l} = \delta^l
-    $$
+    $\frac{\partial \mathcal{L}}{\partial b^l} = \delta^l$
 
   ---
 
