@@ -8,21 +8,17 @@ An optimization method such as **gradient descent** iteratively improves a neura
 
 1. **Forward Pass**  
    Compute outputs from inputs **layer by layer**:
-   $$
-   z = w \cdot x + b \quad \Rightarrow \quad a = \sigma(z)
-   $$
+   $z = w \cdot x + b \quad \Rightarrow \quad a = \sigma(z)$
 
 2. **Calculate Loss**  
-   Compare predicted output \( \hat{y} \) with true output \( y \) using a loss function \( \mathcal{L} \).
+   Compare predicted output  $\hat{y}$ with true output $y$ using a loss function $\mathcal{L}$.
 
 3. **Backpropagation**  
    Starting from the output, **propagate the error backward** through the network using the **chain rule**.
 
 4. **Gradient Descent Update**  
-   Adjust each weight \( w \) and bias \( b \) to minimize the loss:
-   $$
-   w := w - \eta \cdot \frac{\partial \mathcal{L}}{\partial w}
-   $$
+   Adjust each weight $w$ and bias $b$ to minimize the loss:
+   $w := w - \eta \cdot \frac{\partial \mathcal{L}}{\partial w}$
 
 ---
 
@@ -40,13 +36,9 @@ Let the network have **\( L \)** layers.
 Focusing on the last layers:
 
 - **Weighted Sum**:
-  $$
-  z^L = w^L a^{L-1} + b^L
-  $$
+  $z^L = w^L a^{L-1} + b^L$
 - **Activation**:
-  $$
-  a^L = \sigma(z^L)
-  $$
+  $a^L = \sigma(z^L)$
 
 ---
 
@@ -77,8 +69,8 @@ $$
 $$
 
 Here:
-- \( \odot \) = **Hadamard product** (element-wise multiplication)
-- \( \sigma'(z^L) \) = derivative of the activation function
+- $\odot$ = **Hadamard product** (element-wise multiplication)
+- $\sigma'(z^L)$ = derivative of the activation function
 
 ---
 
@@ -86,11 +78,9 @@ Here:
 
 For any hidden layer \( l \) from \( L-1 \) down to 1:
 
-$$
-\delta^l = \left( (w^{l+1})^T \delta^{l+1} \right) \odot \sigma'(z^l)
-$$
+$\delta^l = \left( (w^{l+1})^T \delta^{l+1} \right) \odot \sigma'(z^l)$
 
-- \( (w^{l+1})^T \): transpose of weights from next layer
+- $(w^{l+1})^T$ : transpose of weights from next layer
 - Multiplied with next layer's error
 - Then element-wise multiplied with derivative of activation
 
