@@ -197,12 +197,35 @@ Think of it as **error attribution**: it tells each neuron how much it contribut
 
 Let’s define a few basics:
 
-- \( a^l \): Activations in layer \( l \)
-- \( w^l \): Weights connecting layer \( l-1 \) to \( l \)
-- \( b^l \): Bias vector for layer \( l \)
-- \( z^l = w^l a^{l-1} + b^l \): Weighted input to layer \( l \)
-- \( \sigma \): Activation function (e.g., ReLU, sigmoid)
-- \( \mathcal{L} \): Loss function
+- **Activations in layer \( l \):**  
+  $$
+  a^l
+  $$
+
+- **Weights connecting layer \( l-1 \) to \( l \):**  
+  $$
+  w^l
+  $$
+
+- **Bias vector for layer \( l \):**  
+  $$
+  b^l
+  $$
+
+- **Weighted input to layer \( l \):**  
+  $$
+  z^l = w^l a^{l-1} + b^l
+  $$
+
+- **Activation function (e.g., ReLU, sigmoid):**  
+  $$
+  \sigma(z)
+  $$
+
+- **Loss function:**  
+  $$
+  \mathcal{L}(a^L, y)
+  $$
 
 ---
 
@@ -230,9 +253,21 @@ At the output layer \( L \), compute:
   \delta^L = \nabla_a \mathcal{L}(a^L, y) \odot \sigma'(z^L)
   $$
 Where:
-- \( \nabla_a \mathcal{L} \): Derivative of loss wrt output activations
-- \( \odot \): Element-wise multiplication
-- \( \sigma'(z^L) \): Derivative of the activation function at layer \( L \)
+
+- Derivative of loss wrt output activations
+$$
+a_a \mathcal{L} 
+$$
+
+- Element-wise multiplication
+$$ 
+\odot 
+$$ 
+
+- Derivative of the activation function at layer \( L \)
+$$
+\sigma'(z^L) 
+$$
 
 For **mean squared error**:
 $$
@@ -243,7 +278,7 @@ $$
 
 ### 3. **Backpropagate the Error**
 
-For any hidden layer \( l \) (from \( L-1 \) to 1):
+For any hidden layer $l$ (from $L-1$ to 1):
 $$
 \delta^l = ((w^{l+1})^T \delta^{l+1}) \odot \sigma'(z^l)
 $$
@@ -255,7 +290,8 @@ $$
 
 ### 4. **Compute Gradients**
 
-Now that we have \( \delta^l \), compute:
+Now that we have $\delta^l$, compute:
+
 - Gradient w.r.t. weights:
   $$
   \frac{\partial \mathcal{L}}{\partial w^l} = \delta^l (a^{l-1})^T
@@ -280,7 +316,7 @@ $$
 b^l := b^l - \eta \cdot \frac{\partial \mathcal{L}}{\partial b^l}
 $$
 
-Where \( \eta \) is the learning rate.
+Where $\eta$ is the learning rate.
 
 ---
 
