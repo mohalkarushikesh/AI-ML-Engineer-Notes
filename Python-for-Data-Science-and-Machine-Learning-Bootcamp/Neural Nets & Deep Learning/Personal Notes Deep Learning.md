@@ -5,7 +5,7 @@
 
 **CNN : Convolution neural network** 
 	**Convolution** is mathematical operation which transforms an input matrix by means of another matrix (kernel)
-		- In particular convolution is symmetric, associative, distributive 
+ 		- In particular convolution is symmetric, associative, distributive 
 		- layers are defined as:
 			- kernel size: which is the dimention of linear filter 
 			- stride: which no of input elements to be crossed in consecutive operations of the kernel
