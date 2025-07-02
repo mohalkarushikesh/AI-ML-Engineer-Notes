@@ -4,7 +4,6 @@
 	DKL((P||Q)) divergence between two distributions P and Q 
 
 **CNN : Convolution neural network** 
-	
 	**Convolution** is mathematical operation which transforms an input matrix by means of another matrix (kernel)
 		- In particular convolution is symmetric, associative, distributive 
 		- layers are defined as:
@@ -12,7 +11,7 @@
 			- stride: which no of input elements to be crossed in consecutive operations of the kernel
 			- padding: which is the artificial enlargement of the input to allow the application of the filters on the borders of the input 
 			- depth: which is the no of the different filters that one wish to synthesize (corresponds to the depth of the next layer)
-      - polling layers: 
+      			- polling layers: In CNN it's common practice to alternate convolutional layers with pooling layers, where each neuron takes the mean and max in it's receptive field. This practice reduces the dimention of the output.
 	**Correlation** is mathematical operation similar to covolution which does not flip the given kernal 
 
 	if one does not flip the kernel then one computes the correlation between the two function 
