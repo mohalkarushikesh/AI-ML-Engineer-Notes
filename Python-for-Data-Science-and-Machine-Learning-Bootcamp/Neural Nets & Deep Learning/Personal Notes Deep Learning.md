@@ -1,7 +1,7 @@
 - binary classification problem : sigmoid function 
 - Multiclass classification : Softmax function 
 - classification problem : cross entropy function in order to compare two probability ditributions this function is based on kullback leibler divergence 
-	DKL((P||Q)) divergence between two distributions P and Q 
+	- DKL((P||Q)) divergence between two distributions P and Q 
 
 **CNN : Convolution neural network** 
 	**Convolution** is mathematical operation which transforms an input matrix by means of another matrix (kernel)
@@ -12,9 +12,9 @@
 			- padding: which is the artificial enlargement of the input to allow the application of the filters on the borders of the input 
 			- depth: which is the no of the different filters that one wish to synthesize (corresponds to the depth of the next layer)
       			- polling layers: In CNN it's common practice to alternate convolutional layers with pooling layers, where each neuron takes the mean and max in it's receptive field. This practice reduces the dimention of the output.
-	**Correlation** is mathematical operation similar to covolution which does not flip the given kernal 
-
-	if one does not flip the kernel then one computes the correlation between the two function 
+	**Correlation** is mathematical operation similar to covolution which does not flip the given kernal 		
+   	
+    	- if one does not flip the kernel then one computes the correlation between the two function 
 
 
 **Deteriorated information** refers to information that has become less accurate, reliable, or useful over time. This can happen due to various factors, including the passage of time, changes in context, or errors in data collection or storage. 
