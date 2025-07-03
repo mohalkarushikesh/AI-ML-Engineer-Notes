@@ -57,3 +57,13 @@ An outdated news article might no longer reflect current events, but it can stil
 ---
 
 So you're right: **less accurate = less useful** in most cases. But in some contexts, even flawed or outdated information can offer **secondary value**—just not for its original purpose.
+
+Classification task with tensorflow : 
+
+Indentify and deal with overfitting through early stopping callbacks and Dropout Layers 
+
+Early stopping : Keras can automatically stop tranning based on loss condition on validation data passed during the model.fit() call.
+
+Dropout layers: can be added to layers to turn off neurons during tranning to prevent overfitting.
+
+
