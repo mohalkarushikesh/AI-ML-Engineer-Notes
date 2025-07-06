@@ -12,7 +12,7 @@
   
   $D_{KL}(P || Q) = \sum_i P(i) \log\left(\frac{P(i)}{Q(i)}\right)$
 
-  where $( P )$ is the true distribution and $( Q \$ is the predicted distribution.
+  where $( P )$ is the true distribution and $( Q )$ is the predicted distribution.
 
 ---
 
