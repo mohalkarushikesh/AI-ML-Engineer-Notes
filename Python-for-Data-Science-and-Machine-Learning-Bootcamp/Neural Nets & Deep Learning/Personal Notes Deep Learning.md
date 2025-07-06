@@ -10,9 +10,9 @@
 - **Cross-entropy loss** is used to compare two probability distributions—typically the predicted distribution and the true distribution.
 - It is based on the **Kullback-Leibler divergence**:
   
-  \[D_{KL}(P || Q) = \sum_i P(i) \log\left(\frac{P(i)}{Q(i)}\right)\]
+  $D_{KL}(P || Q) = \sum_i P(i) \log\left(\frac{P(i)}{Q(i)}\right)$
 
-  where \( P \) is the true distribution and \( Q \) is the predicted distribution.
+  where $( P )$ is the true distribution and $( Q \$ is the predicted distribution.
 
 ---
 
@@ -83,9 +83,9 @@ While deteriorated information is generally less useful, it may still retain sec
 ### ReLU (Rectified Linear Unit)
 
 - Defined as:
-  \[
-  f(x) = \max(0, x)
-  \]
+
+  $f(x) = \max(0, x)$
+  
 - If the input is less than 0, output is 0; otherwise, output is the input.
 
 ---
