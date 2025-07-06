@@ -27,13 +27,14 @@
  - Using MapReduce ro distribute computational task to a distributed dataset 
   
 Spark improves on the concept of distribution 
-    - lastest technologies being used to quickly and easily handle big-data
-    - It's open-source project on Apache & first released in 2013 
-    - It is created at AMPLab and UC Berkely
-    - Flexible alternative to MapReduce
-    - Spark can use data stored in variety of formats ex: Cassandra, AWS S3, HDFS and more
-    - MapReduces requires files to be stored in HDFS, Spark does not!
-    - Spark also can perform operations upto 100x faster than MapReduce 
+  - lastest technologies being used to quickly and easily handle big-data
+  - It's open-source project on Apache & first released in 2013 
+  - It is created at AMPLab and UC Berkely
+  - Flexible alternative to MapReduce
+  - Spark can use data stored in variety of formats ex: Cassandra, AWS S3, HDFS and more
+  - MapReduces requires files to be stored in HDFS, Spark does not!
+  - Spark also can perform operations upto 100x faster than MapReduce 
+  
   - How does it achives this speed ?
     - MapRedues write most of the data to disk after each map and reduce operation
     - Spark keeps most of the data in memory after each transformation 
