@@ -18,13 +18,13 @@
   - Mulitple copies of block prevent loss of data due to failure of a node 
   
 **MapReduce** is a way of splitting a computation task to a distributed set of files (HDFS)
-    - It consists of job tracker and multiple task trackers 
-    - The job tracker sends code to run the multiple task trackers
-    - The task trackers allocate CPU and memory for tasks and monitor tasks on the worker nodes 
+ - It consists of job tracker and multiple task trackers 
+ - The job tracker sends code to run the multiple task trackers
+ - The task trackers allocate CPU and memory for tasks and monitor tasks on the worker nodes 
 
 **Conclusion**: 
-    - Using HDFS to distribute large datasets
-    - Using MapReduce ro distribute computational task to a distributed dataset 
+ - Using HDFS to distribute large datasets
+ - Using MapReduce ro distribute computational task to a distributed dataset 
   
 Spark improves on the concept of distribution 
     - lastest technologies being used to quickly and easily handle big-data
