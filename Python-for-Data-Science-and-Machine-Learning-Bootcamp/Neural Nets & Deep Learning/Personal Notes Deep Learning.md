@@ -66,4 +66,20 @@ Early stopping : Keras can automatically stop tranning based on loss condition o
 
 Dropout layers: can be added to layers to turn off neurons during tranning to prevent overfitting.
 
+The rectified linear unit activation function (or ReLU, for short) transforms output using the following algorithm: 
+If the input value is less than 0, return 0. If the input value is greater than or equal to 0, return the input value.
 
+
+In a neural network, the batch size refers to the number of training examples used in one iteration to update the model's parameters. 
+It essentially defines how many data samples are processed simultaneously before the model's weights are adjusted. 
+A batch can be a single sample, or it can be a larger chunk of the training data. 
+
+The .h5 format, also known as HDF5 (Hierarchical Data Format)
+
+Precision: The proportion of correctly predicted positive instances out of all instances predicted as positive.
+
+Recall: The proportion of correctly predicted positive instances out of all actual positive instances.
+
+F1-Score: The harmonic mean of precision and recall, balancing both metrics in a single score.
+
+Support: The number of actual occurrences of each class in the dataset.
