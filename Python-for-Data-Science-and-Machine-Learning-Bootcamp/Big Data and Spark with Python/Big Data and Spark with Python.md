@@ -5,7 +5,7 @@
  - Fault tolerance : if one machine fails, still whole network still go on
   
   **Hadoop** is a way to distribute very large files across multiple machines
-  - It uses Hadoop Distributed File System (HDFS)
+  - It uses **Hadoop Distributed File System (HDFS)**
   - HDFS allows user to work with large dataset
   - HDFS also duplicate blocks of data for fault tolerance 
   - It also then uses MapReduce 
@@ -19,8 +19,8 @@
   
 **MapReduce** is a way of splitting a computation task to a distributed set of files (HDFS)
  - It consists of job tracker and multiple task trackers 
- - The job tracker sends code to run the multiple task trackers
- - The task trackers allocate CPU and memory for tasks and monitor tasks on the worker nodes 
+ - The **job tracker** sends code to run the multiple task trackers
+ - The **task trackers** allocate CPU and memory for tasks and monitor tasks on the worker nodes 
 
 **Conclusion**: 
  - Using HDFS to distribute large datasets
@@ -49,24 +49,24 @@ Spark improves on the concept of distribution
       - RDD are immutable, lazily evaluated and cacheable 
       - There are two types of RDDS operations:
         - **Transformations**:
-          - Filter: Applier function to each element and return elements that evaluate to true  
-          - Map: Transform each element and preserves # of elements, very similar idea to pandas .apply()
+          - **Filter**: Applier function to each element and return elements that evaluate to true  
+          - **Map**: Transform each element and preserves # of elements, very similar idea to pandas .apply()
             - Grabbing first letter of a list of names 
-          - FlatMap: Transform each element into 0-N elements and changes # of elements 
+          - **FlatMap**: Transform each element into 0-N elements and changes # of elements 
             - Transforming corpus of text into list of names 
         - **Actions**:
-          - First: Return the first element of the RDD 
-          - Collect: Return all the elements of the RDD as an array of driver program 
-          - Count: Return the count of the RDD
-          - Take: Return an array with the first n elements of the RDD 
+          - **First**: Return the first element of the RDD 
+          - **Collect**: Return all the elements of the RDD as an array of driver program 
+          - **Count**: Return the count of the RDD
+          - **Take**: Return an array with the first n elements of the RDD 
 
 
     - RDDs will be holding their values in tuples 
       - (key, value)
     - This offers better partitioning of data and leads to functionality based on reduction 
-    - Reduce() : An action that will aggregate RDD elements using function that returns a single element 
-    - ReduceByKey(): An action that will aggregate pair action elements using a function that returns a pair RDD
-    - these ideas similar to group of operation 
+    - **Reduce()** : An action that will aggregate RDD elements using function that returns a single element 
+    - **ReduceByKey()**: An action that will aggregate pair action elements using a function that returns a pair RDD
+    - these ideas similar to fgroup of operation 
 
 - Spark ecosystem now includes : 
   - Spark SQL 
@@ -75,4 +75,21 @@ Spark improves on the concept of distribution
   - GraphX
   - Spart streaming 
 
-  
+```
+- wget install anaconda 
+
+- source .bashrc : to use anaconda python version 
+
+- jupyter notebook configuration for ec2 instance 
+
+- install java
+
+- install scala
+
+```
+
+pip install pyspark 
+
+
+
+
