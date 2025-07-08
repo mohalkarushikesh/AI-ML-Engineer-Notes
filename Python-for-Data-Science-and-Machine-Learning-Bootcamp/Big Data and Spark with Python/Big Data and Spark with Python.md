@@ -48,13 +48,13 @@ Spark improves on the concept of distribution
       - Ability to use many data sources
       - RDD are immutable, lazily evaluated and cacheable 
       - There are two types of RDDS operations:
-        - **Transformations**:
+        - **Transformations**: Spark operation that produces RDD
           - **Filter**: Applier function to each element and return elements that evaluate to true  
           - **Map**: Transform each element and preserves # of elements, very similar idea to pandas .apply()
             - Grabbing first letter of a list of names 
           - **FlatMap**: Transform each element into 0-N elements and changes # of elements 
             - Transforming corpus of text into list of names 
-        - **Actions**:
+        - **Actions**: Spark operation that produces local Object
           - **First**: Return the first element of the RDD 
           - **Collect**: Return all the elements of the RDD as an array of driver program 
           - **Count**: Return the count of the RDD
@@ -86,10 +86,36 @@ Spark improves on the concept of distribution
 
 - install scala
 
+- pip install pyspark  : google colab
+
 ```
 
-- pip install pyspark
-- 
+- Spark Job: Sequence of transformations on data with final action 
+
+Creating an RDD:
+  - sc.parallelize(array): create RDD of elments of an array (or list)
+  - sc.textFile(path/to/file): create RDD of lines from file
+
+RDD Transformations: 
+  - filter
+  - map => multiply
+  - map => split()
+  - flatmap
+  - sample 
+  - union
+  - distinct
+  - sortBys
+
+RDD Actions : 
+  - collect
+  - take 
+  - top
+  - takesample
+  - sum 
+  - mean
+  - stdev
+
+
 
 
 
