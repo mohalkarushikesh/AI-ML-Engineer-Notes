@@ -43,47 +43,47 @@
 
 ```
 NumPy
-  •	Handles arrays and numerical operations efficiently.
-  •	Example: vector math, matrix manipulation.
+- Handles arrays and numerical operations efficiently.
+-	Example: vector math, matrix manipulation.
 Pandas
-  •	Manages tabular data using DataFrames.
-  •	Ideal for data cleaning and analysis.
+-	Manages tabular data using DataFrames.
+-	Ideal for data cleaning and analysis.
 Matplotlib
-  •	Basic plotting library for charts and graphs.
-  •	Great for line plots, bar charts, histograms.
+-	Basic plotting library for charts and graphs.
+-	Great for line plots, bar charts, histograms.
 Seaborn
-  •	Built on Matplotlib; adds prettier, statistical plots.
-  •	Example: heatmaps, violin plots, regression plots.
+-	Built on Matplotlib; adds prettier, statistical plots.
+-	Example: heatmaps, violin plots, regression plots.
 Scikit-learn
-  •	Core ML library for models and evaluation.
-  •	Includes regression, classification, clustering, and more.
+-	Core ML library for models and evaluation.
+-	Includes regression, classification, clustering, and more.
 Deep Learning Libraries
-  •	TensorFlow – Google's framework for building and training neural networks.
-  •	Keras – User-friendly wrapper around TensorFlow for fast prototyping.
-  •	PyTorch – Facebook’s flexible deep learning library with dynamic graphs.
+-	TensorFlow – Google's framework for building and training neural networks.
+-	Keras – User-friendly wrapper around TensorFlow for fast prototyping.
+-	PyTorch – Facebook’s flexible deep learning library with dynamic graphs.
 
 📚 NLTK (Natural Language Toolkit)
-  •	A classic library for working with human language data.
-  •	Supports tokenization, stemming, tagging, parsing, and corpus access.
-  •	Great for educational and research use.
+- A classic library for working with human language data.
+- Supports tokenization, stemming, tagging, parsing, and corpus access.
+-	Great for educational and research use.
 🗣️ spaCy
-  •	Industrial-strength NLP library built for speed and efficiency.
-  •	Handles tagging, parsing, named entity recognition (NER), and more.
-  •	Comes with pre-trained models for many languages.
+- Industrial-strength NLP library built for speed and efficiency.
+-	Handles tagging, parsing, named entity recognition (NER), and more.
+-	Comes with pre-trained models for many languages.
 🧠 TextBlob
-  •	Simple NLP tool built on NLTK and Pattern.
-  •	Easy interface for sentiment analysis, translation, and more.
+-	Simple NLP tool built on NLTK and Pattern.
+- Easy interface for sentiment analysis, translation, and more.
 💬 Gensim
-  •	Specializes in topic modeling and document similarity.
-  •	Widely used for word embeddings like Word2Vec.
+- Specializes in topic modeling and document similarity.
+- Widely used for word embeddings like Word2Vec.
 🔠 Transformers (by Hugging Face)
-  •	Deep learning library focused on state-of-the-art models (BERT, GPT, etc.).
-  •	Handles text classification, translation, summarization, Q&A, and more.
+- Deep learning library focused on state-of-the-art models (BERT, GPT, etc.).
+- Handles text classification, translation, summarization, Q&A, and more.
 🧮 Tesseract
-  •	Optical Character Recognition (OCR) engine.
-  •	Useful for extracting text from images or scanned documents.
+- Optical Character Recognition (OCR) engine.
+- Useful for extracting text from images or scanned documents.
 📊 Beautiful Soup & Scrapy
-  •	Not NLP libraries per se, but great for collecting text data from websites via web scraping.
+- Not NLP libraries per se, but great for collecting text data from websites via web scraping.
 
 ```
 
