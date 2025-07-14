@@ -43,47 +43,47 @@
 
 ```
 NumPy
-•	Handles arrays and numerical operations efficiently.
-•	Example: vector math, matrix manipulation.
+  •	Handles arrays and numerical operations efficiently.
+  •	Example: vector math, matrix manipulation.
 Pandas
-•	Manages tabular data using DataFrames.
-•	Ideal for data cleaning and analysis.
+  •	Manages tabular data using DataFrames.
+  •	Ideal for data cleaning and analysis.
 Matplotlib
-•	Basic plotting library for charts and graphs.
-•	Great for line plots, bar charts, histograms.
+  •	Basic plotting library for charts and graphs.
+  •	Great for line plots, bar charts, histograms.
 Seaborn
-•	Built on Matplotlib; adds prettier, statistical plots.
-•	Example: heatmaps, violin plots, regression plots.
+  •	Built on Matplotlib; adds prettier, statistical plots.
+  •	Example: heatmaps, violin plots, regression plots.
 Scikit-learn
-•	Core ML library for models and evaluation.
-•	Includes regression, classification, clustering, and more.
+  •	Core ML library for models and evaluation.
+  •	Includes regression, classification, clustering, and more.
 Deep Learning Libraries
-•	TensorFlow – Google's framework for building and training neural networks.
-•	Keras – User-friendly wrapper around TensorFlow for fast prototyping.
-•	PyTorch – Facebook’s flexible deep learning library with dynamic graphs.
+  •	TensorFlow – Google's framework for building and training neural networks.
+  •	Keras – User-friendly wrapper around TensorFlow for fast prototyping.
+  •	PyTorch – Facebook’s flexible deep learning library with dynamic graphs.
 
 📚 NLTK (Natural Language Toolkit)
-•	A classic library for working with human language data.
-•	Supports tokenization, stemming, tagging, parsing, and corpus access.
-•	Great for educational and research use.
+  •	A classic library for working with human language data.
+  •	Supports tokenization, stemming, tagging, parsing, and corpus access.
+  •	Great for educational and research use.
 🗣️ spaCy
-•	Industrial-strength NLP library built for speed and efficiency.
-•	Handles tagging, parsing, named entity recognition (NER), and more.
-•	Comes with pre-trained models for many languages.
+  •	Industrial-strength NLP library built for speed and efficiency.
+  •	Handles tagging, parsing, named entity recognition (NER), and more.
+  •	Comes with pre-trained models for many languages.
 🧠 TextBlob
-•	Simple NLP tool built on NLTK and Pattern.
-•	Easy interface for sentiment analysis, translation, and more.
+  •	Simple NLP tool built on NLTK and Pattern.
+  •	Easy interface for sentiment analysis, translation, and more.
 💬 Gensim
-•	Specializes in topic modeling and document similarity.
-•	Widely used for word embeddings like Word2Vec.
+  •	Specializes in topic modeling and document similarity.
+  •	Widely used for word embeddings like Word2Vec.
 🔠 Transformers (by Hugging Face)
-•	Deep learning library focused on state-of-the-art models (BERT, GPT, etc.).
-•	Handles text classification, translation, summarization, Q&A, and more.
+  •	Deep learning library focused on state-of-the-art models (BERT, GPT, etc.).
+  •	Handles text classification, translation, summarization, Q&A, and more.
 🧮 Tesseract
-•	Optical Character Recognition (OCR) engine.
-•	Useful for extracting text from images or scanned documents.
+  •	Optical Character Recognition (OCR) engine.
+  •	Useful for extracting text from images or scanned documents.
 📊 Beautiful Soup & Scrapy
-•	Not NLP libraries per se, but great for collecting text data from websites via web scraping.
+  •	Not NLP libraries per se, but great for collecting text data from websites via web scraping.
 
 ```
 
@@ -104,18 +104,18 @@ Deep Learning Libraries
 - Example: `[[1, 2], [3, 4]]` — used for linear transformations and storing data.
 
 - **Calculus**: 
-Function – A rule that maps inputs to outputs.
-Derivative – Measures the rate of change of a function.
-Gradient – A vector showing direction and rate of steepest increase.
+- Function: A rule that maps inputs to outputs.
+- Derivative: Measures the rate of change of a function.
+- Gradient: A vector showing direction and rate of steepest increase.
 
 - **Statistics**:
 ________________________________________
-Mean – Average value of a dataset.
-Median – Middle value when data is sorted.
-Variance – Measures spread of data from the mean.
-Standard Deviation – Square root of variance; shows how much data varies.
+- Mean – Average value of a dataset.
+- Median – Middle value when data is sorted.
+- Variance – Measures spread of data from the mean.
+- Standard Deviation – Square root of variance; shows how much data varies.
 ________________________________________
-Basic Probability – Likelihood of an event occurring, between 0 and 1.
+- Basic Probability – Likelihood of an event occurring, between 0 and 1.
 ________________________________________
 **Supervised Learning**
 
@@ -187,31 +187,33 @@ o	Label encoding: Assigns a unique number to each category.
 •	Handling Imbalanced Data
 o	SMOTE: Creates synthetic examples of minority class.
 ________________________________________
-🧪 Model Evaluation
-•	Metrics
-o	MSE: Average of squared errors.
-o	RMSE: Square root of MSE.
-o	Accuracy: Correct predictions / total.
-o	Precision: True positives / predicted positives.
-o	Recall: True positives / actual positives.
-o	F1-score: Balance between precision & recall.
-•	Validation Techniques
-o	Train-test split: Separates data for training and testing.
-o	K-fold cross-validation: Repeated splitting for stable results.
-•	Overfitting vs. Underfitting
-o	Overfitting: Model memorizes training data, poor on new data.
-o	Underfitting: Model too simple to capture data patterns.
+🧪 Model Evaluation:
+
+  •	Metrics
+  o	MSE: Average of squared errors.
+  o	RMSE: Square root of MSE.
+  o	Accuracy: Correct predictions / total.
+  o	Precision: True positives / predict
+  ed positives.
+  o	Recall: True positives / actual positives.
+  o	F1-score: Balance between precision & recall.
+  •	Validation Techniques
+  o	Train-test split: Separates data for training and testing.
+  o	K-fold cross-validation: Repeated splitting for stable results.
+  •	Overfitting vs. Underfitting
+  o	Overfitting: Model memorizes training data, poor on new data.
+  o	Underfitting: Model too simple to capture data patterns.
 ________________________________________
-📐 Mathematics (Intermediate)
-•	Linear Algebra
-o	Matrix decomposition: Breaks matrix into simpler forms.
-o	Dot product: Combines two vectors to get a scalar.
-•	Calculus
-o	Gradient descent: Optimizes by moving toward lowest error.
-o	Partial derivatives: Rate of change with respect to one variable.
-•	Probability
-o	Conditional probability: Probability given some condition.
-o	Bayes’ theorem: Updates probability based on new evidence.
+📐 Mathematics (Intermediate):
+  •	Linear Algebra
+  o	Matrix decomposition: Breaks matrix into simpler forms.
+  o	Dot product: Combines two vectors to get a scalar.
+  •	Calculus
+  o	Gradient descent: Optimizes by moving toward lowest error.
+  o	Partial derivatives: Rate of change with respect to one variable.
+  •	Probability
+  o	Conditional probability: Probability given some condition.
+  o	Bayes’ theorem: Updates probability based on new evidence.
 ________________________________________
 
 **Neural Networks & Deep Learning**
