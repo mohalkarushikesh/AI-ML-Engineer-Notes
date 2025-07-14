@@ -298,3 +298,68 @@ ________________________________________
 - **L1/L2 Regularization** – Penalizes large weights to simplify models.
 
 ---
+
+
+🔢 **Regression Losses**  
+- **MSE (Mean Squared Error)** – Average of squared prediction errors.  
+- **RMSE (Root Mean Squared Error)** – Square root of MSE.  
+- **MAE (Mean Absolute Error)** – Average of absolute errors.  
+- **Huber Loss** – Combines MSE and MAE for robustness to outliers.
+
+---
+
+🧮 **Classification Losses**  
+- **Binary Cross-Entropy** – Measures error for binary classification.  
+- **Categorical Cross-Entropy** – Used for multi-class classification.  
+- **Sparse Categorical Cross-Entropy** – Like categorical, but for integer labels.  
+- **Hinge Loss** – Used in SVM; penalizes incorrect margins.  
+- **Kullback-Leibler (KL) Divergence** – Compares two probability distributions.  
+
+---
+
+🧠 **Specialized Losses (Deep Learning)**  
+- **Contrastive Loss** – Separates similar/dissimilar pairs.  
+- **Triplet Loss** – Optimizes anchor-positive-negative distances.  
+- **Dice Loss** – Measures overlap; often used in image segmentation.  
+- **Focal Loss** – Focuses on hard-to-classify examples; good for imbalanced data.
+
+---
+
+**🧠 Advanced Deep Learning**
+- **Transfer Learning** – Reusing pre-trained models for new tasks.  
+- **Generative Models** – Create new data (e.g. GANs, VAEs).  
+- **Transformers** – Use attention to handle sequences (BERT, GPT).
+
+---
+
+**🎮 Reinforcement Learning**
+- **MDPs** – Framework for decision-making in RL.  
+- **Q-learning** – Learns optimal actions using value tables.  
+- **DQN** – Uses neural networks for Q-learning.  
+- **PPO** – Balances learning speed and stability.
+
+---
+
+**⚙️ MLOps**
+- **Model Deployment** – Serving ML models via APIs.  
+- **Pipeline Automation** – Automate workflows and training.  
+- **Monitoring** – Track performance and drift in models.
+
+---
+
+**📐 Mathematics (Advanced)**
+- **SVD** – Matrix breakdown into simpler parts.  
+- **Eigenvalues** – Show matrix transformation strength.  
+- **Convex Optimization** – Solve problems with one minimum.  
+- **Lagrangian Methods** – Solve constrained optimization.
+
+---
+
+**🧰 Tools**
+- **Hugging Face** – Library for NLP and transformers.  
+- **Gymnasium** – Toolkit for RL environments.  
+- **Flask / FastAPI** – Lightweight web frameworks.  
+- **Docker** – Containerize and deploy apps.  
+- **AWS/GCP** – Cloud platforms for ML workflows.
+
+---
