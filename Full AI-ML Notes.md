@@ -41,7 +41,8 @@
 - Allows duplicates.  
 - Example: `my_tuple = (1, 2, 3)`
 
-```
+---
+
 NumPy
 - Handles arrays and numerical operations efficiently.
 -	Example: vector math, matrix manipulation.
@@ -66,26 +67,30 @@ Deep Learning Libraries
 - A classic library for working with human language data.
 - Supports tokenization, stemming, tagging, parsing, and corpus access.
 -	Great for educational and research use.
+
 🗣️ spaCy
 - Industrial-strength NLP library built for speed and efficiency.
 -	Handles tagging, parsing, named entity recognition (NER), and more.
 -	Comes with pre-trained models for many languages.
+
 🧠 TextBlob
 -	Simple NLP tool built on NLTK and Pattern.
 - Easy interface for sentiment analysis, translation, and more.
+
 💬 Gensim
 - Specializes in topic modeling and document similarity.
 - Widely used for word embeddings like Word2Vec.
+
 🔠 Transformers (by Hugging Face)
 - Deep learning library focused on state-of-the-art models (BERT, GPT, etc.).
 - Handles text classification, translation, summarization, Q&A, and more.
+
 🧮 Tesseract
 - Optical Character Recognition (OCR) engine.
 - Useful for extracting text from images or scanned documents.
+
 📊 Beautiful Soup & Scrapy
 - Not NLP libraries per se, but great for collecting text data from websites via web scraping.
-
-```
 
 ---
 
