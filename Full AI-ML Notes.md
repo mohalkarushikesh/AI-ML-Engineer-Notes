@@ -41,7 +41,7 @@
 - Allows duplicates.  
 - Example: `my_tuple = (1, 2, 3)`
 
-
+```
 NumPy
 •	Handles arrays and numerical operations efficiently.
 •	Example: vector math, matrix manipulation.
@@ -84,6 +84,8 @@ Deep Learning Libraries
 •	Useful for extracting text from images or scanned documents.
 📊 Beautiful Soup & Scrapy
 •	Not NLP libraries per se, but great for collecting text data from websites via web scraping.
+
+```
 
 ---
 
