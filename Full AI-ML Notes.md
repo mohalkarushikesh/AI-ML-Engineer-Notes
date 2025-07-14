@@ -262,4 +262,39 @@ ________________________________________
 
 ---
 
-There we go—everything in one detailed yet readable format. Want this turned into flashcards or visual mind maps? I’m totally game for that too.
+🔧 **Optimizers**
+
+- **SGD (Stochastic Gradient Descent)** – Updates weights using one or few samples at a time.  
+- **Momentum** – Accelerates SGD by considering past gradients.  
+- **NAG (Nesterov Accelerated Gradient)** – Improves Momentum by anticipating future gradients.  
+- **Adagrad** – Adapts learning rate for each parameter based on past gradients.  
+- **RMSprop** – Similar to Adagrad but uses exponential decay for past gradients.  
+- **Adam** – Combines Momentum and RMSprop; widely used for stability and speed.  
+- **AdaMax** – Variant of Adam using infinity norm.  
+- **Nadam** – Adam + Nesterov momentum.  
+- **FTRL (Follow The Regularized Leader)** – Efficient for large-scale sparse problems.  
+- **L-BFGS** – Uses second-order approximation; works well for smaller datasets.  
+- **AMSGrad** – Modification of Adam to ensure convergence.  
+
+---
+
+**📁 Data Handling**
+
+- **Image Preprocessing**  
+  - *Resizing*: Adjust image dimensions.  
+  - *Normalization*: Scale pixel values.  
+  - *Data Augmentation*: Create variations (rotate, flip, etc.) to expand dataset.
+
+- **Text Preprocessing**  
+  - *Tokenization*: Split text into words or phrases.  
+  - *Embeddings (Word2Vec)*: Convert words into numerical vectors showing meaning.
+
+---
+
+**🧪 Regularization**
+
+- **Dropout** – Randomly disables neurons to reduce overfitting.  
+- **Batch Normalization** – Stabilizes training by normalizing activations.  
+- **L1/L2 Regularization** – Penalizes large weights to simplify models.
+
+---
