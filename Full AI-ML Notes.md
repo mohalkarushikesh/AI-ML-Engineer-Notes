@@ -180,7 +180,9 @@ Combine multiple models to improve predictions:
 - Gradient Boosting  
 - Adaboost  
 - Bagging  
-- Stacking  
+- Stacking
+
+```
 ________________________________________
 📊 Data Preprocessing
 •	Feature Scaling – Adjusts numeric features to a common scale.
@@ -220,6 +222,8 @@ ________________________________________
   o	Conditional probability: Probability given some condition.
   o	Bayes’ theorem: Updates probability based on new evidence.
 ________________________________________
+
+```
 
 **Neural Networks & Deep Learning**
 
