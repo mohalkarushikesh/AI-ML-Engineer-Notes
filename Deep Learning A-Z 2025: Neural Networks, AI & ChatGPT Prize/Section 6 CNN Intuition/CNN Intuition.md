@@ -54,9 +54,9 @@ This filter helps CNNs detect outlines and boundaries more clearly.
 
 **Matrix**:
 ```
-000
--1 -1 0
-000
+0    0    0
+-1   -1   0
+0    0    0
 ```
 
 **Purpose**: Slightly boosts edge visibility without drastically changing the image.
@@ -71,9 +71,9 @@ This filter helps CNNs detect outlines and boundaries more clearly.
 
 **Matrix**:
 ```
-010
-1 -4 1
-010
+0  1  0
+1 -4  1
+0  1  0
 ```
 
 **Purpose**: Finds sharp changes in pixel intensity—perfect for identifying object boundaries.
@@ -149,6 +149,10 @@ It allows CNNs to learn **non-trivial patterns** and complex functions rather th
 🎓 _Recommended Reads_:
 - Jay Kuo (2016): *"Understanding CNN with Mathematical Models"*  
 - Kaiming He et al. (2015): *"Delving Deep into Rectifiers"*
+
+---
+
+<img width="1105" height="583" alt="image" src="https://github.com/user-attachments/assets/1498aa99-71f1-48ee-ac79-cabe93fc015e" />
 
 ---
 
