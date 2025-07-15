@@ -99,7 +99,7 @@ This filter helps CNNs detect outlines and boundaries more clearly.
 
 ---
 
-### 2️⃣ Pooling Layer
+### 2️⃣ Pooling Layer aka Downsampling Layer
 
 Simplifies feature maps by reducing dimensions.
 
@@ -171,4 +171,37 @@ It allows CNNs to learn **non-trivial patterns** and complex functions rather th
 | Stride            | Step size while the kernel moves over the input |
 | Feature Maps      | Output from convolution layers that represent learned features |
 
+---
+
+**Linear flow from raw image to prediction**
+
+```
+[ Input Image (e.g., 28×28 pixels) ]
+             ↓
+[ Convolution Layer ]
+  - Applies filters/kernels
+  - Produces feature maps
+             ↓
+[ Activation Layer (ReLU) ]
+  - Adds non-linearity
+  - Only positive values retained
+             ↓
+[ Pooling Layer (e.g., Max Pooling) ]
+  - Reduces spatial size
+  - Keeps important features
+             ↓
+[ Convolution + ReLU + Pooling (repeated) ]
+  - Deeper feature extraction
+             ↓
+[ Flattening ]
+  - Converts 2D maps into 1D vector
+             ↓
+[ Fully Connected Layer ]
+  - Dense connections
+  - Learns complex relationships
+             ↓
+[ Output Layer (e.g., Softmax) ]
+  - Probabilities for each class
+
+```
 ---
