@@ -1,71 +1,103 @@
-what are CNN ?
-  
-  Yann Lecun : founding fathers of deep learning
+## 🧠 **What are CNNs (Convolutional Neural Networks)?**
 
-steps: 
-  step 1: Convolution : Convolution is a general purpose filter effect for images. □ Is a matrix applied to an image and a mathematical operation.
-    <img width="781" height="134" alt="image" src="https://github.com/user-attachments/assets/8b8991b0-c256-454a-88fb-4cb83afc2a55" />
+CNNs are a class of deep neural networks primarily used for **image recognition**, **classification**, and **computer vision** tasks. They automatically and adaptively learn spatial hierarchies of features from input images.
 
-    Convolution Setup in the Image
-    Input Image: 7×7 matrix of binary values (0s and 1s)
-    Kernel (Feature Detector): 3×3 matrix
-    Output Feature Map: 5×5 matrix
-    
-    <img width="1006" height="441" alt="image" src="https://github.com/user-attachments/assets/c87b1a02-1f53-4617-91ba-a6274a50e009" />
-  
-    This process helps the neural network learn spatial hierarchies in images.
-    Early layers might detect simple patterns (edges), while deeper layers detect complex features (faces, objects).
+> **Yann LeCun** is considered one of the founding fathers of deep learning and the pioneer of CNNs.
 
-    sharpen 
-      5 * 5 matrix 
-        000000
-        00-100
-        0-15-10
-        00-100
-        00000
-    blur 
-    edge enhance 
+---
 
-      000
-    -1-10
-    000
-    **edge detect** : important 
-      010
-      1-41
-      010
-    emboss 
+## 🧩 **Step-by-Step Architecture of a CNN**
 
-    Additional Learning: Introduction to CNN by jianxin wu 2017 
-    
-  step 2: Max Pooling 
-  step 3: Flattening 
-  step 4: Full Connection 
+---
 
-filters 
+### 🔹 **Step 1: Convolution**
 
-feature detectors: kernel/ filter 
-  useually 3 * 3 vector can be 5 * 5 or 7 * 7 
+Convolution is a mathematical operation applied to images using a **kernel (filter)** to extract features like edges, textures, and patterns.
 
-  stride: The kernel slides over the input image, one step (stride) at a time.
-  
-feature maps 
+📌 **Key Concepts**:
+- **Input Image**: 7×7 matrix of binary values (0s and 1s)
+- **Kernel (Feature Detector)**: 3×3 matrix
+- **Output Feature Map**: 5×5 matrix
 
-RLEU layer
-  <img width="1093" height="458" alt="image" src="https://github.com/user-attachments/assets/30fade0c-a15d-4f35-ba15-d0127b0c0a26" />
+📷 !Convolution Setup
 
-  why breaking linearirty : 
+📷 !Feature Map Output
 
+🧠 **Why it matters**: Helps the network learn spatial hierarchies. Early layers detect edges; deeper layers detect complex features like faces or objects.
 
-Additional Learning : 
-  1. Understanding CNN with mathematical model by jay kuo 2016 
-  2. Delving deep into rectifiers : Surpassing Human Level performance on imagenet classification by kaiming he et al 2015 
-Pooling layer 
+---
 
-Flattening 
+### 🔧 **Common Filters (Kernels)**
 
-Full Connection 
+| Filter Type     | Example Kernel Matrix |
+|----------------|------------------------|
+| **Sharpen**     | `0  0  0  0  0`<br>`0  0 -1  0  0`<br>`0 -1  5 -1  0`<br>`0  0 -1  0  0`<br>`0  0  0  0  0` |
+| **Blur**        | (Typically a matrix of small positive values that average surrounding pixels) |
+| **Edge Enhance**| `0  0  0`<br>`-1 -1 0`<br>`0  0  0` |
+| **Edge Detect** | `0  1  0`<br>`1 -4  1`<br>`0  1  0` |
+| **Emboss**      | (Highlights edges with a 3D shadow effect) |
 
-extrac topic: Softmax & Cross-Entropy
+---
 
-Additional Learning : Gradient based learning applied to Document Recognition by yann lecun 1998
+### 🔹 **Step 2: Max Pooling**
 
+Reduces the spatial dimensions of the feature map while retaining the most important information.
+
+📌 **Types**:
+- **Max Pooling**: Takes the maximum value in each patch.
+- **Mean Pooling**: Takes the average.
+- **Sum Pooling**: Adds up values.
+
+🧠 **Why it matters**: Reduces computation, removes noise, and preserves features even if the image is slightly rotated or shifted.
+
+📚 *Additional Reading*: *Evaluation for Pooling Operations in Convolutional Architectures for Object Recognition* by **Dominik Scherer et al., 2010**
+
+---
+
+### 🔹 **Step 3: Flattening**
+
+Converts the 2D feature maps into a 1D vector to feed into the fully connected layers.
+
+---
+
+### 🔹 **Step 4: Fully Connected Layer (Dense Layer)**
+
+Each neuron is connected to every neuron in the previous layer. This layer performs the final classification based on the features extracted.
+
+---
+
+## 🧪 **Activation Function: ReLU Layer**
+
+📷 !ReLU Layer
+
+- **ReLU (Rectified Linear Unit)** introduces non-linearity.
+- **Why break linearity?** Without it, the network would behave like a linear classifier, limiting its ability to model complex patterns.
+
+📚 *Additional Reading*:
+1. *Understanding CNN with Mathematical Model* by **Jay Kuo, 2016**
+2. *Delving Deep into Rectifiers* by **Kaiming He et al., 2015**
+
+---
+
+## 🎯 **Extra Topics**
+
+### 🔸 **Softmax & Cross-Entropy**
+- **Softmax**: Converts raw scores into probabilities.
+- **Cross-Entropy**: Measures the difference between predicted and actual labels.
+
+📚 *Additional Reading*: *Gradient-Based Learning Applied to Document Recognition* by **Yann LeCun, 1998**
+
+---
+
+## 🧰 **Terminology Recap**
+
+| Term              | Description |
+|-------------------|-------------|
+| **Kernel / Filter** | Matrix used to extract features |
+| **Stride**         | Number of steps the kernel moves |
+| **Feature Map**    | Output of the convolution operation |
+| **Pooling**        | Downsampling technique |
+| **Flattening**     | Converts 2D to 1D |
+| **Fully Connected**| Final classification layer |
+
+---
