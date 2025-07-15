@@ -123,6 +123,8 @@ Simplifies feature maps by reducing dimensions.
 
 - Example: A feature map of size `5×5` becomes a vector of `25` elements.
 
+<img width="1106" height="488" alt="image" src="https://github.com/user-attachments/assets/84c093a7-0096-439b-81b0-47dc606c6d18" />
+
 ---
 
 ### 4️⃣ Fully Connected Layer (Dense Layer)
