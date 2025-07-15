@@ -185,7 +185,7 @@ Where:
 - If your model predicts class “cat” with 90% confidence, and the correct answer is “dog,” the cross-entropy loss will be high.
 - If the model is right and confident, loss is low.
 
-🎓 _Recommended Read_: 
+🎓 _Recommended Read_:
 **"A Friendly Introduction to Cross Entropy Loss"** - by Rob DiPitro (2016)
 
 🎓 _Recommended Read_:  
