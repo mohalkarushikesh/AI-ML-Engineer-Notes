@@ -154,10 +154,36 @@ It allows CNNs to learn **non-trivial patterns** and complex functions rather th
 
 ## 🎯 Extra Topics
 
-### Softmax & Cross-Entropy
+### 🎯 **Softmax & Cross-Entropy**
 
-- **Softmax** turns raw scores into probability distribution across classes.
-- **Cross-Entropy** measures the difference between predicted and actual labels (used as the loss function).
+#### 📊 Softmax Function  
+The **Softmax** function converts raw class scores (logits) into probabilities that sum to 1.
+
+**Formula**:
+$$\text{Softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}$$
+
+Where:
+- $z_i$ is the score for class $i$
+- $K$ is the total number of classes
+- $e^{z_i}$ increases confidence for higher scores
+
+🔍 Interpretation: The higher the score $z_i$, the higher the probability assigned to class $i$.
+
+---
+
+#### 📉 Cross-Entropy Loss  
+**Cross-Entropy** quantifies how far off the predicted probabilities are from the actual labels.
+
+**Formula**:
+$$\text{Loss} = -\sum_{i=1}^{K} y_i \cdot \log(\hat{y}_i)$$
+
+Where:
+- $y_i$ is the true label (1 for correct class, 0 for others)
+- $hat{y}_i$ is the predicted probability from Softmax
+
+🧠 In practice:  
+- If your model predicts class “cat” with 90% confidence, and the correct answer is “dog,” the cross-entropy loss will be high.
+- If the model is right and confident, loss is low.
 
 🎓 _Recommended Read_:  
 **"Gradient-based Learning Applied to Document Recognition"** – Yann LeCun (1998)
