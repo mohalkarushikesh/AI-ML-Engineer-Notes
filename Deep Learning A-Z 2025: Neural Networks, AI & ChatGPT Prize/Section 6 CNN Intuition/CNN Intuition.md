@@ -152,10 +152,6 @@ It allows CNNs to learn **non-trivial patterns** and complex functions rather th
 
 ---
 
-<img width="1105" height="583" alt="image" src="https://github.com/user-attachments/assets/1498aa99-71f1-48ee-ac79-cabe93fc015e" />
-
----
-
 ## 🎯 Extra Topics
 
 ### Softmax & Cross-Entropy
@@ -210,4 +206,10 @@ It allows CNNs to learn **non-trivial patterns** and complex functions rather th
   - Probabilities for each class
 
 ```
+
+<img width="1105" height="583" alt="image" src="https://github.com/user-attachments/assets/1498aa99-71f1-48ee-ac79-cabe93fc015e" />
+
 ---
+
+🎓 _Recommended Read_:  
+**"The 9 Deep Learning Papers you need to know about (Understanding the CNN part - 3)"** – Adit Deshpande (2016)
