@@ -107,6 +107,14 @@ Each gate uses element-wise operations to control the flow of information.
 
 ---
 
+## 📚 How LSTM Works & Visualization
+
+- [*The Unreasonable Effectiveness of Recurrent Neural Networks* – Andrej Karpathy (2015)](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+- [*Visualizing and Understanding Recurrent Networks* – Andrej Karpathy et al. (2015)](https://arxiv.org/abs/1506.02078)
+- [*LSTM: A Search Space Odyssey* – Klaus Greff et al. (2015)](https://arxiv.org/abs/1503.04069)
+
+---
+
 ## 🧩 LSTM Variations
 
 - **Bidirectional LSTM**: Processes input in both directions  
