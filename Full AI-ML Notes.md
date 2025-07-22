@@ -352,6 +352,9 @@ Combine multiple models to improve predictions:
 - **Dropout** – Randomly disables neurons to reduce overfitting.  
 - **Batch Normalization** – Stabilizes training by normalizing activations.  
 - **L1/L2 Regularization** – Penalizes large weights to simplify models.
+- **Dropout**: Randomly disables neurons during training  
+- **Early Stopping**: Halts training when validation loss stops improving  
+- **Data Augmentation**: Expands dataset with transformations (flip, rotate, zoom)
 
 ---
 
