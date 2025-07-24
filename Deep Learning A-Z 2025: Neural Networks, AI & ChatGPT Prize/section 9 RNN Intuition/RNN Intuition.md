@@ -123,3 +123,34 @@ Each gate uses element-wise operations to control the flow of information.
 - **Attention-based LSTM**: Focuses on relevant parts of the sequence
 
 ---
+
+## Feature scaling 
+
+- Min-Max Scaling transforms your feature values so that they fall between a specified range—usually 0 to 1.
+- Formula: Xscaled = (X - Xmin) / (Xmax - Xmin)
+- Benefits: Makes training more stable & Prevents feature dominance
+
+**Standardization** is a feature scaling technique that transforms the data to have a mean of 0 and a standard deviation of 1. This process is also known as Z-score normalization. It is especially useful for algorithms that assume the data is centered around zero.
+
+**Formula:**
+
+$z = \frac{x - \mu}{\sigma}$
+
+Where:
+- $x$ = original value  
+- $\mu$ = mean of the feature  
+- $\sigma$ = standard deviation of the feature  
+
+
+**Normalization** is a feature scaling technique that rescales the values of a feature to a fixed range, typically [0, 1]. This is useful when you want all features to have the same scale, especially for algorithms that use distance metrics or gradient-based optimization.
+
+**Formula (Min-Max Normalization):**
+
+$x' = \frac{x - x_{min}}{x_{max} - x_{min}}$
+
+Where:
+- $x$ = original value  
+- $x_{min}$ = minimum value of the feature  
+- $x_{max}$ = maximum value of the feature  
+- $x'$ = normalized value (between 0 and 1)
+
