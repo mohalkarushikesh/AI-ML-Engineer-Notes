@@ -257,16 +257,49 @@ $$
 ## 🧬 Deep Belief Networks (DBN)
 
 ### 🧱 Architecture
-- Stack of RBMs—each layer is trained individually using unsupervised learning.
+- DBNs are composed of multiple layers of **Restricted Boltzmann Machines (RBMs)**.
+- Each RBM consists of a **visible layer** ($v$) and a **hidden layer** ($h$), with symmetrical connections and no intra-layer connections.
+- Layers are stacked such that the hidden layer of one RBM becomes the visible layer of the next.
 
 ### 🔄 Greedy Layer-wise Training
-1. Train first RBM on input data.
-2. Use its hidden layer outputs as input to next RBM.
-3. Repeat for deeper layers.
+1. **Unsupervised Pretraining**:  
+   - Train the first RBM on the input data $x$ to learn $P(h_1 | x)$.
+   - Use the activations of $h_1$ as input for the second RBM: learn $P(h_2 | h_1)$.
+   - Repeat this process for all subsequent layers ($h_3, h_4, \dots$).
+2. **Fine-tuning with Supervised Learning**:  
+   - Once all RBMs are pretrained, the whole DBN is fine-tuned using **backpropagation** to improve performance on a labeled task (e.g., classification).
 
 ### 🎯 Purpose
-- Pretraining deep networks
-- Capturing hierarchical representations
+- **Pretraining** helps in initializing deep networks efficiently, overcoming issues like vanishing gradients.
+- DBNs learn **hierarchical feature representations**:  
+  - Lower layers capture simple features (edges, shapes).  
+  - Higher layers capture abstract patterns (objects, categories).
+
+---
+
+How DBNs differ from other deep architectures like autoencoders or CNNs? 🧠🔍
+
+---
+
+## 🔍 DBN vs. Autoencoders vs. CNNs
+
+| Feature/Aspect         | 🧬 DBN                                     | 🔄 Autoencoder                              | 🧠 CNN                                          |
+|------------------------|-------------------------------------------|---------------------------------------------|------------------------------------------------|
+| **Core Idea**          | Stacked RBMs trained layer-wise           | Encode–decode input through bottleneck      | Learn spatial features via convolution filters |
+| **Training Type**      | Unsupervised pretraining + supervised fine-tuning | Typically unsupervised                      | Mostly supervised                              |
+| **Architecture**       | Multiple RBMs stacked (generative model)  | Symmetric encoder-decoder structure         | Convolution + pooling layers                   |
+| **Data Suitability**   | Tabular, structured, binary input         | Any input—images, text, tabular             | Especially effective on image and spatial data |
+| **Feature Hierarchy**  | Learns abstract features layer by layer   | Learns compressed representation            | Captures local patterns using receptive fields |
+| **Applications**       | Pretraining deep nets, feature discovery  | Dimensionality reduction, anomaly detection | Image classification, object detection         |
+| **Latent Space**       | Hierarchical probabilistic representation | Continuous low-dimensional code             | Learned feature maps in spatial hierarchy      |
+
+---
+
+### 🧠 Key Takeaways
+
+- **DBNs** are probabilistic generative models—excellent for discovering deep, abstract features in unlabeled data and initializing deep architectures.
+- **Autoencoders** compress input into a latent space and reconstruct it—great for understanding data structure and noise reduction.
+- **CNNs** dominate in vision tasks due to their ability to detect spatial hierarchies and patterns across pixels.
 
 ---
 
