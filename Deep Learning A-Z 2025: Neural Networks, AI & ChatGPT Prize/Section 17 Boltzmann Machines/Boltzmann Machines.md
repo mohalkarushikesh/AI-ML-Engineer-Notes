@@ -236,8 +236,8 @@ $$
 ---
 
 - Additional Learning
-  - **A fast learning algorithm for deep belief nets** by Geoffrey Hinton et al. (2006) [Paper link](https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf)
-  - **Notes on Contrastive Divergence** by oliver woodford (2012) [Paper link](http://www.robots.ox.ac.uk/~ojw/files/NotesOnCD.pdf)
+  - **A fast learning algorithm for deep belief nets** by Geoffrey Hinton et al. (2006) [Paper Link](https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf)
+  - **Notes on Contrastive Divergence** by oliver woodford (2012) [Paper Link](http://www.robots.ox.ac.uk/~ojw/files/NotesOnCD.pdf)
     
 ---
 ### 📌 Key Points
@@ -276,6 +276,8 @@ $$
   - Higher layers capture abstract patterns (objects, categories).
 
 ---
+<img width="1084" height="473" alt="image" src="https://github.com/user-attachments/assets/3e8ef3c6-63ef-469f-bd7e-57e93d1382e3" />
+---
 
 How DBNs differ from other deep architectures like autoencoders or CNNs? 🧠🔍
 
@@ -303,17 +305,76 @@ How DBNs differ from other deep architectures like autoencoders or CNNs? 🧠�
 
 ---
 
+- Additinal Learning:
+  - **Greedy Layer-Wise Training of Deep Networks** by Yoshua Bengio et al. (2006) [Paper Link](http://www.iro.umontreal.ca/~lisa/pointeurs/BengioNips2006All.pdf)
+  - **The Wake-sleep algorithm for unsupervised neural networks** by Groffrey Hinton et al. (1995) [Paper Link](http://www.gatsby.ucl.ac.uk/~dayan/papers/hdfn95.pdf)
+---
+
 ## 🌌 Deep Boltzmann Machines (DBM)
 
-### 🌐 Extension of BM with multiple layers
-- Like DBNs but with **undirected** connections between all layers.
+### 🌐 Extension of BM with Multiple Layers
+
+- DBMs are **deep generative models** built from layers of binary units, each connected via **undirected weights**.
+- Unlike Deep Belief Networks (DBNs), all connections between layers are **symmetric and bidirectional**—no top-down or bottom-up directional assumption.
+- Stacked **Restricted Boltzmann Machines (RBMs)** are used, but training is done **jointly** across all layers instead of greedily.
+
+Let layers be indexed as $v$, $h^{(1)}$, $h^{(2)}$, ..., $h^{(L)}$ where:
+- $v$: visible layer (input)
+- $h^{(l)}$: hidden layers from layer $1$ to layer $L$
+
+---
 
 ### 🧠 Highlights
-- Captures complex dependencies in data.
-- All layers jointly trained via approximate inference methods (e.g., mean-field approximation).
+
+- **Hierarchical latent representation**:
+  - Lower hidden layers capture simple correlations.
+  - Higher layers model **abstract and global features**.
+- **Undirected connections** allow **inter-layer symmetry**, enabling richer interactions.
+- Learns a **joint probability distribution** over inputs and hidden features:
+  $$
+  P(v, h^{(1)}, h^{(2)}, \dots, h^{(L)}) = \frac{1}{Z} e^{-E(v, h^{(1)}, \dots, h^{(L)})}
+  $$
+
+- **Energy Function Example** (3-layer DBM):
+  $$
+  E(v, h^{(1)}, h^{(2)}) = -v^\top W^{(1)} h^{(1)} - h^{(1)\top} W^{(2)} h^{(2)} - b^\top v - c^{(1)\top} h^{(1)} - c^{(2)\top} h^{(2)}
+  $$
+
+---
+
+### 🧠 Training with Approximate Inference
+
+- Full inference is **intractable** due to the nested structure.
+- DBMs use **variational methods** like:
+  - **Mean-field approximation**
+  - **Stochastic gradient descent**
+  - **Persistent Contrastive Divergence (PCD)**
+
+#### 🔄 Mean-Field Overview
+
+- Replaces sampling with **deterministic updates** of unit states.
+- Iteratively estimates expected values $\langle h_j \rangle$ for hidden units.
+- Approximates posterior distributions needed for weight updates.
+
+---
 
 ### ⚠️ Challenges
-- Very difficult to train due to deep architecture and complex energy functions.
+
+- **Training difficulty**:
+  - Requires careful initialization, often using pre-trained RBMs.
+  - Gradient signals diminish over layers—makes optimization harder.
+- **Slow convergence**:
+  - Sampling-based methods like MCMC are computationally expensive.
+- **Hyperparameter sensitivity**:
+  - Small changes in learning rate, weight decay, or layer size affect performance.
+
+---
+
+### 🧪 Applications
+
+- Modeling high-dimensional data distributions.
+- Unsupervised learning on complex datasets (images, text).
+- Pretraining components of deep neural networks.
 
 ---
 
