@@ -229,10 +229,21 @@ $$
 
 ---
 
+<img width="1059" height="376" alt="image" src="https://github.com/user-attachments/assets/bb3efbdd-7fce-4c06-92df-baf4a6d57096" />
+<img width="1002" height="367" alt="image" src="https://github.com/user-attachments/assets/01c95081-a07a-4dd9-a0f7-49a6757e9ffe" />
+<img width="1047" height="388" alt="image" src="https://github.com/user-attachments/assets/adaef6f4-b508-4aa2-b78b-662436a377e1" />
+
+---
+
+- Additional Learning
+  - **A fast learning algorithm for deep belief nets** by Geoffrey Hinton et al. (2006) [Paper link](https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf)
+  - **Notes on Contrastive Divergence** by oliver woodford (2012) [Paper link](http://www.robots.ox.ac.uk/~ojw/files/NotesOnCD.pdf)
+    
+---
 ### 📌 Key Points
 
 - No need to compute the partition function—**makes training scalable**.
-- Often used for:
+- Often used for:    
   - **Unsupervised feature learning**,
   - **Dimensionality reduction**,
   - **Pretraining** layers in deep networks.
