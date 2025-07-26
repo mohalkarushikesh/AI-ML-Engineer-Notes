@@ -188,16 +188,59 @@ CD dramatically reduces computational cost vs full gradient descent.
 ## 🌀 Contrastive Divergence (CD)
 
 ### ⚙️ Training Algorithm for RBM
-- Approximates gradient of log-likelihood.
-- **Idea:** Run Gibbs sampling from data distribution but only for few steps (often 1), hence **CD-k**.
 
-### 🔄 Steps
-1. Sample $h \sim P(h|v)$
-2. Reconstruct $v' \sim P(v|h)$
-3. Use difference between $v$ and $v'$ to update weights
+- CD is a **fast learning algorithm** for Restricted Boltzmann Machines (RBMs).
+- It approximates the gradient of the log-likelihood of the data.
+- Instead of full MCMC sampling, it uses short Gibbs sampling chains—often **just 1 step**, hence **CD-$k$**.
 
-> Very efficient compared to pure maximum likelihood methods.
+---
 
+### 🔍 Why Use It?
+
+- Computing the exact gradient requires evaluating the partition function—**very expensive**.
+- CD avoids this by:
+  - Running a few sampling steps from the data,
+  - Comparing the original input and the reconstructed version.
+- Even **CD-1** is effective for learning useful features and representations.
+
+---
+
+### 🔄 Steps of CD-$k$
+
+Let $v$ be the visible layer input and $k$ be the number of Gibbs sampling steps:
+
+1. **Positive Phase**:
+   - Sample hidden units $h$ from $P(h | v)$ using current weights.
+   - This captures statistics from the **data distribution**.
+
+2. **Negative Phase (Reconstruction)**:
+   - Reconstruct visible units $v' \sim P(v | h)$.
+   - Run $k$ steps of Gibbs sampling:
+     - Sample hidden units $h' \sim P(h | v')$,
+     - Then sample visible units $v'' \sim P(v | h')$,
+     - Repeat $k$ times if $k > 1$.
+
+3. **Weight Update**:
+   - Use the difference in expectations between the data and reconstruction to update:
+  
+$$
+\Delta w_{ij} \propto \langle v_i h_j \rangle_{\text{data}} - \langle v_i h_j \rangle_{\text{reconstruction}}
+$$
+
+---
+
+### 📌 Key Points
+
+- No need to compute the partition function—**makes training scalable**.
+- Often used for:
+  - **Unsupervised feature learning**,
+  - **Dimensionality reduction**,
+  - **Pretraining** layers in deep networks.
+- Performance depends on parameters:
+  - Choice of $k$, learning rate, initialization,
+  - Mini-batch size, and momentum.
+- Works well even with binary units, but also extendable to Gaussian and other types.
+  
 ---
 
 ## 🧬 Deep Belief Networks (DBN)
