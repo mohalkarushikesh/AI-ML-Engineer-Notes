@@ -96,13 +96,24 @@ Below is a reorganized version of your AI Notes, structured according to parent 
 **Example**: Recognizing handwritten digits in postal codes.  
 **Applications**: Pattern recognition (e.g., voice authentication), predictive analytics.
 
+##### Artificial Neural Networks (RNNs)
+
+<img width="781" height="393" alt="image" src="https://github.com/user-attachments/assets/2645c788-03ee-48c0-a0ab-54609bc90ef3" />
+
+
 ##### Convolutional Neural Networks (CNNs)
+
+<img width="768" height="375" alt="image" src="https://github.com/user-attachments/assets/b0e07a72-35b3-49b5-b5bb-323d825f8719" />
+
 **Definition**: Neural networks for processing grid-like data (e.g., images).  
 **Key Concepts**: Convolutional layers, pooling layers, filters.  
 **Example**: Identifying objects in self-driving car camera feeds.  
 **Applications**: Object detection, facial recognition (e.g., phone unlocking).
 
 ##### Recurrent Neural Networks (RNNs)
+
+<img width="781" height="438" alt="image" src="https://github.com/user-attachments/assets/6df4c662-baba-4b93-b0a8-ab4e01d59354" />
+
 **Definition**: Neural networks for sequential data.  
 **Key Concepts**: Hidden states, loops, time steps.  
 **Example**: Predicting the next word in Google’s autocomplete.  
