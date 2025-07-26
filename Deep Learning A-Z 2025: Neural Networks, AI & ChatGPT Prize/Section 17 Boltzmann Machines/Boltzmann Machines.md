@@ -36,8 +36,13 @@ $$
 E(v, h) = -\sum_i b_i v_i - \sum_j c_j h_j - \sum_{i,j} v_i w_{ij} h_j
 $$
 
-- **Lower energy** → more probable configuration.
-- The system uses this function to evaluate how “compatible” a visible-hidden pair is.
+- $v_i$: **Visible unit** – a piece of input data, like a pixel or number.
+- $h_j$: **Hidden unit** – a learned feature that helps explain the input.
+- $b_i$: **Visible bias** – adjusts the influence of each input unit.
+- $c_j$: **Hidden bias** – adjusts the activation tendency of each hidden unit.
+- $w_{ij}$: **Weight** – controls how strongly visible unit $v_i$ and hidden unit $h_j$ interact.
+- **Lower energy** → means the model finds the input and features a good match.
+- The system uses this to judge how well $v$ and $h$ work together.
 
 ---
 
