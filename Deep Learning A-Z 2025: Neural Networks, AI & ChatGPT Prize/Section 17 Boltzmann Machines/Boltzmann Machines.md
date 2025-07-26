@@ -324,6 +324,10 @@ Let layers be indexed as $v$, $h^{(1)}$, $h^{(2)}$, ..., $h^{(L)}$ where:
 
 ---
 
+<img width="1076" height="479" alt="image" src="https://github.com/user-attachments/assets/35eab926-a331-45e1-9d8c-b83051e974b8" />
+
+---
+
 ### 🧠 Highlights
 
 - **Hierarchical latent representation**:
@@ -331,14 +335,16 @@ Let layers be indexed as $v$, $h^{(1)}$, $h^{(2)}$, ..., $h^{(L)}$ where:
   - Higher layers model **abstract and global features**.
 - **Undirected connections** allow **inter-layer symmetry**, enabling richer interactions.
 - Learns a **joint probability distribution** over inputs and hidden features:
-  $$
-  P(v, h^{(1)}, h^{(2)}, \dots, h^{(L)}) = \frac{1}{Z} e^{-E(v, h^{(1)}, \dots, h^{(L)})}
-  $$
+
+$$
+P(v, h^{(1)}, h^{(2)}, \dots, h^{(L)}) = \frac{1}{Z} e^{-E(v, h^{(1)}, \dots, h^{(L)})}
+$$
 
 - **Energy Function Example** (3-layer DBM):
-  $$
-  E(v, h^{(1)}, h^{(2)}) = -v^\top W^{(1)} h^{(1)} - h^{(1)\top} W^{(2)} h^{(2)} - b^\top v - c^{(1)\top} h^{(1)} - c^{(2)\top} h^{(2)}
-  $$
+
+$$
+E(v, h^{(1)}, h^{(2)}) = -v^\top W^{(1)} h^{(1)} - h^{(1)\top} W^{(2)} h^{(2)} - b^\top v - c^{(1)\top} h^{(1)} - c^{(2)\top} h^{(2)}
+$$
 
 ---
 
@@ -376,6 +382,8 @@ Let layers be indexed as $v$, $h^{(1)}$, $h^{(2)}$, ..., $h^{(L)}$ where:
 - Unsupervised learning on complex datasets (images, text).
 - Pretraining components of deep neural networks.
 
+---
+- Additional Learning : **Deep Boltxmann Machines** by Ruslan Salahutdinov et al. (2009) [Paper Link](http://www.utstat.toronto.edu/~rsalakhu/papers/dbm.pdf)
 ---
 
 ## 🧩 Summary Comparison
