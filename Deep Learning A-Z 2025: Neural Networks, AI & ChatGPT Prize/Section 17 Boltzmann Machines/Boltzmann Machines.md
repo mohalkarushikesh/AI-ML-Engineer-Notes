@@ -5,7 +5,7 @@
 - They don’t output probabilities directly but infer patterns by minimizing energy functions.
 
 ### 🧠 Core Idea
-- Energy function \( E(x) \) measures compatibility between input \( x \) and model parameters.
+- Energy function $E(x)$ measures compatibility between input $x$ and model parameters.
 - Learning involves shaping this energy landscape so that real data resides in low-energy regions.
 
 ---
@@ -23,14 +23,14 @@
 
 - **Units**: Each neuron (unit) is binary (on/off) and can be either visible (input/output) or hidden (latent features).
 - **Connections**: Every unit is connected to every other unit (fully connected), including hidden-hidden and visible-visible links.
-- **Weights**: Each connection \( w_{ij} \) has a weight that influences the energy of the system.
-- **Biases**: Each unit has a bias term \( b_i \) or \( c_j \) that affects its activation probability.
+- **Weights**: Each connection $w_{ij}$ has a weight that influences the energy of the system.
+- **Biases**: Each unit has a bias term $b_i$ or $c_j$ that affects its activation probability.
 
 ---
 
 ### 📉 Energy Function Explained
 
-The energy of a configuration \( (v, h) \) is given by:
+The energy of a configuration $(v, h)$ is given by:
 
 $$
 E(v, h) = -\sum_i b_i v_i - \sum_j c_j h_j - \sum_{i,j} v_i w_{ij} h_j
@@ -51,7 +51,7 @@ P(v, h) = \frac{e^{-E(v, h)}}{Z}
 $$
 
 Where:
-- \( Z = \sum_{v,h} e^{-E(v, h)} \) is the **partition function**, summing over all possible states.
+- $Z = \sum_{v,h} e^{-E(v, h)}$ is the **partition function**, summing over all possible states.
 - This makes training computationally expensive due to the exponential number of configurations.
 
 #### 🧮 Training Objective
@@ -100,24 +100,83 @@ $$
 
 ---
 
-## 🚫 Restricted Boltzmann Machines (RBM)
+## 🔬 In-depth Look at Restricted Boltzmann Machines
 
-### ✂️ Simplification
-- **No intra-layer connections** among visible or hidden units—making them “restricted.”
+### 🧠 Intuition Behind RBMs
+RBMs learn to capture patterns in data by modeling the joint probability distribution of inputs (visible units) and latent features (hidden units). Training allows them to discover correlations and useful representations—especially in unsupervised settings.
 
-### 🧮 Structure
-- Visible layer \( v \), Hidden layer \( h \), with only inter-layer connections.
+- The absence of intra-layer connections avoids feedback loops, simplifying the inference and learning processes.
+- Hidden units act as "feature detectors"—each unit tries to represent some abstract aspect of the input.
 
-### 🚀 Applications
-- Feature extraction
-- Dimensionality reduction
-- Pretraining for deep networks
+---
 
-### 🔍 Energy Function
-Same form as BM but simplified:
+### 📐 Mathematics of RBMs
+
+#### **Probability Distribution**
+RBMs define a probability over the visible and hidden vectors using the energy function:
+
 $$
-E(v, h) = -\sum_i b_i v_i - \sum_j c_j h_j - \sum_{i,j} v_i w_{ij} h_j
+P(v,h) = \frac{1}{Z} e^{-E(v,h)}
 $$
+
+Where:
+- $Z$ is the **partition function**:  
+  $$Z = \sum_{v,h} e^{-E(v,h)}$$
+- This ensures $P(v,h)$ is a valid probability distribution.
+
+---
+
+#### **Marginal and Conditional Probabilities**
+RBMs exploit conditional independence for efficient inference:
+- Given $v$, hidden units $h_j$ are conditionally independent:
+
+$$
+P(h_j = 1 \mid v) = \sigma \left(c_j + \sum_i v_i w_{ij} \right)
+$$
+
+- Similarly, for visible units:
+
+$$
+P(v_i = 1 \mid h) = \sigma \left(b_i + \sum_j h_j w_{ij} \right)
+$$
+
+- $\sigma(x)$ is the sigmoid activation function.
+
+---
+
+### 🛠️ Training RBMs
+
+RBMs are typically trained using **Contrastive Divergence (CD)**:
+- Start with the data sample $v^{(0)}$
+- Sample hidden $h^{(0)}$ from $P(h \mid v^{(0)})$
+- Reconstruct $v^{(1)}$ from $P(v \mid h^{(0)})$
+- Repeat for limited steps (usually 1–k steps)
+- Update weights using gradient approximation:
+
+$$
+\Delta w_{ij} \propto \langle v_i h_j \rangle_{\text{data}} - \langle v_i h_j \rangle_{\text{model}}
+$$
+
+CD dramatically reduces computational cost vs full gradient descent.
+
+---
+
+### 📚 Advanced Concepts & Variants
+
+| Variant | Feature | Use Case |
+|--------|---------|----------|
+| Deep Belief Networks (DBNs) | Stack multiple RBMs | Pretraining deep architectures |
+| Conditional RBMs | Add conditioning variables | Time-series or sequential data |
+| Gaussian RBMs | Replace binary visible units | Modeling real-valued data |
+
+---
+
+### 🧭 Use Cases in Practice
+
+- **Collaborative Filtering**: Recommender systems (e.g., Netflix Prize)
+- **Dimensionality Reduction**: Like PCA, but more expressive
+- **Pretraining Neural Networks**: Jumpstart learning before supervised fine-tuning
+- **Image Denoising & Reconstruction**: Using learned latent patterns
 
 ---
 
@@ -128,9 +187,9 @@ $$
 - **Idea:** Run Gibbs sampling from data distribution but only for few steps (often 1), hence **CD-k**.
 
 ### 🔄 Steps
-1. Sample \( h \sim P(h|v) \)
-2. Reconstruct \( v' \sim P(v|h) \)
-3. Use difference between \( v \) and \( v' \) to update weights
+1. Sample $h \sim P(h|v)$
+2. Reconstruct $v' \sim P(v|h)$
+3. Use difference between $v$ and $v'$ to update weights
 
 > Very efficient compared to pure maximum likelihood methods.
 
