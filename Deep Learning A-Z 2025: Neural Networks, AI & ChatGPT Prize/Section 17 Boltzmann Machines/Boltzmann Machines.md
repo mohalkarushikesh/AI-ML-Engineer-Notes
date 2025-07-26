@@ -19,6 +19,10 @@
 
 ---
 
+<img width="451" height="450" alt="image" src="https://github.com/user-attachments/assets/8b5a78f0-b0d5-4667-b81e-346adb338839" />
+
+---
+
 ### 🏗️ Architecture Details
 
 - **Units**: Each neuron (unit) is binary (on/off) and can be either visible (input/output) or hidden (latent features).
@@ -145,6 +149,10 @@ P(v_i = 1 \mid h) = \sigma \left(b_i + \sum_j h_j w_{ij} \right)
 $$
 
 - $\sigma(x)$ is the sigmoid activation function.
+
+---
+
+<img width="857" height="235" alt="image" src="https://github.com/user-attachments/assets/b1453911-dfd3-4f21-997f-51fc583c6d3f" />
 
 ---
 
