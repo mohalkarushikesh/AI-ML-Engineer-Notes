@@ -119,6 +119,12 @@ Below is a reorganized version of your AI Notes, structured according to parent 
 **Example**: Predicting the next word in Google’s autocomplete.  
 **Applications**: Speech recognition, time series prediction (e.g., stock trends).
 
+##### Boltzmann Machines 
+- ANN => CNN => RNN
+- Boltzmann Machines 
+<img width="1094" height="546" alt="image" src="https://github.com/user-attachments/assets/e1328f96-8c14-4286-a572-fbc6d8168522" />
+
+
 ##### Autoencoders
 **Definition**: Neural networks for unsupervised learning of data encodings.  
 **Key Concepts**: Encoder, decoder, latent space.  
