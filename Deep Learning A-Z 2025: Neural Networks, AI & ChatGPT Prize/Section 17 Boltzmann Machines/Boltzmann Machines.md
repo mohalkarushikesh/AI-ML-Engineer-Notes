@@ -97,11 +97,10 @@ $$
 - Theoretical modeling of cognitive processes
 - Feature learning in small-scale datasets
 - Foundation for more practical models like RBMs and DBNs
-- 
-
+  
 ---
 
-- Additional Learning : **A tutorial on energy based learning by Yann Lecun et al. (2006)**
+- Additional Learning : **A tutorial on energy based learning** by Yann Lecun et al. (2006) [Paper Link](https://web.stanford.edu/class/cs379c/archive/2012/suggested_reading_list/documents/LeCunetal06.pdf)
 
 ---
 
