@@ -99,32 +99,53 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 ## Phase 2: Core Machine Learning Foundations  
 **Duration**: 4-5 months  
 **Goal**: Master fundamental ML algorithms, data preprocessing, and evaluation techniques.  
+
 **Topics**:
-- **Supervised Learning**:
-  - Regression: 
-    - [Linear regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/)
-    - [Polynomial regression](https://www.geeksforgeeks.org/machine-learning/python-implementation-of-polynomial-regression/)
-    - [Ridge regression](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression)
-    - [Lasso regression](https://scikit-learn.org/stable/modules/linear_model.html#lasso)
-    - [Elastic Net](https://scikit-learn.org/stable/modules/linear_model.html#elastic-net)
-    - [Support Vector Regression (SVR)](https://scikit-learn.org/stable/modules/svm.html#regression)
-    - [Bayesian regression](https://scikit-learn.org/stable/modules/linear_model.html#bayesian-regression)
-    - [Quantile regression](https://scikit-learn.org/stable/modules/linear_model.html#quantile-regression)
-  - Classification: 
-    - [Logistic regression](https://www.geeksforgeeks.org/machine-learning/understanding-logistic-regression/)
-    - [k-Nearest Neighbors (k-NN)](https://www.geeksforgeeks.org/machine-learning/k-nearest-neighbours/)
-    - [Decision trees](https://www.tutorialspoint.com/machine_learning/machine_learning_decision_tree_algorithm.htm)
-    - [Support Vector Machine (SVM)](https://www.geeksforgeeks.org/machine-learning/support-vector-machine-svm/)
-    - [Naive Bayes](https://www.geeksforgeeks.org/naive-bayes-classifiers/)
-    - [Gradient Boosting](https://scikit-learn.org/stable/modules/ensemble.html#gradient-boosting)
-    - [Random Forest](https://www.geeksforgeeks.org/random-forest-classifier-using-scikit-learn/)
-    - [AdaBoost](https://scikit-learn.org/stable/modules/ensemble.html#adaboost)
-    - [XGBoost](https://xgboost.readthedocs.io/en/stable/)
-    - [LightGBM](https://lightgbm.readthedocs.io/en/latest/)
-    - [CatBoost](https://catboost.ai/en/docs/)
-    - [Extra Trees](https://scikit-learn.org/stable/modules/ensemble.html#extra-trees)
-    - [Quadratic Discriminant Analysis (QDA)](https://scikit-learn.org/stable/modules/lda_qda.html)
-    - [Linear Discriminant Analysis (LDA)](https://scikit-learn.org/stable/modules/lda_qda.html)
+### 📊 **Supervised Learning**
+  - #### 🔁 Regression
+    - **Linear Models**:
+      - [Linear Regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/)
+      - [Polynomial Regression](https://www.geeksforgeeks.org/machine-learning/python-implementation-of-polynomial-regression/)
+      - [Ridge Regression](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression)
+      - [Lasso Regression](https://scikit-learn.org/stable/modules/linear_model.html#lasso)
+      - [Elastic Net](https://scikit-learn.org/stable/modules/linear_model.html#elastic-net)
+      - [Bayesian Regression](https://scikit-learn.org/stable/modules/linear_model.html#bayesian-regression)
+      - [Quantile Regression](https://scikit-learn.org/stable/modules/linear_model.html#quantile-regression)
+
+    - **Kernel-Based**:
+      - [Support Vector Regression (SVR)](https://scikit-learn.org/stable/modules/svm.html#regression)
+
+  - #### 🧠 Classification
+      - **Linear Models**:
+        - [Logistic Regression](https://www.geeksforgeeks.org/machine-learning/understanding-logistic-regression/)
+
+      - **Instance-Based**:
+        - [k-Nearest Neighbors (k-NN)](https://www.geeksforgeeks.org/machine-learning/k-nearest-neighbours/)
+
+      - **Tree-Based**:
+        - [Decision Trees](https://www.tutorialspoint.com/machine_learning/machine_learning_decision_tree_algorithm.htm)
+        - [Random Forest](https://www.geeksforgeeks.org/random-forest-classifier-using-scikit-learn/)
+        - [Extra Trees](https://scikit-learn.org/stable/modules/ensemble.html#extra-trees)
+
+      - **Kernel-Based**:
+        - [Support Vector Machine (SVM)](https://www.geeksforgeeks.org/machine-learning/support-vector-machine-svm/)
+
+      - **Probabilistic Models**:
+        - [Naive Bayes](https://www.geeksforgeeks.org/naive-bayes-classifiers/)
+        - [Quadratic Discriminant Analysis (QDA)](https://scikit-learn.org/stable/modules/lda_qda.html)
+        - [Linear Discriminant Analysis (LDA)](https://scikit-learn.org/stable/modules/lda_qda.html)
+
+      - **Boosting Algorithms**:
+        - [Gradient Boosting](https://scikit-learn.org/stable/modules/ensemble.html#gradient-boosting)
+        - [AdaBoost](https://scikit-learn.org/stable/modules/ensemble.html#adaboost)
+        - [XGBoost](https://xgboost.readthedocs.io/en/stable/)
+        - [LightGBM](https://lightgbm.readthedocs.io/en/latest/)
+        - [CatBoost](https://catboost.ai/en/docs/)
+
+    #### 🧬 Ensemble Methods
+    - **Bagging**: Combines predictions from multiple models trained on random subsets of the data (e.g., Random Forest).
+    - **Stacking**: Combines predictions from multiple models using a meta-model to improve performance.
+
 
 - **Unsupervised Learning**:
   - Clustering: 
@@ -143,6 +164,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     - [Independent Component Analysis (ICA)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html)
     - [Singular Value Decomposition (SVD)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html)
     - [UMAP](https://umap-learn.readthedocs.io/en/latest/)
+    - [Linear Discriminant Analysis (LDA)](https://www.ibm.com/think/topics/linear-discriminant-analysis)
   - Association Rule Learning:
     - [Apriori Algorithm](https://www.geeksforgeeks.org/apriori-algorithm/)
     - [Eclat Algorithm](https://www.geeksforgeeks.org/eclat-algorithm/)
@@ -267,85 +289,87 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
   - [tanh](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/)  
   - [Leaky ReLU](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/)  
   - [ELU (Exponential Linear Unit)](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/)  
+  - [SELU – Self-normalizing activation for deep networks](https://www.geeksforgeeks.org/deep-learning/selu-activation-function-in-neural-network/)
+  - [GELU – Approximates ReLU using Gaussian error function](https://www.baeldung.com/cs/gelu-activation-function)
   - [Swish](https://www.aicodesnippet.com/machine-learning/neural-networks/activation-functions-relu-sigmoid-and-tanh-explained.html)  
   - [Softmax (for output layers)](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/)
 
 
 #### 🧠 Deep Learning Architectures
 
-- **Supervised Architectures**
+- **Artificial Neural Networks**
+    - **Supervised Architectures**
+  
+      - **Feedforward Neural Networks (FNNs)**(https://www.geeksforgeeks.org/nlp/feedforward-neural-network/)
+    
+      - **Convolutional Neural Networks (CNNs)**   
+          - [LeNet](https://www.geeksforgeeks.org/lenet-5-cnn-architecture/)  
+          - [AlexNet](https://www.geeksforgeeks.org/understanding-alexnet-model/)  
+          - [VGG](https://learnopencv.com/understanding-vgg-model/)  
+          - [ResNet](https://www.geeksforgeeks.org/introduction-to-residual-networks/)  
+          - [Inception (GoogLeNet)](https://learnopencv.com/introduction-to-googlenet-inception-in-tensorflow/)  
+          - [MobileNet](https://www.analyticsvidhya.com/blog/2022/10/mobilenet-architecture-with-python-code/)  
+          - [EfficientNet](https://learnopencv.com/efficientnet-architecture-introduction/)
 
-  - **Convolutional Neural Networks (CNNs)**  
-    - Subtypes:  
-      - [LeNet](https://www.geeksforgeeks.org/lenet-5-cnn-architecture/)  
-      - [AlexNet](https://www.geeksforgeeks.org/understanding-alexnet-model/)  
-      - [VGG](https://learnopencv.com/understanding-vgg-model/)  
-      - [ResNet](https://www.geeksforgeeks.org/introduction-to-residual-networks/)  
-      - [Inception (GoogLeNet)](https://learnopencv.com/introduction-to-googlenet-inception-in-tensorflow/)  
-      - [MobileNet](https://www.analyticsvidhya.com/blog/2022/10/mobilenet-architecture-with-python-code/)  
-      - [EfficientNet](https://learnopencv.com/efficientnet-architecture-introduction/)
+      - **Recurrent Neural Networks (RNNs)**  
+          - [Vanilla RNN](https://www.geeksforgeeks.org/recurrent-neural-networks-rnns/)  
+          - [Gated Recurrent Unit (GRU)](https://www.geeksforgeeks.org/gated-recurrent-unit-gru/)  
+          - [Bidirectional RNN](https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/)
 
-  - **Recurrent Neural Networks (RNNs)**  
-    - Subtypes:  
-      - [Vanilla RNN](https://www.geeksforgeeks.org/recurrent-neural-networks-rnns/)  
-      - [Gated Recurrent Unit (GRU)](https://www.geeksforgeeks.org/gated-recurrent-unit-gru/)  
-      - [Bidirectional RNN](https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/)
+        - **Long Short-Term Memory (LSTM)**  
+            - [Vanilla LSTM](https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/)  
+            - [Stacked LSTM](https://towardsdatascience.com/stacked-long-short-term-memory-networks-4b8b0a4e21b4)  
+            - [Bidirectional LSTM](https://towardsdatascience.com/bidirectional-lstm-for-text-classification-85c5d849b49c)  
+            - [CNN-LSTM](https://www.geeksforgeeks.org/cnn-lstm-models/)
 
-    - **Long Short-Term Memory (LSTM)**  
-      - Subtypes:  
-        - [Vanilla LSTM](https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/)  
-        - [Stacked LSTM](https://towardsdatascience.com/stacked-long-short-term-memory-networks-4b8b0a4e21b4)  
-        - [Bidirectional LSTM](https://towardsdatascience.com/bidirectional-lstm-for-text-classification-85c5d849b49c)  
-        - [CNN-LSTM](https://www.geeksforgeeks.org/cnn-lstm-models/)
+      - **Transformers**  
+        - Subtypes:  
+          - [Vanilla Transformer](https://huggingface.co/learn/nlp-course/chapter3/4)  
+          - [BERT (Bidirectional Encoder Representations from Transformers)](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)  
+          - [GPT (Generative Pre-trained Transformer)](https://www.simplilearn.com/tutorials/deep-learning-tutorial/gpt)  
+          - [T5 (Text-to-Text Transfer Transformer)](https://huggingface.co/transformers/model_doc/t5.html)  
+          - [Vision Transformer (ViT)](https://learnopencv.com/introduction-to-vision-transformers-vit/)
 
-  - **Transformers**  
-    - Subtypes:  
-      - [Vanilla Transformer](https://huggingface.co/learn/nlp-course/chapter3/4)  
-      - [BERT (Bidirectional Encoder Representations from Transformers)](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)  
-      - [GPT (Generative Pre-trained Transformer)](https://www.simplilearn.com/tutorials/deep-learning-tutorial/gpt)  
-      - [T5 (Text-to-Text Transfer Transformer)](https://huggingface.co/transformers/model_doc/t5.html)  
-      - [Vision Transformer (ViT)](https://learnopencv.com/introduction-to-vision-transformers-vit/)
+      - **Encoder-Decoder Networks**  
+        - Subtypes:  
+          - [Seq2Seq (RNN-based)](https://machinelearningmastery.com/encoder-decoder-long-short-term-memory-networks/)  
+          - [Transformer-based Encoder-Decoder](https://www.analyticsvidhya.com/blog/2022/09/encoder-decoder-architecture-of-transformers/)  
+          - [CNN Encoder with RNN Decoder (e.g., image captioning)](https://medium.com/@arindamganguly07/image-captioning-using-cnns-and-rnns-a-tutorial-on-deep-learning-624f7966ac71)
 
-  - **Encoder-Decoder Networks**  
-    - Subtypes:  
-      - [Seq2Seq (RNN-based)](https://machinelearningmastery.com/encoder-decoder-long-short-term-memory-networks/)  
-      - [Transformer-based Encoder-Decoder](https://www.analyticsvidhya.com/blog/2022/09/encoder-decoder-architecture-of-transformers/)  
-      - [CNN Encoder with RNN Decoder (e.g., image captioning)](https://medium.com/@arindamganguly07/image-captioning-using-cnns-and-rnns-a-tutorial-on-deep-learning-624f7966ac71)
+      - **Deep Q-Networks (DQNs)**  
+        - Subtypes:  
+          - [Vanilla DQN](https://neptune.ai/blog/deep-q-learning-dqn)  
+          - [Double DQN](https://www.geeksforgeeks.org/double-dqn-in-reinforcement-learning/)  
+          - [Dueling DQN](https://stable-baselines.readthedocs.io/en/master/modules/dueling_dqn.html)  
+          - [Prioritized Experience Replay](https://www.geeksforgeeks.org/prioritized-experience-replay-reinforcement-learning/)
 
-  - **Deep Q-Networks (DQNs)**  
-    - Subtypes:  
-      - [Vanilla DQN](https://neptune.ai/blog/deep-q-learning-dqn)  
-      - [Double DQN](https://www.geeksforgeeks.org/double-dqn-in-reinforcement-learning/)  
-      - [Dueling DQN](https://stable-baselines.readthedocs.io/en/master/modules/dueling_dqn.html)  
-      - [Prioritized Experience Replay](https://www.geeksforgeeks.org/prioritized-experience-replay-reinforcement-learning/)
+      - **Policy Gradient Methods**  
+        - Subtypes:  
+          - [REINFORCE](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/)  
+          - [Proximal Policy Optimization (PPO)](https://spinningup.openai.com/en/latest/algorithms/ppo.html)  
+          - [Trust Region Policy Optimization (TRPO)](https://spinningup.openai.com/en/latest/algorithms/trpo.html)
 
-  - **Policy Gradient Methods**  
-    - Subtypes:  
-      - [REINFORCE](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/)  
-      - [Proximal Policy Optimization (PPO)](https://spinningup.openai.com/en/latest/algorithms/ppo.html)  
-      - [Trust Region Policy Optimization (TRPO)](https://spinningup.openai.com/en/latest/algorithms/trpo.html)
+      - **Actor-Critic Models**  
+        - Subtypes:  
+          - [A2C (Advantage Actor-Critic)](https://www.analyticsvidhya.com/blog/2022/06/advantage-actor-critic-a2c-algorithm/)  
+          - [A3C (Asynchronous Advantage Actor-Critic)](https://www.geeksforgeeks.org/a3c-asynchronous-advantage-actor-critic/)  
+          - [DDPG (Deep Deterministic Policy Gradient)](https://spinningup.openai.com/en/latest/algorithms/ddpg.html)  
+          - [SAC (Soft Actor-Critic)](https://github.com/ku2482/soft-actor-critic-pytorch)
 
-  - **Actor-Critic Models**  
-    - Subtypes:  
-      - [A2C (Advantage Actor-Critic)](https://www.analyticsvidhya.com/blog/2022/06/advantage-actor-critic-a2c-algorithm/)  
-      - [A3C (Asynchronous Advantage Actor-Critic)](https://www.geeksforgeeks.org/a3c-asynchronous-advantage-actor-critic/)  
-      - [DDPG (Deep Deterministic Policy Gradient)](https://spinningup.openai.com/en/latest/algorithms/ddpg.html)  
-      - [SAC (Soft Actor-Critic)](https://github.com/ku2482/soft-actor-critic-pytorch)
+    - **Unsupervised Architectures**
+          - [Autoencoders](https://vitalflux.com/autoencoder-vs-variational-autoencoder-vae-difference/)  
+          - [Variational Autoencoders (VAEs)](https://www.geeksforgeeks.org/machine-learning/variational-autoencoders/)  
+          - [Generative Adversarial Networks (GANs)](https://aman.ai/primers/ai/dl-comp/#gan)  
+          - [Restricted Boltzmann Machines (RBMs)](https://www.geeksforgeeks.org/restricted-boltzmann-machines/)  
+          - [Self-Organizing Maps (SOMs)](https://www.geeksforgeeks.org/self-organizing-maps-soms/)  
+          - [Deep Belief Networks (DBNs)](https://www.geeksforgeeks.org/deep-belief-network-dbn/)  
 
-  - **Unsupervised Architectures**
-      - [Autoencoders](https://vitalflux.com/autoencoder-vs-variational-autoencoder-vae-difference/)  
-      - [Variational Autoencoders (VAEs)](https://www.geeksforgeeks.org/machine-learning/variational-autoencoders/)  
-      - [Generative Adversarial Networks (GANs)](https://aman.ai/primers/ai/dl-comp/#gan)  
-      - [Restricted Boltzmann Machines (RBMs)](https://www.geeksforgeeks.org/restricted-boltzmann-machines/)  
-      - [Self-Organizing Maps (SOMs)](https://www.geeksforgeeks.org/self-organizing-maps-soms/)  
-      - [Deep Belief Networks (DBNs)](https://www.geeksforgeeks.org/deep-belief-network-dbn/)  
-
-  - **Hybrid / Semi-Supervised Architectures**
-      - [Attention Mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/)  
-      - [Transformers with Pretraining (e.g., BERT, GPT)](https://focalx.ai/ai/ai-model-architectures/)  
-      - [CycleGANs](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-021-00444-8)  
-      - [Contrastive Learning Models](https://www.analyticsvidhya.com/blog/2021/06/contrastive-learning-in-deep-learning/)  
-      - [Semi-Supervised GANs](https://eitca.org/artificial-intelligence/eitc-ai-adl-advanced-deep-learning/unsupervised-learning/unsupervised-representation-learning/examination-review-unsupervised-representation-learning/)
+    - **Hybrid / Semi-Supervised Architectures**
+          - [Attention Mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/)  
+          - [Transformers with Pretraining (e.g., BERT, GPT)](https://focalx.ai/ai/ai-model-architectures/)  
+          - [CycleGANs](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-021-00444-8)  
+          - [Contrastive Learning Models](https://www.analyticsvidhya.com/blog/2021/06/contrastive-learning-in-deep-learning/)  
+          - [Semi-Supervised GANs](https://eitca.org/artificial-intelligence/eitc-ai-adl-advanced-deep-learning/unsupervised-learning/unsupervised-representation-learning/examination-review-unsupervised-representation-learning/)
 
 
 #### 🧪 Loss Functions
