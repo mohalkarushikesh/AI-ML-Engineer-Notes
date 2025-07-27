@@ -298,8 +298,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 #### 🧠 Deep Learning Architectures
 
 - **Artificial Neural Networks**
-    - **Supervised Architectures**
-  
+  - **Supervised Architectures**  
       - [**Feedforward Neural Networks (FNNs)**](https://www.geeksforgeeks.org/nlp/feedforward-neural-network/)
     
       - **Convolutional Neural Networks (CNNs)**   
@@ -356,20 +355,30 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
           - [DDPG (Deep Deterministic Policy Gradient)](https://spinningup.openai.com/en/latest/algorithms/ddpg.html)  
           - [SAC (Soft Actor-Critic)](https://github.com/ku2482/soft-actor-critic-pytorch)
 
-    - **Unsupervised Architectures**
-          - [Autoencoders](https://vitalflux.com/autoencoder-vs-variational-autoencoder-vae-difference/)  
-          - [Variational Autoencoders (VAEs)](https://www.geeksforgeeks.org/machine-learning/variational-autoencoders/)  
-          - [Generative Adversarial Networks (GANs)](https://aman.ai/primers/ai/dl-comp/#gan)  
-          - [Restricted Boltzmann Machines (RBMs)](https://www.geeksforgeeks.org/restricted-boltzmann-machines/)  
-          - [Self-Organizing Maps (SOMs)](https://www.geeksforgeeks.org/self-organizing-maps-soms/)  
-          - [Deep Belief Networks (DBNs)](https://www.geeksforgeeks.org/deep-belief-network-dbn/)  
+    - ### 🧠 **Unsupervised Architectures**
 
-    - **Hybrid / Semi-Supervised Architectures**
-          - [Attention Mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/)  
-          - [Transformers with Pretraining (e.g., BERT, GPT)](https://focalx.ai/ai/ai-model-architectures/)  
-          - [CycleGANs](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-021-00444-8)  
-          - [Contrastive Learning Models](https://www.analyticsvidhya.com/blog/2021/06/contrastive-learning-in-deep-learning/)  
-          - [Semi-Supervised GANs](https://eitca.org/artificial-intelligence/eitc-ai-adl-advanced-deep-learning/unsupervised-learning/unsupervised-representation-learning/examination-review-unsupervised-representation-learning/)
+      - #### 🔄 **Autoencoding Models**
+        - [Autoencoders](https://vitalflux.com/autoencoder-vs-variational-autoencoder-vae-difference/)  
+        - [Variational Autoencoders (VAEs)](https://www.geeksforgeeks.org/machine-learning/variational-autoencoders/)  
+
+      - #### 🎨 **Generative Models**
+        - [Generative Adversarial Networks (GANs)](https://aman.ai/primers/ai/dl-comp/#gan)  
+        - [Boltzmann Machines (BMs)](https://iq.opengenus.org/boltzmann-machines/)  
+          - [**Restricted Boltzmann Machines (RBMs)**](https://www.geeksforgeeks.org/machine-learning/restricted-boltzmann-machine/)  
+            - [**Contrastive Divergence (CD)**](https://www.geeksforgeeks.org/deep-learning/contrastive-divergence-in-restricted-boltzmann-machines/)
+          - [**Deep Belief Networks (DBNs)**](https://www.geeksforgeeks.org/deep-belief-network-dbn/)  
+          - [**Deep Boltzmann Machines (DBMs)**](https://www.geeksforgeeks.org/deep-learning/deep-boltzmann-machines-dbms-in-deep-learning/)  
+        - [Deep Belief Networks (DBNs)](https://www.geeksforgeeks.org/deep-belief-network-dbn/)  
+
+      - #### 🗺️ **Topology-Preserving Models**
+        - [Self-Organizing Maps (SOMs)](https://www.geeksforgeeks.org/self-organizing-maps-soms/)  
+
+    - ### **Hybrid / Semi-Supervised Architectures**
+      - [Attention Mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/)  
+      - [Transformers with Pretraining (e.g., BERT, GPT)](https://focalx.ai/ai/ai-model-architectures/)  
+      - [CycleGANs](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-021-00444-8)  
+      - [Contrastive Learning Models](https://www.analyticsvidhya.com/blog/2021/06/contrastive-learning-in-deep-learning/)
+      - [Semi-Supervised GANs](https://eitca.org/artificial-intelligence/eitc-ai-adl-advanced-deep-learning/unsupervised-learning/unsupervised-representation-learning/examination-review-unsupervised-representation-learning/)
 
 
 #### 🧪 Loss Functions
