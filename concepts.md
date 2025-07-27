@@ -6,48 +6,96 @@ Below is a reorganized version of your AI Notes, structured according to parent 
 
 **Purpose**: These notes provide a structured overview of Artificial Intelligence concepts, focusing on key definitions, techniques, and applications for quick reference.
 
-## Table of Contents
-- [AI Notes](#ai-notes)
-  - [Table of Contents](#table-of-contents)
-  - [Artificial Intelligence (AI)](#artificial-intelligence-ai)
-  - [Machine Learning (ML)](#machine-learning-ml)
-    - [Supervised Learning](#supervised-learning)
-    - [Unsupervised Learning](#unsupervised-learning)
-    - [Reinforcement Learning](#reinforcement-learning)
-    - [Deep Learning](#deep-learning)
-      - [Neural Networks](#neural-networks)
-        - [Convolutional Neural Networks (CNNs)](#convolutional-neural-networks-cnns)
-        - [Recurrent Neural Networks (RNNs)](#recurrent-neural-networks-rnns)
-        - [Autoencoders](#autoencoders)
-        - [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
-    - [Torque Clustering](#torque-clustering)
-  - [Transformers](#transformers)
-  - [Natural Language Processing (NLP)](#natural-language-processing-nlp)
-    - [Natural Language Understanding (NLU)](#natural-language-understanding-nlu)
-    - [Natural Language Generation (NLG)](#natural-language-generation-nlg)
-    - [Additional NLP Techniques](#additional-nlp-techniques)
-  - [Computer Vision](#computer-vision)
-    - [Key Techniques](#key-techniques)
-  - [Generative AI](#generative-ai)
-  - [Large Language Models (LLMs)](#large-language-models-llms)
-  - [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
-  - [LangChain](#langchain)
-  - [Machine Learning and NLP Libraries](#machine-learning-and-nlp-libraries)
-    - [ML Frameworks](#ml-frameworks)
-  - [Hugging Face](#hugging-face)
-  - [Core Concepts](#core-concepts)
-    - [Self-Attention](#self-attention)
-    - [Attention Mechanism](#attention-mechanism)
-    - [Bidirectional Encoder Representations from Transformers (BERT)](#bidirectional-encoder-representations-from-transformers-bert)
-    - [Generative Pre-trained Transformer (GPT)](#generative-pre-trained-transformer-gpt)
-    - [Transfer Learning](#transfer-learning)
-    - [Fine-Tuning](#fine-tuning)
-    - [Hyperparameter Tuning](#hyperparameter-tuning)
-    - [Gradient Descent](#gradient-descent)
-    - [Backpropagation](#backpropagation)
-    - [Data Augmentation](#data-augmentation)
-    - [Notes on Reorganization](#notes-on-reorganization)
+## 📚 Table of Contents
 
+### 🧠 [AI Notes](#ai-notes)
+- [Table of Contents](#table-of-contents)
+
+---
+
+### 🤖 [Artificial Intelligence (AI)](#artificial-intelligence-ai)
+
+---
+
+### 📈 [Machine Learning (ML)](#machine-learning-ml)
+- [Supervised Learning](#supervised-learning)
+  - [Artificial Neural Network](#artificial-neural-network)
+  - [Convolutional Neural Networks (CNNs)](#convolutional-neural-networks-cnns)
+  - [Recurrent Neural Networks (RNNs)](#recurrent-neural-networks-rnns)
+    - [1. Vanilla RNN](#1-vanilla-rnn)
+    - [2. Bidirectional RNNs](#2-bidirectional-rnns)
+    - [3. Long Short-Term Memory Networks (LSTMs)](#3-long-short-term-memory-networks-lstms)
+    - [4. Gated Recurrent Units (GRUs)](#4-gated-recurrent-units-grus)
+
+- [Unsupervised Learning](#unsupervised-learning)
+  - [Autoencoders](#autoencoders)
+  - [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
+
+- [Reinforcement Learning](#reinforcement-learning)
+
+- [Deep Learning](#deep-learning)
+  - [Neural Networks](#neural-networks)
+
+- [Torque Clustering](#torque-clustering)
+
+---
+
+### 🧮 [Transformers](#transformers)
+
+---
+
+### 🗣️ [Natural Language Processing (NLP)](#natural-language-processing-nlp)
+- [Natural Language Understanding (NLU)](#natural-language-understanding-nlu)
+- [Natural Language Generation (NLG)](#natural-language-generation-nlg)
+- [Additional NLP Techniques](#additional-nlp-techniques)
+
+---
+
+### 👁️ [Computer Vision](#computer-vision)
+- [Key Techniques](#key-techniques)
+
+---
+
+### 🧪 [Generative AI](#generative-ai)
+
+---
+
+### 🧠 [Large Language Models (LLMs)](#large-language-models-llms)
+
+---
+
+### 🔍 [Retrieval-Augmented Generation (RAG)](#retrieval-augmented-generation-rag)
+
+---
+
+### 🔗 [LangChain](#langchain)
+
+---
+
+### 📦 [Machine Learning and NLP Libraries](#machine-learning-and-nlp-libraries)
+- [ML Frameworks](#ml-frameworks)
+
+---
+
+### 🤗 [Hugging Face](#hugging-face)
+
+---
+
+### 🧩 [Core Concepts](#core-concepts)
+- [Self-Attention](#self-attention)
+- [Attention Mechanism](#attention-mechanism)
+- [Bidirectional Encoder Representations from Transformers (BERT)](#bidirectional-encoder-representations-from-transformers-bert)
+- [Generative Pre-trained Transformer (GPT)](#generative-pre-trained-transformer-gpt)
+- [Transfer Learning](#transfer-learning)
+- [Fine-Tuning](#fine-tuning)
+- [Hyperparameter Tuning](#hyperparameter-tuning)
+- [Gradient Descent](#gradient-descent)
+- [Backpropagation](#backpropagation)
+- [Data Augmentation](#data-augmentation)
+
+---
+
+### 🛠️ [Notes on Reorganization](#notes-on-reorganization)
 ---
 
 ## Artificial Intelligence (AI)
