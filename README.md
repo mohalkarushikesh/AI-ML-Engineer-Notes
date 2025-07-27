@@ -280,7 +280,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
   - [Perceptrons](https://www.geeksforgeeks.org/machine-learning/what-is-perceptron-the-simplest-artificial-neural-network/)  
   - [Multi-layer perceptrons (MLPs)](https://www.geeksforgeeks.org/deep-learning/multi-layer-perceptron-learning-in-tensorflow/)  
   - [Backpropagation](https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/)  
-  - [Gradient descent](https://bing.com/search?q=Gradient+descent+tutorial)  
+  - [Gradient descent](https://bing.com/search?q=Gradient+descent+tutorial) is a fundamental optimization algorithm used in machine learning to minimize the cost function by iteratively adjusting model parameters.
   - [Weight initialization strategies (Xavier, He)](https://www.geeksforgeeks.org/weight-initialization-techniques-in-neural-networks/)
 
 #### ⚡ Activation Functions
