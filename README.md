@@ -300,7 +300,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 - **Artificial Neural Networks**
     - **Supervised Architectures**
   
-      - **Feedforward Neural Networks (FNNs)**(https://www.geeksforgeeks.org/nlp/feedforward-neural-network/)
+      - [**Feedforward Neural Networks (FNNs)**](https://www.geeksforgeeks.org/nlp/feedforward-neural-network/)
     
       - **Convolutional Neural Networks (CNNs)**   
           - [LeNet](https://www.geeksforgeeks.org/lenet-5-cnn-architecture/)  
