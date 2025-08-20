@@ -200,6 +200,8 @@ Below is a reorganized version of your AI Notes, structured according to parent 
 **Example**: Translating "The cat is on the mat" to "Le chat est sur le tapis" with Google Translate.  
 **Applications**: Text generation, machine translation, question answering, image recognition (e.g., Vision Transformers).
 
+<img width="1216" height="479" alt="image" src="https://github.com/user-attachments/assets/44733ce0-8e87-4bf8-bead-0c14fec74afe" />
+
 ---
 
 ## Natural Language Processing (NLP)
