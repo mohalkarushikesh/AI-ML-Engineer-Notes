@@ -222,8 +222,8 @@ The loss function combines:
 ## Additional Learning 
 
 - [Deep Learning Tutorial - Sparse Autoencoder By Chris McCormick (2014)](http://mccormickml.com/2014/05/30/deep-learning-tutorial-sparse-autoencoder/)
-- [Deep Learning - Sparse AutoEncoders By Eric Wilkinson (2014)](http://www.ericlwilkinson.com/blog/2014/11/19/deep-learning-
-sparse-autoencoders)
+- [Deep Learning - Sparse AutoEncoders By Eric Wilkinson (2014)](http://www.ericlwilkinson.com/blog/2014/11/19/deep-learning-sparse-autoencoders)
+- [K-Sparse AutoEncoders By Alireza Makhzani et al. (2014)](https://arxiv.org/pdf/1312.5663.pdf)
 ---
 
 ## 📚 Recommended Reading
