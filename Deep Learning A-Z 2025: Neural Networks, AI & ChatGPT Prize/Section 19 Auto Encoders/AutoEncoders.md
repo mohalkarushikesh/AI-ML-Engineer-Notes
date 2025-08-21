@@ -320,6 +320,12 @@ class DenoisingAutoencoder(nn.Module):
 
 ---
 
+## Additional Learning 
+
+- [Extracting and Composing Robust Features with Denoising AutoEncoders By Pascan Vincet (2008)](http://www.cs.toronto.edu/~larocheh/publications/icml-2008-denoising-autoencoders.pdf)
+
+---
+
 ## 📚 Key Research & Resources
 
 - [GeeksforGeeks: Denoising AutoEncoders in Machine Learning](https://www.geeksforgeeks.org/machine-learning/denoising-autoencoders-in-machine-learning/)
@@ -416,6 +422,12 @@ This assumes:
 | **Sparse AE**         | Enforce sparse hidden activations             | Encourages specialization of neurons     |
 
 ---
+
+## Additional Learning 
+
+- [Contrastive Auto-Encoders: Explicit Invariance During the Feature Extraction By Salah Rifai et al(2011)](https://icml.cc/2011/papers/455_icmlpaper.pdf)
+
+--- 
 
 ## 📚 Recommended Reading
 
