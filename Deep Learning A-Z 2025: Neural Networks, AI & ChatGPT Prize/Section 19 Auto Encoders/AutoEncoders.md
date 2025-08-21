@@ -144,3 +144,383 @@ class OvercompleteAE(nn.Module):
 | **Deep Autoencoders**     | Deep architectures for capturing complex data patterns                     |
 
 ---
+
+## 🔍 What Is a Sparse Autoencoder?
+
+A **Sparse Autoencoder (SAE)** is a type of autoencoder that introduces a **sparsity constraint** on the hidden units. Unlike standard autoencoders that may activate all hidden neurons, SAEs encourage only a **small subset** of neurons to be active at any time.
+
+This leads to:
+- **Compact representations**
+- **Better generalization**
+- **Feature disentanglement**
+
+---
+
+## 🧱 Architecture Overview
+
+- **Input Layer**: Raw data (e.g., image pixels, tabular features)
+- **Hidden Layer**: More neurons than input (often overcomplete)
+- **Sparsity Constraint**: Applied to hidden activations
+- **Output Layer**: Reconstructed input
+
+---
+
+## 🧮 Objective Function
+
+The loss function combines:
+1. **Reconstruction Loss**: Measures how well the output matches the input  
+   $$L_{\text{recon}} = \|X - \hat{X}\|^2$$
+
+2. **Sparsity Penalty**: Encourages hidden activations to be close to a target sparsity level  
+   $$L_{\text{sparse}} = \lambda \cdot \sum_{j=1}^{n} \text{KL}(\rho \| \hat{\rho}_j)$$  
+   - ρ: Desired average activation (e.g., 0.05)
+   - \( \hat{\rho}_j \): Actual average activation of neuron j
+   - KL: Kullback-Leibler divergence
+
+3. **Total Loss**:  
+   $$L = L_{\text{recon}} + L_{\text{sparse}}$$
+
+---
+
+## 🛠️ Techniques to Enforce Sparsity
+
+| Method              | Description                                                                 |
+|---------------------|------------------------------------------------------------------------------|
+| **KL Divergence**    | Penalizes deviation from target activation level                            |
+| **L1 Regularization**| Encourages weights to be small, leading to sparse activations               |
+| **Dropout**          | Randomly disables neurons during training to reduce reliance on all units   |
+
+---
+
+## 🧪 Training Process
+
+1. **Initialization**: Random or pre-trained weights
+2. **Forward Pass**: Input → Encoder → Decoder → Output
+3. **Loss Calculation**: Combines reconstruction + sparsity penalty
+4. **Backpropagation**: Updates weights using gradients
+5. **Iteration**: Repeat until convergence
+
+---
+
+## 📈 Applications
+
+- **Feature Learning**: Extracts interpretable features from raw data
+- **Image Denoising**: Filters out noise while preserving structure
+- **Anomaly Detection**: Sparse activations highlight unusual patterns
+- **Pretraining**: Used to initialize deep networks with meaningful weights
+
+---
+
+## 🧠 Intuition Behind Sparsity
+
+- Forces the network to **specialize** neurons for specific features
+- Prevents **trivial identity mapping**
+- Mimics biological neural systems where only a few neurons fire at once
+
+---
+
+## 📚 Recommended Reading
+
+- [Sparse Autoencoders in Deep Learning – GeeksforGeeks](https://www.geeksforgeeks.org/deep-learning/sparse-autoencoders-in-deep-learning/)
+- [Stanford Lecture Notes by Andrew Ng](https://web.stanford.edu/class/cs294a/sparseAutoencoder.pdf)
+- [Intuitive Explanation of Sparse Autoencoders](https://adamkarvonen.github.io/machine_learning/2024/06/11/sae-intuitions.html)
+
+---
+
+## 🔧 What Is a Denoising Autoencoder?
+
+A **Denoising Autoencoder** is a neural network trained to:
+- **Take a noisy or corrupted version of input**
+- **Reconstruct the original clean input**
+
+This forces the model to learn **robust features** that capture the underlying structure of the data rather than memorizing it.
+
+---
+
+## 🧱 Architecture Overview
+
+- **Input Layer**: Receives corrupted data (e.g., image with noise)
+- **Encoder**: Maps noisy input to a latent representation
+- **Decoder**: Reconstructs the original clean input from the latent space
+- **Output Layer**: Matches the original (uncorrupted) input
+
+> 🧠 Unlike standard autoencoders, the loss is computed between the output and the **clean input**, not the noisy one.
+
+---
+
+## 🧮 Objective Function
+
+The goal is to minimize the **reconstruction loss**:
+
+$$
+L = \|x - \hat{x}\|^2
+$$
+
+Where:
+- \( x \): Original clean input
+- \( \hat{x} \): Reconstructed output from noisy input
+
+---
+
+## 🌪️ Types of Noise Used
+
+| Noise Type         | Description                                      |
+|--------------------|--------------------------------------------------|
+| **Gaussian Noise** | Add random values from a normal distribution     |
+| **Salt & Pepper**  | Randomly flip pixel values to black or white     |
+| **Masking Noise**  | Randomly set some input values to zero           |
+| **Block Masking**  | Hide entire regions of the input (e.g., image)   |
+| **Blurring**       | Apply Gaussian blur to smooth the input          |
+
+These techniques simulate real-world corruption and help the model generalize better.
+
+---
+
+## 🧪 PyTorch Implementation (Simplified)
+
+```python
+class DenoisingAutoencoder(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.encoder = nn.Sequential(
+            nn.Linear(784, 128),
+            nn.ReLU(),
+            nn.Linear(128, 64)
+        )
+        self.decoder = nn.Sequential(
+            nn.Linear(64, 128),
+            nn.ReLU(),
+            nn.Linear(128, 784),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        x_noisy = x + torch.randn_like(x) * 0.2  # Add Gaussian noise
+        encoded = self.encoder(x_noisy)
+        decoded = self.decoder(encoded)
+        return decoded
+```
+
+---
+
+## 🎯 Why Use Denoising Autoencoders?
+
+- **Robust Feature Learning**: Learns to ignore noise and focus on structure
+- **Improved Generalization**: Avoids overfitting by training on corrupted data
+- **Pretraining**: Useful for initializing deep networks
+- **Image Restoration**: Effective in removing noise from visual data
+- **Anomaly Detection**: Highlights deviations from expected patterns
+
+---
+
+## 📚 Key Research & Resources
+
+- [GeeksforGeeks: Denoising AutoEncoders in Machine Learning](https://www.geeksforgeeks.org/machine-learning/denoising-autoencoders-in-machine-learning/)
+- [University of Washington Lecture Notes on DAEs](https://courses.cs.washington.edu/courses/cse599i/20au/resources/L17_denoising.pdf)
+- [Scaler Topics: Exploring Denoising Autoencoders](https://www.scaler.com/topics/deep-learning/denoising-autoencoder/)
+- [François Fleuret’s Deep Learning Notes on DAEs](https://fleuret.org/dlc/materials/dlc-handout-7-3-denoising-autoencoders.pdf)
+
+---
+
+## 🔧 What Is a Contractive Autoencoder?
+
+A **Contractive Autoencoder** is a regularized autoencoder that adds a penalty term to the loss function to **reduce the sensitivity of the encoder** to small changes in the input. This encourages the model to learn **stable and invariant features**.
+
+> 📌 Think of it as teaching the model to “contract” its response to tiny input perturbations—hence the name.
+
+---
+
+## 🧱 Architecture Overview
+
+- **Input Layer**: Raw data (e.g., images, vectors)
+- **Encoder**: Maps input to latent space
+- **Decoder**: Reconstructs input from latent space
+- **Output Layer**: Matches original input
+
+The key difference lies in the **loss function**, which includes a **contractive penalty**.
+
+---
+
+## 🧮 Objective Function
+
+The total loss combines:
+
+1. **Reconstruction Loss**  
+   $$L_{\text{recon}} = \|x - \hat{x}\|^2$$  
+   Measures how well the output matches the input.
+
+2. **Contractive Penalty**  
+   $$L_{\text{contractive}} = \lambda \cdot \|J_h(x)\|_F^2$$  
+   - \( J_h(x) \): Jacobian of the encoder’s hidden representation w.r.t. input  
+   - \( \| \cdot \|_F^2 \): Frobenius norm (sum of squared partial derivatives)  
+   - λ: Regularization strength
+
+3. **Total Loss**  
+   $$L = L_{\text{recon}} + L_{\text{contractive}}$$
+
+This penalty discourages the encoder from being too sensitive to input changes.
+
+---
+
+## 🧠 Intuition Behind the Jacobian Penalty
+
+- The **Jacobian matrix** captures how much each hidden unit changes with respect to each input feature.
+- Penalizing its norm ensures that **small input changes** don’t cause **large changes** in the hidden representation.
+- This leads to **smooth, stable, and invariant features**.
+
+---
+
+## 🧪 PyTorch Implementation (Simplified)
+
+```python
+def contractive_loss(x, x_hat, hidden, W, lam):
+    mse = F.mse_loss(x_hat, x)
+    dh = hidden * (1 - hidden)  # derivative of sigmoid
+    W_squared = W.pow(2)
+    contractive_term = lam * torch.sum(W_squared * dh.pow(2))
+    return mse + contractive_term
+```
+
+This assumes:
+- `hidden` is the encoder output
+- `W` is the weight matrix of the encoder
+- `lam` is the regularization coefficient
+
+---
+
+## 🎯 Why Use Contractive Autoencoders?
+
+| Benefit                     | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| **Robustness to Noise**     | Learns features that ignore small perturbations                            |
+| **Improved Generalization** | Avoids overfitting by focusing on stable patterns                          |
+| **Feature Invariance**      | Captures essential structure, ignoring irrelevant transformations          |
+| **Smooth Latent Space**     | Useful for downstream tasks like classification or clustering              |
+
+---
+
+## 🔄 Comparison with Other Autoencoders
+
+| Type                  | Key Idea                                      | Robustness Mechanism                     |
+|-----------------------|-----------------------------------------------|------------------------------------------|
+| **Standard AE**       | Reconstruct input                             | No explicit robustness                   |
+| **Denoising AE**      | Reconstruct clean input from noisy version    | Learns to ignore finite perturbations    |
+| **Contractive AE**    | Penalize sensitivity to input changes         | Learns to ignore infinitesimal changes   |
+| **Sparse AE**         | Enforce sparse hidden activations             | Encourages specialization of neurons     |
+
+---
+
+## 📚 Recommended Reading
+
+- [Contractive Autoencoders (CAE) Formulation – apxml.com](https://apxml.com/courses/autoencoders-representation-learning/chapter-3-regularized-autoencoders/contractive-autoencoders-formulation)
+- [Contractive Autoencoders Explained with Implementation – OpenGenus](https://iq.opengenus.org/contractive-autoencoder/)
+- [GeeksforGeeks: Contractive Autoencoder Overview](https://www.geeksforgeeks.org/deep-learning/contractive-autoencoder-cae/)
+
+---
+
+## 🔧 What Is a Stacked Autoencoder?
+
+A **Stacked Autoencoder** is a deep neural network formed by **stacking multiple autoencoders** on top of each other. Each layer learns to encode the output of the previous layer, allowing the network to build **hierarchical feature representations**.
+
+> Think of it as building a tower of abstraction—each level captures increasingly complex patterns.
+
+---
+
+## 🧱 Architecture Overview
+
+- **Layer 1**: Autoencoder trained on raw input
+- **Layer 2**: Autoencoder trained on Layer 1’s encoded output
+- **Layer n**: Trained on encoded output of Layer n−1
+
+After training each layer individually, the entire stack is **fine-tuned** using backpropagation.
+
+### Example Structure:
+```
+Input → AE1 → AE2 → AE3 → Decoder3 → Decoder2 → Decoder1 → Output
+```
+
+---
+
+## 🧪 Training Strategy
+
+### 🔹 Phase 1: Layer-wise Pretraining
+- Train each autoencoder independently
+- Use unsupervised learning (e.g., MSE loss)
+- Freeze weights after training each layer
+
+### 🔹 Phase 2: Fine-tuning
+- Stack all encoders and decoders
+- Train the full network end-to-end using backpropagation
+- Optionally use labeled data for supervised fine-tuning
+
+---
+
+## 🧮 Objective Function
+
+Each autoencoder minimizes its own **reconstruction loss**:
+
+$$
+L = \|x - \hat{x}\|^2
+$$
+
+During fine-tuning, the loss is computed between the final output and the original input.
+
+---
+
+## 🎯 Why Use Stacked Autoencoders?
+
+| Benefit                     | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| **Deep Feature Learning**   | Captures complex, hierarchical patterns                                     |
+| **Unsupervised Pretraining**| Useful when labeled data is scarce                                          |
+| **Dimensionality Reduction**| Learns compact representations for visualization or clustering              |
+| **Transfer Learning**       | Pretrained layers can be reused across tasks                                |
+| **Improved Initialization** | Helps avoid poor local minima in deep networks                              |
+
+---
+
+## 🧠 Intuition Behind Layer Stacking
+
+- Each layer learns **increasingly abstract features**
+- Lower layers capture edges or textures (in images)
+- Higher layers capture shapes, objects, or semantic meaning
+
+---
+
+## 🧪 PyTorch Skeleton (Simplified)
+
+```python
+class AE(nn.Module):
+    def __init__(self, input_dim, hidden_dim):
+        super().__init__()
+        self.encoder = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.ReLU()
+        )
+        self.decoder = nn.Sequential(
+            nn.Linear(hidden_dim, input_dim),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        encoded = self.encoder(x)
+        decoded = self.decoder(encoded)
+        return decoded
+
+# Stack multiple AEs
+ae1 = AE(784, 512)
+ae2 = AE(512, 256)
+ae3 = AE(256, 128)
+```
+
+Each autoencoder is trained separately, then stacked and fine-tuned.
+
+---
+
+## 📚 Recommended Reading
+
+- [Autoencoders – IIT Kharagpur Lecture Notes](https://cse.iitkgp.ac.in/~sudeshna/courses/DL17/Autoencoder-15-Mar-17.pdf)
+- [Stacked Autoencoders – Towards Data Science](https://towardsdatascience.com/stacked-autoencoders-f0a4391ae282)
+- [CSCE Lecture on Autoencoders – University of Nebraska](https://cse.unl.edu/~sscott/teach/Classes/cse496S19/slides/05-Autoencoders.pdf)
+
+---
