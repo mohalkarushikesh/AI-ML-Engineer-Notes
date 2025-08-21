@@ -536,6 +536,12 @@ Each autoencoder is trained separately, then stacked and fine-tuned.
 
 ---
 
+## Additional Learning 
+
+- [Stacked Denoising AutoEncoders Learning Useful Representations in a Deep Network with Local Denoising Criterion By Pascal Vince et al (2010)](http://www.jmlr.org/papers/volume11/vincent10a/vincent10a.pdf)
+
+---
+
 ## 📚 Recommended Reading
 
 - [Autoencoders – IIT Kharagpur Lecture Notes](https://cse.iitkgp.ac.in/~sudeshna/courses/DL17/Autoencoder-15-Mar-17.pdf)
@@ -644,6 +650,12 @@ class DeepAutoencoder(nn.Module):
 - Apply **dropout** and **batch normalization** to prevent overfitting
 - Choose appropriate **activation functions** (ReLU, Sigmoid, etc.)
 - Monitor **reconstruction loss** and **latent space behavior**
+
+--- 
+
+## Additional Learning 
+
+- [Reducing the Dimentionality of Data with Neural Networks By Geoffery Hinton et al (2006)](https://www.cs.toronto.edu/~hinton/science.pdf)
 
 ---
 
