@@ -217,6 +217,13 @@ The loss function combines:
 - Prevents **trivial identity mapping**
 - Mimics biological neural systems where only a few neurons fire at once
 
+--- 
+
+## Additional Learning 
+
+- [Deep Learning Tutorial - Sparse Autoencoder By Chris McCormick (2014)](http://mccormickml.com/2014/05/30/deep-learning-tutorial-sparse-autoencoder/)
+- [Deep Learning - Sparse AutoEncoders By Eric Wilkinson (2014)](http://www.ericlwilkinson.com/blog/2014/11/19/deep-learning-
+sparse-autoencoders)
 ---
 
 ## 📚 Recommended Reading
