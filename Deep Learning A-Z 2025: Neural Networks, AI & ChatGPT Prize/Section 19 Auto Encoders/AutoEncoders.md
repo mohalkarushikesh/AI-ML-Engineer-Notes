@@ -265,7 +265,7 @@ $$
 
 Where:
 - \( x \): Original clean input
-- \( \hat{x} \): Reconstructed output from noisy input
+- ( $\hat{x}$ ): Reconstructed output from noisy input
 
 ---
 
