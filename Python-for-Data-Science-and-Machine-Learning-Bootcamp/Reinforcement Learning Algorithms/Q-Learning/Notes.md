@@ -57,9 +57,9 @@ This equation is **recursive** — it defines the value of a state-action pair i
 
 
 Q-table 
-	- Row represent state
-	- column represent action
-	- each entry in the table corresponds to the Q-value for state-action pair.
+- Row represent state
+- column represent action
+- each entry in the table corresponds to the Q-value for state-action pair.
 
 Ex
 1. Define the environments 
