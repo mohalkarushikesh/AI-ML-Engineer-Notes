@@ -1,6 +1,8 @@
-Q-Learning 
-- model-free reinforcement learning algorithm 
-- Q-learning is an **off-policy TD control algorithm**. It uses the Bellman optimality equation to update Q-values:
+### **Q-Learning**
+
+- Q-learning is a **model-free reinforcement learning algorithm** that learns an optimal policy by estimating the **Q-value function**, which represents the expected cumulative reward of taking a particular action in a given state and following the optimal policy thereafter. The goal is to discover a strategy that maximizes total reward over time.
+
+- It is an **off-policy Temporal Difference (TD) control algorithm**, meaning it learns the value of the optimal policy independently of the agent’s actions. Q-learning updates its Q-values using the **Bellman optimality equation**, which is defined as:
 
 $$
 Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right]
