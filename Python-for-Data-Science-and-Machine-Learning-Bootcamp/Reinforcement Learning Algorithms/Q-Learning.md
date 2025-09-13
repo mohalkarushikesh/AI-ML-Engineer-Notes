@@ -1,11 +1,11 @@
 Q-Learning 
-	- model-free reinforcement learning algorithm 
-	- Q-learning is an **off-policy TD control algorithm**. It uses the Bellman optimality equation to update Q-values:
+- model-free reinforcement learning algorithm 
+- Q-learning is an **off-policy TD control algorithm**. It uses the Bellman optimality equation to update Q-values:
 
 $$
 Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right]
 $$	
-- \( \alpha \): Learning rate
+- $\alpha$: Learning rate
 - The term inside the brackets is the **TD error** — the difference between the predicted and actual value.
 
 Key components 
@@ -47,11 +47,11 @@ $$
 Q(s, a) = \mathbb{E} \left[ r + \gamma \max_{a'} Q(s', a') \mid s, a \right]
 $$
 
-- \( Q(s, a) \): Value of taking action \( a \) in state \( s \)
-- \( r \): Immediate reward
-- \( \gamma \): Discount factor (how much future rewards matter)
-- \( s' \): Next state
-- \( a' \): Next possible actions
+- $Q(s, a)$: Value of taking action $a$ in state $s$
+- $r$: Immediate reward
+- $\gamma$: Discount factor (how much future rewards matter)
+- $s'$: Next state
+- $a'$: Next possible actions
 
 This equation is **recursive** — it defines the value of a state-action pair in terms of the values of future state-action pairs.
 
