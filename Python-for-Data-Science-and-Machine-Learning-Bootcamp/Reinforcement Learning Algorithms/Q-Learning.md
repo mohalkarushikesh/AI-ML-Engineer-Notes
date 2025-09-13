@@ -1,5 +1,12 @@
 Q-Learning 
 	- model-free reinforcement learning algorithm 
+	- Q-learning is an **off-policy TD control algorithm**. It uses the Bellman optimality equation to update Q-values:
+
+$$
+Q(s, a) \leftarrow Q(s, a) + \alpha \left[ r + \gamma \max_{a'} Q(s', a') - Q(s, a) \right]
+$$	
+- \( \alpha \): Learning rate
+- The term inside the brackets is the **TD error** — the difference between the predicted and actual value.
 
 Key components 
 1. Q-Values or Action-Values 
@@ -18,7 +25,36 @@ working
 
 Methods for Determining Q-values 
 1. Temporal Difference : is calculated by comparing current state and action values of prev ones. It provides a way to learn directly from experience, without needing a model of the enviroment.
+TD learning blends ideas from Monte Carlo and Dynamic Programming. The TD error is:
+
+$$
+\delta_t = r_{t+1} + \gamma V(s_{t+1}) - V(s_t)
+$$
+
+Or for Q-values:
+
+$$
+\delta_t = r_{t+1} + \gamma Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t)
+$$
+
+This error measures how far off the current estimate is from the observed reward plus the estimated future value.
+  
 2. Bellaman's Equation : is a recurssive formula used to calculate with given state and determine the optimal action. It is fundamental in the context of Q-Learning.
+
+This is the foundation of value-based reinforcement learning. It expresses the expected value of a state-action pair:
+
+$$
+Q(s, a) = \mathbb{E} \left[ r + \gamma \max_{a'} Q(s', a') \mid s, a \right]
+$$
+
+- \( Q(s, a) \): Value of taking action \( a \) in state \( s \)
+- \( r \): Immediate reward
+- \( \gamma \): Discount factor (how much future rewards matter)
+- \( s' \): Next state
+- \( a' \): Next possible actions
+
+This equation is **recursive** — it defines the value of a state-action pair in terms of the values of future state-action pairs.
+
 
 Q-table 
 	- Row represent state
@@ -42,8 +78,3 @@ Dis-Advantages
 2. Expensive in some enviroments
 3. Curse of dimentionality
 4. Limited to Discete actions
-
-
-	
-
-	
