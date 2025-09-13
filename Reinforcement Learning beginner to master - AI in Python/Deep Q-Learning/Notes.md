@@ -42,3 +42,17 @@ $$
 
 - The goal is to **minimize this loss** by adjusting $\theta$, so the network better predicts future rewards.
 
+Traning process of Deep Q-Learning:
+1. Intialization
+2. Exploration vs. Exploitation
+3. Experience Collection
+4. Training Updates
+5. Target network update
+6. Decay Exploration Rate
+
+Applications of DQN
+1. Atari games
+2. Robotics
+3. Self driving cars
+4. finance
+5. helthcare 
