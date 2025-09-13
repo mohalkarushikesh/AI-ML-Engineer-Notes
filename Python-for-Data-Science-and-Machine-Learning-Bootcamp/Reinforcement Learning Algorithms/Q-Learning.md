@@ -1,11 +1,11 @@
 Q-Learning 
-	model-free reinforcement learning algorithm 
+	- model-free reinforcement learning algorithm 
 
 Key components 
-	1. Q-Values or Action-Values 
-	2. Rewards and Episodes 
-	3. Temporal Difference or TD-Update
-	4. E-greedy Policy (Exploration vs. Exploitation)
+1. Q-Values or Action-Values 
+2. Rewards and Episodes 
+3. Temporal Difference or TD-Update
+4. E-greedy Policy (Exploration vs. Exploitation)
 		1. Exploration : The agent picks the action with highest Q-value with probability 1-E. this means agent uses it's current knowledge ot maximize rewards 
 		2. Exploitation : With probability E, the agent picks a random action, exploring new possibilities to learn if there are better ways to get rewards. This allows the agent to discover
 new strategies and improve it's decision-making over time 
