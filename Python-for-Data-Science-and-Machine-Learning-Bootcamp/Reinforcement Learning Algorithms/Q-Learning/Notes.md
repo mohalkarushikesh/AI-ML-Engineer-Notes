@@ -13,7 +13,7 @@ Key components
 2. Rewards and Episodes 
 3. Temporal Difference or TD-Update
 4. E-greedy Policy (Exploration vs. Exploitation)
-- Exploration : The agent picks the action with highest Q-value with probability 1-$\epsilon$ this means agent uses it's current knowledge ot maximize rewards 
+- Exploration : The agent picks the action with highest Q-value with probability 1 - $\epsilon$ this means agent uses it's current knowledge ot maximize rewards 
 - Exploitation : With probability $\epsilon$, the agent picks a random action, exploring new possibilities to learn if there are better ways to get rewards. This allows the agent to discover new strategies and improve it's decision-making over time 
 
 working 
