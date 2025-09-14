@@ -1,5 +1,6 @@
 - Episodes = 500
 
+```
 Starting DQN training on cpu for 500 episodes...
 Environment: CartPole-v1
 State space: 4 features
@@ -19,6 +20,7 @@ Episode 400, Duration: 500, Avg (last 50): 500.0
 Episode 450, Duration: 500, Avg (last 50): 500.0
 \nTraining complete!
 Average duration over last 100 episodes: 500.0
+```
 
 <img width="640" height="480" alt="dqn-cartpole-v1-result" src="https://github.com/user-attachments/assets/6e5fd7f3-dad6-41a5-b8bb-d9130dfed0b5" />
 
