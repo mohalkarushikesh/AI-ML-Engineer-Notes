@@ -355,7 +355,7 @@ def optimize_model():
 if torch.cuda.is_available() or torch.backends.mps.is_available():
     num_episodes = 600  # More episodes for GPU training
 else: 
-    num_episodes = 200  # Fewer episodes for CPU training
+    num_episodes = 500  # Fewer episodes for CPU training
 
 print(f"Starting DQN training on {device} for {num_episodes} episodes...")
 print(f"Environment: CartPole-v1")
