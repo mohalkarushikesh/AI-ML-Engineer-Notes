@@ -155,6 +155,8 @@ class DQN(nn.Module):
     - Output layer: n_actions (2 for CartPole: left, right)
     """
 
+    # DQN Network	4 → 128 → 128 → 2 neurons
+    
     def __init__(self, n_observations, n_actions):
         """
         Initialize the DQN network.
@@ -364,6 +366,19 @@ print(f"Action space: {n_actions} actions")
 print(f"Batch size: {BATCH_SIZE}")
 print(f"Learning rate: {LR}")
 print("-" * 50)
+
+'''
+For each episode:
+  1. Reset environment
+  2. For each step:
+     - Choose action (explore or exploit)
+     - Take action, get reward
+     - Store experience in memory
+     - Train network on random batch
+     - Update target network slowly
+  3. Plot progress
+
+'''
 
 for i_episode in range(num_episodes):
     # Initialize the environment and get initial state
