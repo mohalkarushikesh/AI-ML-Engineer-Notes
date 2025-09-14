@@ -420,5 +420,3 @@ print(f"Average duration over last 100 episodes: {sum(episode_durations[-100:]) 
 plot_durations(show_result=True)
 plt.ioff()
 plt.show()
-
-https://docs.pytorch.org/tutorials/_images/sphx_glr_reinforcement_q_learning_001.png
