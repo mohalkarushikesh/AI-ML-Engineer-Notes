@@ -4,19 +4,19 @@ import numpy as np
 import random 
 
 class GridWorld: 
-    def __init__(self, width, height, start, goal, obstacles):  # ✅ Fixed
+    def __init__(self, width, height, start, goal, obstacles): 
         self.width = width
         self.height = height
         self.start = start 
         self.goal = goal
         self.obstacles = obstacles 
-        self.state = start               # sets the agent's initial position 
+        self.state = start             # sets the agent's initial position 
     
-    def reset(self):                       # reset the env to it's initial state (starting of the new episodes)
+    def reset(self):                   # reset the env to it's initial state (starting of the new episodes)
         self.state = self.start 
         return self.state           
 
-    def step(self, action):                  # Ensure agent stay within the grid boundaries using max and min 
+    def step(self, action):            # Ensure agent stay within the grid boundaries using max and min 
         x, y = self.state 
         if action == 0: 
             x = max(x-1, 0)
@@ -25,20 +25,20 @@ class GridWorld:
         elif action == 2: 
             y = max(y-1, 0)
         elif action == 3: 
-            y = min(y+1, self.width-1)  # ✅ Fixed: was max, should be min
+            y = min(y+1, self.width-1)  
 
-        if (x, y) in self.obstacles:  # ✅ Fixed: use (x, y)
+        if (x, y) in self.obstacles:  
             reward = -10
             done = True
-        elif (x, y) == self.goal:  # ✅ Fixed: use (x, y)
+        elif (x, y) == self.goal:  
             reward = 10 
             done = True 
         else: 
             reward = -1
-            done = False  # ✅ Fixed: should be False for normal steps
+            done = False  
     
-        self.state = (x, y)  # ✅ Fixed: use (x, y)
-        return (x, y), reward, done  # ✅ Fixed: return (x, y)
+        self.state = (x, y)   
+        return (x, y), reward, done  
         
 
 # Step 2 : Define the sarsa algorithm 
@@ -47,12 +47,12 @@ def sarsa(env, episodes, alpha, gamma, epsilon):
     
     for episode in range(episodes):
         state = env.reset()
-        action = epsilon_greedy_policy(Q, state, epsilon)                       # Choose an action based on epsilon greedy policy (explore or exploit )
+        action = epsilon_greedy_policy(Q, state, epsilon)                   # Choose an action based on epsilon greedy policy (explore or exploit )
         done = False 
 
         while not done: 
-            next_state, reward, done = env.step(action)  # ✅ Fixed: use step
-            next_action  = epsilon_greedy_policy(Q, next_state, epsilon)        # Choose an action based on epsilon greedy policy again 
+            next_state, reward, done = env.step(action)  
+            next_action  = epsilon_greedy_policy(Q, next_state, epsilon)    # Choose an action based on epsilon greedy policy again 
 
             # target = reward + gamma * Q(next_state, next_action)
             Q[state[0], state[1], action] += alpha * (reward + gamma * Q[next_state[0], next_state[1], next_action] - Q[state[0], state[1], action])
@@ -63,14 +63,14 @@ def sarsa(env, episodes, alpha, gamma, epsilon):
     return Q
 
 # Step 3 : Define epsilon greedy policy 
-def epsilon_greedy_policy(Q, state, epsilon):  # ✅ Fixed: added 'y'
-    if random.uniform(0, 1) < epsilon:                  # ✅ Fixed: 0 to 1
+def epsilon_greedy_policy(Q, state, epsilon):  
+    if random.uniform(0, 1) < epsilon:         # with the probability of epsilon chooses the action 0 to 3
         return random.randint(0, 3)
-    else:                                               # otherwise choose the action with highest Q-value for the current state 
+    else:                                      # otherwise choose the action with highest Q-value for the current state 
         return np.argmax(Q[state[0], state[1]])
 
 # Step 4 : Setup the environment and execute the sarsa 
-if __name__ == "__main__":  # ✅ Fixed: use 'if'
+if __name__ == "__main__":  # 
 
     width = 5
     height = 5
