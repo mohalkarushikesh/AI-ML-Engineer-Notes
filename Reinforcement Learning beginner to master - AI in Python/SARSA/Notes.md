@@ -3,8 +3,6 @@ The agent explores it's environment, takes actions, receives feedback and contin
 
 sarsa updates it's Q-Value using bellman equation for sarsa
 
-Sure! Here's the Q-learning update rule written clearly:
-
 $$
 Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left[ r_{t+1} + \gamma Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t) \right]
 $$
