@@ -7,12 +7,14 @@ Policy Gradient methods are a class of reinforcement learning algorithms that **
 Instead of learning how good each state or action is, policy gradients learn **how to act** by adjusting the parameters of a policy function to **maximize expected rewards**.
 
 The objective is:
+
 $$
 J(\theta) = \mathbb{E}_{\pi_\theta} \left[ \sum_t R_t \right]
 $$
+
 Where:
-- \( \pi_\theta \): the policy parameterized by \( \theta \)
-- \( R_t \): reward at time step \( t \)
+- $\pi_\theta$ : the policy parameterized by $\theta$
+- $R_t$ : reward at time step $t$
 
 ---
 
