@@ -24,6 +24,8 @@ The **Actor-Critic method** is a powerful approach in reinforcement learning tha
 4. The actor uses this feedback to adjust its policy.
 5. The critic updates its value estimates based on the observed reward.
 
+![actor_critic_method](https://github.com/user-attachments/assets/90bf433c-e865-48f3-87b5-0bbed6683619)
+
 ---
 
 ### 🧠 Why Use Actor-Critic?
