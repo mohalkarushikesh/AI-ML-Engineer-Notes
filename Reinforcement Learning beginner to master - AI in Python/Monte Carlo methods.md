@@ -13,19 +13,19 @@ Monte Carlo methods in reinforcement learning are a family of algorithms that le
 ### 🧠 How It Works
 
 1. **Generate Episodes**  
-   The agent interacts with the environment using a policy, collecting sequences of states, actions, and rewards.
+The agent interacts with the environment using a policy, collecting sequences of states, actions, and rewards.
 
 2. **Calculate Returns**  
-   For each state (or state-action pair), compute the total reward from that point to the end of the episode.
+For each state (or state-action pair), compute the total reward from that point to the end of the episode.
 
 3. **Estimate Values**  
-   Average the returns over multiple episodes to estimate the value of each state:
+Average the returns over multiple episodes to estimate the value of each state:
    
-   $$
-   V(s) = \frac{1}{N} \sum_{i=1}^{N} G_i
-   $$
+$$
+V(s) = \frac{1}{N} \sum_{i=1}^{N} G_i
+$$
 
-   where $G_i$ is the return from the *i-th* episode where state *s* was visited.
+where $G_i$ is the return from the *i-th* episode where state *s* was visited.
 
 ---
 
