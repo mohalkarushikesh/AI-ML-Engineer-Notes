@@ -20,10 +20,12 @@ Monte Carlo methods in reinforcement learning are a family of algorithms that le
 
 3. **Estimate Values**  
    Average the returns over multiple episodes to estimate the value of each state:
+   
    $$
    V(s) = \frac{1}{N} \sum_{i=1}^{N} G_i
    $$
-   where \( G_i \) is the return from the *i-th* episode where state *s* was visited.
+
+   where $G_i$ is the return from the *i-th* episode where state *s* was visited.
 
 ---
 
