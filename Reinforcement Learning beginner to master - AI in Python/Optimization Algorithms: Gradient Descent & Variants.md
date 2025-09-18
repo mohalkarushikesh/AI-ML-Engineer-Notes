@@ -4,6 +4,7 @@
 An iterative optimization algorithm that minimizes a function by repeatedly taking steps in the **opposite direction** of the gradient.
 
 **Update Rule:**
+
 $$
 x_{n+1} = x_n - \eta \nabla f(x_n)
 $$
@@ -21,6 +22,7 @@ Where:
 
 - **Stochastic Gradient Descent (SGD)**  
   Updates parameters using the gradient from **one randomly selected training example** per iteration.
+  
 $$
 x_{n+1} = x_n - \eta \nabla f(x_i)
 $$
