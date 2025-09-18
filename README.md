@@ -181,19 +181,28 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     - [Graph-Based Methods](https://machinelearningmastery.com/semi-supervised-learning-with-label-propagation/)
 
 - **Reinforcement Learning**:
-  - Algorithms:
-    - [Q-Learning](https://www.geeksforgeeks.org/q-learning-in-python/)
-    - [SARSA](https://www.geeksforgeeks.org/sarsa-reinforcement-learning/)
-    - [Deep Q-Network (DQN)](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
-    - [Policy Gradient](https://www.geeksforgeeks.org/policy-gradient-reinforcement-learning/)
-    - [Actor-Critic](https://www.geeksforgeeks.org/actor-critic-method-reinforcement-learning/)
-    - [Proximal Policy Optimization (PPO)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/04-ppo.ipynb)
-    - [Deep Deterministic Policy Gradient (DDPG)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/05-ddpg.ipynb)
-    - [Soft Actor-Critic (SAC)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/06-sac.ipynb)
-    - [Monte Carlo Methods](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm)
-    - [Temporal Difference (TD) Learning](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm)
-    - [REINFORCE Algorithm](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/)
-    - [Model-Based RL](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm)
+ - Algorithms:
+    - Value-Based Methods:
+        - [Q-Learning](https://www.geeksforgeeks.org/q-learning-in-python/)
+        - [SARSA](https://www.geeksforgeeks.org/sarsa-reinforcement-learning/)
+        - [Deep Q-Network (DQN)](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
+
+    - Policy-Based Methods:
+        - [Policy Gradient](https://www.geeksforgeeks.org/policy-gradient-reinforcement-learning/)
+            - [Actor-Critic](https://www.geeksforgeeks.org/actor-critic-method-reinforcement-learning/)
+            - [Proximal Policy Optimization (PPO)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/04-ppo.ipynb)
+            - [REINFORCE Algorithm](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/)
+            - [Deep Deterministic Policy Gradient (DDPG)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/05-ddpg.ipynb)
+            - [Soft Actor-Critic (SAC)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/06-sac.ipynb)
+
+    - Monte Carlo Methods:
+        - [Monte Carlo Methods](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm)
+
+    - Temporal Difference Methods:
+        - [Temporal Difference (TD) Learning](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm)
+
+    - Model-Based Methods:
+        - [Model-Based RL](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm)
 
 - **Data Preprocessing**:
   - Feature scaling:
