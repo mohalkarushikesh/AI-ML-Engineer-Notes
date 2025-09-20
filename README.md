@@ -74,31 +74,125 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
 - ### 📐 Mathematics for AI/ML (Beginner Level)
 
-  - **Linear Algebra**  
-    Scalars represent single values, vectors are ordered lists, and matrices are 2D arrays. Basic operations include addition and multiplication.  
-    - [Linear Algebra for Machine Learning](https://www.geeksforgeeks.org/linear-algebra-for-machine-learning/)  
-    - [Introduction to Vectors and Matrices](https://www.intellspot.com/linear-algebra-machine-learning/)
-    ```math
-    A + B = [a_{ij} + b_{ij}], \quad AB = C \text{ where } c_{ij} = \sum_k a_{ik}b_{kj}
-    ```
+  - ### 📐 Linear Algebra for AI/ML
+  
+    - **Scalars, Vectors, Matrices, and Tensors**  
+      Scalars represent single values.  
+      Vectors are 1D arrays of numbers.  
+      Matrices are 2D arrays used for datasets and transformations.  
+      Tensors generalize matrices to higher dimensions.
+  
+    - **Basic Operations**  
+      - **Addition**: Element-wise sum of matrices.  
+        ```math
+        A + B = [a_{ij} + b_{ij}]
+        ```
+      - **Multiplication**: Dot product or matrix product.  
+        ```math
+        C = AB, \quad c_{ij} = \sum_k a_{ik}b_{kj}
+        ```
+      - **Transpose**: Flip rows and columns.  
+        ```math
+        A^T_{ij} = A_{ji}
+        ```
+      - **Dot Product**: Measures similarity between vectors.  
+        ```math
+        \mathbf{a} \cdot \mathbf{b} = \sum_i a_i b_i
+        ```
+      - **Hadamard Product**: Element-wise multiplication.  
+        ```math
+        A \circ B = [a_{ij} \cdot b_{ij}]
+        ```
+  
+    - **Applications in ML**  
+      - **Data Representation**:  
+        ```math
+        X = \begin{bmatrix} x_{11} & x_{12} & \dots \\ x_{21} & x_{22} & \dots \end{bmatrix}
+        ```
+      - **Linear Regression**:  
+        ```math
+        \hat{y} = Xw + b
+        ```
+      - **Neural Networks**:  
+        ```math
+        \mathbf{z} = W\mathbf{x} + \mathbf{b}
+        ```
+  
+    - **Key Concepts**  
+      - **Rank**: Number of linearly independent rows or columns.  
+      - **Determinant**: Indicates matrix invertibility.  
+      - **Inverse**:  
+        ```math
+        A^{-1}A = I
+        ```
+      - **Eigenvalues & Eigenvectors**:  
+        ```math
+        A\mathbf{v} = \lambda \mathbf{v}
+        ```
+  
+    - **Useful Resources**  
+      - [Linear Algebra for Machine Learning](https://www.geeksforgeeks.org/linear-algebra-for-machine-learning/)  
+      - [Introduction to Vectors and Matrices](https://www.intellspot.com/linear-algebra-machine-learning/)
 
-  - **Calculus**  
-    Functions describe relationships between variables. Derivatives measure change, and gradients are vectors of partial derivatives used in optimization.  
-    - [Calculus for Machine Learning](https://www.geeksforgeeks.org/calculus-for-machine-learning/)  
-    - [Understanding Gradients](https://machinelearningmastery.com/what-is-a-gradient-in-machine-learning/)
-    ```math
-    \frac{df}{dx}, \quad \nabla f(x) = \left[ \frac{\partial f}{\partial x_1}, \dots, \frac{\partial f}{\partial x_n} \right]
-    ```
 
-  - **Statistics**  
-    Mean and median measure central tendency. Variance and standard deviation measure spread. Probability quantifies uncertainty.  
-    - [Statistics for Machine Learning](https://www.geeksforgeeks.org/statistics-for-machine-learning/)  
-    - [Basic Probability Concepts](https://www.statisticshowto.com/probability-and-statistics/probability-main-index/)
-    ```math
-    \text{Mean} = \frac{1}{n} \sum x_i, \quad
-    \text{Variance} = \frac{1}{n} \sum (x_i - \mu)^2, \quad
-    \text{Standard Deviation} = \sqrt{\text{Variance}}
-    ```
+  - ### 📉 Calculus for AI/ML
+  
+    - **Functions**  
+      Describe relationships between input and output variables. In ML, functions often represent models or loss functions.
+  
+    - **Derivatives**  
+      Measure how a function changes with respect to its input. Used to find slopes, optimize functions, and guide learning.
+      ```math
+      \frac{df}{dx}
+      ```
+  
+    - **Gradients**  
+      Vectors of partial derivatives that point in the direction of steepest ascent. Used in optimization algorithms like gradient descent.
+      ```math
+      \nabla f(x) = \left[ \frac{\partial f}{\partial x_1}, \dots, \frac{\partial f}{\partial x_n} \right]
+      ```
+  
+    - **Applications in ML**  
+      - **Gradient Descent**: Minimizes loss by updating weights in the opposite direction of the gradient.
+        ```math
+        \theta := \theta - \alpha \nabla_\theta J(\theta)
+        ```
+      - **Backpropagation**: Uses chain rule to compute gradients in neural networks.
+      - **Activation Functions**: Require derivatives for learning (e.g., sigmoid, ReLU).
+  
+    - **Useful Resources**  
+      - [Calculus for Machine Learning](https://www.geeksforgeeks.org/calculus-for-machine-learning/)  
+      - [Understanding Gradients](https://machinelearningmastery.com/what-is-a-gradient-in-machine-learning/)
+
+
+  - ### 📊 Statistics for AI/ML
+  
+    - **Central Tendency**  
+      - **Mean**: Average value of a dataset.  
+      - **Median**: Middle value when data is sorted.  
+      These help summarize the typical value in a dataset.
+  
+    - **Spread / Dispersion**  
+      - **Variance**: Measures how far data points are from the mean.  
+      - **Standard Deviation**: Square root of variance; easier to interpret in original units.
+      ```math
+      \text{Mean} = \frac{1}{n} \sum x_i, \quad
+      \text{Variance} = \frac{1}{n} \sum (x_i - \mu)^2, \quad
+      \text{Standard Deviation} = \sqrt{\text{Variance}}
+      ```
+  
+    - **Probability**  
+      Quantifies uncertainty and likelihood of events. Used in classification, Bayesian models, and decision-making.
+  
+    - **Applications in ML**  
+      - Feature selection using variance thresholds  
+      - Probabilistic models like Naive Bayes  
+      - Evaluation metrics (e.g., precision, recall) rely on statistical reasoning
+  
+    - **Useful Resources**  
+      - [Statistics for Machine Learning](https://www.geeksforgeeks.org/statistics-for-machine-learning/)  
+      - [Basic Probability Concepts](https://www.statisticshowto.com/probability-and-statistics/probability-main-index/)
+
 
 - ### 📊 Data Basics
 
