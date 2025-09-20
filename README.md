@@ -412,7 +412,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     w := w - \alpha \frac{\partial J}{\partial w}
     ```  
   - [Weight initialization strategies (Xavier, He)](https://www.geeksforgeeks.org/weight-initialization-techniques-in-neural-networks/): methods to set initial weights to improve convergence.
-    ```
+    ```math
     Xavier: Var(w) = 1/n  
     He: Var(w) = 2/n
     ```
