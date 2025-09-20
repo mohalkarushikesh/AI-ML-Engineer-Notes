@@ -101,48 +101,48 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 **Goal**: Master fundamental ML algorithms, data preprocessing, and evaluation techniques.  
 
 **Topics**:
-### 📊 **Supervised Learning**
+- ### 📊 **Supervised Learning**
   - #### 🔁 Regression
     - **Linear Models**:
       - [Linear Regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/) models the relationship between input features and target using a straight line.  
-      ```math
-      y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n
-      ```
+        ```math
+        y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n
+        ```
       - [Polynomial Regression](https://www.geeksforgeeks.org/machine-learning/python-implementation-of-polynomial-regression/) fits a nonlinear curve by adding polynomial terms to linear regression.  
-      ```math
-      y = \beta_0 + \beta_1 x + \beta_2 x^2 + \dots + \beta_d x^d
-      $$
-      ```    
+        ```math
+        y = \beta_0 + \beta_1 x + \beta_2 x^2 + \dots + \beta_d x^d
+        $$
+        ```    
       - [Ridge Regression](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression) adds L2 regularization to linear regression to reduce overfitting.  
-      ```math
-      \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2
-      ```  
+        ```math
+        \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2
+        ```  
       - [Lasso Regression](https://scikit-learn.org/stable/modules/linear_model.html#lasso) adds L1 regularization, promoting sparsity by shrinking some coefficients to zero.  
-      ```math
-      \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j|
-      ```   
+        ```math
+        \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j|
+        ```   
       - [Elastic Net](https://scikit-learn.org/stable/modules/linear_model.html#elastic-net) combines L1 and L2 regularization for balanced feature selection and shrinkage.  
-      ```math
-      \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda_1 \sum |\beta_j| + \lambda_2 \sum \beta_j^2
-      ```
+        ```math
+        \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda_1 \sum |\beta_j| + \lambda_2 \sum \beta_j^2
+        ```
       - [Bayesian Regression](https://scikit-learn.org/stable/modules/linear_model.html#bayesian-regression) incorporates prior distributions into regression for probabilistic predictions.  
-      ```math
-      P(\beta | X, y) \propto P(y | X, \beta) \cdot P(\beta)
-      ```    
+        ```math
+        P(\beta | X, y) \propto P(y | X, \beta) \cdot P(\beta)
+        ```    
       - [Quantile Regression](https://scikit-learn.org/stable/modules/linear_model.html#quantile-regression) estimates conditional quantiles instead of the mean, useful for skewed data.  
-      ```math
-      \min_{\beta} \sum_i \rho_\tau (y_i - x_i^\top \beta)
-      ```
+        ```math
+        \min_{\beta} \sum_i \rho_\tau (y_i - x_i^\top \beta)
+        ```
       <p align="center">where</p>
       
-      ```math
-      \rho_\tau(u) = u(\tau - \mathbb{I}(u < 0))
-      ```
-    - **Kernel-Based**:
+        ```math
+        \rho_\tau(u) = u(\tau - \mathbb{I}(u < 0))
+        ```
+    - 🌀 **Kernel-Based**:
       - [Support Vector Regression (SVR)](https://scikit-learn.org/stable/modules/svm.html#regression) uses kernel tricks to model nonlinear relationships with margin-based optimization.  
-      ```math
-      \min \frac{1}{2} ||w||^2 + C \sum (\xi_i + \xi_i^*)
-      ```
+        ```math
+        \min \frac{1}{2} ||w||^2 + C \sum (\xi_i + \xi_i^*)
+        ```
       <p align="center">subject to</p>
       
       ```math
@@ -150,12 +150,12 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       w^\top x_i + b - y_i \leq \epsilon + \xi_i^*
       ```
 
-  - #### Classification
+  - #### 🧠 Classification
     - **Linear Models**:
       - [Logistic Regression](https://www.geeksforgeeks.org/machine-learning/understanding-logistic-regression/) predicts probabilities for binary classes using a sigmoid function.
-      ```math
-      P(y=1|x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)}}
-      ```
+        ```math
+        P(y=1|x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)}}
+        ```
     - **Instance-Based**:
       - [k-Nearest Neighbors (k-NN)](https://www.geeksforgeeks.org/machine-learning/k-nearest-neighbours/) classifies based on the majority label among the k closest data points.
     - **Tree-Based**:
@@ -164,14 +164,14 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [Extra Trees](https://scikit-learn.org/stable/modules/ensemble.html#extra-trees) uses randomized thresholds for faster and more diverse trees.    
     - **Kernel-Based**:
       - [Support Vector Machine (SVM)](https://www.geeksforgeeks.org/machine-learning/support-vector-machine-svm/) finds the optimal hyperplane that separates classes with maximum margin.
-      ```math
-      \min \frac{1}{2} ||w||^2 \quad \text{subject to } y_i(w^T x_i + b) \geq 1
-      ```
+        ```math
+        \min \frac{1}{2} ||w||^2 \quad \text{subject to } y_i(w^T x_i + b) \geq 1
+        ```
     - **Probabilistic Models**:
       - [Naive Bayes](https://www.geeksforgeeks.org/naive-bayes-classifiers/) applies Bayes’ theorem assuming feature independence.
-      ```math
-      P(y|x) = \frac{P(x|y)P(y)}{P(x)}
-      ```
+        ```math
+        P(y|x) = \frac{P(x|y)P(y)}{P(x)}
+        ```
       - [Quadratic Discriminant Analysis (QDA)](https://scikit-learn.org/stable/modules/lda_qda.html) models each class with its own covariance matrix.
       - [Linear Discriminant Analysis (LDA)](https://scikit-learn.org/stable/modules/lda_qda.html) assumes shared covariance across classes for linear separation.
     
@@ -186,30 +186,51 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - **Bagging**: Combines predictions from multiple models trained on random subsets of the data (e.g., Random Forest).
       - **Stacking**: Combines predictions from multiple models using a meta-model to improve performance.
 
-- **Unsupervised Learning**:
-  - Clustering: 
-    - [K-means](https://www.geeksforgeeks.org/machine-learning/k-means-clustering-introduction/)
-    - [Hierarchical clustering](https://www.geeksforgeeks.org/hierarchical-clustering/)
-    - [DBSCAN](https://scikit-learn.org/stable/modules/clustering.html#dbscan)
-    - [Mean Shift](https://scikit-learn.org/stable/modules/clustering.html#mean-shift)
-    - [Affinity Propagation](https://scikit-learn.org/stable/modules/clustering.html#affinity-propagation)
-    - [Spectral Clustering](https://scikit-learn.org/stable/modules/clustering.html#spectral-clustering)
-    - [Gaussian Mixture Models](https://scikit-learn.org/stable/modules/mixture.html)
-    - [Agglomerative Clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html)
-  - Dimensionality Reduction: 
-    - [Principal Component Analysis (PCA)](https://www.geeksforgeeks.org/principal-component-analysis-pca/)
-    - [t-SNE](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html)
-    - [Autoencoders](https://www.geeksforgeeks.org/introduction-to-autoencoders/)
-    - [Independent Component Analysis (ICA)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html)
-    - [Singular Value Decomposition (SVD)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html)
-    - [UMAP](https://umap-learn.readthedocs.io/en/latest/)
-    - [Linear Discriminant Analysis (LDA)](https://www.ibm.com/think/topics/linear-discriminant-analysis)
-  - Association Rule Learning:
-    - [Apriori Algorithm](https://www.geeksforgeeks.org/apriori-algorithm/)
-    - [Eclat Algorithm](https://www.geeksforgeeks.org/eclat-algorithm/)
-    - [FP-Growth](https://www.geeksforgeeks.org/fp-growth-algorithm-for-association-rule-learning/)
+- ### 🧩 **Unsupervised Learning**:
+  - Clustering:
+    - [K-means](https://www.geeksforgeeks.org/machine-learning/k-means-clustering-introduction/) partitions data into k clusters by minimizing intra-cluster variance.
+      ```math
+      \text{argmin}_C \sum_{i=1}^{k} \sum_{x \in C_i} ||x - \mu_i||^2
+      ```
+    - [Hierarchical clustering](https://www.geeksforgeeks.org/hierarchical-clustering/) builds a tree of clusters using either agglomerative or divisive methods.
+    - [DBSCAN](https://scikit-learn.org/stable/modules/clustering.html#dbscan) groups points that are closely packed and marks outliers as noise.
+    - [Mean Shift](https://scikit-learn.org/stable/modules/clustering.html#mean-shift) shifts data points toward the mode of a density function.
+    - [Affinity Propagation](https://scikit-learn.org/stable/modules/clustering.html#affinity-propagation) identifies exemplars based on message passing between data points.
+    - [Spectral Clustering](https://scikit-learn.org/stable/modules/clustering.html#spectral-clustering) uses graph Laplacian and eigenvectors to cluster data.
+    - [Gaussian Mixture Models](https://scikit-learn.org/stable/modules/mixture.html) models data as a mixture of multiple Gaussian distributions.
+      ```math
+      P(x) = \sum_{k=1}^{K} \pi_k \mathcal{N}(x | \mu_k, \Sigma_k)
+      ```
+    - [Agglomerative Clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html) merges clusters iteratively based on linkage criteria.
 
-- **Semi-Supervised Learning**:
+  - Dimensionality Reduction:
+    - [Principal Component Analysis (PCA)](https://www.geeksforgeeks.org/principal-component-analysis-pca/) projects data onto directions of maximum variance.
+      ```math
+      Z = XW
+      ```
+    - [t-SNE](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html) maps high-dimensional data to 2D or 3D while preserving local structure.
+    - [Autoencoders](https://www.geeksforgeeks.org/introduction-to-autoencoders/) neural networks that learn compressed representations of input data.
+    - [Independent Component Analysis (ICA)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html) separates mixed signals into statistically independent components.
+    - [Singular Value Decomposition (SVD)](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html) factorizes a matrix into singular vectors and values.
+      ```math
+      X = U \Sigma V^T
+      ```
+    - [UMAP](https://umap-learn.readthedocs.io/en/latest/) reduces dimensions using manifold approximation and graph layout.
+    - [Linear Discriminant Analysis (LDA)](https://www.ibm.com/think/topics/linear-discriminant-analysis) projects data to maximize class separability.
+
+  - Association Rule Learning:
+    - [Apriori Algorithm](https://www.geeksforgeeks.org/apriori-algorithm/) finds frequent itemsets and derives rules using support and confidence.
+      ```math
+      \text{Support}(A) = \frac{\text{Transactions containing } A}{\text{Total transactions}}
+      ```
+  
+      ```math
+      \text{Confidence}(A \Rightarrow B) = \frac{\text{Support}(A \cup B)}{\text{Support}(A)}
+      ```
+    - [Eclat Algorithm](https://www.geeksforgeeks.org/eclat-algorithm/) uses vertical data format and intersection to find frequent itemsets.
+    - [FP-Growth](https://www.geeksforgeeks.org/fp-growth-algorithm-for-association-rule-learning/) builds a prefix tree to mine frequent patterns without candidate generation.
+
+- ### 🌓 **Semi-Supervised Learning**:
   - Algorithms:
     - [Self-training](https://scikit-learn.org/stable/whats_new/v0.24.html#id17)
     - [Label Propagation](https://scikit-learn.org/stable/modules/semi_supervised.html#label-propagation)
@@ -219,7 +240,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     - [Generative Models (e.g., VAEs)](https://spotintelligence.com/2023/12/28/semi-supervised-machine-learning-made-simple-5-algorithms-how-to-python-tutorial/)
     - [Graph-Based Methods](https://machinelearningmastery.com/semi-supervised-learning-with-label-propagation/)
 
-- **Reinforcement Learning**:
+- ### 🎮 **Reinforcement Learning**:
  - Algorithms:
     - Value-Based Methods:
         - [Q-Learning](https://www.geeksforgeeks.org/q-learning-in-python/)
