@@ -232,83 +232,134 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
 - ### 🌓 **Semi-Supervised Learning**:
   - Algorithms:
-    - [Self-training](https://scikit-learn.org/stable/whats_new/v0.24.html#id17)
-    - [Label Propagation](https://scikit-learn.org/stable/modules/semi_supervised.html#label-propagation)
-    - [Label Spreading](https://scikit-learn.org/stable/modules/semi_supervised.html#label-spreading)
-    - [Co-training](https://spotintelligence.com/2023/12/28/semi-supervised-machine-learning-made-simple-5-algorithms-how-to-python-tutorial/)
-    - [Semi-Supervised SVM (S3VM)](https://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf)
-    - [Generative Models (e.g., VAEs)](https://spotintelligence.com/2023/12/28/semi-supervised-machine-learning-made-simple-5-algorithms-how-to-python-tutorial/)
-    - [Graph-Based Methods](https://machinelearningmastery.com/semi-supervised-learning-with-label-propagation/)
+    - [Self-training](https://scikit-learn.org/stable/whats_new/v0.24.html#id17): trains on labeled data, then uses confident predictions to label unlabeled data.
+    - [Label Propagation](https://scikit-learn.org/stable/modules/semi_supervised.html#label-propagation): spreads labels through a graph based on similarity.
+    - [Label Spreading](https://scikit-learn.org/stable/modules/semi_supervised.html#label-spreading): similar to label propagation but uses a normalized graph Laplacian.
+    - [Co-training](https://spotintelligence.com/2023/12/28/semi-supervised-machine-learning-made-simple-5-algorithms-how-to-python-tutorial/): trains two classifiers on different views of the data and shares confident predictions.
+    - [Semi-Supervised SVM (S3VM)](https://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf): extends SVM to use both labeled and unlabeled data.
+    - [Generative Models (e.g., VAEs)](https://spotintelligence.com/2023/12/28/semi-supervised-machine-learning-made-simple-5-algorithms-how-to-python-tutorial/): learn data distribution to generate labels for unlabeled data.
+    - [Graph-Based Methods](https://machinelearningmastery.com/semi-supervised-learning-with-label-propagation/): use graph structure to infer labels from neighbors.
 
 - ### 🎮 **Reinforcement Learning**:
- - Algorithms:
+  - Algorithms:
     - Value-Based Methods:
-        - [Q-Learning](https://www.geeksforgeeks.org/q-learning-in-python/)
-        - [SARSA](https://www.geeksforgeeks.org/sarsa-reinforcement-learning/)
-        - [Deep Q-Network (DQN)](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
+      - [Q-Learning](https://www.geeksforgeeks.org/q-learning-in-python/): learns optimal action-value function.
+        ```math
+        Q(s,a) \leftarrow Q(s,a) + \alpha [r + \gamma \max_a Q(s',a) - Q(s,a)]
+        ```
+      - [SARSA](https://www.geeksforgeeks.org/sarsa-reinforcement-learning/): updates Q-values using the action actually taken.
+        ```math
+        Q(s,a) \leftarrow Q(s,a) + \alpha [r + \gamma Q(s',a') - Q(s,a)]
+        ```
+      - [Deep Q-Network (DQN)](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html): uses neural networks to approximate Q-values.
 
     - Policy-Based Methods:
-        - [Policy Gradient](https://www.geeksforgeeks.org/policy-gradient-reinforcement-learning/)
-            - [Actor-Critic](https://www.geeksforgeeks.org/actor-critic-method-reinforcement-learning/)
-            - [Proximal Policy Optimization (PPO)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/04-ppo.ipynb)
-            - [REINFORCE Algorithm](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/)
-            - [Deep Deterministic Policy Gradient (DDPG)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/05-ddpg.ipynb)
-            - [Soft Actor-Critic (SAC)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/06-sac.ipynb)
+      - [Policy Gradient](https://www.geeksforgeeks.org/policy-gradient-reinforcement-learning/): directly optimizes the policy.
+        ```math
+        \nabla J(\theta) = \mathbb{E}[\nabla_\theta \log \pi_\theta(a|s) R]
+        ```
+        - [Actor-Critic](https://www.geeksforgeeks.org/actor-critic-method-reinforcement-learning/): combines value and policy learning.
+        - [Proximal Policy Optimization (PPO)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/04-ppo.ipynb): stabilizes training with clipped updates.
+        - [REINFORCE Algorithm](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/): uses Monte Carlo returns to update policy.
+        - [Deep Deterministic Policy Gradient (DDPG)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/05-ddpg.ipynb): handles continuous action spaces.
+        - [Soft Actor-Critic (SAC)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/06-sac.ipynb): adds entropy to encourage exploration.
 
     - Monte Carlo Methods:
-        - [Monte Carlo Methods](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm)
+      - [Monte Carlo Methods](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm): estimate value functions using complete episodes.
 
     - Temporal Difference Methods:
-        - [Temporal Difference (TD) Learning](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm)
+      - [Temporal Difference (TD) Learning](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm): combines Monte Carlo and dynamic programming.
+        ```math
+        V(s) \leftarrow V(s) + \alpha [r + \gamma V(s') - V(s)]
+        ```
 
     - Model-Based Methods:
-        - [Model-Based RL](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm)
+      - [Model-Based RL](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm): builds a model of the environment to plan actions.
 
-- **Data Preprocessing**:
-  - Feature scaling:
-    - [Standardization](https://scikit-learn.org/stable/modules/preprocessing.html#standardization-or-mean-removal-and-variance-scaling)
-    - [Normalization](https://scikit-learn.org/stable/modules/preprocessing.html#normalization)
-  - Encoding categorical variables:
-    - [One-hot encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
-    - [Label encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html)
-  - [Handling imbalanced data (e.g., SMOTE)](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html)
+- ### ⚙️ **Data Preprocessing**:
+  - Feature Scaling:
+    - [Standardization](https://scikit-learn.org/stable/modules/preprocessing.html#standardization-or-mean-removal-and-variance-scaling): scales features to have zero mean and unit variance.
+    ```math
+    z = \frac{x - \mu}{\sigma}
+    ```
+    - [Normalization](https://scikit-learn.org/stable/modules/preprocessing.html#normalization): scales features to a fixed range, typically [0, 1].
 
-- **Model Evaluation**:
-  - Metrics: 
-    - [MSE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) mean squared error measures the average of squared differences between predicted and actual values, penalizing larger errors more heavily.  
-    - [RMSE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) root mean squared error is the square root of MSE, representing prediction error in the same units as the target variable.  
-    - [MAE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error) mean absolute error calculates the average of absolute differences between predicted and actual values, treating all errors equally.  
-    - [R²](https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score) coefficient of determination indicates how well the model explains the variance in the target variable, ranging from 0 to 1.  
-    - [Accuracy](https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score) ratio of correctly predicted values to the total number of samples.  
-    - [Precision](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-score) ratio of correctly predicted values to the all predicted values.  
-    - [Recall](https://scikit-learn.org/stable/modules/model_evaluation.html#recall-score) ratio of no of accurately found desired results to all predicted values in the sample set.  
-    - [F1-score](https://scikit-learn.org/stable/modules/model_evaluation.html#f1-score) harmonic mean of precision and recall, balancing both metrics in a single score.  
-    - [AUC](https://scikit-learn.org/stable/modules/model_evaluation.html#roc-auc-score) area under the ROC curve measures the ability of the model to distinguish between classes across all thresholds.  
-  - [Train-test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)  
-  - [k-fold cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html)  
-  - [Overfitting vs. underfitting](https://scikit-learn.org/stable/modules/learning_curve.html)
-  - **[Hyperparameter Tuning](https://scikit-learn.org/stable/modules/grid_search.html)**:  
-    - [Grid Search](https://scikit-learn.org/stable/modules/grid_search.html)  
-    - [Random Search](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html)
+  - Encoding Categorical Variables:
+    - [One-hot encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html): converts categories into binary columns.
+    - [Label encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html): assigns numeric labels to categories.
 
-- **Mathematics (Intermediate)**:
-  - Linear Algebra: 
-    - [Matrix decomposition](https://www.geeksforgeeks.org/matrix-decomposition-methods/)
-    - [Dot products](https://www.geeksforgeeks.org/dot-product-of-two-vectors/)
-  - Calculus: 
-    - [Gradient descent](https://www.geeksforgeeks.org/gradient-descent-in-linear-regression/)
-    - [Partial derivatives](https://www.geeksforgeeks.org/partial-derivatives/)
-  - Probability: 
-    - [Conditional probability](https://www.geeksforgeeks.org/conditional-probability/)
-    - [Bayes’ theorem](https://www.geeksforgeeks.org/bayes-theorem/)
+  - [Handling Imbalanced Data (e.g., SMOTE)](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html): synthetically generates samples for minority class to balance the dataset.
 
-- **Tools**:
-  - [Scikit-learn](https://scikit-learn.org/stable/)
-  - [Seaborn (advanced visualization)](https://seaborn.pydata.org/tutorial.html)
-  - [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/latest/)
+- ### 📏 **Model Evaluation**:
+  - Metrics:
+    - [MSE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error): average of squared prediction errors.
+    ```math
+    MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+    ```
+    - [RMSE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error): square root of MSE.
+    ```math
+    RMSE = \sqrt{MSE}
+    ```
+    - [MAE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error): average of absolute prediction errors.
+    ```math
+    MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
+    ```
+    - [R²](https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score): proportion of variance explained by the model.
+    ```math
+    R^2 = 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}
+    ```
+    - [Accuracy](https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score): ratio of correct predictions to total samples.
+    - [Precision](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-score): ratio of true positives to all predicted positives.
+    - [Recall](https://scikit-learn.org/stable/modules/model_evaluation.html#recall-score): ratio of true positives to all actual positives.
+    - [F1-score](https://scikit-learn.org/stable/modules/model_evaluation.html#f1-score): harmonic mean of precision and recall.
+    ```math
+    F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
+    ```
+    - [AUC](https://scikit-learn.org/stable/modules/model_evaluation.html#roc-auc-score): area under the ROC curve, measuring classification performance across thresholds.
+
+  - [Train-test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html): divides data into training and testing sets.
+  - [k-fold cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html): evaluates model performance by splitting data into k subsets.
+  - [Overfitting vs. Underfitting](https://scikit-learn.org/stable/modules/learning_curve.html): overfitting memorizes training data; underfitting fails to capture patterns.
+
+- ### 🔧 **Hyperparameter Tuning**:
+  - [Grid Search](https://scikit-learn.org/stable/modules/grid_search.html): exhaustively searches over specified parameter values.
+  - [Random Search](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html): samples random combinations of parameters.
+
+- ### 📐 **Mathematics (Intermediate)**:
+  - Linear Algebra:
+    - [Matrix decomposition](https://www.geeksforgeeks.org/matrix-decomposition-methods/): breaks a matrix into simpler components (e.g., LU, QR, SVD).
+    - [Dot products](https://www.geeksforgeeks.org/dot-product-of-two-vectors/): measures similarity between two vectors.
+    ```math
+    a \cdot b = \sum_{i=1}^{n} a_i b_i
+    ```
+
+  - Calculus:
+    - [Gradient descent](https://www.geeksforgeeks.org/gradient-descent-in-linear-regression/): optimization method to minimize loss by updating parameters.
+    ```math
+    \theta := \theta - \alpha \nabla J(\theta)
+    ```
+    - [Partial derivatives](https://www.geeksforgeeks.org/partial-derivatives/): derivative of a multivariable function with respect to one variable.
+    ```math
+    \frac{\partial f}{\partial x}
+    ```
+
+  - Probability:
+    - [Conditional probability](https://www.geeksforgeeks.org/conditional-probability/): probability of event A given event B.
+    ```math
+    P(A|B) = \frac{P(A \cap B)}{P(B)}
+    ```
+    - [Bayes’ theorem](https://www.geeksforgeeks.org/bayes-theorem/): updates probability based on new evidence.
+    ```math
+    P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+    ```
+
+- ### 🛠️ **Tools**:
+  - [Scikit-learn](https://scikit-learn.org/stable/): machine learning library for classification, regression, clustering, and more.
+  - [Seaborn (advanced visualization)](https://seaborn.pydata.org/tutorial.html): statistical data visualization built on top of matplotlib.
+  - [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/latest/): interactive environment for writing and running code.
   - **[Explainability](https://shap.readthedocs.io/en/latest/)**:
-    - [SHAP](https://shap.readthedocs.io/en/latest/)
-    - [LIME](https://github.com/marcotcr/lime)
+    - [SHAP](https://shap.readthedocs.io/en/latest/): explains model predictions using Shapley values.
+    - [LIME](https://github.com/marcotcr/lime): interprets predictions by approximating the model locally with interpretable models.
 
 **Resources**:
 - **Books**:
