@@ -9,38 +9,98 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
 **Topics**:
 
-- **Introduction to AI/ML**:
-  - What is AI, ML, and Deep Learning? Real-world examples (e.g., spam filters, image recognition).  
+- ### 🤖 Introduction to AI/ML
+
+  - **What is AI, ML, and Deep Learning?**  
+    AI is the broader concept of machines performing tasks intelligently. ML is a subset where systems learn from data. Deep Learning uses neural networks for complex tasks.  
     - [Deep Learning Examples: Practical Applications](https://www.geeksforgeeks.org/deep-learning/deep-learning-examples/)  
     - [Spam Filters: How AI Makes Them Smarter](https://insights2techinfo.com/spam-filters-how-ai-makes-them-smarter/)
-  - Types of ML: Supervised, unsupervised, reinforcement learning.  
-    - [Supervised vs Unsupervised vs Reinforcement Learning](https://www.geeksforgeeks.org/machine-learning/supervised-vs-reinforcement-vs-unsupervised/)  
-    - [Types of Machine Learning](https://www.simplilearn.com/tutorials/machine-learning-tutorial/types-of-machine-learning)
 
-- **Python Programming (Zero to Intermediate)**:
-  - Basics: Variables, loops, conditionals, functions.  
+  - **Types of ML**  
+    Supervised: learns from labeled data.  
+    Unsupervised: finds patterns in unlabeled data.  
+    Reinforcement: learns by interacting with an environment.  
+    - [Supervised vs Unsupervised vs Reinforcement Learning](https://www.geeksforgeeks.org/machine-learning/supervised-vs-reinforcement-vs-unsupervised/)  
+    - [Types of Machine Learning](https://www.simplilearn.com/tutorials/machine-learning-tutorial/types-of-machine-learning/)
+    ```math
+    \text{Supervised: } y = f(x) \quad \text{Unsupervised: } x \rightarrow \text{clusters} \quad \text{Reinforcement: } Q(s,a)
+    ```
+
+---
+
+- ### 🐍 Python Programming (Zero to Intermediate)
+
+  - **Basics**  
+    Variables store data, loops repeat actions, conditionals control flow, functions encapsulate logic.  
     - [Python Conditional Statements and Loops](https://pythonguides.com/conditional-statements-and-loops/)  
     - [Loops and Conditional Statements](https://pythontutorials.readthedocs.io/en/latest/01_03_Loops.html)
-  - Data structures: Lists, dictionaries, sets, tuples.  
-    - [Python Data Structures: Lists, Dictionaries, Sets, Tuples](https://www.dataquest.io/blog/data-structures-in-python/)  
-    - [Differences and Applications of List, Tuple, Set and Dictionary](https://www.geeksforgeeks.org/python/differences-and-applications-of-list-tuple-set-and-dictionary-in-python/)
-  - Libraries: NumPy (arrays, operations), Pandas (dataframes), Matplotlib (visualization).  
+    ```python
+    for i in range(5):
+        if i % 2 == 0:
+            print(i)
+    ```
+
+  - **Data Structures**  
+    Lists: ordered, mutable.  
+    Tuples: ordered, immutable.  
+    Sets: unordered, unique.  
+    Dictionaries: key-value pairs.  
+    - [Python Data Structures](https://www.dataquest.io/blog/data-structures-in-python/)  
+    - [Differences and Applications](https://www.geeksforgeeks.org/python/differences-and-applications-of-list-tuple-set-and-dictionary-in-python/)
+    ```python
+    my_dict = {"name": "AI", "type": "ML"}
+    ```
+
+  - **Libraries**  
+    NumPy: numerical arrays and operations.  
+    Pandas: tabular data manipulation.  
+    Matplotlib: plotting and visualization.  
     - [Introduction to Pandas and NumPy](https://www.codecademy.com/article/introduction-to-numpy-and-pandas)  
     - [Guide to NumPy, pandas, and Data Visualization](https://www.dataquest.io/guide/numpy-pandas-and-data-visualization-tutorial/)
-  - File handling, basic error handling, and debugging.  
-    - [Understanding Python File Handling and Exception Management](https://softenant.com/understanding-python-file-handling-and-exception-managemen/)  
-    - [Python Error Handling Best Practices](https://codezup.com/effective-error-handling-in-python/)
+    ```python
+    import numpy as np
+    a = np.array([1, 2, 3])
+    ```
 
-- **Mathematics for AI/ML (Beginner Level)**:
-  - **Linear Algebra**: Scalars, vectors, matrices, basic operations (addition, multiplication).  
+  - **File Handling & Debugging**  
+    Read/write files, handle exceptions, debug with print/logging.  
+    - [Understanding Python File Handling](https://softenant.com/understanding-python-file-handling-and-exception-managemen/)  
+    - [Python Error Handling Best Practices](https://codezup.com/effective-error-handling-in-python/)
+    ```python
+    try:
+        with open("data.csv") as f:
+            content = f.read()
+    except FileNotFoundError:
+        print("File not found")
+    ```
+
+- ### 📐 Mathematics for AI/ML (Beginner Level)
+
+  - **Linear Algebra**  
+    Scalars represent single values, vectors are ordered lists, and matrices are 2D arrays. Basic operations include addition and multiplication.  
     - [Linear Algebra for Machine Learning](https://www.geeksforgeeks.org/linear-algebra-for-machine-learning/)  
     - [Introduction to Vectors and Matrices](https://www.intellspot.com/linear-algebra-machine-learning/)
-  - **Calculus**: Functions, derivatives, gradients (intuitive understanding).  
+    ```math
+    A + B = [a_{ij} + b_{ij}], \quad AB = C \text{ where } c_{ij} = \sum_k a_{ik}b_{kj}
+    ```
+
+  - **Calculus**  
+    Functions describe relationships between variables. Derivatives measure change, and gradients are vectors of partial derivatives used in optimization.  
     - [Calculus for Machine Learning](https://www.geeksforgeeks.org/calculus-for-machine-learning/)  
     - [Understanding Gradients](https://machinelearningmastery.com/what-is-a-gradient-in-machine-learning/)
-  - **Statistics**: Mean, median, variance, standard deviation, basic probability.  
+    ```math
+    \frac{df}{dx}, \quad \nabla f(x) = \left[ \frac{\partial f}{\partial x_1}, \dots, \frac{\partial f}{\partial x_n} \right]
+    ```
+
+  - **Statistics**  
+    Mean and median measure central tendency. Variance and standard deviation measure spread. Probability quantifies uncertainty.  
     - [Statistics for Machine Learning](https://www.geeksforgeeks.org/statistics-for-machine-learning/)  
     - [Basic Probability Concepts](https://www.statisticshowto.com/probability-and-statistics/probability-main-index/)
+    ```math
+    \text{Mean} = \frac{1}{n} \sum x_i, \quad
+    \text{Variance} = \frac{1}{n} \sum (x_i - \mu)^2, \quad
+    \text{Standard Deviation} = \sqrt{\text{Variance}}
+    ```
 
 - **Data Basics**:
   - Understanding datasets: CSV files, data cleaning (missing values, outliers).  
