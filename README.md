@@ -296,16 +296,24 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
   - [Weight initialization strategies (Xavier, He)](https://www.geeksforgeeks.org/weight-initialization-techniques-in-neural-networks/)
 
 #### ⚡ Activation Functions
-  - [Sigmoid](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/)  
-  - [ReLU](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/)  
-  - [tanh](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/)  
-  - [Leaky ReLU](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/)  
-  - [ELU (Exponential Linear Unit)](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/)  
-  - [SELU – Self-normalizing activation for deep networks](https://www.geeksforgeeks.org/deep-learning/selu-activation-function-in-neural-network/)
-  - [GELU – Approximates ReLU using Gaussian error function](https://www.baeldung.com/cs/gelu-activation-function)
-  - [Swish](https://www.aicodesnippet.com/machine-learning/neural-networks/activation-functions-relu-sigmoid-and-tanh-explained.html)  
-  - [Softmax (for output layers)](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/)
-
+  - [Sigmoid](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) squashes input to range (0, 1).  
+    Formula: σ(x) = 1 / (1 + e^(-x))  
+  - [ReLU](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) outputs zero for negatives and linear for positives.  
+    Formula: f(x) = max(0, x)  
+  - [tanh](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) maps input to range (-1, 1).  
+    Formula: tanh(x) = (e^x - e^(-x)) / (e^x + e^(-x))  
+  - [Leaky ReLU](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/) allows small gradient for negative inputs.  
+    Formula: f(x) = x if x > 0 else αx (typically α = 0.01)  
+  - [ELU (Exponential Linear Unit)](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/) smooths negative values with exponential curve.  
+    Formula: f(x) = x if x > 0 else α(e^x - 1)  
+  - [SELU – Self-normalizing activation for deep networks](https://www.geeksforgeeks.org/deep-learning/selu-activation-function-in-neural-network/) scales and shifts outputs to maintain mean and variance.  
+    Formula: f(x) = λ * (x if x > 0 else α(e^x - 1))  
+  - [GELU – Approximates ReLU using Gaussian error function](https://www.baeldung.com/cs/gelu-activation-function) blends input with probability curve.  
+    Formula: f(x) = x * Φ(x), where Φ(x) is the standard normal CDF  
+  - [Swish](https://www.aicodesnippet.com/machine-learning/neural-networks/activation-functions-relu-sigmoid-and-tanh-explained.html) multiplies input with sigmoid of input.  
+    Formula: f(x) = x * σ(x)  
+  - [Softmax (for output layers)](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) converts outputs to probability distribution.  
+    Formula: f(xᵢ) = e^(xᵢ) / Σ e^(xⱼ) for all j  
 
 #### 🧠 Deep Learning Architectures
 
