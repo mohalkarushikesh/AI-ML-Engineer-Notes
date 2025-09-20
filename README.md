@@ -418,6 +418,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     ```
 
 #### ⚡ Activation Functions
+  
   - [Sigmoid](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) squashes input to range (0, 1).
     ```math
     \sigma(x) = \frac{1}{1 + e^{-x}}
@@ -440,7 +441,6 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     ```
   - [ELU (Exponential Linear Unit)](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/) smooths negative values with exponential curve.  
     ```math
-    $$
     f(x) = 
     \begin{cases}
     x & \text{if } x \geq 0 \\
@@ -556,29 +556,29 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
   - #### 🔄 Autoencoding Models
     - [Autoencoders](https://vitalflux.com/autoencoder-vs-variational-autoencoder-vae-difference/): learn compressed representations by reconstructing input.
-    ```math
-    \hat{x} = f(g(x))
-    ```
+      ```math
+      \hat{x} = f(g(x))
+      ```
     - [Variational Autoencoders (VAEs)](https://www.geeksforgeeks.org/machine-learning/variational-autoencoders/): probabilistic autoencoders that learn latent distributions.
-    ```math
-    \mathcal{L} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - D_{KL}(q(z|x) || p(z))
-    ```
+      ```math
+      \mathcal{L} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - D_{KL}(q(z|x) || p(z))
+      ```
 
   - #### 🎨 Generative Models
     - [Generative Adversarial Networks (GANs)](https://aman.ai/primers/ai/dl-comp/#gan): train generator and discriminator in a minimax game.
-    ```math
-    \min_G \max_D V(D,G) = \mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]
-    ```
+      ```math
+      \min_G \max_D V(D,G) = \mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]
+      ```
 
     - [Boltzmann Machines (BMs)](https://iq.opengenus.org/boltzmann-machines/): stochastic recurrent networks that learn probability distributions.
-    ```math
-    P(v,h) = \frac{1}{Z} \exp(-E(v,h))
-    ```
+      ```math
+      P(v,h) = \frac{1}{Z} \exp(-E(v,h))
+      ```
 
       - [Restricted Boltzmann Machines (RBMs)](https://www.geeksforgeeks.org/machine-learning/restricted-boltzmann-machine/): simplified BMs with no intra-layer connections.
-      ```math
-      E(v,h) = -\sum_i v_i b_i - \sum_j h_j c_j - \sum_{i,j} v_i h_j w_{ij}
-      ```
+        ```math
+        E(v,h) = -\sum_i v_i b_i - \sum_j h_j c_j - \sum_{i,j} v_i h_j w_{ij}
+        ```
 
         - [Contrastive Divergence (CD)](https://www.geeksforgeeks.org/deep-learning/contrastive-divergence-in-restricted-boltzmann-machines/): approximates gradient for RBM training.
         ```math
@@ -590,23 +590,23 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
   - #### 🗺️ Topology-Preserving Models
     - [Self-Organizing Maps (SOMs)](https://www.geeksforgeeks.org/self-organizing-maps-soms/): map high-dimensional data to 2D grid preserving topological structure.
-    ```math
-    w_i(t+1) = w_i(t) + \alpha(t) \cdot h_{ci}(t) \cdot (x(t) - w_i(t))
-    ```
+      ```math
+      w_i(t+1) = w_i(t) + \alpha(t) \cdot h_{ci}(t) \cdot (x(t) - w_i(t))
+      ```
 
 - ### 🧬 Hybrid / Semi-Supervised Architectures
 
   - [Attention Mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/): focus on relevant parts of input during processing.
-  ```math
-  \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-  ```
+    ```math
+    \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+    ```
 
   - [Transformers with Pretraining (e.g., BERT, GPT)](https://focalx.ai/ai/ai-model-architectures/): pretrained on large corpora, fine-tuned for tasks.
 
   - [CycleGANs](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-021-00444-8): learn image-to-image translation without paired data.
-  ```math
-  \mathcal{L}_{cyc}(G,F) = \mathbb{E}_{x}[\|F(G(x)) - x\|_1] + \mathbb{E}_{y}[\|G(F(y)) - y\|_1]
-  ```
+    ```math
+    \mathcal{L}_{cyc}(G,F) = \mathbb{E}_{x}[\|F(G(x)) - x\|_1] + \mathbb{E}_{y}[\|G(F(y)) - y\|_1]
+    ```
 
   - [Contrastive Learning Models](https://www.analyticsvidhya.com/blog/2021/06/contrastive-learning-in-deep-learning/): learn representations by pulling similar samples together and pushing dissimilar apart.
   ```math
@@ -618,14 +618,14 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 #### 🧪 Loss Functions
 
 - [Mean Squared Error (MSE)](https://www.geeksforgeeks.org/mean-squared-error/): measures average squared difference between predicted and actual values.
-```math
-MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
-```
+  ```math
+  MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+  ```
 
 - [Binary Cross-Entropy](https://www.geeksforgeeks.org/binary-cross-entropy-loss-function/): used for binary classification tasks.
-```math
-L = -[y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})]
-```
+  ```math
+  L = -[y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})]
+  ```
 
 - [Categorical Cross-Entropy](https://www.geeksforgeeks.org/categorical-crossentropy-loss-function/): used for multi-class classification.
 ```math
@@ -633,9 +633,9 @@ L = -\sum_{i=1}^{C} y_i \log(\hat{y}_i)
 ```
 
 - [Hinge Loss](https://www.geeksforgeeks.org/hinge-loss-function/): used for "maximum-margin" classification like SVM.
-```math
-L = \max(0, 1 - y \cdot \hat{y})
-```
+  ```math
+  L = \max(0, 1 - y \cdot \hat{y})
+  ```
 
 - [Custom Loss Functions (PyTorch/TensorFlow)](https://www.analyticsvidhya.com/blog/2021/06/custom-loss-functions-in-tensorflow-and-pytorch/): user-defined loss tailored to specific tasks or constraints.
 
@@ -649,29 +649,29 @@ L = \max(0, 1 - y \cdot \hat{y})
 ```
 
 - [Momentum](https://www.geeksforgeeks.org/momentum-optimization-in-deep-learning/): accelerates SGD by adding a fraction of previous update.
-```math
-v_t = \gamma v_{t-1} + \alpha \nabla_\theta J(\theta)  
-\theta := \theta - v_t
-```
+  ```math
+  v_t = \gamma v_{t-1} + \alpha \nabla_\theta J(\theta)  
+  \theta := \theta - v_t
+  ```
 
 - [Nesterov Accelerated Gradient](https://www.geeksforgeeks.org/nesterov-accelerated-gradient/): looks ahead before computing gradient.
-```math
-v_t = \gamma v_{t-1} + \alpha \nabla_\theta J(\theta - \gamma v_{t-1})  
-\theta := \theta - v_t
-```
+  ```math
+  v_t = \gamma v_{t-1} + \alpha \nabla_\theta J(\theta - \gamma v_{t-1})  
+  \theta := \theta - v_t
+  ```
 
 - [Adam](https://www.geeksforgeeks.org/adam-optimization-algorithm/): combines momentum and adaptive learning rates.
-```math
-m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t  
-v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2  
-\theta := \theta - \alpha \cdot \frac{m_t}{\sqrt{v_t} + \epsilon}
-```
+  ```math
+  m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t  
+  v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2  
+  \theta := \theta - \alpha \cdot \frac{m_t}{\sqrt{v_t} + \epsilon}
+  ```
 
 - [RMSProp](https://www.geeksforgeeks.org/rmsprop-optimizer/): adapts learning rate using moving average of squared gradients.
-```math
-v_t = \beta v_{t-1} + (1 - \beta) g_t^2  
-\theta := \theta - \alpha \cdot \frac{g_t}{\sqrt{v_t} + \epsilon}
-```
+  ```math
+  v_t = \beta v_{t-1} + (1 - \beta) g_t^2  
+  \theta := \theta - \alpha \cdot \frac{g_t}{\sqrt{v_t} + \epsilon}
+  ```
 
 - [Adagrad](https://www.geeksforgeeks.org/adagrad-optimizer/): adapts learning rate based on past gradients.
 ```math
@@ -679,14 +679,14 @@ v_t = \beta v_{t-1} + (1 - \beta) g_t^2
 ```
 
 - [AdamW](https://www.geeksforgeeks.org/adamw-optimizer/): variant of Adam with decoupled weight decay.
-```math
-\theta := \theta - \alpha \cdot \left( \frac{m_t}{\sqrt{v_t} + \epsilon} + \lambda \theta \right)
-```
+  ```math
+  \theta := \theta - \alpha \cdot \left( \frac{m_t}{\sqrt{v_t} + \epsilon} + \lambda \theta \right)
+  ```
 
 - [Nadam](https://www.geeksforgeeks.org/nadam-optimizer/): Adam with Nesterov momentum.
-```math
-\theta := \theta - \alpha \cdot \left( \beta_1 m_t + \frac{(1 - \beta_1) g_t}{1 - \beta_1^t} \right)
-```
+  ```math
+  \theta := \theta - \alpha \cdot \left( \beta_1 m_t + \frac{(1 - \beta_1) g_t}{1 - \beta_1^t} \right)
+  ```
 
 #### 🧰 Frameworks & Tools
   - [TensorFlow/Keras: Sequential and Functional APIs](https://www.tensorflow.org/guide/keras/sequential_model)  
@@ -708,28 +708,28 @@ v_t = \beta v_{t-1} + (1 - \beta) g_t^2
 #### 🛡️ Regularization Techniques
 
 - [Dropout](https://www.geeksforgeeks.org/dropout-in-neural-networks/): randomly disables neurons during training to prevent overfitting.
-```math
-\hat{y} = f(W \cdot (x \cdot r))
-```
+  ```math
+  \hat{y} = f(W \cdot (x \cdot r))
+  ```
 Where \( r \sim \text{Bernoulli}(p) \) is the dropout mask.
 
 - [Batch normalization](https://www.geeksforgeeks.org/batch-normalization-in-neural-networks/): normalizes layer inputs to stabilize learning.
-```math
-\hat{x} = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta
-```
+  ```math
+  \hat{x} = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta
+  ```
 
 - [L1/L2 regularization](https://www.geeksforgeeks.org/l1-and-l2-regularization/): penalizes large weights to reduce model complexity.
-```math
-L_{L1} = \lambda \sum |w_i|  
-L_{L2} = \lambda \sum w_i^2
-```
+  ```math
+  L_{L1} = \lambda \sum |w_i|  
+  L_{L2} = \lambda \sum w_i^2
+  ```
 
 - [Early stopping](https://www.geeksforgeeks.org/early-stopping-in-machine-learning/): halts training when validation performance stops improving.
 
 - [Gradient clipping](https://www.geeksforgeeks.org/gradient-clipping-in-deep-learning/): limits gradient magnitude to prevent exploding gradients.
-```math
-g = \frac{g}{\max(1, \frac{||g||}{\text{threshold}})}
-```
+  ```math
+  g = \frac{g}{\max(1, \frac{||g||}{\text{threshold}})}
+  ```
 
 ### 📘 Resources
 - #### 📖 Books
