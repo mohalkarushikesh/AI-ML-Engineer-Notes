@@ -26,8 +26,6 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     \text{Supervised: } y = f(x) \quad \text{Unsupervised: } x \rightarrow \text{clusters} \quad \text{Reinforcement: } Q(s,a)
     ```
 
----
-
 - ### 🐍 Python Programming (Zero to Intermediate)
 
   - **Basics**  
