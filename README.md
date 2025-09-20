@@ -149,37 +149,42 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       y_i - w^\top x_i - b \leq \epsilon + \xi_i \\
       w^\top x_i + b - y_i \leq \epsilon + \xi_i^*
       ```
-  - #### 🧠 Classification
-      - **Linear Models**:
-        - [Logistic Regression](https://www.geeksforgeeks.org/machine-learning/understanding-logistic-regression/)
 
-      - **Instance-Based**:
-        - [k-Nearest Neighbors (k-NN)](https://www.geeksforgeeks.org/machine-learning/k-nearest-neighbours/)
+  - #### Classification
+    - **Linear Models**:
+      - [Logistic Regression](https://www.geeksforgeeks.org/machine-learning/understanding-logistic-regression/) predicts probabilities for binary classes using a sigmoid function.
+      ```math
+      P(y=1|x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)}}
+      ```
+    - **Instance-Based**:
+      - [k-Nearest Neighbors (k-NN)](https://www.geeksforgeeks.org/machine-learning/k-nearest-neighbours/) classifies based on the majority label among the k closest data points.
+    - **Tree-Based**:
+      - [Decision Trees](https://www.tutorialspoint.com/machine_learning/machine_learning_decision_tree_algorithm.htm) split data using feature thresholds to form a tree of decisions.
+      - [Random Forest](https://www.geeksforgeeks.org/random-forest-classifier-using-scikit-learn/) builds multiple decision trees and averages their predictions.
+      - [Extra Trees](https://scikit-learn.org/stable/modules/ensemble.html#extra-trees) uses randomized thresholds for faster and more diverse trees.    
+    - **Kernel-Based**:
+      - [Support Vector Machine (SVM)](https://www.geeksforgeeks.org/machine-learning/support-vector-machine-svm/) finds the optimal hyperplane that separates classes with maximum margin.
+      ```math
+      \min \frac{1}{2} ||w||^2 \quad \text{subject to } y_i(w^T x_i + b) \geq 1
+      ```
+    - **Probabilistic Models**:
+      - [Naive Bayes](https://www.geeksforgeeks.org/naive-bayes-classifiers/) applies Bayes’ theorem assuming feature independence.
+      ```math
+      P(y|x) = \frac{P(x|y)P(y)}{P(x)}
+      ```
+      - [Quadratic Discriminant Analysis (QDA)](https://scikit-learn.org/stable/modules/lda_qda.html) models each class with its own covariance matrix.
+      - [Linear Discriminant Analysis (LDA)](https://scikit-learn.org/stable/modules/lda_qda.html) assumes shared covariance across classes for linear separation.
+    
+    - **Boosting Algorithms**:
+      - [Gradient Boosting](https://scikit-learn.org/stable/modules/ensemble.html#gradient-boosting) builds models sequentially to correct previous errors.
+      - [AdaBoost](https://scikit-learn.org/stable/modules/ensemble.html#adaboost) adjusts weights on misclassified samples to focus learning.
+      - [XGBoost](https://xgboost.readthedocs.io/en/stable/) optimized gradient boosting with regularization and speed.
+      - [LightGBM](https://lightgbm.readthedocs.io/en/latest/) uses histogram-based learning for faster training.
+      - [CatBoost](https://catboost.ai/en/docs/) handles categorical features natively and reduces overfitting.
 
-      - **Tree-Based**:
-        - [Decision Trees](https://www.tutorialspoint.com/machine_learning/machine_learning_decision_tree_algorithm.htm)
-        - [Random Forest](https://www.geeksforgeeks.org/random-forest-classifier-using-scikit-learn/)
-        - [Extra Trees](https://scikit-learn.org/stable/modules/ensemble.html#extra-trees)
-
-      - **Kernel-Based**:
-        - [Support Vector Machine (SVM)](https://www.geeksforgeeks.org/machine-learning/support-vector-machine-svm/)
-
-      - **Probabilistic Models**:
-        - [Naive Bayes](https://www.geeksforgeeks.org/naive-bayes-classifiers/)
-        - [Quadratic Discriminant Analysis (QDA)](https://scikit-learn.org/stable/modules/lda_qda.html)
-        - [Linear Discriminant Analysis (LDA)](https://scikit-learn.org/stable/modules/lda_qda.html)
-
-      - **Boosting Algorithms**:
-        - [Gradient Boosting](https://scikit-learn.org/stable/modules/ensemble.html#gradient-boosting)
-        - [AdaBoost](https://scikit-learn.org/stable/modules/ensemble.html#adaboost)
-        - [XGBoost](https://xgboost.readthedocs.io/en/stable/)
-        - [LightGBM](https://lightgbm.readthedocs.io/en/latest/)
-        - [CatBoost](https://catboost.ai/en/docs/)
-
-    #### 🧬 Ensemble Methods
-    - **Bagging**: Combines predictions from multiple models trained on random subsets of the data (e.g., Random Forest).
-    - **Stacking**: Combines predictions from multiple models using a meta-model to improve performance.
-
+    - #### Ensemble Methods
+      - **Bagging**: Combines predictions from multiple models trained on random subsets of the data (e.g., Random Forest).
+      - **Stacking**: Combines predictions from multiple models using a meta-model to improve performance.
 
 - **Unsupervised Learning**:
   - Clustering: 
