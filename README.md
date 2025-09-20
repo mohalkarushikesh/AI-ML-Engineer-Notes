@@ -76,12 +76,20 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
   - ### 📐 Linear Algebra for AI/ML
   
-    - **Scalars, Vectors, Matrices, and Tensors**  
-      Scalars represent single values.  
-      Vectors are 1D arrays of numbers.  
-      Matrices are 2D arrays used for datasets and transformations.  
-      Tensors generalize matrices to higher dimensions.
-  
+    - **Scalars** : A single number (e.g., temperature, weight).
+    ```math
+    a \in \mathbb{R}
+    ```
+    - **Vectors** : A 1D array of numbers, often used to represent features or weights.
+    ```math
+    \mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}
+    ```
+    - **Matrices** : A 2D array of numbers, used to represent datasets or transformations.
+    ```math
+    A = \begin{bmatrix} a_{11} & a_{12} & \dots \\ a_{21} & a_{22} & \dots \end{bmatrix}
+    ```
+    - **Tensors** : A generalization of matrices to higher dimensions (used in deep learning).
+     
     - **Basic Operations**  
       - **Addition**: Element-wise sum of matrices.  
         ```math
@@ -105,18 +113,19 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         ```
   
     - **Applications in ML**  
-      - **Data Representation**:  
+      - **Data Representation**: Datasets are stored as matrices where rows are samples and columns are features.
         ```math
         X = \begin{bmatrix} x_{11} & x_{12} & \dots \\ x_{21} & x_{22} & \dots \end{bmatrix}
         ```
-      - **Linear Regression**:  
+      - **Linear Regression**: Predicts output using matrix multiplication.
         ```math
         \hat{y} = Xw + b
         ```
-      - **Neural Networks**:  
+      - **Neural Networks**: Forward pass involves multiplying input vectors with weight matrices.
         ```math
         \mathbf{z} = W\mathbf{x} + \mathbf{b}
         ```
+      - PCA (Principal Component Analysis): Uses eigenvectors and eigenvalues to reduce dimensionality.
   
     - **Key Concepts**  
       - **Rank**: Number of linearly independent rows or columns.  
