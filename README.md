@@ -303,11 +303,35 @@ $$f(x) = \max(0, x)$$
   - [tanh](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) maps input to range (-1, 1).  
 $$\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
   - [Leaky ReLU](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/) allows small gradient for negative inputs.  
-  $$f(x) = \begin{cases} x & \text{if } x > 0 \\ \alpha x & \text{otherwise} \end{cases}$$
+
+$$
+f(x) = 
+\begin{cases}
+x & \text{if } x \geq 0 \\
+\alpha x & \text{if } x < 0
+\end{cases}
+$$ 
+
   - [ELU (Exponential Linear Unit)](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/) smooths negative values with exponential curve.  
-$$f(x) = \begin{cases}x & \text{if } x > 0 \\ \alpha (e^x - 1) & \text{otherwise}\end{cases}$$
+
+$$
+f(x) = 
+\begin{cases}
+x & \text{if } x \geq 0 \\
+\alpha (e^x - 1) & \text{if } x < 0
+\end{cases}
+$$ 
+
   - [SELU – Self-normalizing activation for deep networks](https://www.geeksforgeeks.org/deep-learning/selu-activation-function-in-neural-network/) scales and shifts outputs to maintain mean and variance.  
-$$f(x) = \lambda \begin{cases} x & \text{if } x > 0 \\ \alpha (e^x - 1) & \text{otherwise} \end{cases}$$
+
+$$
+f(x) = 
+\lambda 
+\begin{cases}
+x & \text{if } x \geq 0 \\
+\alpha (e^x - 1) & \text{if } x < 0
+\end{cases}
+$$
 
   - [GELU – Approximates ReLU using Gaussian error function](https://www.baeldung.com/cs/gelu-activation-function) blends input with probability curve.  
 $$f(x) = x \cdot \Phi(x)$$
