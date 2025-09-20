@@ -451,41 +451,40 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [Model-Based RL](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm): builds a model of the environment to plan actions.
 
 - ### ⚙️ **Data Preprocessing**:
-- ### ⚙️ Feature Engineering Techniques
-
-  - **Feature Scaling**
-    - [Standardization](https://scikit-learn.org/stable/modules/preprocessing.html#standardization-or-mean-removal-and-variance-scaling): scales features to have zero mean and unit variance.
-    ```math
-    z = \frac{x - \mu}{\sigma}
-    ```
-    - [Normalization](https://scikit-learn.org/stable/modules/preprocessing.html#normalization): scales features to a fixed range, typically [0, 1].
-    ```math
-    x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
-    ```
-    - [Robust Scaling](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html): uses median and IQR, robust to outliers.
-    ```math
-    x' = \frac{x - \text{median}}{\text{IQR}}
-    ```
-    - [MaxAbs Scaling](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MaxAbsScaler.html): scales data by its maximum absolute value.
-    ```math
-    x' = \frac{x}{|x_{\max}|}
-    ```
-
-  - **Encoding Categorical Variables**
-    - [One-hot encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html): converts categories into binary columns.
-    - [Label encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html): assigns numeric labels to categories.
-    - [Ordinal encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html): encodes categories with ordered integers.
-    - [Target encoding](https://contrib.scikit-learn.org/category_encoders/): replaces categories with the mean of the target variable for each category.
-
-  - **Handling Imbalanced Data**
-    - [SMOTE (Synthetic Minority Over-sampling Technique)](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html): generates synthetic samples for minority class.
-    - [ADASYN](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.ADASYN.html): adaptive version of SMOTE focusing on harder-to-learn samples.
-    - [Random Over-Sampling](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.RandomOverSampler.html): duplicates minority class samples.
-    - [Random Under-Sampling](https://imbalanced-learn.org/stable/references/generated/imblearn.under_sampling.RandomUnderSampler.html): removes majority class samples.
-    - [Class Weights](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html): adjusts loss function to penalize misclassification of minority class.
-    ```math
-    \text{Weighted Loss} = \sum w_i \cdot \text{Loss}(y_i, \hat{y}_i)
-    ```
+  - Feature Engineering Techniques
+    - **Feature Scaling**
+      - [Standardization](https://scikit-learn.org/stable/modules/preprocessing.html#standardization-or-mean-removal-and-variance-scaling): scales features to have zero mean and unit variance.
+      ```math
+      z = \frac{x - \mu}{\sigma}
+      ```
+      - [Normalization](https://scikit-learn.org/stable/modules/preprocessing.html#normalization): scales features to a fixed range, typically [0, 1].
+      ```math
+      x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
+      ```
+      - [Robust Scaling](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html): uses median and IQR, robust to outliers.
+      ```math
+      x' = \frac{x - \text{median}}{\text{IQR}}
+      ```
+      - [MaxAbs Scaling](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MaxAbsScaler.html): scales data by its maximum absolute value.
+      ```math
+      x' = \frac{x}{|x_{\max}|}
+      ```
+  
+    - **Encoding Categorical Variables**
+      - [One-hot encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html): converts categories into binary columns.
+      - [Label encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html): assigns numeric labels to categories.
+      - [Ordinal encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html): encodes categories with ordered integers.
+      - [Target encoding](https://contrib.scikit-learn.org/category_encoders/): replaces categories with the mean of the target variable for each category.
+  
+    - **Handling Imbalanced Data**
+      - [SMOTE (Synthetic Minority Over-sampling Technique)](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html): generates synthetic samples for minority class.
+      - [ADASYN](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.ADASYN.html): adaptive version of SMOTE focusing on harder-to-learn samples.
+      - [Random Over-Sampling](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.RandomOverSampler.html): duplicates minority class samples.
+      - [Random Under-Sampling](https://imbalanced-learn.org/stable/references/generated/imblearn.under_sampling.RandomUnderSampler.html): removes majority class samples.
+      - [Class Weights](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html): adjusts loss function to penalize misclassification of minority class.
+      ```math
+      \text{Weighted Loss} = \sum w_i \cdot \text{Loss}(y_i, \hat{y}_i)
+      ```
 
 - ### 📏 **Model Evaluation**:
   - Metrics:
