@@ -215,12 +215,15 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
 - **Model Evaluation**:
   - Metrics: 
-    - [MSE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error)  
-    - [RMSE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error)  
-    - [Accuracy](https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score)  
-    - [Precision](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-score)  
-    - [Recall](https://scikit-learn.org/stable/modules/model_evaluation.html#recall-score)  
-    - [F1-score](https://scikit-learn.org/stable/modules/model_evaluation.html#f1-score)
+    - [MSE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) mean squared error measures the average of squared differences between predicted and actual values, penalizing larger errors more heavily.  
+    - [RMSE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error) root mean squared error is the square root of MSE, representing prediction error in the same units as the target variable.  
+    - [MAE](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error) mean absolute error calculates the average of absolute differences between predicted and actual values, treating all errors equally.  
+    - [R²](https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score) coefficient of determination indicates how well the model explains the variance in the target variable, ranging from 0 to 1.  
+    - [Accuracy](https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score) ratio of correctly predicted values to the total number of samples.  
+    - [Precision](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-score) ratio of correctly predicted values to the all predicted values.  
+    - [Recall](https://scikit-learn.org/stable/modules/model_evaluation.html#recall-score) ratio of no of accurately found desired results to all predicted values in the sample set.  
+    - [F1-score](https://scikit-learn.org/stable/modules/model_evaluation.html#f1-score) harmonic mean of precision and recall, balancing both metrics in a single score.  
+    - [AUC](https://scikit-learn.org/stable/modules/model_evaluation.html#roc-auc-score) area under the ROC curve measures the ability of the model to distinguish between classes across all thresholds.  
   - [Train-test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)  
   - [k-fold cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html)  
   - [Overfitting vs. underfitting](https://scikit-learn.org/stable/modules/learning_curve.html)
