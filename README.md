@@ -133,7 +133,8 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       ```math
       \min_{\beta} \sum_i \rho_\tau (y_i - x_i^\top \beta)
       ```
-        where  
+      <p align="center">where</p>
+      
       ```math
       \rho_\tau(u) = u(\tau - \mathbb{I}(u < 0))
       ```
@@ -142,7 +143,8 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       ```math
       \min \frac{1}{2} ||w||^2 + C \sum (\xi_i + \xi_i^*)
       ```
-       subject to  
+      <p align="center">subject to</p>
+      
       ```math
       y_i - w^\top x_i - b \leq \epsilon + \xi_i \\
       w^\top x_i + b - y_i \leq \epsilon + \xi_i^*
