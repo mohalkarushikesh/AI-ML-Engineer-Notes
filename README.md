@@ -100,13 +100,27 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     \text{Standard Deviation} = \sqrt{\text{Variance}}
     ```
 
-- **Data Basics**:
-  - Understanding datasets: CSV files, data cleaning (missing values, outliers).  
+- ### 📊 Data Basics
+
+  - **Understanding Datasets**  
+    Datasets are structured collections of data, often stored in formats like CSV (Comma-Separated Values). Data cleaning involves handling missing values, correcting errors, and removing outliers to improve data quality.  
     - [Working with CSV Files in Python](https://realpython.com/python-csv/)  
     - [Data Cleaning Techniques](https://www.geeksforgeeks.org/data-cleaning-techniques-in-python/)
-  - Basic visualization: Histograms, scatter plots.  
+    ```math
+    \text{Cleaned Value} = \begin{cases}
+    \text{Impute with mean/median} & \text{if missing} \\
+    \text{Remove or cap} & \text{if outlier}
+    \end{cases}
+    ```
+
+  - **Basic Visualization**  
+    Visualization helps explore and understand data distributions and relationships. Histograms show frequency distributions, while scatter plots reveal correlations between variables.  
     - [Matplotlib Tutorial – Histograms and Scatter Plots](https://www.geeksforgeeks.org/matplotlib-tutorial/)  
     - [Data Visualization with Python](https://www.datacamp.com/blog/data-visualization-python)
+    ```math
+    \text{Histogram bin count} = \frac{\text{Range}}{\text{Bin width}}, \quad
+    \text{Scatter plot: } (x_i, y_i)
+    ```
 
 - **Tools**:
   - Python, Jupyter Notebook, Google Colab, NumPy, Pandas, Matplotlib.  
