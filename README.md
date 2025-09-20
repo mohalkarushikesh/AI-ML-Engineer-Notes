@@ -104,16 +104,55 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 ### 📊 **Supervised Learning**
   - #### 🔁 Regression
     - **Linear Models**:
-      - [Linear Regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/)
-      - [Polynomial Regression](https://www.geeksforgeeks.org/machine-learning/python-implementation-of-polynomial-regression/)
-      - [Ridge Regression](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression)
-      - [Lasso Regression](https://scikit-learn.org/stable/modules/linear_model.html#lasso)
-      - [Elastic Net](https://scikit-learn.org/stable/modules/linear_model.html#elastic-net)
-      - [Bayesian Regression](https://scikit-learn.org/stable/modules/linear_model.html#bayesian-regression)
-      - [Quantile Regression](https://scikit-learn.org/stable/modules/linear_model.html#quantile-regression)
+    - [Linear Regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/) models the relationship between input features and target using a straight line.  
+      $$
+      y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n
+      $$
+  
+    - [Polynomial Regression](https://www.geeksforgeeks.org/machine-learning/python-implementation-of-polynomial-regression/) fits a nonlinear curve by adding polynomial terms to linear regression.  
+      $$
+      y = \beta_0 + \beta_1 x + \beta_2 x^2 + \dots + \beta_d x^d
+      $$
+  
+    - [Ridge Regression](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression) adds L2 regularization to linear regression to reduce overfitting.  
+      $$
+      \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2
+      $$
+  
+    - [Lasso Regression](https://scikit-learn.org/stable/modules/linear_model.html#lasso) adds L1 regularization, promoting sparsity by shrinking some coefficients to zero.  
+      $$
+      \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j|
+      $$
+  
+    - [Elastic Net](https://scikit-learn.org/stable/modules/linear_model.html#elastic-net) combines L1 and L2 regularization for balanced feature selection and shrinkage.  
+      $$
+      \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda_1 \sum |\beta_j| + \lambda_2 \sum \beta_j^2
+      $$
+  
+    - [Bayesian Regression](https://scikit-learn.org/stable/modules/linear_model.html#bayesian-regression) incorporates prior distributions into regression for probabilistic predictions.  
+      $$
+      P(\beta | X, y) \propto P(y | X, \beta) \cdot P(\beta)
+      $$
+  
+    - [Quantile Regression](https://scikit-learn.org/stable/modules/linear_model.html#quantile-regression) estimates conditional quantiles instead of the mean, useful for skewed data.  
+      $$
+      \min_{\beta} \sum_i \rho_\tau (y_i - x_i^\top \beta)
+      $$
+      where  
+      $$
+      \rho_\tau(u) = u(\tau - \mathbb{I}(u < 0))
+      $$
 
-    - **Kernel-Based**:
-      - [Support Vector Regression (SVR)](https://scikit-learn.org/stable/modules/svm.html#regression)
+  - **Kernel-Based**:
+    - [Support Vector Regression (SVR)](https://scikit-learn.org/stable/modules/svm.html#regression) uses kernel tricks to model nonlinear relationships with margin-based optimization.  
+      $$
+      \min \frac{1}{2} ||w||^2 + C \sum (\xi_i + \xi_i^*)
+      $$
+      subject to  
+      $$
+      y_i - w^\top x_i - b \leq \epsilon + \xi_i \\
+      w^\top x_i + b - y_i \leq \epsilon + \xi_i^*
+      $$
 
   - #### 🧠 Classification
       - **Linear Models**:
