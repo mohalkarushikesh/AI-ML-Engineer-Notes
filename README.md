@@ -20,7 +20,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     Supervised: learns from labeled data to predict outcomes (e.g., classifying emails as spam or not).  
     Unsupervised: finds patterns in unlabeled data (e.g., customer segmentation).  
     Reinforcement: learns by interacting with an environment through trial and error (e.g., game-playing AI).  
-    - **New Addition: Semi-Supervised Learning Overview**: Combines labeled and unlabeled data for efficiency, useful when labeling is costly.  
+    - **Semi-Supervised Learning Overview**: Combines labeled and unlabeled data for efficiency, useful when labeling is costly.  
     - [Supervised vs Unsupervised vs Reinforcement Learning](https://www.geeksforgeeks.org/machine-learning/supervised-vs-reinforcement-vs-unsupervised/)  
     - [Types of Machine Learning](https://www.simplilearn.com/tutorials/machine-learning-tutorial/types-of-machine-learning/)
     ```math
@@ -45,7 +45,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     Tuples: ordered, immutable (e.g., (1, 2, 3) for fixed data).  
     Sets: unordered, unique elements (e.g., {1, 2, 3} for deduplication).  
     Dictionaries: key-value pairs (e.g., {"key": "value"} for lookups).  
-    - **New Addition: Advanced Usage**: List comprehensions for concise creation, e.g., [x**2 for x in range(5)].  
+    - **Advanced Usage**: List comprehensions for concise creation, e.g., [x**2 for x in range(5)].  
     - [Python Data Structures](https://www.dataquest.io/blog/data-structures-in-python/)  
     - [Differences and Applications](https://www.geeksforgeeks.org/python/differences-and-applications-of-list-tuple-set-and-dictionary-in-python/)
     ```python
@@ -68,7 +68,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
   - **File Handling & Debugging**  
     Read/write files (e.g., CSV, text), handle exceptions to manage errors gracefully, debug with print statements or logging for traceability.  
-    - **New Addition: Context Managers**: Use 'with' for safe file operations to avoid leaks.  
+    - **Context Managers**: Use 'with' for safe file operations to avoid leaks.  
     - [Understanding Python File Handling](https://softenant.com/understanding-python-file-handling-and-exception-managemen/)  
     - [Python Error Handling Best Practices](https://codezup.com/effective-error-handling-in-python/)
     ```python
@@ -133,7 +133,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         \mathbf{z} = W\mathbf{x} + \mathbf{b}
         ```
       - PCA (Principal Component Analysis): Uses eigenvectors and eigenvalues to reduce dimensionality.
-      - **New Addition: Vector Norms**: L1 (Manhattan) and L2 (Euclidean) for regularization.  
+      - **Vector Norms**: L1 (Manhattan) and L2 (Euclidean) for regularization.  
         ```math
         ||x||_1 = \sum |x_i|, \quad ||x||_2 = \sqrt{\sum x_i^2}
         ```
@@ -149,7 +149,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         ```math
         A\mathbf{v} = \lambda \mathbf{v}
         ```
-      - **New Addition: Orthogonality**: Vectors at right angles; useful in projections.  
+      - **Orthogonality**: Vectors at right angles; useful in projections.  
         ```math
         \mathbf{a} \cdot \mathbf{b} = 0
         ```
@@ -176,7 +176,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       ```math
       \nabla f(x) = \left[ \frac{\partial f}{\partial x_1}, \dots, \frac{\partial f}{\partial x_n} \right]
       ```
-      - **New Addition: Chain Rule**: For composite functions, df/dx = df/dy * dy/dx.
+      - **Chain Rule**: For composite functions, df/dx = df/dy * dy/dx.
   
     - **Applications in ML**  
       - **Gradient Descent**: Minimizes loss by updating weights in the opposite direction of the gradient.
@@ -185,7 +185,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         ```
       - **Backpropagation**: Uses chain rule to compute gradients in neural networks.
       - **Activation Functions**: Require derivatives for learning (e.g., sigmoid, ReLU).
-      - **New Addition: Second Derivatives (Hessian)**: For convexity checks in optimization.  
+      - **Second Derivatives (Hessian)**: For convexity checks in optimization.  
         ```math
         H_{ij} = \frac{\partial^2 f}{\partial x_i \partial x_j}
         ```
@@ -207,7 +207,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     - **Spread / Dispersion**  
       - **Variance**: Measures how far data points are from the mean.  
       - **Standard Deviation**: Square root of variance; easier to interpret in original units.  
-      - **New Addition: Interquartile Range (IQR)**: Difference between Q3 and Q1 for outlier detection.  
+      - **Interquartile Range (IQR)**: Difference between Q3 and Q1 for outlier detection.  
       ```math
       \text{Mean} = \frac{1}{n} \sum x_i, \quad
       \text{Variance} = \frac{1}{n} \sum (x_i - \mu)^2, \quad
@@ -217,7 +217,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
   
     - **Probability**  
       Quantifies uncertainty and likelihood of events. Used in classification, Bayesian models, and decision-making.  
-      - **New Addition: Distributions**: Normal (bell curve for continuous data), Binomial (for binary trials).  
+      - **Distributions**: Normal (bell curve for continuous data), Binomial (for binary trials).  
         ```math
         P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \quad \text{(Binomial)}
         ```
@@ -226,7 +226,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - Feature selection using variance thresholds  
       - Probabilistic models like Naive Bayes  
       - Evaluation metrics (e.g., precision, recall) rely on statistical reasoning  
-      - **New Addition: Hypothesis Testing**: t-test for comparing means, p-values for significance.
+      - **Hypothesis Testing**: t-test for comparing means, p-values for significance.
   
     - **Useful Resources**  
       - [Statistics for Machine Learning](https://www.geeksforgeeks.org/statistics-for-machine-learning/)  
@@ -250,7 +250,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
   - **Basic Visualization**  
     Visualization helps explore and understand data distributions and relationships. Histograms show frequency distributions, while scatter plots reveal correlations between variables.  
-    - **New Addition: Bar Charts and Heatmaps**: For categorical data and correlations.  
+    - **Bar Charts and Heatmaps**: For categorical data and correlations.  
     - [Matplotlib Tutorial – Histograms and Scatter Plots](https://www.geeksforgeeks.org/matplotlib-tutorial/)  
     - [Data Visualization with Python](https://www.datacamp.com/blog/data-visualization-python)
     ```math
@@ -360,7 +360,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         ```math
         \rho_\tau(u) = u(\tau - \mathbb{I}(u < 0))
         ```
-      - **New Addition: Huber Regression**: Robust to outliers with hybrid loss.  
+      - **Huber Regression**: Robust to outliers with hybrid loss.  
         ```math
         L(\delta) = \begin{cases} \frac{1}{2} \delta^2 & |\delta| \leq \epsilon \\ \epsilon (|\delta| - \frac{1}{2} \epsilon) & |\delta| > \epsilon \end{cases}
         ```
@@ -376,7 +376,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       y_i - w^\top x_i - b \leq \epsilon + \xi_i \\
       w^\top x_i + b - y_i \leq \epsilon + \xi_i^*
       ```
-      - **New Addition: Gaussian Process Regression**: Probabilistic non-parametric model.  
+      - **Gaussian Process Regression**: Probabilistic non-parametric model.  
         ```math
         f(x) \sim GP(m(x), k(x,x'))
         ```
@@ -418,12 +418,12 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [XGBoost](https://xgboost.readthedocs.io/en/stable/) optimized gradient boosting with regularization and speed.
       - [LightGBM](https://lightgbm.readthedocs.io/en/latest/) uses histogram-based learning for faster training.
       - [CatBoost](https://catboost.ai/en/docs/) handles categorical features natively and reduces overfitting.
-      - **New Addition: Histogram Gradient Boosting**: Scikit-learn's fast variant.
+      - **Histogram Gradient Boosting**: Scikit-learn's fast variant.
 
     - #### Ensemble Methods
       - **Bagging**: Combines predictions from multiple models trained on random subsets of the data (e.g., Random Forest).
       - **Stacking**: Combines predictions from multiple models using a meta-model to improve performance.
-      - **New Addition: Voting Classifiers**: Hard/soft voting for aggregation.
+      - **Voting Classifiers**: Hard/soft voting for aggregation.
 
 - ### 🧩 **Unsupervised Learning**:
   - Clustering:
@@ -441,7 +441,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       P(x) = \sum_{k=1}^{K} \pi_k \mathcal{N}(x | \mu_k, \Sigma_k)
       ```
     - [Agglomerative Clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html) merges clusters iteratively based on linkage criteria.
-    - **New Addition: OPTICS**: Extension of DBSCAN for varying densities.
+    - **OPTICS**: Extension of DBSCAN for varying densities.
 
   - Dimensionality Reduction:
     - [Principal Component Analysis (PCA)](https://www.geeksforgeeks.org/principal-component-analysis-pca/) projects data onto directions of maximum variance. Enhanced: Explained variance ratio.  
@@ -457,7 +457,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       ```
     - [UMAP](https://umap-learn.readthedocs.io/en/latest/) reduces dimensions using manifold approximation and graph layout.
     - [Linear Discriminant Analysis (LDA)](https://www.ibm.com/think/topics/linear-discriminant-analysis) projects data to maximize class separability.
-    - **New Addition: Isomap**: Preserves geodesic distances for nonlinear reduction.
+    - **Isomap**: Preserves geodesic distances for nonlinear reduction.
 
   - Association Rule Learning:
     - [Apriori Algorithm](https://www.geeksforgeeks.org/apriori-algorithm/) finds frequent itemsets and derives rules using support and confidence.
@@ -470,7 +470,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       ```
     - [Eclat Algorithm](https://www.geeksforgeeks.org/eclat-algorithm/) uses vertical data format and intersection to find frequent itemsets.
     - [FP-Growth](https://www.geeksforgeeks.org/fp-growth-algorithm-for-association-rule-learning/) builds a prefix tree to mine frequent patterns without candidate generation.
-    - **New Addition: Lift Metric**: Measures rule strength.  
+    - **Lift Metric**: Measures rule strength.  
       ```math
       \text{Lift}(A \Rightarrow B) = \frac{\text{Confidence}(A \Rightarrow B)}{\text{Support}(B)}
       ```
@@ -484,7 +484,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     - [Semi-Supervised SVM (S3VM)](https://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf): extends SVM to use both labeled and unlabeled data.
     - [Generative Models (e.g., VAEs)](https://spotintelligence.com/2023/12/28/semi-supervised-machine-learning-made-simple-5-algorithms-how-to-python-tutorial/): learn data distribution to generate labels for unlabeled data.
     - [Graph-Based Methods](https://machinelearningmastery.com/semi-supervised-learning-with-label-propagation/): use graph structure to infer labels from neighbors.
-    - **New Addition: Consistency Regularization**: Enforces similar predictions on perturbed data.
+    - **Consistency Regularization**: Enforces similar predictions on perturbed data.
 
 - ### 🎮 **Reinforcement Learning**:
   - Algorithms:
@@ -509,7 +509,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         - [REINFORCE Algorithm](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/): uses Monte Carlo returns to update policy.
         - [Deep Deterministic Policy Gradient (DDPG)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/05-ddpg.ipynb): handles continuous action spaces.
         - [Soft Actor-Critic (SAC)](https://github.com/tsmatz/reinforcement-learning-tutorials/blob/master/06-sac.ipynb): adds entropy to encourage exploration.
-      - **New Addition: Trust Region Policy Optimization (TRPO)**: Constrains policy updates.
+      - **Trust Region Policy Optimization (TRPO)**: Constrains policy updates.
 
     - Monte Carlo Methods:
       - [Monte Carlo Methods](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm): estimate value functions using complete episodes.
@@ -522,7 +522,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
     - Model-Based Methods:
       - [Model-Based RL](https://www.tutorialspoint.com/machine_learning/machine_learning_reinforcement_learning_algorithms.htm): builds a model of the environment to plan actions.
-      - **New Addition: Model Predictive Control (MPC)**: Optimizes over predicted trajectories.
+      - **Model Predictive Control (MPC)**: Optimizes over predicted trajectories.
 
 - ### ⚙️ **Data Preprocessing**:
   - Feature Engineering Techniques
@@ -543,14 +543,14 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       ```math
       x' = \frac{x}{|x_{\max}|}
       ```
-      - **New Addition: Power Transformer**: For making data Gaussian-like (Box-Cox).
+      - **Power Transformer**: For making data Gaussian-like (Box-Cox).
   
     - **Encoding Categorical Variables**
       - [One-hot encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html): converts categories into binary columns.
       - [Label encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html): assigns numeric labels to categories.
       - [Ordinal encoding](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html): encodes categories with ordered integers.
       - [Target encoding](https://contrib.scikit-learn.org/category_encoders/): replaces categories with the mean of the target variable for each category.
-      - **New Addition: Frequency Encoding**: Based on category counts.
+      - **Frequency Encoding**: Based on category counts.
   
     - **Handling Imbalanced Data**
       - [SMOTE (Synthetic Minority Over-sampling Technique)](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html): generates synthetic samples for minority class.
@@ -561,7 +561,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       ```math
       \text{Weighted Loss} = \sum w_i \cdot \text{Loss}(y_i, \hat{y}_i)
       ```
-      - **New Addition: Bias Detection**: Use fairness metrics like disparate impact.
+      - **Bias Detection**: Use fairness metrics like disparate impact.
 
 - ### 📏 **Model Evaluation**:
   - Metrics:
@@ -589,7 +589,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
     ```
     - [AUC](https://scikit-learn.org/stable/modules/model_evaluation.html#roc-auc-score): area under the ROC curve, measuring classification performance across thresholds.
-    - **New Addition: Cohen's Kappa**: For agreement beyond chance in classification.
+    - **Cohen's Kappa**: For agreement beyond chance in classification.
 
   - [Train-test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html): divides data into training and testing sets.
   - [k-fold cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html): evaluates model performance by splitting data into k subsets. Enhanced: Stratified for imbalanced data.
@@ -598,7 +598,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 - ### 🔧 **Hyperparameter Tuning**:
   - [Grid Search](https://scikit-learn.org/stable/modules/grid_search.html): exhaustively searches over specified parameter values.
   - [Random Search](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html): samples random combinations of parameters.
-  - **New Addition: Bayesian Optimization**: Uses probabilistic models for efficient search.
+  - **Bayesian Optimization**: Uses probabilistic models for efficient search.
 
 - ### 📐 **Mathematics (Intermediate)**:
   - Linear Algebra:
@@ -607,7 +607,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     ```math
     a \cdot b = \sum_{i=1}^{n} a_i b_i
     ```
-    - **New Addition: Moore-Penrose Pseudoinverse**: For non-square matrices.  
+    - **Moore-Penrose Pseudoinverse**: For non-square matrices.  
       ```math
       A^+ = V D^+ U^T
       ```
@@ -621,7 +621,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     ```math
     \frac{\partial f}{\partial x}
     ```
-    - **New Addition: Stochastic vs. Batch GD**: Trade-offs in convergence.
+    - **Stochastic vs. Batch GD**: Trade-offs in convergence.
 
   - Probability:
     - [Conditional probability](https://www.geeksforgeeks.org/conditional-probability/): probability of event A given event B.
@@ -632,7 +632,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     ```math
     P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
     ```
-    - **New Addition: Expectation and Variance**: Core for loss functions.  
+    - **Expectation and Variance**: Core for loss functions.  
       ```math
       E[X] = \sum x p(x), \quad Var(X) = E[(X - E[X])^2]
       ```
@@ -705,7 +705,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     Xavier: Var(w) = 1/n  
     He: Var(w) = 2/n
     ```
-  - **New Addition: Batch vs. Mini-Batch GD**: Trade-offs in memory and convergence speed.
+  - **Batch vs. Mini-Batch GD**: Trade-offs in memory and convergence speed.
 
 #### ⚡ Activation Functions
   
@@ -758,7 +758,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
     ```math
     f(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
     ```
-  - **New Addition: Mish**: x * tanh(softplus(x)), better than Swish in some cases.
+  - **Mish**: x * tanh(softplus(x)), better than Swish in some cases.
 
 #### 🧠 Deep Learning Architectures
 
@@ -779,7 +779,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [Inception (GoogLeNet)](https://learnopencv.com/introduction-to-googlenet-inception-in-tensorflow/)
       - [MobileNet](https://www.analyticsvidhya.com/blog/2022/10/mobilenet-architecture-with-python-code/)
       - [EfficientNet](https://learnopencv.com/efficientnet-architecture-introduction/)
-      - **New Addition: DenseNet**: Dense connections for feature reuse.
+      - **DenseNet**: Dense connections for feature reuse.
         ```math
         S(i,j) = \sum_m \sum_n X(i+m, j+n) \cdot K(m,n)
         ```
@@ -797,7 +797,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [Stacked LSTM](https://towardsdatascience.com/stacked-long-short-term-memory-networks-4b8b0a4e21b4)
       - [Bidirectional LSTM](https://towardsdatascience.com/bidirectional-lstm-for-text-classification-85c5d849b49c)
       - [CNN-LSTM](https://www.geeksforgeeks.org/cnn-lstm-models/)
-      - **New Addition: Peephole LSTM**: Adds cell state to gates.
+      - **Peephole LSTM**: Adds cell state to gates.
         ```math
         f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)  
         i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)  
@@ -812,7 +812,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [GPT](https://www.simplilearn.com/tutorials/deep-learning-tutorial/gpt)
       - [T5](https://huggingface.co/docs/transformers/model_doc/t5.html)
       - [Vision Transformer (ViT)](https://learnopencv.com/introduction-to-vision-transformers-vit/)
-      - **New Addition: XLNet**: Permutation-based pretraining.
+      - **XLNet**: Permutation-based pretraining.
           ```math
           \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
           ```
@@ -844,7 +844,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [A3C](https://www.geeksforgeeks.org/a3c-asynchronous-advantage-actor-critic/)
       - [DDPG](https://spinningup.openai.com/en/latest/algorithms/ddpg.html)
       - [SAC](https://github.com/ku2482/soft-actor-critic-pytorch)
-      - **New Addition: TD3 (Twin Delayed DDPG)**: Reduces overestimation.
+      - **TD3 (Twin Delayed DDPG)**: Reduces overestimation.
 
 
 - ### 🧠 Unsupervised Architectures
@@ -858,7 +858,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       ```math
       \mathcal{L} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - D_{KL}(q(z|x) || p(z))
       ```
-      - **New Addition: Beta-VAE**: Controls disentanglement with beta parameter.
+      - **Beta-VAE**: Controls disentanglement with beta parameter.
 
   - #### 🎨 Generative Models
     - [Generative Adversarial Networks (GANs)](https://aman.ai/primers/ai/dl-comp/#gan): train generator and discriminator in a minimax game. Enhanced: Wasserstein GAN for stability.
@@ -883,14 +883,14 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
       - [Deep Belief Networks (DBNs)](https://www.geeksforgeeks.org/deep-belief-network-dbn/): stack of RBMs trained layer-wise.
       - [Deep Boltzmann Machines (DBMs)](https://www.geeksforgeeks.org/deep-learning/deep-boltzmann-machines-dbms-in-deep-learning/): deep networks with undirected connections across layers.
-      - **New Addition: Energy-Based Models (EBMs)**: Generalize BMs.
+      - **Energy-Based Models (EBMs)**: Generalize BMs.
 
   - #### 🗺️ Topology-Preserving Models
     - [Self-Organizing Maps (SOMs)](https://www.geeksforgeeks.org/self-organizing-maps-soms/): map high-dimensional data to 2D grid preserving topological structure.
       ```math
       w_i(t+1) = w_i(t) + \alpha(t) \cdot h_{ci}(t) \cdot (x(t) - w_i(t))
       ```
-      - **New Addition: Growing SOMs**: Dynamically add nodes.
+      - **Growing SOMs**: Dynamically add nodes.
 
 - ### 🧬 Hybrid / Semi-Supervised Architectures
 
@@ -912,7 +912,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
   ```
 
   - [Semi-Supervised GANs](https://eitca.org/artificial-intelligence/eitc-ai-adl-advanced-deep-learning/unsupervised-learning/unsupervised-representation-learning/examination-review-unsupervised-representation-learning/): use GANs with labeled and unlabeled data to improve classification.
-  - **New Addition: Ladder Networks**: Combine supervised and unsupervised losses.
+  - **Ladder Networks**: Combine supervised and unsupervised losses.
 
 #### 🧪 Loss Functions
 
@@ -937,7 +937,7 @@ L = -\sum_{i=1}^{C} y_i \log(\hat{y}_i)
   ```
 
 - [Custom Loss Functions (PyTorch/TensorFlow)](https://www.analyticsvidhya.com/blog/2021/06/custom-loss-functions-in-tensorflow-and-pytorch/): user-defined loss tailored to specific tasks or constraints.
-- **New Addition: Focal Loss**: For imbalanced classification.  
+- **Focal Loss**: For imbalanced classification.  
   ```math
   L = -\alpha (1 - p_t)^\gamma \log(p_t)
   ```
@@ -990,7 +990,7 @@ L = -\sum_{i=1}^{C} y_i \log(\hat{y}_i)
   ```math
   \theta := \theta - \alpha \cdot \left( \beta_1 m_t + \frac{(1 - \beta_1) g_t}{1 - \beta_1^t} \right)
   ```
-- **New Addition: Lion Optimizer**: Recent efficient alternative to Adam.
+- **Lion Optimizer**: Recent efficient alternative to Adam.
 
 #### 🧰 Frameworks & Tools
   - [TensorFlow/Keras: Sequential and Functional APIs](https://www.tensorflow.org/guide/keras/sequential_model)  
@@ -1007,7 +1007,7 @@ L = -\sum_{i=1}^{C} y_i \log(\hat{y}_i)
 - [Text: Tokenization, stemming, lemmatization, embeddings (Word2Vec, GloVe)](https://www.geeksforgeeks.org/natural-language-processing-text-preprocessing/): converts raw text into structured formats for NLP tasks. Enhanced: Subword tokenization (BPE).
 
 - [Handling imbalanced datasets (SMOTE, class weights)](https://imbalanced-learn.org/stable/over_sampling.html): balances class distribution by generating synthetic samples or adjusting loss weights.
-- **New Addition: Privacy Considerations**: Differential privacy in data augmentation.
+- **Privacy Considerations**: Differential privacy in data augmentation.
 
 ---
 
@@ -1036,7 +1036,7 @@ Where \( r \sim \text{Bernoulli}(p) \) is the dropout mask.
   ```math
   g = \frac{g}{\max(1, \frac{||g||}{\text{threshold}})}
   ```
-- **New Addition: Label Smoothing**: Softens hard labels to reduce overconfidence.
+- **Label Smoothing**: Softens hard labels to reduce overconfidence.
 
 ### 📘 Resources
 - #### 📖 Books
@@ -1091,14 +1091,14 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
   - **Transfer Learning**
     - [Fine-tuning pre-trained models](https://www.tensorflow.org/tutorials/images/transfer_learning): adapts models trained on large datasets to new tasks by updating weights.
     - Common models: VGG, ResNet, BERT
-    - **New Addition: Knowledge Distillation**: Transfer from teacher to student model.
+    - **Knowledge Distillation**: Transfer from teacher to student model.
 
   - **Generative Models**
     - [GANs (Generative Adversarial Networks)](https://www.analyticsvidhya.com/blog/2019/03/introduction-generative-adversarial-networks-gans/): train a generator and discriminator in a minimax game.
     ```math
     \min_G \max_D V(D,G) = \mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]
     ```
-    - **New Addition: Diffusion Models**: Iterative denoising for generation (e.g., Stable Diffusion).
+    - **Diffusion Models**: Iterative denoising for generation (e.g., Stable Diffusion).
 
     - [VAEs (Variational Autoencoders)](https://www.geeksforgeeks.org/variational-autoencoder-introduction/): learn latent distributions for generative reconstruction.
     ```math
@@ -1114,7 +1114,7 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
 
     - [BERT](https://huggingface.co/docs/transformers/model_doc/bert.html): bidirectional transformer for language understanding.
     - [GPT](https://huggingface.co/docs/transformers/model_doc/gpt2.html): autoregressive transformer for text generation.
-    - **New Addition: Llama Models**: Open-source large language models.
+    - **Llama Models**: Open-source large language models.
 
 ---
 
@@ -1125,7 +1125,7 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
     ```math
     V^\pi(s) = \mathbb{E}_\pi \left[ \sum_{t=0}^{\infty} \gamma^t r_t \right]
     ```
-    - **New Addition: Partially Observable MDPs (POMDPs)**: For incomplete state info.
+    - **Partially Observable MDPs (POMDPs)**: For incomplete state info.
 
   - **Q-learning**
     - [Q-learning guide](https://www.geeksforgeeks.org/q-learning-in-python/): learns optimal action-value function.
@@ -1139,7 +1139,7 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
     ```math
     L^{CLIP}(\theta) = \mathbb{E}_t \left[ \min(r_t(\theta) \hat{A}_t, \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) \hat{A}_t) \right]
     ```
-    - **New Addition: Multi-Agent RL**: Cooperative/competitive agents.
+    - **Multi-Agent RL**: Cooperative/competitive agents.
 
 - ### 🛠️ MLOps
 
@@ -1147,16 +1147,16 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
     - [Deploy using Flask](https://www.geeksforgeeks.org/deploy-machine-learning-model-using-flask/): serve ML models via lightweight web APIs.
     - [FastAPI for ML APIs](https://towardsdatascience.com/fastapi-for-machine-learning-60720f09e2b6): modern, fast framework for building ML endpoints.
     - [Docker containers](https://www.analyticsvidhya.com/blog/2021/06/deploy-machine-learning-model-using-docker/): package models with dependencies for consistent deployment.
-    - **New Addition: Kubernetes for Scaling**: Orchestrate containers.
+    - **Kubernetes for Scaling**: Orchestrate containers.
 
   - **Pipeline Automation**
     - [Using Airflow](https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html): orchestrate ML workflows with DAGs and scheduling.
     - [Kubeflow overview](https://neptune.ai/blog/mlops-pipeline-using-kubeflow): scalable ML pipelines on Kubernetes.
-    - **New Addition: MLflow**: For experiment tracking and reproducibility.
+    - **MLflow**: For experiment tracking and reproducibility.
 
   - **Monitoring**
     - [Model drift & performance metrics](https://www.deeplearning.ai/the-batch/monitoring-machine-learning-models-in-production/): track changes in data distribution and model accuracy over time.
-    - **New Addition: CI/CD for ML**: Jenkins or GitHub Actions for automated testing.
+    - **CI/CD for ML**: Jenkins or GitHub Actions for automated testing.
 
 - ### 📐 Mathematics (Advanced)
 
@@ -1170,7 +1170,7 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
     ```math
     A v = \lambda v
     ```
-    - **New Addition: Positive Definite Matrices**: For convex optimization checks.
+    - **Positive Definite Matrices**: For convex optimization checks.
 
   - **Optimization**
     - [Convex Optimization](https://towardsdatascience.com/convex-optimization-primer-f8d3a44fa5ed): minimizes convex functions where any local minimum is global.
@@ -1182,7 +1182,7 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
     ```math
     \mathcal{L}(x, \lambda) = f(x) + \lambda (g(x) - c)
     ``` 
-    - **New Addition: KKT Conditions**: For optimality in constraints.
+    - **KKT Conditions**: For optimality in constraints.
 
 - **New Subtopic: Federated Learning**  
   - Decentralized training on edge devices for privacy.  
@@ -1248,33 +1248,33 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
     - Object detection (YOLO, SSD): [YOLO vs SSD comparison](https://www.analyticsvidhya.com/blog/2022/09/object-detection-using-yolo-and-mobilenet-ssd/)  
     - Semantic segmentation: [Stanford CS231n Lecture Notes](https://cs231n.stanford.edu/slides/2022/lecture_9_jiajun.pdf)  
     - Pose estimation: [YOLO-NAS Pose GitHub](https://github.com/juanjosecas/YOLO-NAS_pose-estimation)
-    - **New Addition: 3D Vision**: Point clouds with PointNet.
+    - **3D Vision**: Point clouds with PointNet.
 
   - **Natural Language Processing (NLP)**  
     Enables machines to understand, generate, and respond to human language.  
     - Chatbots: [Building Chatbots with GPT](https://nlpcloud.com/how-to-build-chatbot-gpt-3-gpt-j.html)  
     - Question answering: [GPT-4 for NLP Tasks](https://www.sitepoint.com/gpt4-for-nlp/)  
     - Language generation (e.g., GPT-based models): [ChatGPT for Text Generation](https://dev.to/abbhiishek/chatgpt-the-ultimate-tool-for-natural-language-processing-and-text-generation-40ag)
-    - **New Addition: Multilingual NLP**: With mBERT.
+    - **Multilingual NLP**: With mBERT.
 
   - **Generative AI**  
     Focuses on creating new content such as images, music, or text using models trained on existing data.  
     - Image generation (Stable Diffusion): [Stable Diffusion Guide](https://learnopencv.com/stable-diffusion-generative-ai/)  
     - Music generation: [Audiocraft MusicGen Tutorial](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/AI-Music-Generation-Audiocraft-Tutorial.md)
-    - **New Addition: Video Generation**: Sora-like models.
+    - **Video Generation**: Sora-like models.
 
   - **Reinforcement Learning**  
     Trains agents to make decisions by interacting with environments and receiving rewards.  
     - Robotics: [Reinforcement Learning for Robotics Course](https://www.theconstruct.ai/robotigniteacademy_learnros/ros-courses-library/reinforcement-learning-for-robotics/)  
     - Autonomous systems: [Unity ML Agents for Robotics](https://github.com/sushantmenon1/Unity-ML-Agents-Training-a-Robot)  
     - Game AI: [PPO Game AI Tutorial](https://lightning.ai/pages/community/tutorial/how-to-train-reinforcement-learning-model-to-play-game-using-proximal-policy-optimization-ppo-algorithm/)
-    - **New Addition: Offline RL**: Learning from static datasets.
+    - **Offline RL**: Learning from static datasets.
 
   - **Time Series**  
     Analyzes data indexed over time to forecast trends and detect anomalies.  
     - Financial forecasting: [BigQuery Time Series Forecasting](https://cloud.google.com/bigquery/docs/time-series-anomaly-detection-tutorial)  
     - Anomaly detection: [StatsForecast Anomaly Detection](https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/anomalydetection.html)
-    - **New Addition: Prophet for Forecasting**: Facebook's tool.
+    - **Prophet for Forecasting**: Facebook's tool.
 
   - **New Specialization: Multi-Modal AI**  
     - Combines text, image, audio (e.g., CLIP, DALL-E).  
