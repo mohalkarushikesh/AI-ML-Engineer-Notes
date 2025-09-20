@@ -111,7 +111,6 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [Polynomial Regression](https://www.geeksforgeeks.org/machine-learning/python-implementation-of-polynomial-regression/) fits a nonlinear curve by adding polynomial terms to linear regression.  
         ```math
         y = \beta_0 + \beta_1 x + \beta_2 x^2 + \dots + \beta_d x^d
-        $$
         ```    
       - [Ridge Regression](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression) adds L2 regularization to linear regression to reduce overfitting.  
         ```math
@@ -777,46 +776,95 @@ A well-documented Jupyter Notebook with model performance metrics and visualizat
 
 ### **Topics**:
 
-- **Advanced Deep Learning**:
-  - **Transfer Learning**  
-    - [Fine-tuning pre-trained models](https://www.tensorflow.org/tutorials/images/transfer_learning)  
+- ### 🧠 Advanced Deep Learning
+
+  - **Transfer Learning**
+    - [Fine-tuning pre-trained models](https://www.tensorflow.org/tutorials/images/transfer_learning): adapts models trained on large datasets to new tasks by updating weights.
     - Common models: VGG, ResNet, BERT
-  - **Generative Models**  
-    - [GANs (Generative Adversarial Networks)](https://www.analyticsvidhya.com/blog/2019/03/introduction-generative-adversarial-networks-gans/)  
-    - [VAEs (Variational Autoencoders)](https://www.geeksforgeeks.org/variational-autoencoder-introduction/)  
-  - **Transformers**  
-    - [Attention mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/)  
-    - [Self-attention](https://jalammar.github.io/illustrated-transformer/)  
-    - [BERT](https://huggingface.co/transformers/model_doc/bert.html)  
-    - [GPT](https://huggingface.co/transformers/model_doc/gpt2.html)  
 
-- **Reinforcement Learning**:
-  - **Markov Decision Processes (MDPs)**  
-    - [MDPs overview](https://www.geeksforgeeks.org/markov-decision-process-mdp-in-reinforcement-learning/)  
-  - **Q-learning**  
-    - [Q-learning guide](https://www.geeksforgeeks.org/q-learning-in-python/)  
-  - **Deep Reinforcement Learning**  
-    - [Deep Q-Networks (DQN)](https://www.geeksforgeeks.org/deep-q-learning/)  
-    - [Proximal Policy Optimization (PPO)](https://huggingface.co/blog/deep-rl-ppo)  
+  - **Generative Models**
+    - [GANs (Generative Adversarial Networks)](https://www.analyticsvidhya.com/blog/2019/03/introduction-generative-adversarial-networks-gans/): train a generator and discriminator in a minimax game.
+    ```math
+    \min_G \max_D V(D,G) = \mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]
+    ```
 
-- **MLOps**:
-  - **Model Deployment**  
-    - [Deploy using Flask](https://www.geeksforgeeks.org/deploy-machine-learning-model-using-flask/)  
-    - [FastAPI for ML APIs](https://towardsdatascience.com/fastapi-for-machine-learning-60720f09e2b6)  
-    - [Docker containers](https://www.analyticsvidhya.com/blog/2021/06/deploy-machine-learning-model-using-docker/)  
-  - **Pipeline Automation**  
-    - [Using Airflow](https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html)  
-    - [Kubeflow overview](https://neptune.ai/blog/mlops-pipeline-using-kubeflow)  
-  - **Monitoring**  
-    - [Model drift & performance metrics](https://www.deeplearning.ai/the-batch/monitoring-machine-learning-models-in-production/)  
+    - [VAEs (Variational Autoencoders)](https://www.geeksforgeeks.org/variational-autoencoder-introduction/): learn latent distributions for generative reconstruction.
+    ```math
+    \mathcal{L} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - D_{KL}(q(z|x) || p(z))
+    ```
 
-- **Mathematics (Advanced)**:
-  - **Linear Algebra**  
-    - [Singular value decomposition (SVD)](https://www.geeksforgeeks.org/singular-value-decomposition-svd/)  
-    - [Eigenvalues and eigenvectors](https://www.intmath.com/matrices-determinants/7-eigenvalues-eigenvectors.php)  
-  - **Optimization**  
-    - [Convex optimization](https://towardsdatascience.com/convex-optimization-primer-f8d3a44fa5ed)  
-    - [Lagrangian methods](https://www.math.ubc.ca/~pwalls/math-python/optimization/lagrangian-multipliers/)  
+  - **Transformers**
+    - [Attention mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/): focus on relevant input parts during processing.
+    - [Self-attention](https://jalammar.github.io/illustrated-transformer/): computes attention within a sequence.
+    ```math
+    \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+    ```
+
+    - [BERT](https://huggingface.co/transformers/model_doc/bert.html): bidirectional transformer for language understanding.
+    - [GPT](https://huggingface.co/transformers/model_doc/gpt2.html): autoregressive transformer for text generation.
+
+---
+
+- ### 🎮 Reinforcement Learning
+
+  - **Markov Decision Processes (MDPs)**
+    - [MDPs overview](https://www.geeksforgeeks.org/markov-decision-process-mdp-in-reinforcement-learning/): formalize decision-making with states, actions, rewards, and transitions.
+    ```math
+    V^\pi(s) = \mathbb{E}_\pi \left[ \sum_{t=0}^{\infty} \gamma^t r_t \right]
+    ```
+
+  - **Q-learning**
+    - [Q-learning guide](https://www.geeksforgeeks.org/q-learning-in-python/): learns optimal action-value function.
+    ```math
+    Q(s,a) \leftarrow Q(s,a) + \alpha [r + \gamma \max_a Q(s',a) - Q(s,a)]
+    ```
+
+  - **Deep Reinforcement Learning**
+    - [Deep Q-Networks (DQN)](https://www.geeksforgeeks.org/deep-q-learning/): uses neural networks to approximate Q-values.
+    - [Proximal Policy Optimization (PPO)](https://huggingface.co/blog/deep-rl-ppo): stabilizes policy updates using clipped objective.
+    ```math
+    L^{CLIP}(\theta) = \mathbb{E}_t \left[ \min(r_t(\theta) \hat{A}_t, \text{clip}(r_t(\theta), 1 - \epsilon, 1 + \epsilon) \hat{A}_t) \right]
+    ```
+
+- ### 🛠️ MLOps
+
+  - **Model Deployment**
+    - [Deploy using Flask](https://www.geeksforgeeks.org/deploy-machine-learning-model-using-flask/): serve ML models via lightweight web APIs.
+    - [FastAPI for ML APIs](https://towardsdatascience.com/fastapi-for-machine-learning-60720f09e2b6): modern, fast framework for building ML endpoints.
+    - [Docker containers](https://www.analyticsvidhya.com/blog/2021/06/deploy-machine-learning-model-using-docker/): package models with dependencies for consistent deployment.
+
+  - **Pipeline Automation**
+    - [Using Airflow](https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html): orchestrate ML workflows with DAGs and scheduling.
+    - [Kubeflow overview](https://neptune.ai/blog/mlops-pipeline-using-kubeflow): scalable ML pipelines on Kubernetes.
+
+  - **Monitoring**
+    - [Model drift & performance metrics](https://www.deeplearning.ai/the-batch/monitoring-machine-learning-models-in-production/): track changes in data distribution and model accuracy over time.
+
+---
+
+- ### 📐 Mathematics (Advanced)
+
+  - **Linear Algebra**
+    - [Singular Value Decomposition (SVD)](https://www.geeksforgeeks.org/singular-value-decomposition-svd/): factorizes a matrix into singular vectors and values.
+    ```math
+    A = U \Sigma V^T
+    ```
+
+    - [Eigenvalues and Eigenvectors](https://www.intmath.com/matrices-determinants/7-eigenvalues-eigenvectors.php): describe directions and scaling in linear transformations.
+    ```math
+    A v = \lambda v
+    ```
+
+  - **Optimization**
+    - [Convex Optimization](https://towardsdatascience.com/convex-optimization-primer-f8d3a44fa5ed): minimizes convex functions where any local minimum is global.
+    ```math
+    \min_x f(x) \quad \text{subject to } g_i(x) \leq 0, \; h_j(x) = 0
+    ```
+
+    - [Lagrangian Methods](https://www.math.ubc.ca/~pwalls/math-python/optimization/lagrangian-multipliers/): solve constrained optimization problems.
+    ```math
+    \mathcal{L}(x, \lambda) = f(x) + \lambda (g(x) - c)
+    ``` 
 
 - **Tools**:
   - [Hugging Face Transformers](https://huggingface.co/docs/transformers/index)  
@@ -866,26 +914,32 @@ A well-documented Jupyter Notebook with model performance metrics and visualizat
 **Duration**: 6-12 months  
 **Goal**: Specialize in a niche, build a professional portfolio, and prepare for industry roles.  
 
-**Topics**:
-- **Specializations** (choose one or more):
-  - **Computer Vision**:  
-    - Object detection (YOLO, SSD): [YOLO vs SSD comparison](https://www.analyticsvidhya.com/blog/2022/09/object-detection-using-yolo-and-mobilenet-ssd/)  
-    - Semantic segmentation: [Stanford CS231n Lecture Notes](https://cs231n.stanford.edu/slides/2022/lecture_9_jiajun.pdf)  
-    - Pose estimation: [YOLO-NAS Pose GitHub](https://github.com/juanjosecas/YOLO-NAS_pose-estimation)
-  - **NLP**:  
-    - Chatbots: [Building Chatbots with GPT](https://nlpcloud.com/how-to-build-chatbot-gpt-3-gpt-j.html)  
-    - Question answering: [GPT-4 for NLP Tasks](https://www.sitepoint.com/gpt4-for-nlp/)  
-    - Language generation (e.g., GPT-based models): [ChatGPT for Text Generation](https://dev.to/abbhiishek/chatgpt-the-ultimate-tool-for-natural-language-processing-and-text-generation-40ag)
-  - **Generative AI**:  
-    - Image generation (Stable Diffusion): [Stable Diffusion Guide](https://learnopencv.com/stable-diffusion-generative-ai/)  
-    - Music generation: [Audiocraft MusicGen Tutorial](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/AI-Music-Generation-Audiocraft-Tutorial.md)
-  - **Reinforcement Learning**:  
-    - Robotics: [Reinforcement Learning for Robotics Course](https://www.theconstruct.ai/robotigniteacademy_learnros/ros-courses-library/reinforcement-learning-for-robotics/)  
-    - Autonomous systems: [Unity ML Agents for Robotics](https://github.com/sushantmenon1/Unity-ML-Agents-Training-a-Robot)  
-    - Game AI: [PPO Game AI Tutorial](https://lightning.ai/pages/community/tutorial/how-to-train-reinforcement-learning-model-to-play-game-using-proximal-policy-optimization-ppo-algorithm/)
-  - **Time Series**:  
-    - Financial forecasting: [BigQuery Time Series Forecasting](https://cloud.google.com/bigquery/docs/time-series-anomaly-detection-tutorial)  
-    - Anomaly detection: [StatsForecast Anomaly Detection](https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/anomalydetection.html)
+- ### 🎯 Topics
+
+  - **Specializations** (choose one or more):
+
+    - **Computer Vision**  
+      - Object detection (YOLO, SSD): [YOLO vs SSD comparison](https://www.analyticsvidhya.com/blog/2022/09/object-detection-using-yolo-and-mobilenet-ssd/)  
+      - Semantic segmentation: [Stanford CS231n Lecture Notes](https://cs231n.stanford.edu/slides/2022/lecture_9_jiajun.pdf)  
+      - Pose estimation: [YOLO-NAS Pose GitHub](https://github.com/juanjosecas/YOLO-NAS_pose-estimation)
+
+    - **Natural Language Processing (NLP)**  
+      - Chatbots: [Building Chatbots with GPT](https://nlpcloud.com/how-to-build-chatbot-gpt-3-gpt-j.html)  
+      - Question answering: [GPT-4 for NLP Tasks](https://www.sitepoint.com/gpt4-for-nlp/)  
+      - Language generation (e.g., GPT-based models): [ChatGPT for Text Generation](https://dev.to/abbhiishek/chatgpt-the-ultimate-tool-for-natural-language-processing-and-text-generation-40ag)
+
+    - **Generative AI**  
+      - Image generation (Stable Diffusion): [Stable Diffusion Guide](https://learnopencv.com/stable-diffusion-generative-ai/)  
+      - Music generation: [Audiocraft MusicGen Tutorial](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/AI-Music-Generation-Audiocraft-Tutorial.md)
+
+    - **Reinforcement Learning**  
+      - Robotics: [Reinforcement Learning for Robotics Course](https://www.theconstruct.ai/robotigniteacademy_learnros/ros-courses-library/reinforcement-learning-for-robotics/)  
+      - Autonomous systems: [Unity ML Agents for Robotics](https://github.com/sushantmenon1/Unity-ML-Agents-Training-a-Robot)  
+      - Game AI: [PPO Game AI Tutorial](https://lightning.ai/pages/community/tutorial/how-to-train-reinforcement-learning-model-to-play-game-using-proximal-policy-optimization-ppo-algorithm/)
+
+    - **Time Series**  
+      - Financial forecasting: [BigQuery Time Series Forecasting](https://cloud.google.com/bigquery/docs/time-series-anomaly-detection-tutorial)  
+      - Anomaly detection: [StatsForecast Anomaly Detection](https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/anomalydetection.html)
 
 - **Industry Skills**:
   - Portfolio:  
