@@ -400,182 +400,294 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 ### 📚 Topics
 
 #### 🔧 Neural Network Fundamentals
-  - [Perceptrons](https://www.geeksforgeeks.org/machine-learning/what-is-perceptron-the-simplest-artificial-neural-network/)  
-  - [Multi-layer perceptrons (MLPs)](https://www.geeksforgeeks.org/deep-learning/multi-layer-perceptron-learning-in-tensorflow/)  
-  - [Backpropagation](https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/)  
-  - [Gradient descent](https://bing.com/search?q=Gradient+descent+tutorial) is a fundamental optimization algorithm used in machine learning to minimize the cost function by iteratively adjusting model parameters.
-  - [Weight initialization strategies (Xavier, He)](https://www.geeksforgeeks.org/weight-initialization-techniques-in-neural-networks/)
+  - [Perceptrons](https://www.geeksforgeeks.org/machine-learning/what-is-perceptron-the-simplest-artificial-neural-network/): basic unit of a neural network that makes decisions using weighted inputs and a threshold.
+    ```math
+    y = f\left(\sum_{i=1}^{n} w_i x_i + b\right)
+    ```
+  - [Multi-layer perceptrons (MLPs)](https://www.geeksforgeeks.org/deep-learning/multi-layer-perceptron-learning-in-tensorflow/): feedforward neural networks with one or more hidden layers for learning complex patterns.
+  
+  - [Backpropagation](https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/): algorithm to compute gradients of loss with respect to weights using the chain rule.
+  
+  - [Gradient descent](https://bing.com/search?q=Gradient+descent+tutorial): optimization method to minimize loss by updating weights.
+    ```math
+    w := w - \alpha \frac{\partial J}{\partial w}
+    ```  
+  - [Weight initialization strategies (Xavier, He)](https://www.geeksforgeeks.org/weight-initialization-techniques-in-neural-networks/): methods to set initial weights to improve convergence.
+    ```
+    Xavier: Var(w) = 1/n  
+    He: Var(w) = 2/n
+    ```
 
 #### ⚡ Activation Functions
-  - [Sigmoid](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) squashes input to range (0, 1).  
-
-$$
-\sigma(x) = \frac{1}{1 + e^{-x}}
-$$
-
-  - [ReLU](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) outputs zero for negatives and linear for positives.  
-
-$$
-f(x) = \max(0, x)
-$$
-
+  - [Sigmoid](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) squashes input to range (0, 1).
+    ```math
+    \sigma(x) = \frac{1}{1 + e^{-x}}
+    ```
+  - [ReLU](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) outputs zero for negatives and linear for positives.
+    ```math
+    f(x) = \max(0, x)
+    ```
   - [tanh](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) maps input to range (-1, 1).  
-
-$$
-\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
-$$
-
+    ```math
+    \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
+    ```
   - [Leaky ReLU](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/) allows small gradient for negative inputs.  
-
-$$
-f(x) = 
-\begin{cases}
-x & \text{if } x \geq 0 \\
-\alpha x & \text{if } x < 0
-\end{cases}
-$$ 
-
+    ```math
+    f(x) = 
+    \begin{cases}
+    x & \text{if } x \geq 0 \\
+    \alpha x & \text{if } x < 0
+    \end{cases}
+    ```
   - [ELU (Exponential Linear Unit)](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/) smooths negative values with exponential curve.  
-
-$$
-f(x) = 
-\begin{cases}
-x & \text{if } x \geq 0 \\
-\alpha (e^x - 1) & \text{if } x < 0
-\end{cases}
-$$ 
-
+    ```math
+    $$
+    f(x) = 
+    \begin{cases}
+    x & \text{if } x \geq 0 \\
+    \alpha (e^x - 1) & \text{if } x < 0
+    \end{cases}
+    ```
   - [SELU – Self-normalizing activation for deep networks](https://www.geeksforgeeks.org/deep-learning/selu-activation-function-in-neural-network/) scales and shifts outputs to maintain mean and variance.  
-
-$$
-f(x) = 
-\lambda 
-\begin{cases}
-x & \text{if } x \geq 0 \\
-\alpha (e^x - 1) & \text{if } x < 0
-\end{cases}
-$$
-
+    ```math
+    f(x) = 
+    \lambda 
+    \begin{cases}
+    x & \text{if } x \geq 0 \\
+    \alpha (e^x - 1) & \text{if } x < 0
+    \end{cases}
+    ```
   - [GELU – Approximates ReLU using Gaussian error function](https://www.baeldung.com/cs/gelu-activation-function) blends input with probability curve.  
-
-$$
-f(x) = x \cdot \Phi(x)
-$$
-
+    ```math
+    f(x) = x \cdot \Phi(x)
+    ```
   - [Swish](https://www.aicodesnippet.com/machine-learning/neural-networks/activation-functions-relu-sigmoid-and-tanh-explained.html) multiplies input with sigmoid of input.  
-
-$$
-f(x) = x \cdot \sigma(x)
-$$
-
+    ```math
+    f(x) = x \cdot \sigma(x)
+    ```
   - [Softmax (for output layers)](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) converts outputs to probability distribution.  
-
-$$
-f(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
-$$
+    ```math
+    f(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
+    ```
 
 #### 🧠 Deep Learning Architectures
 
-- **Artificial Neural Networks**
-  - **Supervised Architectures**  
-      - [**Feedforward Neural Networks (FNNs)**](https://www.geeksforgeeks.org/nlp/feedforward-neural-network/)
-    
-      - **Convolutional Neural Networks (CNNs)**   
-          - [LeNet](https://www.geeksforgeeks.org/lenet-5-cnn-architecture/)  
-          - [AlexNet](https://www.geeksforgeeks.org/understanding-alexnet-model/)  
-          - [VGG](https://learnopencv.com/understanding-vgg-model/)  
-          - [ResNet](https://www.geeksforgeeks.org/introduction-to-residual-networks/)  
-          - [Inception (GoogLeNet)](https://learnopencv.com/introduction-to-googlenet-inception-in-tensorflow/)  
-          - [MobileNet](https://www.analyticsvidhya.com/blog/2022/10/mobilenet-architecture-with-python-code/)  
-          - [EfficientNet](https://learnopencv.com/efficientnet-architecture-introduction/)
+- ### 🧠 Artificial Neural Networks
 
-      - **Recurrent Neural Networks (RNNs)**  
-          - [Vanilla RNN](https://www.geeksforgeeks.org/recurrent-neural-networks-rnns/)  
-          - [Gated Recurrent Unit (GRU)](https://www.geeksforgeeks.org/gated-recurrent-unit-gru/)  
-          - [Bidirectional RNN](https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/)
+  - **Supervised Architectures**
 
-        - **Long Short-Term Memory (LSTM)**  
-            - [Vanilla LSTM](https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/)  
-            - [Stacked LSTM](https://towardsdatascience.com/stacked-long-short-term-memory-networks-4b8b0a4e21b4)  
-            - [Bidirectional LSTM](https://towardsdatascience.com/bidirectional-lstm-for-text-classification-85c5d849b49c)  
-            - [CNN-LSTM](https://www.geeksforgeeks.org/cnn-lstm-models/)
+    - [Feedforward Neural Networks (FNNs)](https://www.geeksforgeeks.org/nlp/feedforward-neural-network/): data flows from input to output through hidden layers.
+      ```math
+      y = f\left(\sum_{i=1}^{n} w_i x_i + b\right)
+      ```
 
-      - **Transformers**  
-        - Subtypes:  
-          - [Vanilla Transformer](https://huggingface.co/learn/nlp-course/chapter3/4)  
-          - [BERT (Bidirectional Encoder Representations from Transformers)](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)  
-          - [GPT (Generative Pre-trained Transformer)](https://www.simplilearn.com/tutorials/deep-learning-tutorial/gpt)  
-          - [T5 (Text-to-Text Transfer Transformer)](https://huggingface.co/transformers/model_doc/t5.html)  
-          - [Vision Transformer (ViT)](https://learnopencv.com/introduction-to-vision-transformers-vit/)
+    - **Convolutional Neural Networks (CNNs)**: extract spatial features from images.
+      - [LeNet](https://www.geeksforgeeks.org/lenet-5-cnn-architecture/)
+      - [AlexNet](https://www.geeksforgeeks.org/understanding-alexnet-model/)
+      - [VGG](https://learnopencv.com/understanding-vgg-model/)
+      - [ResNet](https://www.geeksforgeeks.org/introduction-to-residual-networks/)
+      - [Inception (GoogLeNet)](https://learnopencv.com/introduction-to-googlenet-inception-in-tensorflow/)
+      - [MobileNet](https://www.analyticsvidhya.com/blog/2022/10/mobilenet-architecture-with-python-code/)
+      - [EfficientNet](https://learnopencv.com/efficientnet-architecture-introduction/)
+      ```math
+      S(i,j) = \sum_m \sum_n X(i+m, j+n) \cdot K(m,n)
+      ```
 
-      - **Encoder-Decoder Networks**  
-        - Subtypes:  
-          - [Seq2Seq (RNN-based)](https://machinelearningmastery.com/encoder-decoder-long-short-term-memory-networks/)  
-          - [Transformer-based Encoder-Decoder](https://www.analyticsvidhya.com/blog/2022/09/encoder-decoder-architecture-of-transformers/)  
-          - [CNN Encoder with RNN Decoder (e.g., image captioning)](https://medium.com/@arindamganguly07/image-captioning-using-cnns-and-rnns-a-tutorial-on-deep-learning-624f7966ac71)
+    - **Recurrent Neural Networks (RNNs)**: model sequential data using feedback loops.
+      - [Vanilla RNN](https://www.geeksforgeeks.org/recurrent-neural-networks-rnns/)
+      - [Gated Recurrent Unit (GRU)](https://www.geeksforgeeks.org/gated-recurrent-unit-gru/)
+      - [Bidirectional RNN](https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/)
+      ```math
+      h_t = f(W_h h_{t-1} + W_x x_t + b)
+      ```
 
-      - **Deep Q-Networks (DQNs)**  
-        - Subtypes:  
-          - [Vanilla DQN](https://neptune.ai/blog/deep-q-learning-dqn)  
-          - [Double DQN](https://www.geeksforgeeks.org/double-dqn-in-reinforcement-learning/)  
-          - [Dueling DQN](https://stable-baselines.readthedocs.io/en/master/modules/dueling_dqn.html)  
-          - [Prioritized Experience Replay](https://www.geeksforgeeks.org/prioritized-experience-replay-reinforcement-learning/)
+    - **Long Short-Term Memory (LSTM)**: handles long-term dependencies in sequences.
+      - [Vanilla LSTM](https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/)
+      - [Stacked LSTM](https://towardsdatascience.com/stacked-long-short-term-memory-networks-4b8b0a4e21b4)
+      - [Bidirectional LSTM](https://towardsdatascience.com/bidirectional-lstm-for-text-classification-85c5d849b49c)
+      - [CNN-LSTM](https://www.geeksforgeeks.org/cnn-lstm-models/)
+      ```math
+      f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)  
+      i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)  
+      o_t = \sigma(W_o x_t + U_o h_{t-1} + b_o)  
+      c_t = f_t \cdot c_{t-1} + i_t \cdot \tanh(W_c x_t + U_c h_{t-1} + b_c)  
+      h_t = o_t \cdot \tanh(c_t)
+      ```
 
-      - **Policy Gradient Methods**  
-        - Subtypes:  
-          - [REINFORCE](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/)  
-          - [Proximal Policy Optimization (PPO)](https://spinningup.openai.com/en/latest/algorithms/ppo.html)  
-          - [Trust Region Policy Optimization (TRPO)](https://spinningup.openai.com/en/latest/algorithms/trpo.html)
+    - **Transformers**: use attention mechanisms for sequence modeling.
+      - [Vanilla Transformer](https://huggingface.co/learn/nlp-course/chapter3/4)
+      - [BERT](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)
+      - [GPT](https://www.simplilearn.com/tutorials/deep-learning-tutorial/gpt)
+      - [T5](https://huggingface.co/transformers/model_doc/t5.html)
+      - [Vision Transformer (ViT)](https://learnopencv.com/introduction-to-vision-transformers-vit/)
+      ```math
+      \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+      ```
 
-      - **Actor-Critic Models**  
-        - Subtypes:  
-          - [A2C (Advantage Actor-Critic)](https://www.analyticsvidhya.com/blog/2022/06/advantage-actor-critic-a2c-algorithm/)  
-          - [A3C (Asynchronous Advantage Actor-Critic)](https://www.geeksforgeeks.org/a3c-asynchronous-advantage-actor-critic/)  
-          - [DDPG (Deep Deterministic Policy Gradient)](https://spinningup.openai.com/en/latest/algorithms/ddpg.html)  
-          - [SAC (Soft Actor-Critic)](https://github.com/ku2482/soft-actor-critic-pytorch)
+    - **Encoder-Decoder Networks**: map input sequences to output sequences.
+      - [Seq2Seq (RNN-based)](https://machinelearningmastery.com/encoder-decoder-long-short-term-memory-networks/)
+      - [Transformer-based Encoder-Decoder](https://www.analyticsvidhya.com/blog/2022/09/encoder-decoder-architecture-of-transformers/)
+      - [CNN Encoder with RNN Decoder](https://medium.com/@arindamganguly07/image-captioning-using-cnns-and-rnns-a-tutorial-on-deep-learning-624f7966ac71)
 
-    - ### 🧠 **Unsupervised Architectures**
+    - **Deep Q-Networks (DQNs)**: use neural networks to approximate Q-values.
+      - [Vanilla DQN](https://neptune.ai/blog/deep-q-learning-dqn)
+      - [Double DQN](https://www.geeksforgeeks.org/double-dqn-in-reinforcement-learning/)
+      - [Dueling DQN](https://stable-baselines.readthedocs.io/en/master/modules/dueling_dqn.html)
+      - [Prioritized Experience Replay](https://www.geeksforgeeks.org/prioritized-experience-replay-reinforcement-learning/)
+    ```math
+    Q(s,a) \leftarrow Q(s,a) + \alpha [r + \gamma \max_a Q(s',a) - Q(s,a)]
+    ```
 
-      - #### 🔄 **Autoencoding Models**
-        - [Autoencoders](https://vitalflux.com/autoencoder-vs-variational-autoencoder-vae-difference/)  
-        - [Variational Autoencoders (VAEs)](https://www.geeksforgeeks.org/machine-learning/variational-autoencoders/)  
+    - **Policy Gradient Methods**: optimize policies directly.
+      - [REINFORCE](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/)
+      - [PPO](https://spinningup.openai.com/en/latest/algorithms/ppo.html)
+      - [TRPO](https://spinningup.openai.com/en/latest/algorithms/trpo.html)
+    ```math
+    \nabla J(\theta) = \mathbb{E}[\nabla_\theta \log \pi_\theta(a|s) \cdot R]
+    ```
 
-      - #### 🎨 **Generative Models**
-        - [Generative Adversarial Networks (GANs)](https://aman.ai/primers/ai/dl-comp/#gan)  
-        - [Boltzmann Machines (BMs)](https://iq.opengenus.org/boltzmann-machines/)  
-          - [**Restricted Boltzmann Machines (RBMs)**](https://www.geeksforgeeks.org/machine-learning/restricted-boltzmann-machine/)  
-            - [**Contrastive Divergence (CD)**](https://www.geeksforgeeks.org/deep-learning/contrastive-divergence-in-restricted-boltzmann-machines/)
-          - [**Deep Belief Networks (DBNs)**](https://www.geeksforgeeks.org/deep-belief-network-dbn/)  
-          - [**Deep Boltzmann Machines (DBMs)**](https://www.geeksforgeeks.org/deep-learning/deep-boltzmann-machines-dbms-in-deep-learning/)  
-        - [Deep Belief Networks (DBNs)](https://www.geeksforgeeks.org/deep-belief-network-dbn/)  
+    - **Actor-Critic Models**: combine value estimation and policy learning.
+      - [A2C](https://www.analyticsvidhya.com/blog/2022/06/advantage-actor-critic-a2c-algorithm/)
+      - [A3C](https://www.geeksforgeeks.org/a3c-asynchronous-advantage-actor-critic/)
+      - [DDPG](https://spinningup.openai.com/en/latest/algorithms/ddpg.html)
+      - [SAC](https://github.com/ku2482/soft-actor-critic-pytorch)
 
-      - #### 🗺️ **Topology-Preserving Models**
-        - [Self-Organizing Maps (SOMs)](https://www.geeksforgeeks.org/self-organizing-maps-soms/)  
 
-    - ### **Hybrid / Semi-Supervised Architectures**
-      - [Attention Mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/)  
-      - [Transformers with Pretraining (e.g., BERT, GPT)](https://focalx.ai/ai/ai-model-architectures/)  
-      - [CycleGANs](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-021-00444-8)  
-      - [Contrastive Learning Models](https://www.analyticsvidhya.com/blog/2021/06/contrastive-learning-in-deep-learning/)
-      - [Semi-Supervised GANs](https://eitca.org/artificial-intelligence/eitc-ai-adl-advanced-deep-learning/unsupervised-learning/unsupervised-representation-learning/examination-review-unsupervised-representation-learning/)
+- ### 🧠 Unsupervised Architectures
 
+  - #### 🔄 Autoencoding Models
+    - [Autoencoders](https://vitalflux.com/autoencoder-vs-variational-autoencoder-vae-difference/): learn compressed representations by reconstructing input.
+    ```math
+    \hat{x} = f(g(x))
+    ```
+    - [Variational Autoencoders (VAEs)](https://www.geeksforgeeks.org/machine-learning/variational-autoencoders/): probabilistic autoencoders that learn latent distributions.
+    ```math
+    \mathcal{L} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - D_{KL}(q(z|x) || p(z))
+    ```
+
+  - #### 🎨 Generative Models
+    - [Generative Adversarial Networks (GANs)](https://aman.ai/primers/ai/dl-comp/#gan): train generator and discriminator in a minimax game.
+    ```math
+    \min_G \max_D V(D,G) = \mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]
+    ```
+
+    - [Boltzmann Machines (BMs)](https://iq.opengenus.org/boltzmann-machines/): stochastic recurrent networks that learn probability distributions.
+    ```math
+    P(v,h) = \frac{1}{Z} \exp(-E(v,h))
+    ```
+
+      - [Restricted Boltzmann Machines (RBMs)](https://www.geeksforgeeks.org/machine-learning/restricted-boltzmann-machine/): simplified BMs with no intra-layer connections.
+      ```math
+      E(v,h) = -\sum_i v_i b_i - \sum_j h_j c_j - \sum_{i,j} v_i h_j w_{ij}
+      ```
+
+        - [Contrastive Divergence (CD)](https://www.geeksforgeeks.org/deep-learning/contrastive-divergence-in-restricted-boltzmann-machines/): approximates gradient for RBM training.
+        ```math
+        \Delta w_{ij} \propto \langle v_i h_j \rangle_{data} - \langle v_i h_j \rangle_{model}
+        ```
+
+      - [Deep Belief Networks (DBNs)](https://www.geeksforgeeks.org/deep-belief-network-dbn/): stack of RBMs trained layer-wise.
+      - [Deep Boltzmann Machines (DBMs)](https://www.geeksforgeeks.org/deep-learning/deep-boltzmann-machines-dbms-in-deep-learning/): deep networks with undirected connections across layers.
+
+  - #### 🗺️ Topology-Preserving Models
+    - [Self-Organizing Maps (SOMs)](https://www.geeksforgeeks.org/self-organizing-maps-soms/): map high-dimensional data to 2D grid preserving topological structure.
+    ```math
+    w_i(t+1) = w_i(t) + \alpha(t) \cdot h_{ci}(t) \cdot (x(t) - w_i(t))
+    ```
+
+- ### 🧬 Hybrid / Semi-Supervised Architectures
+
+  - [Attention Mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/): focus on relevant parts of input during processing.
+  ```math
+  \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+  ```
+
+  - [Transformers with Pretraining (e.g., BERT, GPT)](https://focalx.ai/ai/ai-model-architectures/): pretrained on large corpora, fine-tuned for tasks.
+
+  - [CycleGANs](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-021-00444-8): learn image-to-image translation without paired data.
+  ```math
+  \mathcal{L}_{cyc}(G,F) = \mathbb{E}_{x}[\|F(G(x)) - x\|_1] + \mathbb{E}_{y}[\|G(F(y)) - y\|_1]
+  ```
+
+  - [Contrastive Learning Models](https://www.analyticsvidhya.com/blog/2021/06/contrastive-learning-in-deep-learning/): learn representations by pulling similar samples together and pushing dissimilar apart.
+  ```math
+  \mathcal{L}_{contrastive} = -\log \frac{\exp(\text{sim}(x_i, x_j)/\tau)}{\sum_{k=1}^{2N} \exp(\text{sim}(x_i, x_k)/\tau)}
+  ```
+
+  - [Semi-Supervised GANs](https://eitca.org/artificial-intelligence/eitc-ai-adl-advanced-deep-learning/unsupervised-learning/unsupervised-representation-learning/examination-review-unsupervised-representation-learning/): use GANs with labeled and unlabeled data to improve classification.
 
 #### 🧪 Loss Functions
-  - [Mean Squared Error (MSE)](https://www.geeksforgeeks.org/mean-squared-error/)  
-  - [Binary Cross-Entropy](https://www.geeksforgeeks.org/binary-cross-entropy-loss-function/)  
-  - [Categorical Cross-Entropy](https://www.geeksforgeeks.org/categorical-crossentropy-loss-function/)  
-  - [Hinge loss](https://www.geeksforgeeks.org/hinge-loss-function/)  
-  - [Custom loss functions (in PyTorch/TensorFlow)](https://www.analyticsvidhya.com/blog/2021/06/custom-loss-functions-in-tensorflow-and-pytorch/)
+
+- [Mean Squared Error (MSE)](https://www.geeksforgeeks.org/mean-squared-error/): measures average squared difference between predicted and actual values.
+```math
+MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+```
+
+- [Binary Cross-Entropy](https://www.geeksforgeeks.org/binary-cross-entropy-loss-function/): used for binary classification tasks.
+```math
+L = -[y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})]
+```
+
+- [Categorical Cross-Entropy](https://www.geeksforgeeks.org/categorical-crossentropy-loss-function/): used for multi-class classification.
+```math
+L = -\sum_{i=1}^{C} y_i \log(\hat{y}_i)
+```
+
+- [Hinge Loss](https://www.geeksforgeeks.org/hinge-loss-function/): used for "maximum-margin" classification like SVM.
+```math
+L = \max(0, 1 - y \cdot \hat{y})
+```
+
+- [Custom Loss Functions (PyTorch/TensorFlow)](https://www.analyticsvidhya.com/blog/2021/06/custom-loss-functions-in-tensorflow-and-pytorch/): user-defined loss tailored to specific tasks or constraints.
+
+---
 
 #### 🚀 Optimizers
-  - [SGD (Stochastic Gradient Descent)](https://www.geeksforgeeks.org/gradient-descent-in-machine-learning/)  
-  - [Momentum](https://www.geeksforgeeks.org/momentum-optimization-in-deep-learning/)  
-  - [Nesterov Accelerated Gradient](https://www.geeksforgeeks.org/nesterov-accelerated-gradient/)  
-  - [Adam](https://www.geeksforgeeks.org/adam-optimization-algorithm/)  
-  - [RMSProp](https://www.geeksforgeeks.org/rmsprop-optimizer/)  
-  - [Adagrad](https://www.geeksforgeeks.org/adagrad-optimizer/)  
-  - [AdamW](https://www.geeksforgeeks.org/adamw-optimizer/)  
-  - [Nadam](https://www.geeksforgeeks.org/nadam-optimizer/)
+
+- [SGD (Stochastic Gradient Descent)](https://www.geeksforgeeks.org/gradient-descent-in-machine-learning/): updates weights using one sample at a time.
+```math
+\theta := \theta - \alpha \cdot \nabla_\theta J(\theta)
+```
+
+- [Momentum](https://www.geeksforgeeks.org/momentum-optimization-in-deep-learning/): accelerates SGD by adding a fraction of previous update.
+```math
+v_t = \gamma v_{t-1} + \alpha \nabla_\theta J(\theta)  
+\theta := \theta - v_t
+```
+
+- [Nesterov Accelerated Gradient](https://www.geeksforgeeks.org/nesterov-accelerated-gradient/): looks ahead before computing gradient.
+```math
+v_t = \gamma v_{t-1} + \alpha \nabla_\theta J(\theta - \gamma v_{t-1})  
+\theta := \theta - v_t
+```
+
+- [Adam](https://www.geeksforgeeks.org/adam-optimization-algorithm/): combines momentum and adaptive learning rates.
+```math
+m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t  
+v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2  
+\theta := \theta - \alpha \cdot \frac{m_t}{\sqrt{v_t} + \epsilon}
+```
+
+- [RMSProp](https://www.geeksforgeeks.org/rmsprop-optimizer/): adapts learning rate using moving average of squared gradients.
+```math
+v_t = \beta v_{t-1} + (1 - \beta) g_t^2  
+\theta := \theta - \alpha \cdot \frac{g_t}{\sqrt{v_t} + \epsilon}
+```
+
+- [Adagrad](https://www.geeksforgeeks.org/adagrad-optimizer/): adapts learning rate based on past gradients.
+```math
+\theta := \theta - \frac{\alpha}{\sqrt{G_t + \epsilon}} \cdot g_t
+```
+
+- [AdamW](https://www.geeksforgeeks.org/adamw-optimizer/): variant of Adam with decoupled weight decay.
+```math
+\theta := \theta - \alpha \cdot \left( \frac{m_t}{\sqrt{v_t} + \epsilon} + \lambda \theta \right)
+```
+
+- [Nadam](https://www.geeksforgeeks.org/nadam-optimizer/): Adam with Nesterov momentum.
+```math
+\theta := \theta - \alpha \cdot \left( \beta_1 m_t + \frac{(1 - \beta_1) g_t}{1 - \beta_1^t} \right)
+```
 
 #### 🧰 Frameworks & Tools
   - [TensorFlow/Keras: Sequential and Functional APIs](https://www.tensorflow.org/guide/keras/sequential_model)  
@@ -585,17 +697,40 @@ $$
   - [Hugging Face Transformers (intro level)](https://huggingface.co/docs/transformers/index)
 
 #### 🧼 Data Preprocessing
-  - [Image: Resizing, normalization, augmentation](https://www.analyticsvidhya.com/blog/2021/06/image-data-augmentation-techniques-in-deep-learning/)  
-  - [Text: Tokenization, stemming, lemmatization, embeddings (Word2Vec, GloVe)](https://www.geeksforgeeks.org/natural-language-processing-text-preprocessing/)  
-  - [Handling imbalanced datasets (SMOTE, class weights)](https://imbalanced-learn.org/stable/over_sampling.html)
+
+- [Image: Resizing, normalization, augmentation](https://www.analyticsvidhya.com/blog/2021/06/image-data-augmentation-techniques-in-deep-learning/): transforms image data to improve model generalization and consistency.
+
+- [Text: Tokenization, stemming, lemmatization, embeddings (Word2Vec, GloVe)](https://www.geeksforgeeks.org/natural-language-processing-text-preprocessing/): converts raw text into structured formats for NLP tasks.
+
+- [Handling imbalanced datasets (SMOTE, class weights)](https://imbalanced-learn.org/stable/over_sampling.html): balances class distribution by generating synthetic samples or adjusting loss weights.
+
+---
 
 #### 🛡️ Regularization Techniques
-  - [Dropout](https://www.geeksforgeeks.org/dropout-in-neural-networks/)  
-  - [Batch normalization](https://www.geeksforgeeks.org/batch-normalization-in-neural-networks/)  
-  - [L1/L2 regularization](https://www.geeksforgeeks.org/l1-and-l2-regularization/)  
-  - [Early stopping](https://www.geeksforgeeks.org/early-stopping-in-machine-learning/)  
-  - [Gradient clipping](https://www.geeksforgeeks.org/gradient-clipping-in-deep-learning/)
 
+- [Dropout](https://www.geeksforgeeks.org/dropout-in-neural-networks/): randomly disables neurons during training to prevent overfitting.
+```math
+\hat{y} = f(W \cdot (x \cdot r))
+```
+Where \( r \sim \text{Bernoulli}(p) \) is the dropout mask.
+
+- [Batch normalization](https://www.geeksforgeeks.org/batch-normalization-in-neural-networks/): normalizes layer inputs to stabilize learning.
+```math
+\hat{x} = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta
+```
+
+- [L1/L2 regularization](https://www.geeksforgeeks.org/l1-and-l2-regularization/): penalizes large weights to reduce model complexity.
+```math
+L_{L1} = \lambda \sum |w_i|  
+L_{L2} = \lambda \sum w_i^2
+```
+
+- [Early stopping](https://www.geeksforgeeks.org/early-stopping-in-machine-learning/): halts training when validation performance stops improving.
+
+- [Gradient clipping](https://www.geeksforgeeks.org/gradient-clipping-in-deep-learning/): limits gradient magnitude to prevent exploding gradients.
+```math
+g = \frac{g}{\max(1, \frac{||g||}{\text{threshold}})}
+```
 
 ### 📘 Resources
 - #### 📖 Books
