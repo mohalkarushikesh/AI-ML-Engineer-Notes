@@ -1114,30 +1114,35 @@ A well-documented Jupyter Notebook with model performance metrics and visualizat
 
 - ### 🎯 Topics
 
-  - **Specializations** (choose one or more):
+- ### 🎯 Specializations (choose one or more)
 
-    - **Computer Vision**  
-      - Object detection (YOLO, SSD): [YOLO vs SSD comparison](https://www.analyticsvidhya.com/blog/2022/09/object-detection-using-yolo-and-mobilenet-ssd/)  
-      - Semantic segmentation: [Stanford CS231n Lecture Notes](https://cs231n.stanford.edu/slides/2022/lecture_9_jiajun.pdf)  
-      - Pose estimation: [YOLO-NAS Pose GitHub](https://github.com/juanjosecas/YOLO-NAS_pose-estimation)
+  - **Computer Vision**  
+    Focuses on enabling machines to interpret and understand visual data.  
+    - Object detection (YOLO, SSD): [YOLO vs SSD comparison](https://www.analyticsvidhya.com/blog/2022/09/object-detection-using-yolo-and-mobilenet-ssd/)  
+    - Semantic segmentation: [Stanford CS231n Lecture Notes](https://cs231n.stanford.edu/slides/2022/lecture_9_jiajun.pdf)  
+    - Pose estimation: [YOLO-NAS Pose GitHub](https://github.com/juanjosecas/YOLO-NAS_pose-estimation)
 
-    - **Natural Language Processing (NLP)**  
-      - Chatbots: [Building Chatbots with GPT](https://nlpcloud.com/how-to-build-chatbot-gpt-3-gpt-j.html)  
-      - Question answering: [GPT-4 for NLP Tasks](https://www.sitepoint.com/gpt4-for-nlp/)  
-      - Language generation (e.g., GPT-based models): [ChatGPT for Text Generation](https://dev.to/abbhiishek/chatgpt-the-ultimate-tool-for-natural-language-processing-and-text-generation-40ag)
+  - **Natural Language Processing (NLP)**  
+    Enables machines to understand, generate, and respond to human language.  
+    - Chatbots: [Building Chatbots with GPT](https://nlpcloud.com/how-to-build-chatbot-gpt-3-gpt-j.html)  
+    - Question answering: [GPT-4 for NLP Tasks](https://www.sitepoint.com/gpt4-for-nlp/)  
+    - Language generation (e.g., GPT-based models): [ChatGPT for Text Generation](https://dev.to/abbhiishek/chatgpt-the-ultimate-tool-for-natural-language-processing-and-text-generation-40ag)
 
-    - **Generative AI**  
-      - Image generation (Stable Diffusion): [Stable Diffusion Guide](https://learnopencv.com/stable-diffusion-generative-ai/)  
-      - Music generation: [Audiocraft MusicGen Tutorial](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/AI-Music-Generation-Audiocraft-Tutorial.md)
+  - **Generative AI**  
+    Focuses on creating new content such as images, music, or text using models trained on existing data.  
+    - Image generation (Stable Diffusion): [Stable Diffusion Guide](https://learnopencv.com/stable-diffusion-generative-ai/)  
+    - Music generation: [Audiocraft MusicGen Tutorial](https://github.com/FurkanGozukara/Stable-Diffusion/blob/main/Tutorials/AI-Music-Generation-Audiocraft-Tutorial.md)
 
-    - **Reinforcement Learning**  
-      - Robotics: [Reinforcement Learning for Robotics Course](https://www.theconstruct.ai/robotigniteacademy_learnros/ros-courses-library/reinforcement-learning-for-robotics/)  
-      - Autonomous systems: [Unity ML Agents for Robotics](https://github.com/sushantmenon1/Unity-ML-Agents-Training-a-Robot)  
-      - Game AI: [PPO Game AI Tutorial](https://lightning.ai/pages/community/tutorial/how-to-train-reinforcement-learning-model-to-play-game-using-proximal-policy-optimization-ppo-algorithm/)
+  - **Reinforcement Learning**  
+    Trains agents to make decisions by interacting with environments and receiving rewards.  
+    - Robotics: [Reinforcement Learning for Robotics Course](https://www.theconstruct.ai/robotigniteacademy_learnros/ros-courses-library/reinforcement-learning-for-robotics/)  
+    - Autonomous systems: [Unity ML Agents for Robotics](https://github.com/sushantmenon1/Unity-ML-Agents-Training-a-Robot)  
+    - Game AI: [PPO Game AI Tutorial](https://lightning.ai/pages/community/tutorial/how-to-train-reinforcement-learning-model-to-play-game-using-proximal-policy-optimization-ppo-algorithm/)
 
-    - **Time Series**  
-      - Financial forecasting: [BigQuery Time Series Forecasting](https://cloud.google.com/bigquery/docs/time-series-anomaly-detection-tutorial)  
-      - Anomaly detection: [StatsForecast Anomaly Detection](https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/anomalydetection.html)
+  - **Time Series**  
+    Analyzes data indexed over time to forecast trends and detect anomalies.  
+    - Financial forecasting: [BigQuery Time Series Forecasting](https://cloud.google.com/bigquery/docs/time-series-anomaly-detection-tutorial)  
+    - Anomaly detection: [StatsForecast Anomaly Detection](https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/anomalydetection.html)
 
 - **Industry Skills**:
   - Portfolio:  
