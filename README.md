@@ -571,9 +571,9 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
   - **Supervised Architectures**
 
     - [Feedforward Neural Networks (FNNs)](https://www.geeksforgeeks.org/nlp/feedforward-neural-network/): data flows from input to output through hidden layers.
-      ```math
-      y = f\left(\sum_{i=1}^{n} w_i x_i + b\right)
-      ```
+        ```math
+        y = f\left(\sum_{i=1}^{n} w_i x_i + b\right)
+        ```
 
     - **Convolutional Neural Networks (CNNs)**: extract spatial features from images.
       - [LeNet](https://www.geeksforgeeks.org/lenet-5-cnn-architecture/)
@@ -583,40 +583,40 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [Inception (GoogLeNet)](https://learnopencv.com/introduction-to-googlenet-inception-in-tensorflow/)
       - [MobileNet](https://www.analyticsvidhya.com/blog/2022/10/mobilenet-architecture-with-python-code/)
       - [EfficientNet](https://learnopencv.com/efficientnet-architecture-introduction/)
-      ```math
-      S(i,j) = \sum_m \sum_n X(i+m, j+n) \cdot K(m,n)
-      ```
+        ```math
+        S(i,j) = \sum_m \sum_n X(i+m, j+n) \cdot K(m,n)
+        ```
 
     - **Recurrent Neural Networks (RNNs)**: model sequential data using feedback loops.
       - [Vanilla RNN](https://www.geeksforgeeks.org/recurrent-neural-networks-rnns/)
       - [Gated Recurrent Unit (GRU)](https://www.geeksforgeeks.org/gated-recurrent-unit-gru/)
       - [Bidirectional RNN](https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/)
-      ```math
-      h_t = f(W_h h_{t-1} + W_x x_t + b)
-      ```
+        ```math
+        h_t = f(W_h h_{t-1} + W_x x_t + b)
+        ```
 
     - **Long Short-Term Memory (LSTM)**: handles long-term dependencies in sequences.
       - [Vanilla LSTM](https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/)
       - [Stacked LSTM](https://towardsdatascience.com/stacked-long-short-term-memory-networks-4b8b0a4e21b4)
       - [Bidirectional LSTM](https://towardsdatascience.com/bidirectional-lstm-for-text-classification-85c5d849b49c)
       - [CNN-LSTM](https://www.geeksforgeeks.org/cnn-lstm-models/)
-      ```math
-      f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)  
-      i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)  
-      o_t = \sigma(W_o x_t + U_o h_{t-1} + b_o)  
-      c_t = f_t \cdot c_{t-1} + i_t \cdot \tanh(W_c x_t + U_c h_{t-1} + b_c)  
-      h_t = o_t \cdot \tanh(c_t)
-      ```
-
+        ```math
+        f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)  
+        i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)  
+        o_t = \sigma(W_o x_t + U_o h_{t-1} + b_o)  
+        c_t = f_t \cdot c_{t-1} + i_t \cdot \tanh(W_c x_t + U_c h_{t-1} + b_c)  
+        h_t = o_t \cdot \tanh(c_t)
+        ```
+        
     - **Transformers**: use attention mechanisms for sequence modeling.
       - [Vanilla Transformer](https://huggingface.co/learn/nlp-course/chapter3/4)
       - [BERT](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)
       - [GPT](https://www.simplilearn.com/tutorials/deep-learning-tutorial/gpt)
       - [T5](https://huggingface.co/transformers/model_doc/t5.html)
       - [Vision Transformer (ViT)](https://learnopencv.com/introduction-to-vision-transformers-vit/)
-      ```math
-      \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-      ```
+          ```math
+          \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+          ```
 
     - **Encoder-Decoder Networks**: map input sequences to output sequences.
       - [Seq2Seq (RNN-based)](https://machinelearningmastery.com/encoder-decoder-long-short-term-memory-networks/)
@@ -628,17 +628,17 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [Double DQN](https://www.geeksforgeeks.org/double-dqn-in-reinforcement-learning/)
       - [Dueling DQN](https://stable-baselines.readthedocs.io/en/master/modules/dueling_dqn.html)
       - [Prioritized Experience Replay](https://www.geeksforgeeks.org/prioritized-experience-replay-reinforcement-learning/)
-    ```math
-    Q(s,a) \leftarrow Q(s,a) + \alpha [r + \gamma \max_a Q(s',a) - Q(s,a)]
-    ```
+        ```math
+        Q(s,a) \leftarrow Q(s,a) + \alpha [r + \gamma \max_a Q(s',a) - Q(s,a)]
+        ```
 
     - **Policy Gradient Methods**: optimize policies directly.
       - [REINFORCE](https://www.geeksforgeeks.org/reinforce-algorithm-in-reinforcement-learning/)
       - [PPO](https://spinningup.openai.com/en/latest/algorithms/ppo.html)
       - [TRPO](https://spinningup.openai.com/en/latest/algorithms/trpo.html)
-    ```math
-    \nabla J(\theta) = \mathbb{E}[\nabla_\theta \log \pi_\theta(a|s) \cdot R]
-    ```
+        ```math
+        \nabla J(\theta) = \mathbb{E}[\nabla_\theta \log \pi_\theta(a|s) \cdot R]
+        ```
 
     - **Actor-Critic Models**: combine value estimation and policy learning.
       - [A2C](https://www.analyticsvidhya.com/blog/2022/06/advantage-actor-critic-a2c-algorithm/)
