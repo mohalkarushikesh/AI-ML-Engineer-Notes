@@ -1,7 +1,3 @@
-Here's a well-structured and polished markdown summary of the **Feature Engineering Process**, incorporating all your points with clarity and completeness:
-
----
-
 # 🔍 Feature Engineering Process
 
 Feature engineering is the process of transforming raw data into meaningful features that enhance the performance of machine learning models. It involves creating, transforming, extracting, selecting, and scaling features.
