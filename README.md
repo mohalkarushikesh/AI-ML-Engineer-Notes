@@ -76,19 +76,19 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
   - ### 📐 Linear Algebra for AI/ML
   
-    - **Scalars** : A single number (e.g., temperature, weight).
-    ```math
-    a \in \mathbb{R}
-    ```
-    - **Vectors** : A 1D array of numbers, often used to represent features or weights.
-    ```math
-    \mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}
-    ```
-    - **Matrices** : A 2D array of numbers, used to represent datasets or transformations.
-    ```math
-    A = \begin{bmatrix} a_{11} & a_{12} & \dots \\ a_{21} & a_{22} & \dots \end{bmatrix}
-    ```
-    - **Tensors** : A generalization of matrices to higher dimensions (used in deep learning).
+      - **Scalars** : A single number (e.g., temperature, weight).
+      ```math
+      a \in \mathbb{R}
+      ```
+      - **Vectors** : A 1D array of numbers, often used to represent features or weights.
+      ```math
+      \mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}
+      ```
+      - **Matrices** : A 2D array of numbers, used to represent datasets or transformations.
+      ```math
+      A = \begin{bmatrix} a_{11} & a_{12} & \dots \\ a_{21} & a_{22} & \dots \end{bmatrix}
+      ```
+      - **Tensors** : A generalization of matrices to higher dimensions (used in deep learning).
      
     - **Basic Operations**  
       - **Addition**: Element-wise sum of matrices.  
