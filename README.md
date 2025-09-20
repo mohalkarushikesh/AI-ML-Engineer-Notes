@@ -104,56 +104,49 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 ### 📊 **Supervised Learning**
   - #### 🔁 Regression
     - **Linear Models**:
-    - [Linear Regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/) models the relationship between input features and target using a straight line.  
-      $$
+      - [Linear Regression](https://www.geeksforgeeks.org/machine-learning/ml-linear-regression/) models the relationship between input features and target using a straight line.  
+      ```math
       y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n
-      $$
-  
-    - [Polynomial Regression](https://www.geeksforgeeks.org/machine-learning/python-implementation-of-polynomial-regression/) fits a nonlinear curve by adding polynomial terms to linear regression.  
-      $$
+      ```
+      - [Polynomial Regression](https://www.geeksforgeeks.org/machine-learning/python-implementation-of-polynomial-regression/) fits a nonlinear curve by adding polynomial terms to linear regression.  
+      ```math
       y = \beta_0 + \beta_1 x + \beta_2 x^2 + \dots + \beta_d x^d
       $$
-  
-    - [Ridge Regression](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression) adds L2 regularization to linear regression to reduce overfitting.  
-      $$
+      ```    
+      - [Ridge Regression](https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression) adds L2 regularization to linear regression to reduce overfitting.  
+      ```math
       \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum \beta_j^2
-      $$
-  
-    - [Lasso Regression](https://scikit-learn.org/stable/modules/linear_model.html#lasso) adds L1 regularization, promoting sparsity by shrinking some coefficients to zero.  
-      $$
+      ```  
+      - [Lasso Regression](https://scikit-learn.org/stable/modules/linear_model.html#lasso) adds L1 regularization, promoting sparsity by shrinking some coefficients to zero.  
+      ```math
       \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda \sum |\beta_j|
-      $$
-  
-    - [Elastic Net](https://scikit-learn.org/stable/modules/linear_model.html#elastic-net) combines L1 and L2 regularization for balanced feature selection and shrinkage.  
-      $$
+      ```   
+      - [Elastic Net](https://scikit-learn.org/stable/modules/linear_model.html#elastic-net) combines L1 and L2 regularization for balanced feature selection and shrinkage.  
+      ```math
       \text{Loss} = \sum (y_i - \hat{y}_i)^2 + \lambda_1 \sum |\beta_j| + \lambda_2 \sum \beta_j^2
-      $$
-  
-    - [Bayesian Regression](https://scikit-learn.org/stable/modules/linear_model.html#bayesian-regression) incorporates prior distributions into regression for probabilistic predictions.  
-      $$
+      ```
+      - [Bayesian Regression](https://scikit-learn.org/stable/modules/linear_model.html#bayesian-regression) incorporates prior distributions into regression for probabilistic predictions.  
+      ```math
       P(\beta | X, y) \propto P(y | X, \beta) \cdot P(\beta)
-      $$
-  
-    - [Quantile Regression](https://scikit-learn.org/stable/modules/linear_model.html#quantile-regression) estimates conditional quantiles instead of the mean, useful for skewed data.  
-      $$
+      ```    
+      - [Quantile Regression](https://scikit-learn.org/stable/modules/linear_model.html#quantile-regression) estimates conditional quantiles instead of the mean, useful for skewed data.  
+      ```math
       \min_{\beta} \sum_i \rho_\tau (y_i - x_i^\top \beta)
-      $$
-      where  
-      $$
+      ```
+        where  
+      ```math
       \rho_\tau(u) = u(\tau - \mathbb{I}(u < 0))
-      $$
-
-  - **Kernel-Based**:
-    - [Support Vector Regression (SVR)](https://scikit-learn.org/stable/modules/svm.html#regression) uses kernel tricks to model nonlinear relationships with margin-based optimization.  
-      $$
+      ```
+    - **Kernel-Based**:
+      - [Support Vector Regression (SVR)](https://scikit-learn.org/stable/modules/svm.html#regression) uses kernel tricks to model nonlinear relationships with margin-based optimization.  
+      ```math
       \min \frac{1}{2} ||w||^2 + C \sum (\xi_i + \xi_i^*)
-      $$
-      subject to  
-      $$
+      ```
+       subject to  
+      ```math
       y_i - w^\top x_i - b \leq \epsilon + \xi_i \\
       w^\top x_i + b - y_i \leq \epsilon + \xi_i^*
-      $$
-
+      ```
   - #### 🧠 Classification
       - **Linear Models**:
         - [Logistic Regression](https://www.geeksforgeeks.org/machine-learning/understanding-logistic-regression/)
@@ -336,11 +329,23 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
 #### ⚡ Activation Functions
   - [Sigmoid](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) squashes input to range (0, 1).  
-$$\sigma(x) = \frac{1}{1 + e^{-x}}$$
+
+$$
+\sigma(x) = \frac{1}{1 + e^{-x}}
+$$
+
   - [ReLU](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) outputs zero for negatives and linear for positives.  
-$$f(x) = \max(0, x)$$
+
+$$
+f(x) = \max(0, x)
+$$
+
   - [tanh](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) maps input to range (-1, 1).  
-$$\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
+
+$$
+\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
+$$
+
   - [Leaky ReLU](https://machinelearningknowledge.ai/pytorch-activation-functions-relu-leaky-relu-sigmoid-tanh-and-softmax/) allows small gradient for negative inputs.  
 
 $$
@@ -373,13 +378,22 @@ x & \text{if } x \geq 0 \\
 $$
 
   - [GELU – Approximates ReLU using Gaussian error function](https://www.baeldung.com/cs/gelu-activation-function) blends input with probability curve.  
-$$f(x) = x \cdot \Phi(x)$$
+
+$$
+f(x) = x \cdot \Phi(x)
+$$
 
   - [Swish](https://www.aicodesnippet.com/machine-learning/neural-networks/activation-functions-relu-sigmoid-and-tanh-explained.html) multiplies input with sigmoid of input.  
-$$f(x) = x \cdot \sigma(x)$$
+
+$$
+f(x) = x \cdot \sigma(x)
+$$
 
   - [Softmax (for output layers)](https://www.geeksforgeeks.org/machine-learning/activation-functions-neural-networks/) converts outputs to probability distribution.  
-$$f(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}$$
+
+$$
+f(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
+$$
 
 #### 🧠 Deep Learning Architectures
 
