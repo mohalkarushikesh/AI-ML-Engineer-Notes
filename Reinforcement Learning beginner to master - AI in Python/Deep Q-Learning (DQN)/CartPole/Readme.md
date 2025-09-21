@@ -1,7 +1,3 @@
-Absolutely! Here's a well-structured **README.md** file tailored for your Deep Q-Network (DQN) CartPole project. It includes setup instructions, usage, and key features — perfect for GitHub or sharing with collaborators.
-
----
-
 ## 🧠 DQN CartPole Agent
 
 A PyTorch implementation of a Deep Q-Network (DQN) agent trained to solve the CartPole-v1 environment using reinforcement learning. This project includes training, model saving/loading, rendering, and interactive testing.
