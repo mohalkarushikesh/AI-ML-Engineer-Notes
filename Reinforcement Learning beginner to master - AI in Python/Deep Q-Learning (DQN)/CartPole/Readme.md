@@ -103,6 +103,12 @@ The agent is considered to have solved CartPole-v1 when:
 
 ---
 
+### Training Result 
+
+<img width="640" height="480" alt="dqn-cartpole-v1-result" src="https://github.com/user-attachments/assets/8497abf6-336f-4837-b081-56d7efa1faf7" />
+
+---
+
 ### 📌 Notes
 
 - PyTorch 2.6+ users: If you encounter `UnpicklingError`, set `weights_only=False` when loading models.
