@@ -1,96 +1,115 @@
-# DQN CartPole - Modular Implementation
+Absolutely! Here's a well-structured **README.md** file tailored for your Deep Q-Network (DQN) CartPole project. It includes setup instructions, usage, and key features — perfect for GitHub or sharing with collaborators.
 
-##  Project Structure
+---
 
-```
-DQN/
- config.py              # Configuration and hyperparameters
- memory.py              # Replay memory implementation
- network.py             # DQN neural network
- agent.py               # DQN agent with training logic
- main.py                # Training script
- test.py                # Testing script
- dqn-cartpole-v1.py     # Original monolithic file (backup)
-```
+## 🧠 DQN CartPole Agent
 
-##  Quick Start
+A PyTorch implementation of a Deep Q-Network (DQN) agent trained to solve the CartPole-v1 environment using reinforcement learning. This project includes training, model saving/loading, rendering, and interactive testing.
 
-### Training
+---
+
+### 🚀 Features
+
+- ✅ DQN with experience replay and target network
+- 📈 Live training visualization with Matplotlib
+- 💾 Model checkpointing and final save
+- 🧪 Interactive testing and rendering
+- 🔁 Soft target updates (Polyak averaging)
+- 🧠 Adaptive epsilon-greedy exploration
+
+---
+
+### 📦 Requirements
+
+- Python 3.8+
+- PyTorch 2.0+
+- Gymnasium (`pip install gymnasium`)
+- Matplotlib
+
+Optional (for rendering):
+- A GUI-enabled environment (Windows/macOS/Linux desktop)
+- IPython (for inline plotting in notebooks)
+
+---
+
+### 🛠️ Setup
+
 ```bash
-python main.py
+git clone https://github.com/your-username/dqn-cartpole.git
+cd dqn-cartpole
+pip install -r requirements.txt
 ```
 
-### Testing
+---
+
+### 🧪 Run Training
+
+```bash
+python train.py
+```
+
+Training will:
+- Run for 500–600 episodes (depending on device)
+- Save checkpoints every 50 episodes
+- Save final and solved models to `models/`
+
+---
+
+### 🎮 Test Trained Agent
+
+```python
+from dqn_cartpole import test_agent
+
+test_agent(episodes=5, render=True, model_path="models/dqn_cartpole_solved.pth")
+```
+
+Or run interactively:
+
 ```bash
 python test.py
 ```
 
-##  Module Descriptions
+---
 
-### config.py
-- All hyperparameters and settings
-- Device configuration (CUDA/MPS/CPU)
-- Model saving configuration
-- Environment settings
+### 📁 Project Structure
 
-### memory.py
-- ReplayMemory class for experience replay
-- Transition namedtuple for storing experiences
-- Batch sampling functionality
-
-### network.py
-- DQN neural network implementation
-- Forward pass and action selection
-- Configurable hidden layer sizes
-
-### agent.py
-- DQNAgent class with all training logic
-- Epsilon-greedy action selection
-- Model optimization and target network updates
-- Memory management
-
-### main.py
-- Training script
-- Environment setup
-- Training loop
-- Progress monitoring
-
-### test.py
-- Testing script
-- Visual rendering
-- Performance evaluation
-
-##  Usage Examples
-
-### Basic Training
-```python
-from agent import DQNAgent
-from config import *
-
-device = get_device()
-agent = DQNAgent(n_observations=4, n_actions=2, device=device)
-# Training logic...
+```
+dqn_cartpole/
+├── train.py               # Main training loop
+├── test.py                # Interactive testing script
+├── dqn_cartpole.py        # Core logic: model, memory, training, testing
+├── models/                # Saved models and checkpoints
+└── README.md              # Project documentation
 ```
 
-### Testing with Rendering
-```python
-from test import test_agent
-test_agent(episodes=5, render=True)
-```
+---
 
-##  Configuration
+### 🧠 How It Works
 
-Edit `config.py` to modify:
-- Hyperparameters (learning rate, batch size, etc.)
-- Network architecture
-- Training episodes
-- Model saving settings
-- Device preferences
+- **ReplayMemory** stores transitions for sampling
+- **DQN** is a 3-layer feedforward neural network
+- **select_action()** uses epsilon-greedy strategy
+- **optimize_model()** trains the policy network
+- **Soft updates** keep the target network stable
+- **plot_durations()** visualizes training progress
 
-##  Benefits of Modular Structure
+---
 
-1. **Separation of Concerns**: Each module has a specific responsibility
-2. **Reusability**: Components can be used independently
-3. **Maintainability**: Easy to modify individual components
-4. **Testability**: Each module can be tested separately
-5. **Scalability**: Easy to add new features or environments
+### 🏁 Solving Criteria
+
+The agent is considered to have solved CartPole-v1 when:
+- Average episode duration ≥ 195 over last 100 episodes
+- At least 100 episodes completed
+
+---
+
+### 📌 Notes
+
+- PyTorch 2.6+ users: If you encounter `UnpicklingError`, set `weights_only=False` when loading models.
+- Rendering may not work on headless servers (e.g., SSH, WSL).
+
+---
+
+### 📜 License
+
+MIT License. See `LICENSE` file for details.
