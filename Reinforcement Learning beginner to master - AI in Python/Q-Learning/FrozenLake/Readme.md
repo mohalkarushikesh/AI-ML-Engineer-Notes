@@ -84,6 +84,10 @@ Q-table after training:
 
 Success rate after training = 43.80%
 
+### Training result
+
+<img width="1920" height="967" alt="Training_Outcomes" src="https://github.com/user-attachments/assets/dbc53fa0-6061-411d-a130-31b8e16f0485" />
+
 Note: FrozenLake with default slippery dynamics can be challenging for tabular Q-Learning; success rates may vary widely with hyperparameters, exploration schedules, and number of episodes. Consider using more episodes, ε decay, or the non-slippery variant for clearer convergence.
 
 ### How to Reproduce
