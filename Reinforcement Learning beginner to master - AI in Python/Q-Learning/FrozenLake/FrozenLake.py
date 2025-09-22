@@ -1,16 +1,15 @@
 import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
-import time
 
-# Create FrozenLake environment with slippery transitions
-env = gym.make("FrozenLake-v1", is_slippery=True, render_mode='human')
+# Create FrozenLake environment (slippery, no rendering for speed)
+env = gym.make("FrozenLake-v1", is_slippery=True)
 
 # Initialize Q-table
 qtable = np.zeros((env.observation_space.n, env.action_space.n))
 
 # Hyperparameters
-episodes = 1000
+episodes = 5000
 alpha = 0.1
 gamma = 0.99
 epsilon = 1.0
@@ -31,9 +30,6 @@ for episode in range(episodes):
     outcomes.append('Failure')
 
     while not done and steps < max_steps:
-        # env.render()
-        # time.sleep(0.02)
-
         # Epsilon-greedy action selection
         if np.random.random() < epsilon:
             action = env.action_space.sample()
@@ -81,7 +77,7 @@ plt.title("Training outcomes: Success vs Failure")
 plt.show()
 
 # Evaluation
-eval_episodes = 100
+eval_episodes = 500
 nb_success = 0
 
 for _ in range(eval_episodes):
