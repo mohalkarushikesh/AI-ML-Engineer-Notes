@@ -1,3 +1,4 @@
+```
 Episode 0, Epsilon: 1.000, Reward: -442
 Episode 500, Epsilon: 0.778, Reward: -334
 Episode 1000, Epsilon: 0.606, Reward: -46
@@ -33,3 +34,5 @@ Episode 2, Total Reward: 13
 Episode 3, Total Reward: 6
 Episode 4, Total Reward: 7
 Episode 5, Total Reward: 5
+
+```
