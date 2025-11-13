@@ -18,4 +18,4 @@ Course overview : Complete Generative AI Course With Langchain and Huggingface
 6. Gen AI IN AWS : BEDROCK, LAMBDA FUNCTIONS, API GATEWAY, END TO END PROJECT WITH SAGEMAKER
 7. NVIDIA NIM
 8. CREW AI : MULTI AI AGENT 
-   
+9. grok LPU ENGINE
