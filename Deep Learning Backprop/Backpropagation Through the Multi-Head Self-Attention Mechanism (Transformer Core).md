@@ -650,3 +650,155 @@ print(tokenizer.decode(output[0]))
 **Want next?**  
 Say: `rope` → I’ll explain how the AI knows **"word 1" from "word 1000"** without getting confused.
 
+# RoPE Embeddings: Explained Like You're Teaching a Robot "Position"
+
+**RoPE = "Rotary Positional Embedding"**  
+→ **The smart way Transformers know *where* a word is in a sentence.**
+
+---
+
+## The Problem (Why Normal Position Matters)
+
+Imagine reading:
+
+```
+The cat sat on the mat.
+```
+
+Your brain knows:
+- "The" = **word 1**
+- "cat" = **word 2**
+- "mat" = **word 6**
+
+But **Transformers don’t have order** by default!  
+All words look the same — like a bag of scrabble tiles.
+
+---
+
+## Old Way: Add Numbers (Absolute Position)
+
+```python
+word_embedding = "cat"
+position_number = 2
+final = word_embedding + position_2_vector
+```
+
+**Problems**:
+- Fixed max length (e.g., only up to 512)
+- Can’t handle longer sentences
+- "Position 2" and "Position 1002" feel unrelated
+
+---
+
+## RoPE: Rotate, Don’t Add
+
+> **Instead of *adding* position, *rotate* the word vector.**
+
+Think of each word as a **clock hand**.
+
+```
+"cat" at position 1 → hand at 1 o'clock
+"cat" at position 10 → hand at 10 o'clock
+```
+
+Same word → different angle → **position encoded!**
+
+---
+
+## How It Works (Visual)
+
+```
+Word: "cat" → vector [0.8, 0.6]
+
+Position 1 → rotate by 1°
+Position 2 → rotate by 2°
+...
+Position 1000 → rotate by 1000°
+```
+
+**Rotation = preserves meaning + adds position**
+
+---
+
+## Real Example
+
+| Word | Position | After RoPE |
+|------|----------|------------|
+| "The" | 1 | ↷ 1° |
+| "cat" | 2 | ↷ 2° |
+| "sat" | 3 | ↷ 3° |
+| "on"  | 4 | ↷ 4° |
+
+Now, when attention computes **Q · K**, the dot product **automatically knows relative distance**!
+
+---
+
+## Why It’s Magic
+
+| Feature | Old (Add) | RoPE (Rotate) |
+|--------|-----------|---------------|
+| Max Length | Fixed (e.g. 2048) | **Unlimited** |
+| Relative Position | Hard | **Natural** |
+| Long Contexts | Breaks | **Works at 128K+** |
+| Math | Simple add | Smart rotation |
+
+---
+
+## Under the Hood (No Heavy Math)
+
+```python
+def apply_rope(x, pos):
+    # x: [seq_len, dim]
+    # Split into pairs: (x0, x1), (x2, x3), ...
+    x1 = x[:, 0::2]  # even
+    x2 = x[:, 1::2]  # odd
+    
+    # Precomputed rotation angles
+    theta = 10000 ** (-2 * torch.arange(0, dim//2) / dim)
+    angles = pos[:, None] * theta[None, :]
+    
+    # Rotate!
+    cos_a = torch.cos(angles)
+    sin_a = torch.sin(angles)
+    
+    return torch.cat([
+        x1 * cos_a - x2 * sin_a,
+        x1 * sin_a + x2 * cos_a
+    ], dim=-1)
+```
+
+> **Just 2D rotation** — like spinning a compass.
+
+---
+
+## Real Models Using RoPE
+
+| Model | Context Length | Uses RoPE? |
+|------|----------------|------------|
+| Llama 3 | 128K | Yes |
+| Mistral | 32K | Yes |
+| Gemma 2 | 8K | Yes |
+| GPT-3 | 2K | No (old style) |
+
+---
+
+## One-Liner Summary
+
+> **RoPE = Rotate word vectors by position angle so the model knows *where* each word is — without limits.**
+
+---
+
+## Try It (Hugging Face)
+
+```python
+from transformers import AutoModel
+model = AutoModel.from_pretrained("meta-llama/Llama-3-8B")
+
+# RoPE is built-in — just use long prompts!
+prompt = "Summarize this 50-page story..."  # 100K tokens? No problem!
+```
+
+---
+
+**Want next?**  
+Say: `flash_attn2` → I’ll show how **FlashAttention + KV Cache + RoPE** = **100K context in 1 second**.
