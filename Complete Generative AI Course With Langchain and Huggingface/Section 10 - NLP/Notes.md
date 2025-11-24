@@ -1,17 +1,18 @@
-Here’s a well-structured **Markdown guide** covering all the steps, definitions, and examples you asked for:
-# 📝 Natural Language Processing (NLP) Workflow
+# 📒 NLP Workflow Notes
 
 ## Step 1: Text Preprocessing
 
 ### 🔹 Tokenization
 - **Definition**: Splitting text into smaller units (tokens) such as words or sentences.
-- **Example (NLTK)**:
+- **Examples (NLTK)**:
 ```python
 from nltk.tokenize import sent_tokenize, word_tokenize
 text = "NLP is fun. It helps computers understand language."
 print(sent_tokenize(text))   # ['NLP is fun.', 'It helps computers understand language.']
 print(word_tokenize(text))   # ['NLP', 'is', 'fun', '.', 'It', 'helps', 'computers', 'understand', 'language', '.']
 ```
+
+---
 
 ### 🔹 Lemmatization
 - **Definition**: Reducing words to their base form (lemma) using vocabulary and grammar rules.
@@ -24,6 +25,8 @@ print([token.lemma_ for token in doc])
 # ['the', 'striped', 'bat', 'be', 'hang', 'on', 'their', 'foot', 'for', 'good']
 ```
 
+---
+
 ### 🔹 Stemming
 - **Definition**: Cutting words to their root form (may not be linguistically correct).
 - **Examples (NLTK)**:
@@ -33,12 +36,35 @@ from nltk.stem import PorterStemmer, SnowballStemmer, RegexpStemmer
 ps = PorterStemmer()
 print(ps.stem("running"))   # run
 
-ss = SnowballStemmer("english")
+ss = SnowballStemmer("english")  # Porter2, improved version of Porter
 print(ss.stem("running"))   # run
 
 rs = RegexpStemmer('ing$')
 print(rs.stem("running"))   # runn
 ```
+
+- **Comparison with Lemmatization**:
+  - Stemming is **faster** (just chops suffixes/prefixes).
+  - Lemmatization uses a **dictionary** → more accurate.
+  - Example:  
+    - Word: *history* → Stemming: *histori*, Lemmatization: *history* (correct).
+
+- **Example 1: "sportingly"**
+  - Porter: *sportingli*  
+  - Snowball: *sport*  
+  - ✅ Snowball is more accurate.
+
+#### Differences:
+- **Snowball Stemmer**:
+  - Improved algorithm (Porter2)
+  - Multilingual support
+  - More accurate, balanced approach
+- **Porter Stemmer**:
+  - Original algorithm
+  - English-focused
+  - Less accurate, more nuanced
+
+---
 
 ### 🔹 Stop-Words
 - **Definition**: Common words (like *is, the, and*) removed to reduce noise.
@@ -66,6 +92,8 @@ print(X.toarray())
 # [[1,1,1,0], [1,0,1,1]]
 ```
 
+---
+
 ### 🔹 TF-IDF (Term Frequency – Inverse Document Frequency)
 - **Definition**: Weighs words based on importance across documents.
 - **Example**:
@@ -75,6 +103,8 @@ tfidf = TfidfVectorizer()
 X = tfidf.fit_transform(["NLP is fun", "NLP helps computers"])
 print(X.toarray())
 ```
+
+---
 
 ### 🔹 N-grams (Unigrams, Bigrams)
 - **Definition**: Sequence of *n* words.
@@ -92,7 +122,7 @@ print(cv.get_feature_names_out())
 
 ### 🔹 Word2Vec
 - **Definition**: Neural embeddings capturing semantic meaning of words.
-- **Example**: "king - man + woman ≈ queen"
+- **Example**: *king - man + woman ≈ queen*
 
 ### 🔹 Average Word2Vec
 - **Definition**: Average of word vectors to represent a sentence/document.
@@ -101,9 +131,9 @@ print(cv.get_feature_names_out())
 
 ## 🔹 Deep Learning Models
 
-- **RNN (Recurrent Neural Network)**: Handles sequential data, remembers past states.
-- **LSTM (Long Short-Term Memory)**: Solves vanishing gradient problem, remembers long dependencies.
-- **GRU (Gated Recurrent Unit)**: Simplified LSTM, faster training.
+- **RNN (Recurrent Neural Network)** → Handles sequential data, remembers past states.  
+- **LSTM (Long Short-Term Memory)** → Solves vanishing gradient problem, remembers long dependencies.  
+- **GRU (Gated Recurrent Unit)** → Simplified LSTM, faster training.  
 
 ---
 
@@ -114,14 +144,14 @@ print(cv.get_feature_names_out())
 
 ## 🔹 Transformers
 - **Definition**: Attention-based models for sequence processing.
-- **Example**: BERT (Bidirectional Encoder Representations from Transformers).
+- **Example**: **BERT** (Bidirectional Encoder Representations from Transformers).
 
 ---
 
 ## 🔹 Libraries
-- **NLTK**: Tokenization, stemming, stop-words.
-- **SpaCy**: Advanced NLP (lemmatization, POS tagging).
-- **TensorFlow / PyTorch**: Deep learning frameworks for building RNNs, LSTMs, Transformers.
+- **NLTK** → Tokenization, stemming, stop-words.  
+- **SpaCy** → Advanced NLP (lemmatization, POS tagging).  
+- **TensorFlow / PyTorch** → Deep learning frameworks for RNNs, LSTMs, Transformers.  
 
 ---
 
@@ -147,6 +177,3 @@ print(cv.get_feature_names_out())
 | **PorterStemmer**  | Oldest, rule-based | "running" → "run" |
 | **RegexpStemmer**  | Uses regex rules | "running" → "runn" |
 | **SnowballStemmer**| Improved Porter | "running" → "run" |
-
----
-
