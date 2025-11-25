@@ -77,6 +77,43 @@ filtered = [w for w in words if w.lower() not in stop_words]
 print(filtered)   # ['example']
 ```
 
+## Parts of Speech
+POS tags are short codes representing specific parts of speech. Common POS tags include:
+
+Noun (NN)
+Verb (VB)
+Adjective (JJ)
+Adverb (RB)
+Pronoun (PRP)
+Preposition (IN)
+Conjunction (CC)
+Determiner (DT)
+Interjection (UH)
+
+```
+import nltk
+from nltk import word_tokenize, pos_tag
+
+# Sample sentence
+sentence = “The quick brown fox jumps over the lazy dog.”
+
+# Tokenize the sentence
+tokens = word_tokenize(sentence)
+
+# Perform POS tagging
+pos_tags = pos_tag(tokens)
+
+# Display the POS tags
+print(“POS Tags:”)
+print(pos_tags)
+
+Output:
+
+POS Tags:
+[(‘The’, ‘DT’), (‘quick’, ‘JJ’), (‘brown’, ‘NN’), (‘fox’, ‘NN’), (‘jumps’, ‘VBZ’), (‘over’, ‘IN’), (‘the’, ‘DT’), (‘lazy’, ‘JJ’), (‘dog’, ‘NN’), (‘.’, ‘.’)]
+
+```
+
 ---
 
 ## Step 2: Feature Extraction
