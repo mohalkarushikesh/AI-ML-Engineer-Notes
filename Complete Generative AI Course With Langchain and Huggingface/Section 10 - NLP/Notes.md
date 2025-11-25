@@ -77,7 +77,9 @@ filtered = [w for w in words if w.lower() not in stop_words]
 print(filtered)   # ['example']
 ```
 
-## Parts of Speech
+## Parts of Speech: POS tagging is a fundamental task in Natural Language Processing (NLP) that involves assigning a grammatical category (such as noun, verb, adjective, etc.) to each word in a sentence. The goal is to understand the syntactic structure of a sentence and identify the grammatical roles of individual words. POS tagging provides essential information for various NLP applications, including text analysis, machine translation, and information retrieval.
+
+
 POS tags are short codes representing specific parts of speech. Common POS tags include:
 
 Noun (NN)
