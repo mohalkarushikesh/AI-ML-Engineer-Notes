@@ -116,6 +116,10 @@ POS Tags:
 
 ```
 
+## Named Entity Recognition 
+
+Named Entity Recognition (NER) with Python – Wisecube AI ...Named Entity Recognition (NER) is a subtask of natural language processing (NLP) that involves identifying and classifying named entities in text into predefined categories like people, organizations, locations, dates, and monetary values. I
+
 ---
 
 ## Step 2: Feature Extraction
