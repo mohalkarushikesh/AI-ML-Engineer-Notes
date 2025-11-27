@@ -135,6 +135,15 @@ print(X.toarray())
 # [[1,1,1,0], [1,0,1,1]]
 ```
 
+## One Hot Encoding
+- Advantages: Easy to implement with python - sklearn pd.get_dummies()
+- Dis-advantages: 
+  sparse matrix - leads to over-fitting
+  ml algorithm - finding the size input
+  No semantic meaning in getting captured
+  Out of vocabulary (OOV)
+
+sparse matrix : In a matrix you have lot of 1's and 0's 
 ---
 
 ### 🔹 TF-IDF (Term Frequency – Inverse Document Frequency)
