@@ -134,6 +134,17 @@ X = cv.fit_transform(["NLP is fun", "NLP helps computers"])
 print(X.toarray())
 # [[1,1,1,0], [1,0,1,1]]
 ```
+1. Binary bag of words
+2. Normal Bag of words
+
+Adbvantages
+  1. Simple and Intuitive
+  2. fix size of inputs - ml algorithms
+Dis-Advantages
+  1. sparse matrix - over-fitting
+  2. Ordering of the words getting change
+  3. Out of vocabulary
+  4. Semantic meaning still not getting captured 
 
 ## One Hot Encoding
 - Advantages: Easy to implement with python - sklearn pd.get_dummies()
