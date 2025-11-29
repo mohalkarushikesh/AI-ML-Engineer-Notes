@@ -146,7 +146,8 @@ Dis-Advantages
   3. Out of vocabulary
   4. Semantic meaning still not getting captured 
 
-## One Hot Encoding
+## One Hot Encoding - One Hot Encoding is a method for converting **categorical variables into a binary format**. It creates new columns for each category where 1 means the category is present and 0 means it is not. The primary purpose of One Hot Encoding is to ensure that categorical data can be effectively used in machine learning models
+
 - Advantages: Easy to implement with python - sklearn pd.get_dummies()
 - Dis-advantages: 
   sparse matrix - leads to over-fitting
@@ -169,7 +170,7 @@ print(X.toarray())
 
 ---
 
-### 🔹 N-grams (Unigrams, Bigrams)
+### 🔹 N-grams (Unigrams, Bigrams) - N-gram models predict the probability of a word given the previous n−1 words. For example, a trigram model uses the preceding two words to predict the next word:
 - **Definition**: Sequence of *n* words.
 - **Example**:
 ```python
