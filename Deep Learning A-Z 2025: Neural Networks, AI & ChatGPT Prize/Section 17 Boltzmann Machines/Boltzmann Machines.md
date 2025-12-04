@@ -175,7 +175,7 @@ In optimization, this translates to:
 
 2. **Iterative Process**:
    - Generate a neighboring solution  $S'$.
-   - Calculate the change in cost $ \Delta E = E(S') - E(S) $.
+   - Calculate the change in cost $\Delta E = E(S') - E(S)$.
    - If $\Delta E < 0 $, accept $S'$ (better solution).
    - If $\Delta E > 0$, accept $S'$ with probability:
 $$
