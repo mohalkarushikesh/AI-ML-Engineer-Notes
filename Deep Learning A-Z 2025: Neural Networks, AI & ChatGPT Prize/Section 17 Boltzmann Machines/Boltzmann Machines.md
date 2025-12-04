@@ -178,9 +178,11 @@ In optimization, this translates to:
    - Calculate the change in cost $\Delta E = E(S') - E(S)$.
    - If $\Delta E < 0 $, accept $S'$ (better solution).
    - If $\Delta E > 0$, accept $S'$ with probability:
+
 $$
 P = \exp\left(-\frac{\Delta E}{T}\right)
 $$
+
    - Reduce the temperature $T$ using a cooling schedule.
 
 3. **Repeat** until the system is “frozen” (temperature is low or max iterations reached).
