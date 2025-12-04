@@ -103,21 +103,22 @@ Noise in machine learning is random, irrelevant, or inaccurate information in a 
 
 2. **Iterative Sampling**  
    - For each variable \(x_i\), sample from its conditional distribution:
-     \[
+
+$$
      x_i^{(t+1)} \sim p(x_i \mid x_1^{(t+1)}, \dots, x_{i-1}^{(t+1)}, x_{i+1}^{(t)}, \dots, x_n^{(t)})
-     \]
+$$
    - Repeat for all variables in sequence.
 
-3. **Convergence**  
+4. **Convergence**  
    - After many iterations, the samples approximate the target joint distribution.
 
 ---
 
 ## 📊 Example
-Suppose we want to sample from a bivariate distribution \(p(x, y)\).  
-- Step 1: Initialize \((x_0, y_0)\).  
-- Step 2: Sample \(x_{t+1} \sim p(x \mid y_t)\).  
-- Step 3: Sample \(y_{t+1} \sim p(y \mid x_{t+1})\).  
+Suppose we want to sample from a bivariate distribution $(p(x, y))$.  
+- Step 1: Initialize $x_0, y_0)$.  
+- Step 2: Sample $x_{t+1} \sim p(x \mid y_t)$.  
+- Step 3: Sample $y_{t+1} \sim p(y \mid x_{t+1})$.  
 - Step 4: Repeat until convergence.
 
 ---
@@ -169,18 +170,18 @@ In optimization, this translates to:
 
 ## 🧠 Algorithm Steps
 1. **Initialize**:
-   - Start with a random solution \( S \).
-   - Set an initial temperature \( T \).
+   - Start with a random solution $S$.
+   - Set an initial temperature $T$.
 
 2. **Iterative Process**:
-   - Generate a neighboring solution \( S' \).
-   - Calculate the change in cost \( \Delta E = E(S') - E(S) \).
-   - If \( \Delta E < 0 \), accept \( S' \) (better solution).
-   - If \( \Delta E > 0 \), accept \( S' \) with probability:
-     \[
-     P = \exp\left(-\frac{\Delta E}{T}\right)
-     \]
-   - Reduce the temperature \( T \) using a cooling schedule.
+   - Generate a neighboring solution  $S'$.
+   - Calculate the change in cost $ \Delta E = E(S') - E(S) $.
+   - If $\Delta E < 0 $, accept $S'$ (better solution).
+   - If $\Delta E > 0$, accept $S'$ with probability:
+$$
+P = \exp\left(-\frac{\Delta E}{T}\right)
+$$
+   - Reduce the temperature $T$ using a cooling schedule.
 
 3. **Repeat** until the system is “frozen” (temperature is low or max iterations reached).
 
@@ -188,9 +189,9 @@ In optimization, this translates to:
 
 ## 🌡️ Cooling Schedule
 The cooling schedule controls how temperature decreases:
-- **Linear**: \( T_{k+1} = T_k - \alpha \)
-- **Exponential**: \( T_{k+1} = T_k \cdot \alpha \)
-- **Logarithmic**: \( T_k = T_0 / \log(k + 1) \)
+- **Linear**: $T_{k+1} = T_k - \alpha$
+- **Exponential**: $T_{k+1} = T_k \cdot \alpha$
+- **Logarithmic**: $T_k = T_0 / \log(k + 1)$
 
 Choosing the right schedule is crucial for balancing exploration and convergence.
 
