@@ -81,9 +81,155 @@ $$
 - Iteratively update each unit based on its neighbors.
 - Converges to a stationary distribution representing the learned data.
 
+
+Noise in machine learning is random, irrelevant, or inaccurate information in a dataset that obscures the true underlying patterns
+
+---
+
+**Gibbs sampling is a Markov Chain Monte Carlo (MCMC) algorithm used to generate samples from complex, high-dimensional probability distributions by iteratively sampling from conditional distributions.** It is especially useful in Bayesian statistics and machine learning when direct sampling from the joint distribution is difficult.
+
+---
+
+## 🔑 Key Concepts of Gibbs Sampling
+- **MCMC Framework**: Gibbs sampling is a type of MCMC method that constructs a Markov chain whose stationary distribution is the target distribution.
+- **Conditional Sampling**: Instead of sampling directly from the joint distribution \(p(x_1, x_2, \dots, x_n)\), Gibbs sampling samples each variable sequentially from its conditional distribution given the others.
+- **Iterative Updates**: Each iteration updates one variable at a time, cycling through all variables repeatedly.
+
+---
+
+## 📘 Algorithm Steps
+1. **Initialization**  
+   - Start with an initial guess for all variables \((x_1, x_2, \dots, x_n)\).
+
+2. **Iterative Sampling**  
+   - For each variable \(x_i\), sample from its conditional distribution:
+     \[
+     x_i^{(t+1)} \sim p(x_i \mid x_1^{(t+1)}, \dots, x_{i-1}^{(t+1)}, x_{i+1}^{(t)}, \dots, x_n^{(t)})
+     \]
+   - Repeat for all variables in sequence.
+
+3. **Convergence**  
+   - After many iterations, the samples approximate the target joint distribution.
+
+---
+
+## 📊 Example
+Suppose we want to sample from a bivariate distribution \(p(x, y)\).  
+- Step 1: Initialize \((x_0, y_0)\).  
+- Step 2: Sample \(x_{t+1} \sim p(x \mid y_t)\).  
+- Step 3: Sample \(y_{t+1} \sim p(y \mid x_{t+1})\).  
+- Step 4: Repeat until convergence.
+
+---
+
+## ⚙️ Applications
+- **Bayesian Inference**: Estimating posterior distributions when closed-form solutions are unavailable.
+- **Latent Variable Models**: Widely used in topic models (e.g., Latent Dirichlet Allocation).
+- **Image Processing**: Sampling pixel intensities in Markov Random Fields.
+- **Econometrics & Genetics**: Handling complex hierarchical models.
+
+---
+
+## ✅ Advantages
+- Works well with **high-dimensional distributions**.
+- Requires only **conditional distributions**, which are often easier to compute.
+- Converges to the correct distribution under mild conditions.
+
+## ⚠️ Limitations
+- **Slow mixing**: Convergence can be slow if variables are highly correlated.
+- **Burn-in period**: Initial samples may not represent the target distribution and must be discarded.
+- **Requires tractable conditionals**: If conditional distributions are hard to compute, Gibbs sampling is impractical.
+
+---
+
+## 📝 Summary
+Gibbs sampling is a **powerful MCMC technique** that simplifies sampling by breaking down a joint distribution into conditional distributions. By iteratively updating each variable, it generates samples that approximate the target distribution, making it indispensable in Bayesian statistics, machine learning, and scientific research.
+
+--- 
+
 #### 🧊 Simulated Annealing
 - Gradually reduce a “temperature” parameter to help the system settle into low-energy states.
 - Useful for escaping local minima during optimization.
+ 
+________________________________________
+
+**Simulated Annealing (SA) is a probabilistic optimization technique inspired by the physical process of annealing in metallurgy. It is used to find near-optimal solutions in large, complex search spaces, especially when the problem contains many local optima.**
+
+---
+
+## 🔍 Core Idea
+Simulated Annealing mimics the cooling of metals:
+- **High temperature** allows atoms to move freely.
+- **Slow cooling** lets atoms settle into a low-energy (optimal) configuration.
+In optimization, this translates to:
+- Exploring the solution space widely at first.
+- Gradually narrowing the search to settle into a global optimum.
+
+---
+
+## 🧠 Algorithm Steps
+1. **Initialize**:
+   - Start with a random solution \( S \).
+   - Set an initial temperature \( T \).
+
+2. **Iterative Process**:
+   - Generate a neighboring solution \( S' \).
+   - Calculate the change in cost \( \Delta E = E(S') - E(S) \).
+   - If \( \Delta E < 0 \), accept \( S' \) (better solution).
+   - If \( \Delta E > 0 \), accept \( S' \) with probability:
+     \[
+     P = \exp\left(-\frac{\Delta E}{T}\right)
+     \]
+   - Reduce the temperature \( T \) using a cooling schedule.
+
+3. **Repeat** until the system is “frozen” (temperature is low or max iterations reached).
+
+---
+
+## 🌡️ Cooling Schedule
+The cooling schedule controls how temperature decreases:
+- **Linear**: \( T_{k+1} = T_k - \alpha \)
+- **Exponential**: \( T_{k+1} = T_k \cdot \alpha \)
+- **Logarithmic**: \( T_k = T_0 / \log(k + 1) \)
+
+Choosing the right schedule is crucial for balancing exploration and convergence.
+
+---
+
+## 📊 Example: Traveling Salesman Problem (TSP)
+- **Goal**: Find the shortest route visiting all cities once.
+- **Initial solution**: Random city order.
+- **Neighboring solution**: Swap two cities.
+- **Cost function**: Total distance.
+- SA helps escape local optima by occasionally accepting worse routes early on.
+
+---
+
+## ✅ Advantages
+- **Escapes local optima** due to probabilistic acceptance.
+- **Simple and flexible** for various problem types.
+- **Works well** with discrete and continuous optimization.
+
+## ⚠️ Limitations
+- **Sensitive to parameters** like initial temperature and cooling rate.
+- **Slow convergence** if cooling is too gradual.
+- **No guarantee** of finding the global optimum.
+
+---
+
+## 🧪 Applications
+- **Combinatorial optimization**: TSP, scheduling, assignment problems.
+- **Machine learning**: Hyperparameter tuning.
+- **Image processing**: Restoration and segmentation.
+- **Operations research**: Resource allocation, routing.
+
+---
+
+## 📘 Summary
+Simulated Annealing is a powerful metaheuristic that balances exploration and exploitation by mimicking thermal cooling. It’s especially useful when the solution space is rugged and traditional methods get stuck in local optima.
+
+Sources: [GeeksforGeeks](https://www.geeksforgeeks.org/artificial-intelligence/what-is-simulated-annealing/), [Baeldung](https://www.baeldung.com/cs/simulated-annealing), [IIT Madras PDF](https://www.cse.iitm.ac.in/~vplab/courses/optimization/SA_SEL_SLIDES.pdf)
+
 
 ---
 
