@@ -92,7 +92,7 @@ Noise in machine learning is random, irrelevant, or inaccurate information in a 
 
 ## 🔑 Key Concepts of Gibbs Sampling
 - **MCMC Framework**: Gibbs sampling is a type of MCMC method that constructs a Markov chain whose stationary distribution is the target distribution.
-- **Conditional Sampling**: Instead of sampling directly from the joint distribution \(p(x_1, x_2, \dots, x_n)\), Gibbs sampling samples each variable sequentially from its conditional distribution given the others.
+- **Conditional Sampling**: Instead of sampling directly from the joint distribution $(p(x_1, x_2, \dots, x_n))$, Gibbs sampling samples each variable sequentially from its conditional distribution given the others.
 - **Iterative Updates**: Each iteration updates one variable at a time, cycling through all variables repeatedly.
 
 ---
@@ -116,7 +116,7 @@ $$
 
 ## 📊 Example
 Suppose we want to sample from a bivariate distribution $(p(x, y))$.  
-- Step 1: Initialize $x_0, y_0)$.  
+- Step 1: Initialize $x_0, y_0$.  
 - Step 2: Sample $x_{t+1} \sim p(x \mid y_t)$.  
 - Step 3: Sample $y_{t+1} \sim p(y \mid x_{t+1})$.  
 - Step 4: Repeat until convergence.
