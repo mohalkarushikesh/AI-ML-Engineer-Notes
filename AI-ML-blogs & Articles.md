@@ -1,5 +1,15 @@
-- https://machinelearningmastery.com/blog/
+- https://towardsdatascience.com/
 
+- https://machinelearningmastery.com/blog/
+  - https://onlinedegrees.sandiego.edu/ai-blogs/
+  - https://www.topbots.com/top-ai-agent-companies-2025/
+  - https://machinelearning.apple.com/research
+  - https://www.kdnuggets.com/
+  - https://news.mit.edu/topic/artificial-intelligence2
+  - https://research.google/blog/
+  - https://aws.amazon.com/blogs/machine-learning/
+  - https://towardsai.net/p
+  - https://machinelearningmastery.com/blog/
 
 ## 🔍 Stay Updated 
 
