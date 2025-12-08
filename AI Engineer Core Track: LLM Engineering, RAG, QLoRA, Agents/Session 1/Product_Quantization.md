@@ -1,4 +1,4 @@
-## Product quantization (PQ) is a data compression technique that reduces the memory footprint of high-dimensional vectors, making them easier to store and search. It works by dividing a vector into smaller sub-vectors, then using a clustering algorithm like k-means to quantize each subspace independently. The compressed representation is created by mapping each sub-vector to the ID of its nearest cluster centroid. 
+#### Product quantization (PQ) is a data compression technique that reduces the memory footprint of high-dimensional vectors, making them easier to store and search. It works by dividing a vector into smaller sub-vectors, then using a clustering algorithm like k-means to quantize each subspace independently. The compressed representation is created by mapping each sub-vector to the ID of its nearest cluster centroid. 
 
 #### How it works
 - Divide and conquer: A high-dimensional vector is split into several smaller sub-vectors.
