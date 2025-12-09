@@ -52,6 +52,14 @@
   - Captures dependencies regardless of distance.  
 - This is the core innovation behind Transformers.
 
+![Attention-EX](https://media.datacamp.com/cms/google/ad_4nxekyr3bekgrm3ifl3epopvf1d6qxobwmhezl8fl4zm-96razitisqzfjjib3nlk0vibmsrkhcir1yombplaerrfgtyhdb1nolaxdhuhlvxqq-qsd2znkgf2kbgzvq-y8jcapwfsgo7pfnjzukwickdjw0s.png)
+
+---
+
+## Tokenization 
+- converts raw text into smaller units called tokens, which can be words, subwords, or characters.
+- The role of tokenization in LLM processing is vital as it transforms text into a format that the model can understand and process. 
+
 ---
 
 ## 📊 Measuring LLM Performance
@@ -86,11 +94,11 @@
 
 ---
 
-## 💻 Computational Cost of LLMs
+## 💻 Approaches to reduce the computational cost of LLMs?
 - **Model pruning:** Remove less important weights/neurons to reduce size.  
-- **Quantization:** Convert weights from 32-bit floats to lower precision (e.g., 8-bit integers).  
-- **Distillation:** Train a smaller “student” model to mimic a larger “teacher” model.  
-- **Sparse attention:** Limit attention to subsets of tokens to reduce load.  
+- **Quantization:** **Convert weights from 32-bit floats to lower precision (e.g., 8-bit integers).**  
+- **Distillation:** **Train a smaller “student” model to mimic a larger “teacher” model.**  
+- **Sparse attention:** **Limit attention to subsets of tokens to reduce load.**  
 - **Efficient architectures:** Use designs like **Reformer** or **Longformer** to minimize computation while maintaining performance.
 
 ---
