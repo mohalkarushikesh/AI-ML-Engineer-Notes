@@ -101,6 +101,29 @@
 - **Sparse attention:** **Limit attention to subsets of tokens to reduce load.**  
 - **Efficient architectures:** Use designs like **Reformer** or **Longformer** to minimize computation while maintaining performance.
 
+
+- **Reformer** is a Transformer variant designed to be *more memory- and computation-efficient* by using techniques like **locality-sensitive hashing (LSH) attention** and **reversible layers**.  
+- **Longformer** is a Transformer variant designed to handle *very long sequences* efficiently by using **sparse attention patterns** that scale linearly instead of quadratically.  
+
+**Reformer (2020, Google Research):**  
+- A re-engineered Transformer architecture focused on efficiency.  
+- Uses **LSH attention** to approximate full attention, reducing complexity from quadratic to logarithmic.  
+- Employs **reversible residual layers**, which save memory by allowing activations to be recomputed instead of stored.  
+- Goal: make training large models feasible on limited hardware.
+
+**Longformer (2020, Allen Institute for AI):**  
+- A Transformer variant optimized for **long documents**.  
+- Standard Transformers scale poorly with sequence length (quadratic cost).  
+- Longformer introduces **sparse attention** (local + global patterns) that scales **linearly** with sequence length.  
+- Enables processing of thousands of tokens, useful for tasks like summarizing books, analyzing legal contracts, or genomic data.
+
+---
+
+### 🔎 Key Difference
+- **Reformer** → Efficiency in memory and computation (better for training very large models).  
+- **Longformer** → Efficiency in handling long sequences (better for tasks with huge text inputs).  
+
+
 ---
 ---
 .  
