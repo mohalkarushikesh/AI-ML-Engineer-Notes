@@ -100,10 +100,8 @@
 - **Distillation:** **Train a smaller “student” model to mimic a larger “teacher” model.**  
 - **Sparse attention:** **Limit attention to subsets of tokens to reduce load.**  
 - **Efficient architectures:** Use designs like **Reformer** or **Longformer** to minimize computation while maintaining performance.
-
-
-- **Reformer** is a Transformer variant designed to be *more memory- and computation-efficient* by using techniques like **locality-sensitive hashing (LSH) attention** and **reversible layers**.  
-- **Longformer** is a Transformer variant designed to handle *very long sequences* efficiently by using **sparse attention patterns** that scale linearly instead of quadratically.  
+  - **Reformer** is a Transformer variant designed to be *more memory- and computation-efficient* by using techniques like **locality-sensitive hashing (LSH) attention** and **reversible layers**.  
+  - **Longformer** is a Transformer variant designed to handle *very long sequences* efficiently by using **sparse attention patterns** that scale linearly instead of quadratically.  
 
 **Reformer (2020, Google Research):**  
 - A re-engineered Transformer architecture focused on efficiency.  
