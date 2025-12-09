@@ -94,6 +94,7 @@
 - **Efficient architectures:** Use designs like **Reformer** or **Longformer** to minimize computation while maintaining performance.
 
 ---
+---
 .  
 ### Transformer architecture flow diagram (ASCII)
 
