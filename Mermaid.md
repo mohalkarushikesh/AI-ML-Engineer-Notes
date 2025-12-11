@@ -1,60 +1,74 @@
-
 ```mermaid
 graph TD
-    AIML[AI/ML Overview]
+    A[Artificial Intelligence & Machine Learning]:::main
 
     %% Learning Paradigms
-    AIML --> Paradigms[Learning Paradigms]
-    Paradigms --> Supervised[Supervised Learning]
-    Supervised --> Classification[Classification<br>Algorithms: Logistic Regression, SVM (Kernel-based), KNN, Naive Bayes<br>Evaluation: Accuracy, Precision, Recall, F1-Score, ROC-AUC]
-    Supervised --> Regression[Regression<br>Algorithms: Linear, Polynomial, Ridge/Lasso (Regularization), SVR<br>Evaluation: MAE, MSE, RMSE, R-squared]
-    Paradigms --> Unsupervised[Unsupervised Learning]
-    Unsupervised --> Clustering[Clustering<br>Algorithms: K-Means, Hierarchical, DBSCAN, Gaussian Mixture Models<br>Evaluation: Silhouette Score, Davies-Bouldin Index]
-    Unsupervised --> DimReduction[Dimensionality Reduction<br>Algorithms: PCA, t-SNE, Autoencoders<br>Applications: Feature Extraction for Images/Audio/Video]
-    Paradigms --> Semi[Semi-Supervised Learning<br>Algorithms: Self-Training, Co-Training, Label Propagation<br>Uses: When Labeled Data is Scarce, e.g., Image Annotation]
-    Paradigms --> RL[Reinforcement Learning<br>Algorithms: Q-Learning, SARSA, DDPG, PPO<br>Components: Agent, Environment, Rewards<br>Applications: Games, Robotics, Autonomous Driving (Video-based)]
+    A --> B[Learning Paradigms]
+    B --> B1[Supervised Learning]
+    B1 --> B1a[Classification<br/>• Logistic Regression<br/>• SVM (Linear/RBF Kernel)<br/>• Decision Trees<br/>• KNN • Naive Bayes<br/>• Neural Nets]
+    B1 --> B1b[Regression<br/>• Linear / Polynomial<br/>• Ridge / Lasso / ElasticNet<br/>• SVR • Gradient Boosting Reg.]
+    
+    B --> B2[Unsupervised Learning]
+    B2 --> B2a[Clustering<br/>• K-Means • Hierarchical<br/>• DBSCAN • Gaussian Mixtures]
+    B2 --> B2b[Dimensionality Reduction<br/>• PCA • t-SNE • UMAP<br/>• Autoencoders • LDA]
+    
+    B --> B3[Semi-Supervised Learning<br/>• Self-Training<br/>• Label Propagation<br/>• Co-Training]
+    B --> B4[Reinforcement Learning<br/>• Q-Learning • SARSA<br/>• DQN • PPO • A2C/A3C<br/>• Actor-Critic • Policy Gradient]
 
-    %% Deep Learning
-    AIML --> DL[Deep Learning]
-    DL --> NN[Neural Networks]
-    NN --> ANN[Artificial Neural Networks<br>Basic Feedforward Networks<br>Frameworks: TensorFlow, PyTorch, Keras]
-    NN --> CNN[Convolutional Neural Networks<br>For Image-based: Conv Layers, Pooling<br>Algorithms: AlexNet, ResNet, YOLO (Object Detection)<br>Applications: Computer Vision (CV), Image Classification/Segmentation]
-    NN --> RNN[Recurrent Neural Networks<br>For Sequences: LSTM, GRU<br>Applications: Audio (Speech Recognition), Video (Action Recognition), Time-Series]
-    RNN --> LLM[Large Language Models<br>Based on Transformers (Attention Mechanisms)<br>Algorithms: GPT, BERT, LLaMA<br>Applications: NLP, Text Generation, Chatbots<br>Frameworks: Hugging Face Transformers]
-    DL --> CV[Computer Vision<br>Tasks: Object Detection, Facial Recognition, Semantic Segmentation<br>Algorithms: Faster R-CNN, U-Net<br>Image/Video-based Processing]
+    %% Deep Learning Branch
+    A --> C[Deep Learning]
+    C --> C1[Neural Network Types]
+    C1 --> ANN[ANN (MLP)]
+    C1 --> CNN[CNN<br/>• LeNet • AlexNet<br/>• VGG • ResNet<br/>• EfficientNet • YOLO<br/>• U-Net (Segmentation)]
+    C1 --> RNN[RNN Family<br/>• Vanilla RNN<br/>• LSTM • GRU<br/>• Seq2Seq • Attention]
+    C1 --> Trans[Transformers<br/>• BERT • GPT • T5<br/>• ViT (Vision Transformer)<br/>• LLaMA • Gemini • Grok]
+    C1 --> LLM[Large Language Models (LLM)]
+    C1 --> GNN[Graph Neural Networks<br/>• GCN • GAT • GraphSAGE]
+    
+    C --> C2[Generative Models]
+    C2 --> GAN[GANs<br/>• DCGAN • StyleGAN<br/>• CycleGAN • Pix2Pix]
+    C2 --> VAE[VAE & Variants]
+    C2 --> Diff[Diffusion Models<br/>• DDPM • Stable Diffusion<br/>• Sora (Video)]
 
-    %% Components
-    AIML --> Components[Training Components]
-    Components --> Optimizers[Optimizers<br>Algorithms: SGD, Adam, RMSprop, Adagrad<br>Uses: Gradient Descent in NN Training<br>Math: Calculus (Derivatives, Backpropagation)]
-    Components --> Loss[Loss Functions<br>Examples: MSE (Regression), Cross-Entropy (Classification), Huber Loss<br>For RL: Value Loss, Policy Loss<br>Custom for Audio/Video: Perceptual Losses]
-    Components --> Regularization[Regularization Techniques<br>L1/L2, Dropout, Early Stopping, Data Augmentation<br>Prevents Overfitting in DL Models<br>Applied in CNN/RNN for Images/Audio]
+    %% Computer Vision & Media
+    A --> D[Domain-Specific]
+    D --> CV[Computer Vision<br/>• Object Detection<br/>• Instance/Semantic Segmentation<br/>• Pose Estimation • OCR]
+    D --> Audio[Audio / Speech<br/>• MFCC • Spectrograms<br/>• WaveNet • Whisper<br/>• HuBERT • AudioLM]
+    D --> Video[Video Processing<br/>• Action Recognition<br/>• 3D CNN • Video Transformers<br/>• SlowFast • TimeSformer]
+    D --> Multi[Multimodal<br/>• CLIP • DALL·E<br/>• Flamingo • ImageBind<br/>• LLaVA (Vision+Language)]
 
-    %% Methods
-    AIML --> Methods[Advanced Methods]
-    Methods --> Ensemble[Ensemble Methods<br>Techniques: Bagging (Random Forest), Boosting (XGBoost, AdaBoost), Stacking<br>Tree-based: Decision Trees, Gradient Boosting Machines<br>Improves Accuracy in Classification/Regression]
-    Methods --> Kernel[Kernel-based Methods<br>Algorithms: SVM with RBF/Polynomial Kernels<br>Uses: Non-linear Classification, e.g., Image Features]
-    Methods --> Tree[Tree-based Methods<br>Algorithms: CART, ID3, C4.5, Extra Trees<br>Ensemble Integration: Random Forest for Feature Importance in CV]
+    %% Key Components
+    A --> E[Core Components]
+    E --> Opt[Optimizers<br/>• SGD • Momentum<br/>• Adam • AdamW<br/>• RMSprop • LAMB]
+    E --> Loss[Loss Functions<br/>• MSE • Cross-Entropy<br/>• Dice • Contrastive<br/>• Perceptual • CTC]
+    E --> Reg[Regularization<br/>• L1/L2 • Dropout<br/>• BatchNorm • LayerNorm<br/>• Early Stopping • Augmentation]
+    
+    %% Ensemble & Classical ML
+    A --> F[Advanced Techniques]
+    F --> Ens[Ensemble Methods<br/>• Bagging → Random Forest<br/>• Boosting → XGBoost, LightGBM, CatBoost<br/>• Stacking • Voting]
+    F --> Kernel[Kernel Methods<br/>• SVM Kernels<br/>• Kernel PCA]
+    F --> Tree[Tree-based<br/>• CART • ID3 • C4.5<br/>• Extra Trees]
+    F --> Transfer[Transfer Learning<br/>• Fine-tuning • Feature Extraction<br/>• Domain Adaptation]
+    F --> Few[Few-Shot / Zero-Shot Learning]
 
-    %% Foundations
-    AIML --> Foundations[Foundations]
-    Foundations --> Math[Math Foundations]
-    Math --> Algebra[Linear Algebra<br>Vectors, Matrices, Eigenvalues<br>Uses: NN Weights, PCA in Dim Reduction]
-    Math --> Calculus[Calculus<br>Derivatives, Integrals, Optimization<br>Essential for Backpropagation, Gradients in Optimizers]
-    Foundations --> Stats[Statistics & Probability<br>Distributions (Normal, Poisson), Hypothesis Testing, Bayes' Theorem<br>Uses: Naive Bayes, Uncertainty in RL, Evaluation Metrics]
+    %% Math & Evaluation
+    A --> G[Foundations]
+    G --> Math[Mathematics]
+    Math --> Alg[Linear Algebra<br/>Matrices, Tensors, SVD]
+    Math --> Calc[Calculus<br/>Gradients, Chain Rule, Backprop]
+    Math --> Prob[Probability & Statistics<br/>Bayes, Distributions, Hypothesis Testing]
+    
+    G --> Eval[Evaluation Techniques<br/>• Cross-Validation<br/>• Confusion Matrix • ROC/PR AUC<br/>• BLEU • ROUGE • mAP<br/>• FID • IS (Generative)]
 
-    %% Additional Suggestions
-    AIML --> Apps[Applications & Extensions]
-    Apps --> Frameworks[Frameworks & Libraries<br>ML: Scikit-learn (Supervised/Unsupervised)<br>DL: PyTorch, TensorFlow, MXNet<br>CV: OpenCV<br>NLP: spaCy, NLTK<br>Audio: Librosa, PyDub<br>Video: FFmpeg, MoviePy]
-    Apps --> Media[Media Processing<br>Image: Augmentation (Flip, Rotate), GANs for Generation<br>Audio: Spectrograms, WaveNet<br>Video: Optical Flow, 3D CNNs<br>Multimodal: CLIP (Image+Text)]
-    Apps --> OtherAlgo[Other Algorithms<br>Genetic Algorithms (Evolutionary), Fuzzy Logic<br>Hybrid: Neuro-Fuzzy Systems<br>Emerging: Federated Learning, Transfer Learning in DL]
+    %% Frameworks
+    A --> H[Popular Frameworks]
+    H --> Scikit[Scikit-learn]
+    H --> TF[TensorFlow / Keras]
+    H --> Torch[PyTorch]
+    H --> HF[Hugging Face Transformers]
+    H --> Others[Others<br/>JAX • MXNet • LightGBM<br/>OpenCV • Librosa • TorchAudio]
 
-    %% Connections for Cohesion
-    DL --> Components
-    RL --> Components
-    CV --> CNN
-    LLM --> RNN
-    Ensemble --> Tree
-    Kernel --> Supervised
-    Stats --> Evaluation[Evaluation Techniques<br>Cross-Validation, Confusion Matrix, Bias-Variance Tradeoff<br>Applied Across All Paradigms]
-    Foundations --> Evaluation
-```
+    %% Styling
+    classDef main fill:#4a90e2,stroke:#333,color:white,font-weight:bold
+    classDef category fill:#7ed321,stroke:#333,color:white
+    class A,B,C,D,E,F,G,H category
