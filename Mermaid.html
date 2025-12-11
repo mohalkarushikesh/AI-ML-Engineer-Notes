@@ -2,112 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Complete AI & Machine Learning Roadmap 2025</title>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <title>Complete AI & Machine Learning Ecosystem 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.5/dist/mermaid.min.js"></script>
+
   <style>
-    body { margin:0; padding:30px; background:#f8f9fa; font-family:system-ui,-apple-system,Arial; }
-    h1 { text-align:center; color:#1e293b; margin-bottom:30px; }
-    .mermaid { 
-      background:white; 
-      padding:30px; 
-      border-radius:16px; 
-      box-shadow:0 10px 30px rgba(0,0,0,0.1); 
-      max-width:100%; 
-      overflow-x:auto;
-    }
-    @media (prefers-color-scheme: dark) {
-      body { background:#0f172a; }
-      .mermaid { background:#1e293b; }
-      h1 { color:#e2e8f0; }
-    }
+    body { margin:0; padding:40px; background:#f8fafc; font-family:'Crimson Pro',serif; color:#000; }
+    h1 { text-align:center; font-size:3rem; margin-bottom:40px; color:#1e293b; }
+    .mermaid { background:white; padding:50px; border-radius:20px; box-shadow:0 15px 40px rgba(0,0,0,0.12); overflow-x:auto; }
+    .mermaid .label { line-height:1.6 !important; } /* ensures one bullet per line */
   </style>
 </head>
 <body>
   <h1>Complete AI & Machine Learning Ecosystem (2025)</h1>
-  
+
   <div class="mermaid">
     graph TD
-        %% Root
-        ROOT[Artificial Intelligence & Machine Learning]:::root
+        ROOT["Artificial Intelligence & Machine Learning"]:::main
 
-        %% Learning Paradigms
-        ROOT --> P[Learning Paradigms]
-        P --> SUP[Supervised Learning]
-        SUP --> CLS[Classification<br/>• Logistic Regression<br/>• SVM (Linear/RBF/Poly)<br/>• Decision Trees • Random Forest<br/>• KNN • Naive Bayes<br/>• XGBoost • LightGBM • CatBoost<br/>• Neural Networks]
-        SUP --> REG[Regression<br/>• Linear • Polynomial<br/>• Ridge • Lasso • ElasticNet<br/>• SVR • Gradient Boosting<br/>• Huber • Quantile Regression]
+        ROOT --> P["Learning Paradigms"]:::main
+        P --> SUP["Supervised Learning"]:::main
+        SUP --> CLS["Classification<br/>• Logistic Regression<br/>• SVM (Linear/RBF/Poly)<br/>• Decision Trees<br/>• Random Forest<br/>• KNN<br/>• Naive Bayes<br/>• XGBoost<br/>• LightGBM<br/>• CatBoost<br/>• Neural Networks"]:::sub
+        SUP --> REG["Regression<br/>• Linear Regression<br/>• Polynomial Regression<br/>• Ridge<br/>• Lasso<br/>• ElasticNet<br/>• Support Vector Regression<br/>• Gradient Boosting Reg."]:::sub
 
-        P --> UNS[Unsupervised Learning]
-        UNS --> CLU[Clustering<br/>• K-Means • Hierarchical<br/>• DBSCAN • OPTICS<br/>• Gaussian Mixture Models<br/>• Mean Shift]
-        UNS --> DIM[Dimensionality Reduction<br/>• PCA • Kernel PCA<br/>• t-SNE • UMAP<br/>• Autoencoders • LDA • ICA]
+        P --> UNS["Unsupervised Learning"]:::main
+        UNS --> CLU["Clustering<br/>• K-Means<br/>• Hierarchical<br/>• DBSCAN<br/>• OPTICS<br/>• Gaussian Mixture Models<br/>• Mean Shift"]:::sub
+        UNS --> DIM["Dimensionality Reduction<br/>• PCA<br/>• Kernel PCA<br/>• t-SNE<br/>• UMAP<br/>• Autoencoders<br/>• LDA<br/>• ICA"]:::sub
 
-        P --> SEMI[Semi-Supervised<br/>• Self-Training<br/>• Label Propagation<br/>• Co-Training<br/>• Graph-based Methods]
-        P --> RL[Reinforcement Learning<br/>• Q-Learning • SARSA<br/>• DQN • DDQN • Rainbow<br/>• PPO • A2C/A3C • SAC<br/>• Actor-Critic • Policy Gradient<br/>• Inverse RL • Meta-RL]
+        P --> SEMI["Semi-Supervised Learning<br/>• Self-Training<br/>• Label Propagation<br/>• Co-Training"]:::sub
+        P --> RL["Reinforcement Learning<br/>• Q-Learning<br/>• SARSA<br/>• DQN / DDQN<br/>• PPO<br/>• A2C / A3C<br/>• SAC<br/>• Actor-Critic"]:::sub
 
-        %% Deep Learning
-        ROOT --> DL[Deep Learning]
-        DL --> ANN[ANN / MLP<br/>Feedforward Networks]
-        DL --> CNN[CNN<br/>• LeNet • AlexNet • VGG<br/>• ResNet • DenseNet • EfficientNet<br/>• MobileNet • Inception<br/>• YOLO • Faster R-CNN • Mask R-CNN<br/>• U-Net • DeepLab • SegNet]
-        DL --> RNN[RNN Family<br/>• Vanilla RNN<br/>• LSTM • GRU • BiLSTM<br/>• Seq2Seq • Attention • Bahdanau • Luong]
-        DL --> TRANS[Transformers<br/>• BERT • RoBERTa • DistilBERT<br/>• GPT-2/3/4 • LLaMA • Mistral • Grok<br/>• T5 • BART • mT5<br/>• ViT • DeiT • Swin Transformer<br/>• Perceiver • Mamba]
-        DL --> LLM[Large Language Models<br/>• Gemini • Claude • PaLM • Qwen<br/>• Phi • Falcon • Mixtral]
-        DL --> GNN[Graph Neural Networks<br/>• GCN • GAT • GraphSAGE<br/>• GIN • TransformerConv]
-        DL --> GEN[Generative Models]
-        GEN --> GAN[GANs<br/>• DCGAN • WGAN • StyleGAN • CycleGAN<br/>• Pix2Pix • BigGAN]
-        GEN --> VAE[VAE • CVAE • β-VAE]
-        GEN --> DIFF[Diffusion Models<br/>• DDPM • Score-based<br/>• Stable Diffusion • SDXL<br/>• DALL·E 3 • Imagen • Midjourney<br/>• Sora (Video) • Phenaki]
-        GEN --> FLOW[Normalizing Flows • RealNVP]
+        ROOT --> DL["Deep Learning"]:::main
+        DL --> ANN["ANN / MLP<br/>• Feedforward Networks<br/>• Backpropagation"]:::sub
+        DL --> CNN["CNN Architectures<br/>• LeNet<br/>• AlexNet<br/>• VGG<br/>• ResNet<br/>• EfficientNet<br/>• MobileNet<br/>• YOLO<br/>• U-Net"]:::sub
+        DL --> RNN["RNN Family<br/>• Vanilla RNN<br/>• LSTM<br/>• GRU<br/>• Bi-directional<br/>• Seq2Seq"]:::sub
+        DL --> TRANS["Transformers<br/>• BERT<br/>• GPT Series<br/>• LLaMA<br/>• Mistral<br/>• Grok<br/>• ViT<br/>• Mamba"]:::sub
+        DL --> LLM["Large Language Models<br/>• Gemini<br/>• Claude<br/>• PaLM<br/>• Qwen<br/>• Mixtral"]:::sub
+        DL --> GEN["Generative Models<br/>• GANs<br/>• Diffusion Models<br/>• Stable Diffusion<br/>• DALL·E<br/>• Sora (Video)"]:::sub
 
-        %% Domains
-        ROOT --> DOM[Domains & Applications]
-        DOM --> CV[Computer Vision<br/>• Object Detection • Segmentation<br/>• Pose Estimation • OCR<br/>• Super-Resolution • Depth Estimation]
-        DOM --> NLP[Natural Language Processing<br/>• NER • Sentiment • Translation<br/>• Summarization • Question Answering]
-        DOM --> AUDIO[Audio & Speech<br/>• ASR (Whisper • Wav2Vec • HuBERT)<br/>• TTS (Tacotron • FastSpeech • VALL-E)<br/>• Music Generation • AudioLM]
-        DOM --> VIDEO[Video Understanding<br/>• Action Recognition • Video Generation<br/>• SlowFast • TimeSformer • VideoMAE]
-        DOM --> MULTI[Multimodal<br/>• CLIP • BLIP • Flamingo<br/>• ImageBind • LLaVA • Kosmos<br/>• DALL·E • Make-A-Video]
+        ROOT --> DOM["Domains"]:::main
+        DOM --> CV["Computer Vision<br/>• Object Detection<br/>• Segmentation<br/>• Pose Estimation<br/>• OCR"]:::sub
+        DOM --> NLP["Natural Language Processing<br/>• NER<br/>• Sentiment<br/>• Translation<br/>• Summarization"]:::sub
+        DOM --> AUDIO["Audio & Speech<br/>• Whisper<br/>• Wav2Vec<br/>• HuBERT<br/>• VALL-E<br/>• AudioLM"]:::sub
+        DOM --> MULTI["Multimodal<br/>• CLIP<br/>• LLaVA<br/>• Flamingo<br/>• ImageBind<br/>• Kosmos"]:::sub
 
-        %% Core Components
-        ROOT --> CORE[Core Components]
-        CORE --> OPT[Optimizers<br/>• SGD • Momentum • Nesterov<br/>• Adam • AdamW • AdaGrad<br/>• RMSprop • LAMB • Lion]
-        CORE --> LOSS[Loss Functions<br/>• MSE • MAE • Huber<br/>• Cross-Entropy • Focal Loss<br/>• Dice • IoU • Contrastive<br/>• Triplet • CTC • Perceptual]
-        CORE --> REG[Regularization<br/>• L1/L2 • Dropout • DropConnect<br/>• BatchNorm • LayerNorm • GroupNorm<br/>• Weight Decay • Early Stopping<br/>• Data Augmentation • Mixup • CutMix]
+        ROOT --> CORE["Core Components"]:::main
+        CORE --> OPT["Optimizers<br/>• SGD<br/>• Adam<br/>• AdamW<br/>• RMSprop<br/>• Lion<br/>• LAMB"]:::sub
+        CORE --> LOSS["Loss Functions<br/>• Cross-Entropy<br/>• MSE<br/>• Focal Loss<br/>• Contrastive<br/>• CTC"]:::sub
+        CORE --> REG["Regularization<br/>• Dropout<br/>• BatchNorm<br/>• LayerNorm<br/>• Weight Decay<br/>• Data Augmentation"]:::sub
 
-        %% Advanced Techniques
-        ROOT --> ADV[Advanced Techniques]
-        ADV --> ENS[Ensemble Methods<br/>• Bagging • Boosting • Stacking<br/>• Voting • Snapshot Ensembling]
-        ADV --> TRANSF[Transfer Learning<br/>• Fine-tuning • Feature Extraction<br/>• Domain Adaptation • Prompt Tuning]
-        ADV --> META[Meta / Few-Shot Learning<br/>• MAML • Reptile • ProtoNets<br/>• Zero-Shot • One-Shot]
-        ADV --> NAS[Neural Architecture Search]
-        ADV --> PRUNE[Pruning • Quantization • Distillation]
+        ROOT --> ADV["Advanced Techniques"]:::main
+        ADV --> ENS["Ensemble Methods<br/>• Bagging<br/>• Boosting<br/>• XGBoost<br/>• LightGBM<br/>• CatBoost"]:::sub
+        ADV --> TRANSF["Transfer Learning<br/>• Fine-tuning<br/>• Prompt Tuning<br/>• Few-Shot<br/>• Zero-Shot"]:::sub
 
-        %% Foundations
-        ROOT --> FOUND[Foundations]
-        FOUND --> MATH[Mathematics]
-        MATH --> LA[Linear Algebra<br/>Vectors • Matrices • SVD • Eigen]
-        MATH --> CALC[Calculus<br/>Gradients • Chain Rule • Backprop]
-        MATH --> PROB[Probability & Statistics<br/>Bayes • Distributions • MLE]
-        FOUND --> EVAL[Evaluation Techniques<br/>• Cross-Validation • Holdout<br/>• Confusion Matrix • ROC • PR AUC<br/>• F1 • mAP • BLEU • ROUGE • CIDEr<br/>• FID • IS • CLIP Score]
+        ROOT --> FOUND["Foundations"]:::main
+        FOUND --> MATH["Mathematics<br/>• Linear Algebra<br/>• Calculus<br/>• Probability<br/>• Statistics"]:::sub
+        FOUND --> EVAL["Evaluation<br/>• Accuracy / F1<br/>• ROC-AUC<br/>• BLEU / ROUGE<br/>• FID / IS<br/>• Cross-Validation"]:::sub
 
-        %% Frameworks & Tools
-        ROOT --> FRAME[Frameworks & Libraries]
-        FRAME --> SK[Scikit-learn]
-        FRAME --> TF[TensorFlow • Keras]
-        FRAME --> TORCH[PyTorch • Lightning]
-        FRAME --> JAX[JAX • Flax • Haiku]
-        FRAME --> HF[Hugging Face Transformers]
-        FRAME --> TOOLS[Tools<br/>• OpenCV • Albumentations<br/>• Librosa • Torchaudio<br/>• Weights & Biases • MLflow<br/>• Gradio • Streamlit]
+        ROOT --> FRAME["Frameworks & Tools"]:::main
+        FRAME --> SK["Scikit-learn"]:::sub
+        FRAME --> TORCH["PyTorch<br/>• Lightning<br/>• TorchVision"]:::sub
+        FRAME --> TF["TensorFlow<br/>• Keras"]:::sub
+        FRAME --> HF["Hugging Face Transformers"]:::sub
+        FRAME --> TOOLS["Others<br/>• JAX<br/>• Gradio<br/>• Streamlit<br/>• OpenCV<br/>• Weights & Biases"]:::sub
 
-        %% Styling
-        classDef root fill:#6366f1,stroke:#4338ca,stroke-width:3px,color:white,font-weight:bold
-        classDef category fill:#10b981,stroke:#059669,stroke-width:2px,color:white
-        classDef sub fill:#f59e0b,stroke:#d97706,color:white
-        class ROOT category
-        class P,DL,DOM,CORE,ADV,FOUND,FRAME category
+        classDef main fill:#15803d,stroke:#166534,stroke-width:3px,color:white,font-weight:bold
+        classDef sub fill:#fffbeb,stroke:#d97706,stroke-width:2px,color:black,font-weight:500
   </div>
 
   <script>
     mermaid.initialize({
       startOnLoad: true,
-      theme: 'default',
+      theme: 'neutral',
       flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
     });
   </script>
