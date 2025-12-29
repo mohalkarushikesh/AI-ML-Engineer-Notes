@@ -48,6 +48,8 @@ AlexNet marked the beginning of the **deep learning revolution** in computer vis
 
 Since then, many improved models like **VGG**, **ResNet**, and **Inception** have been built based on the ideas introduced by AlexNet.
 
+
+
 ---
 
 ## 🧩 Summary Table
@@ -63,3 +65,54 @@ Since then, many improved models like **VGG**, **ResNet**, and **Inception** hav
 ---
 
 In short, **AlexNet** is a powerful image recognition system that uses deep learning to automatically understand and classify images — and it helped launch the modern AI revolution.
+
+
+
+Sure! Below is a **Mermaid diagram** in Markdown format that visually represents the **AlexNet architecture**. You can copy and paste this into any Markdown viewer that supports Mermaid (like VS Code, GitHub, or Docusaurus).
+
+---
+
+```mermaid
+graph TD
+    A[Input Image (227x227x3)] --> B[Conv1: 96 filters, 11x11, stride 4]
+    B --> C[ReLU1]
+    C --> D[LRN1]
+    D --> E[Pool1: Max Pooling 3x3, stride 2]
+    E --> F[Conv2: 256 filters, 5x5, pad 2]
+    F --> G[ReLU2]
+    G --> H[LRN2]
+    H --> I[Pool2: Max Pooling 3x3, stride 2]
+    I --> J[Conv3: 384 filters, 3x3, pad 1]
+    J --> K[ReLU3]
+    K --> L[Conv4: 384 filters, 3x3, pad 1]
+    L --> M[ReLU4]
+    M --> N[Conv5: 256 filters, 3x3, pad 1]
+    N --> O[ReLU5]
+    O --> P[Pool3: Max Pooling 3x3, stride 2]
+    P --> Q[Flatten]
+    Q --> R[FC6: 4096 units]
+    R --> S[ReLU6]
+    S --> T[Dropout6]
+    T --> U[FC7: 4096 units]
+    U --> V[ReLU7]
+    V --> W[Dropout7]
+    W --> X[FC8: 1000 units (Output)]
+```
+
+---
+
+### 🧩 Explanation of the Diagram
+
+- **Conv**: Convolutional layer with specified number of filters, kernel size, and stride.
+- **ReLU**: Rectified Linear Unit activation function.
+- **LRN**: Local Response Normalization (used in original AlexNet).
+- **Pool**: Max Pooling layer to reduce spatial size.
+- **FC**: Fully Connected layer.
+- **Dropout**: Dropout layer to prevent overfitting.
+- **Input**: A 227x227 RGB image.
+- **Output**: Final layer with 1000 units for 1000 classes in ImageNet.
+
+---
+
+This diagram captures the key components and flow of the original **AlexNet** architecture in a clear and visual way. Let me know if you'd like a version with color or annotations!
+
