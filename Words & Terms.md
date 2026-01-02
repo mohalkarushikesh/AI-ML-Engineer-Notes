@@ -20,3 +20,5 @@ Convergent : non-iterative
 Riccati difference equations
 
 **Discretization methods** transform continuous data or systems into discrete forms, commonly used in data mining (e.g., Binning, Clustering, Decision Trees) for handling data, and in engineering/physics (e.g., Finite Difference, Finite Volume, Finite Element Methods) to solve differential equations numerically
+
+BLEU (Bilingual Evaluation Understudy) is a popular algorithm in Natural Language Processing (NLP) that scores machine-translated text by comparing it to professional human translations, measuring precision of n-grams (word sequences) and applying a brevity penalty for short outputs, aiming for high correlation with human judgment of quality. Beyond translation, "Bleu" also refers to various brands, including touchless payment solutions, toxin-free condoms, and men's fragrances like Bleu de Chanel. 
