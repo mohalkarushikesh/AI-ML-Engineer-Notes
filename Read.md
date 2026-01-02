@@ -55,3 +55,54 @@
 | 2024 | **RETRO: Retrieval-Enhanced Transformer** – DeepMind | Augmented LLMs with retrieval for factual grounding. | [arXiv](https://arxiv.org/abs/2112.04426) |
 | 2024 | **Orca 2: Learning from Explanations** – Microsoft | Improved reasoning in smaller models by distilling GPT-4 explanations. | [arXiv](https://arxiv.org/abs/2311.11045) |
 
+---
+
+## 📚 Top AI/ML Blogs to Follow
+
+| Blog | Focus Area | Why It’s Valuable | Link |
+|------|------------|------------------|------|
+| **Towards Data Science** | Broad AI/ML tutorials, applied data science | Community-driven, beginner to expert content with code examples. | [Visit](https://towardsdatascience.com) |
+| **OpenAI Blog** | Research updates, GPT models, safety | Direct insights from the creators of GPT and DALL·E. | [Visit](https://openai.com/research) |
+| **Google DeepMind Blog** | Cutting-edge AI research | Covers breakthroughs like AlphaFold, Gemini, Gato. | [Visit](https://deepmind.google/discover/blog) |
+| **Anthropic Blog** | AI safety, alignment, Claude models | Focused on responsible AI development. | [Visit](https://www.anthropic.com/index) |
+| **Berkeley AI Research (BAIR) Blog** | Academic research | Deep dives into robotics, vision, and ML theory. | [Visit](https://bair.berkeley.edu/blog) |
+| **Hugging Face Blog** | Open-source AI tools | Tutorials, model releases, and community projects. | [Visit](https://huggingface.co/blog) |
+| **KDnuggets** | Data science + ML industry | News, tutorials, and applied analytics. | [Visit](https://www.kdnuggets.com) |
+| **Towards AI** | AI research + applied ML | Mix of technical guides and thought leadership. | [Visit](https://towardsai.net) |
+| **MarkTechPost** | AI news + research summaries | Quick updates on new papers and models. | [Visit](https://www.marktechpost.com) |
+| **UsefulAI Blog** | Curated AI insights | Combines industry trends with practical tutorials. | [Visit](https://usefulai.com/blogs) |
+| **DigitalOcean AI Blog** | AI trends + developer guides | Accessible content for engineers and startups. | [Visit](https://www.digitalocean.com/resources/articles/ai-blogs) |
+| **Tableau AI Blog** | Applied AI in business | Focus on ML/AI for analytics and visualization. | [Visit](https://www.tableau.com/learn/articles/blogs-about-machine-learning-artificial-intelligence) |
+
+---
+
+## 📚 Most Important AI/ML Blog Posts (2019–2025)
+
+| Year | Blog Post | Source | Link |
+|------|-----------|--------|------|
+| 2019 | **Introducing GPT-2** – Why OpenAI initially withheld full release | OpenAI Blog | [Read here](https://openai.com/research/language-unsupervised) |
+| 2020 | **GPT-3 Release Notes** – Few-shot learning breakthrough | OpenAI Blog | [Read here](https://openai.com/research/gpt-3) |
+| 2020 | **AlphaFold: Solving Protein Folding** | DeepMind Blog | [Read here](https://deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge/) |
+| 2021 | **CLIP & DALL·E Announcements** | OpenAI Blog | [Read here](https://openai.com/research/clip) |
+| 2021 | **ViT: Transformers for Vision** | Google AI Blog | [Read here](https://ai.googleblog.com/2021/06/transformers-for-vision.html) |
+| 2022 | **PaLM: Scaling Language Models with Pathways** | Google AI Blog | [Read here](https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html) |
+| 2022 | **Whisper: Multilingual Speech Recognition** | OpenAI Blog | [Read here](https://openai.com/research/whisper) |
+| 2022 | **Stable Diffusion Release** | Stability AI Blog | [Read here](https://stability.ai/blog/stable-diffusion-announcement) |
+| 2023 | **LLaMA: Open Foundation Models** | Meta AI Blog | [Read here](https://ai.meta.com/blog/large-language-model-llama-meta-ai/) |
+| 2023 | **Segment Anything Model (SAM)** | Meta AI Blog | [Read here](https://ai.meta.com/blog/segment-anything/) |
+| 2023 | **Mixtral of Experts Announcement** | Mistral AI Blog | [Read here](https://mistral.ai/news/mixtral-of-experts/) |
+| 2023 | **FlashAttention Release** | HazyResearch Blog | [Read here](https://hazyresearch.stanford.edu/blog/2023-07-17-flashattention) |
+| 2023 | **Orca: Learning from Explanations** | Microsoft Research Blog | [Read here](https://www.microsoft.com/en-us/research/blog/orca-progressive-learning-from-gpt-4/) |
+| 2023 | **AlphaTensor: Discovering Algorithms with AI** | DeepMind Blog | [Read here](https://deepmind.google/discover/blog/alphatensor/) |
+| 2024 | **Gemini 1.5 Announcement** | DeepMind Blog | [Read here](https://deepmind.google/discover/blog/gemini-1-5/) |
+| 2024 | **Claude 2 Release Notes** | Anthropic Blog | [Read here](https://www.anthropic.com/index/claude-2) |
+| 2024 | **Falcon LLM Launch** | TII Blog | [Read here](https://tii.ae/news/falcon-llm) |
+| 2024 | **Vision Mamba Introduction** | Research Blog | [Read here](https://arxiv.org/abs/2401.00318) |
+| 2025 | **OpenAI o1 Model Release** | OpenAI Blog | [Read here](https://openai.com/o1) |
+| 2025 | **Google Research 2025 Recap** | Google Blog | [Read here](https://blog.google/technology/ai/2025-research-breakthroughs/) |
+| 2025 | **Claude 3.5 Release Notes** | Anthropic Blog | [Read here](https://www.anthropic.com/news/claude-3-5) |
+| 2025 | **LLaMA 3 Announcement** | Meta AI Blog | [Read here](https://ai.meta.com/blog/llama-3/) |
+| 2025 | **Top AI Stories of 2025** | IEEE Spectrum | [Read here](https://spectrum.ieee.org/ai-2025) |
+
+---
+
