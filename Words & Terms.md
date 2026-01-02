@@ -19,3 +19,4 @@ Convergent : non-iterative
 
 Riccati difference equations
 
+**Discretization methods** transform continuous data or systems into discrete forms, commonly used in data mining (e.g., Binning, Clustering, Decision Trees) for handling data, and in engineering/physics (e.g., Finite Difference, Finite Volume, Finite Element Methods) to solve differential equations numerically
