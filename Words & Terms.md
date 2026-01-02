@@ -13,8 +13,9 @@ Hippo framework: high-order polynomial projection operators
 
 Expectation Maximization: is a method to find the maximum likelihood estimator of a parameter θ of a probability distribution
 
-NSID : Subspace Algorithms for the Identication of Combined DeterministicStochastic Systems
+N4SID : Subspace Algorithms for the Identication of Combined DeterministicStochastic Systems
 
 Convergent : non-iterative 
 
 Riccati difference equations
+
