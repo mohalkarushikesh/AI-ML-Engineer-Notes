@@ -114,8 +114,7 @@
 
 https://simonwillison.net/2025/Dec/31/the-year-in-llms/
 
-
-
+https://arxiv.org/html/2512.21789v1
 
 
 
