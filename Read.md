@@ -111,3 +111,17 @@
 --- 
 
 [mamba-model](https://www.ibm.com/think/topics/mamba-model) - Yet to start 
+
+https://simonwillison.net/2025/Dec/31/the-year-in-llms/
+
+
+
+
+
+
+
+
+
+
+
+
