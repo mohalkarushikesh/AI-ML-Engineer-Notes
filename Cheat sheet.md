@@ -333,3 +333,13 @@ v = β2*v + (1-β2)*g²
 
 **Print, Bookmark, Conquer!**  
 This cheatsheet is designed for interviews, exams, and daily reference. No fluff. All signal.
+[06/01, 2:43 am] Rushikesh Mohalkar: Needs to be added github : https://blog.dailydoseofds.com/p/9-rag-llm-and-ai-agent-cheat-sheets
+[06/01, 2:44 am] Rushikesh Mohalkar: https://github.com/SamBelkacem/AI-ML-cheatsheets
+[06/01, 2:45 am] Rushikesh Mohalkar: https://blog.dailydoseofds.com/p/15-dsml-cheat-sheets
+[06/01, 2:45 am] Rushikesh Mohalkar: https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463?gi=9474d1c5bc4f
+[06/01, 2:46 am] Rushikesh Mohalkar: https://github.com/Abonia1/CheatSheet-LLM
+[06/01, 2:47 am] Rushikesh Mohalkar: https://www.kaggle.com/discussions/general/575880
+[06/01, 2:48 am] Rushikesh Mohalkar: https://www.datacamp.com/cheat-sheet/machine-learning-cheat-sheet
+[06/01, 2:49 am] Rushikesh Mohalkar: https://www.geeksforgeeks.org/machine-learning/machine-learning-algorithms-cheat-sheet/
+[06/01, 2:49 am] Rushikesh Mohalkar: https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-machine-learning-tips-and-tricks
+[06/01, 2:50 am] Rushikesh Mohalkar: https://medium.com/swlh/cheat-sheets-for-machine-learning-interview-topics-51c2bc2bab4f
