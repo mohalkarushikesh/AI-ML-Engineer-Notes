@@ -1,6 +1,3 @@
-Here’s a **README.md draft** for your MUTAG GNN project. It explains the purpose, setup, usage, and results clearly:
-
-```markdown
 # MUTAG Graph Neural Network Project
 
 ## 📌 Overview
@@ -83,6 +80,4 @@ This project demonstrates that **Graph Neural Networks can learn meaningful grap
 It validates the power of GNNs in domains where **relationships (edges) are as important as entities (nodes)**.
 ```
 
----
 
-Would you like me to also add a **“Training Curve” section** in the README with sample plots (loss vs. epochs, accuracy vs. epochs) so it looks more complete for presentation?
