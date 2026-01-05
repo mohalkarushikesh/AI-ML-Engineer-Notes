@@ -1,6 +1,8 @@
 **Graph Neural Networks (GNNs are a deep learning architecture designed to learn from graph-structured data, where nodes represent entities and edges represent relationships. They extend neural networks to non-Euclidean domains, making them powerful for tasks where connections matter as much as the entities themselves.**
 
 ---
+[GNN - geeks for geeks](https://www.geeksforgeeks.org/deep-learning/what-are-graph-neural-networks/)
+---
 
 ## 🧠 Core Concepts of GNNs
 - **Graph Basics:**  
