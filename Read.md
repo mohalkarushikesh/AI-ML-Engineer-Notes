@@ -117,8 +117,11 @@ https://simonwillison.net/2025/Dec/31/the-year-in-llms/
 https://arxiv.org/html/2512.21789v1
 
 - 05-JAN-2026
-**[graph neural netowrk](https://www.ibm.com/think/topics/graph-neural-network#763338464)**
+**[graph neural netowrks](https://www.ibm.com/think/topics/graph-neural-network#763338464)**
+**[graph neural networks](https://www.geeksforgeeks.org/deep-learning/what-are-graph-neural-networks/)**
+
 **[Semi-Supervised Learning With Label Propagation](https://machinelearningmastery.com/semi-supervised-learning-with-label-propagation/)**
+**[gradient](https://machinelearningmastery.com/gradient-in-machine-learning/)**
 
 
 
