@@ -118,7 +118,21 @@ Use GPT **daily**:
 
 ---
 
-### CHEATSHEET - [AI-ML](https://github.com/SamBelkacem/AI-ML-cheatsheets)
+### CHEATSHEET 
+
+# 📚 AI & ML Cheat Sheets Collection
+
+- [AI-ML Cheat Sheets (GitHub)](https://github.com/SamBelkacem/AI-ML-cheatsheets)
+- [RAG, LLM, and AI Agent Cheat Sheets](https://blog.dailydoseofds.com/p/9-rag-llm-and-ai-agent-cheat-sheets)
+- [Data Science & ML Cheat Sheets](https://blog.dailydoseofds.com/p/15-dsml-cheat-sheets)
+- [Neural Networks, ML, DL, Big Data Cheat Sheets](https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463?gi=9474d1c5bc4f)
+- [LLM Cheat Sheet (GitHub)](https://github.com/Abonia1/CheatSheet-LLM)
+- [Kaggle Discussion: Cheat Sheets](https://www.kaggle.com/discussions/general/575880)
+- [Datacamp Machine Learning Cheat Sheet](https://www.datacamp.com/cheat-sheet/machine-learning-cheat-sheet)
+- [GeeksforGeeks ML Algorithms Cheat Sheet](https://www.geeksforgeeks.org/machine-learning/machine-learning-algorithms-cheat-sheet/)
+- [Stanford CS229 ML Tips & Tricks Cheat Sheet](https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-machine-learning-tips-and-tricks)
+- [Machine Learning Interview Topics Cheat Sheets](https://medium.com/swlh/cheat-sheets-for-machine-learning-interview-topics-51c2bc2bab4f)
+
 
 ---
 
