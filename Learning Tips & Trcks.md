@@ -118,6 +118,10 @@ Use GPT **daily**:
 
 ---
 
+### CHEATSHEET - [](https://github.com/SamBelkacem/AI-ML-cheatsheets)
+
+---
+
 ### 6️⃣ NEWS & X.COM (No Noise)
 
 * Hacker News (top + best comments)
@@ -234,7 +238,7 @@ Most ignore this. Top 1% don’t.
 
 ---
 
-## 🧩 FINAL UPGRADED CHEAT SHEET (1-Line Version)
+## 🧩 FINAL UPGRADED CHEAT SHEET (1-Line Version) 
 
 > **Read → Watch → Build → Fail → Revise → Teach → Repeat (Daily)**
 
