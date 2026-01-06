@@ -118,7 +118,7 @@ Use GPT **daily**:
 
 ---
 
-### CHEATSHEET - [](https://github.com/SamBelkacem/AI-ML-cheatsheets)
+### CHEATSHEET - [AI-ML](https://github.com/SamBelkacem/AI-ML-cheatsheets)
 
 ---
 
