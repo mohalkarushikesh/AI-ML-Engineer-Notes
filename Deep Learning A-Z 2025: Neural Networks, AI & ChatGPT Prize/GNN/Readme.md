@@ -1,7 +1,7 @@
 # MUTAG Graph Neural Network Project
 
 ## 📌 Overview
-This project implements a **Graph Neural Network (GNN)** using **GINConv layers** to classify graphs from the **MUTAG dataset**.  
+This project implements a **Graph Neural Network (GNN)** using **GINConv layers - Graph Isomorphism Network Convolutional layers** to classify graphs from the **MUTAG dataset**.  
 MUTAG is a molecular dataset where each graph represents a molecule, nodes represent atoms, and edges represent chemical bonds.  
 The task is **graph classification**: predicting whether a molecule is mutagenic (toxic) or not.
 
