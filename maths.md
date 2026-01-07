@@ -10,8 +10,9 @@
   - **Matrix Multiplication (2D×2D)** → combine transformations / weights  
   - **Eigenvalues** → numbers that tell you *how much variance* (or importance) is captured in a particular direction.  
   - **Eigenvectors** → the *directions* themselves in which that variance lies.  
-  👉 In **PCA (Principal Component Analysis)**:  
-  - **Eigenvectors** = principal components (new axes) **Eigenvalues** = amount of data variance explained along each axis. So: **Eigenvectors = directions, Eigenvalues = strength of those directions.**  
+    👉 In **PCA (Principal Component Analysis)**:  
+    - **Eigenvectors** = principal components (new axes) **Eigenvalues** = amount of data variance explained along each axis.
+    - So: **Eigenvectors = directions, Eigenvalues = strength of those directions.**  
   - **Applications** → data representation, embeddings, NN weights  
 
 - **Calculus**  
