@@ -170,7 +170,14 @@ print(X.toarray())
 
 ---
 
-### 🔹 N-grams (Unigrams, Bigrams) - N-gram models predict the probability of a word given the previous n−1 words. For example, a trigram model uses the preceding two words to predict the next word:
+### 🔹 N-grams (Unigrams, Bigrams) 
+
+N-gram models predict the probability of a word given the previous n−1 words. For example, a trigram model uses the preceding two words to predict the next word:
+
+- Unigram (n=1): A single word, like "I," "love," or "programming".
+- Bigram (n=2): A sequence of two consecutive words, such as ("I love") or ("love programming").
+- N-gram: The general term for sequences of 'n' items, where 'n' can be any number (e.g., trigrams for n=3, 4-grams for n=4). 
+
 - **Definition**: Sequence of *n* words.
 - **Example**:
 ```python
@@ -239,5 +246,7 @@ print(cv.get_feature_names_out())
 | Stemmer            | Definition | Example |
 |--------------------|------------|---------|
 | **PorterStemmer**  | Oldest, rule-based | "running" → "run" |
-| **RegexpStemmer**  | Uses regex rules | "running" → "runn" |
+| **RegexpStemmer**  | Uses regex rules | "running" → "runn" | 
 | **SnowballStemmer**| Improved Porter | "running" → "run" |
+
+- The Porter Stemmer reduces words like "consulting" to "consult," while the Snowball Stemmer (Porter2) offers improved, multilingual stemming, often producing better results like stemming "sportingly" to "sport," compared to Porter's "sportingli," demonstrating Snowball's greater accuracy and less aggressive, yet effective, rule set. 
