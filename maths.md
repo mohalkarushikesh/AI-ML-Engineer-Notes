@@ -11,8 +11,9 @@
   - **Eigenvalues** → numbers that tell you *how much variance* (or importance) is captured in a particular direction.  
   - **Eigenvectors** → the *directions* themselves in which that variance lies.  
     👉 In **PCA (Principal Component Analysis)**:  
-    - **Eigenvectors** = principal components (new axes) **Eigenvalues** = amount of data variance explained along each axis.
-    - So: **Eigenvectors = directions, Eigenvalues = strength of those directions.**  
+    - **Eigenvectors** = principal components (new axes) **Eigenvalues** = amount of data variance (Spread) explained along each axis.
+    - So: **Eigenvectors = directions, Eigenvalues = strength of those directions.**
+    - <img src="https://github.com/user-attachments/assets/d071d39e-76e3-4976-8314-de5710287e2a" alt="image" width="300" height="200">
   - **Applications** → data representation, embeddings, NN weights  
 
 - **Calculus**  
