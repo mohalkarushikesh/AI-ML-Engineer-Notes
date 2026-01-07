@@ -77,7 +77,9 @@ filtered = [w for w in words if w.lower() not in stop_words]
 print(filtered)   # ['example']
 ```
 
-## Parts of Speech: POS tagging is a fundamental task in Natural Language Processing (NLP) that involves assigning a grammatical category (such as noun, verb, adjective, etc.) to each word in a sentence. The goal is to understand the syntactic structure of a sentence and identify the grammatical roles of individual words. POS tagging provides essential information for various NLP applications, including text analysis, machine translation, and information retrieval.
+## Parts of Speech 
+
+POS tagging is a fundamental task in Natural Language Processing (NLP) that involves assigning a grammatical category (such as noun, verb, adjective, etc.) to each word in a sentence. The goal is to understand the syntactic structure of a sentence and identify the grammatical roles of individual words. POS tagging provides essential information for various NLP applications, including text analysis, machine translation, and information retrieval.
 
 
 POS tags are short codes representing specific parts of speech. Common POS tags include:
@@ -146,7 +148,9 @@ Dis-Advantages
   3. Out of vocabulary
   4. Semantic meaning still not getting captured 
 
-## One Hot Encoding - One Hot Encoding is a method for converting **categorical variables into a binary format**. It creates new columns for each category where 1 means the category is present and 0 means it is not. The primary purpose of One Hot Encoding is to ensure that categorical data can be effectively used in machine learning models
+## One Hot Encoding
+
+One Hot Encoding is a method for converting **categorical variables into a binary format**. It creates new columns for each category where 1 means the category is present and 0 means it is not. The primary purpose of One Hot Encoding is to ensure that categorical data can be effectively used in machine learning models
 
 - Advantages: Easy to implement with python - sklearn pd.get_dummies()
 - Dis-advantages: 
