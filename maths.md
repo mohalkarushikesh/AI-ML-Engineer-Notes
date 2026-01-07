@@ -63,9 +63,9 @@
   \mathbf{a} \cdot \mathbf{b} = \sum_i a_i b_i
   \]
 - **Cross‑Entropy Loss**:  
-  \[
-  L = -\sum y \log(\hat{y})
-  \]
+\[
+L = -\sum y \log(\hat{y})
+\]
 
 ---
 
