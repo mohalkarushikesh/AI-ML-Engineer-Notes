@@ -2,7 +2,7 @@
 
 ## 🧠 Core Areas
 
-- **Linear Algebra**  
+- **Linear Algebra** - Math of vectors and matrices, used to solve systems and transformations. 
   - **Vector (1D)** → list of numbers \([x_1, x_2, …, x_n]\)  
   - **Matrix (2D)** → grid of numbers (rows × columns)  
   - **Tensor (nD)** → generalization (2D = matrix, 3D = cube, higher‑D for deep nets)  
@@ -16,16 +16,20 @@
     - <img src="https://github.com/user-attachments/assets/d071d39e-76e3-4976-8314-de5710287e2a" alt="image" width="300" height="200">
   - **Applications** → data representation, embeddings, NN weights  
 
-- **Calculus**  
+- **Calculus** - Study of change, with derivatives (rates) and integrals (areas/accumulation).
   - **Derivative (1D)** → slope of function
+    - Differentiation: solving derivatives (rate of change).
+      - Applications: **Physics** → velocity, acceleration. **Engineering** → max strength, efficiency. **(ML/DL)** → gradient descent for optimization.    
   - <img width="609" height="782" alt="derivative-rules-1624955545" src="https://github.com/user-attachments/assets/ee27a3b2-1a1e-4056-bb53-2a3e029a3b01" />
   - **Gradient (nD)** → vector of partial derivatives  
   - **Chain Rule** → backpropagation in neural nets  
   - **Integral (area under curve)** → probability distributions
+    - Integration: solving integrals (area/accumulation).
+      - Applications: **Probability** → expectation values. **ML** → ROC-AUC, continuous loss functions. **Physics** → displacement from velocity.   
   - <img width="512" height="304" alt="unnamed" src="https://github.com/user-attachments/assets/0cf8a764-1b49-4736-911b-4860216349e4" />
   - **Applications** → optimization, training deep nets  
 
-- **Probability & Statistics**  
+- **Probability** (Math of uncertainty, measuring likelihood of events.) & **Statistics** (Collecting, analyzing, and interpreting data to find patterns and make decisions.)  
   - **Random Variable (1D)** → maps outcomes to numbers  
   - **Distribution (1D/2D)** → Normal, Bernoulli, Binomial, etc.  
   - **Expectation (mean)** → average outcome  
@@ -41,14 +45,14 @@
   - **Lagrange Multipliers** → constrained optimization  
   - **Applications** → training ML/DL models  
 
-- **Discrete Mathematics**  
+- **Discrete Mathematics** -  Study of countable structures (graphs, logic, combinatorics, algorithms). 
   - **Logic (Boolean)** → true/false operations  
   - **Sets (1D)** → collections of elements  
   - **Functions (mapping)** → input → output  
   - **Graph Theory (nodes+edges)** → Graph Neural Networks  
   - **Combinatorics (counting)** → feature selection, probability spaces  
 
-- **Information Theory**  
+- **Information Theory** - Quantifies information, communication, and entropy in data and signals.  
   - **Entropy (uncertainty measure)**  
   - **Cross‑Entropy (loss function)**  
   - **KL Divergence (distribution difference)**  
