@@ -1,59 +1,59 @@
-# 📘 Machine Learning Cheatsheet
+# 📘 Machine Learning Cheatsheet (Enhanced)
 
 ## 🧠 Core Concepts
-- **Supervised Learning** → Learn from labeled data (classification, regression).  
-- **Unsupervised Learning** → Find hidden patterns (clustering, dimensionality reduction).  
-- **Semi‑Supervised Learning** → Mix of labeled + unlabeled data.  
-- **Reinforcement Learning** → Agent learns by interacting with environment.  
-- **Features** → Input variables.  
-- **Labels** → Target outputs.  
-- **Overfitting vs Underfitting** → Too complex vs too simple models.  
-- **Bias‑Variance Tradeoff** → Balance between accuracy and generalization.  
+- **Supervised Learning (labels known)** → classification, regression  
+- **Unsupervised Learning (no labels)** → clustering, dimensionality reduction  
+- **Semi‑Supervised (mix)** → few labels + many unlabeled  
+- **Reinforcement Learning (agent–env loop)** → rewards drive learning  
+- **Features (X, inputs)** → independent variables  
+- **Labels (y, outputs)** → dependent variables  
+- **Overfitting (too complex)** vs **Underfitting (too simple)**  
+- **Bias‑Variance Tradeoff** → accuracy vs generalization  
 
 ---
 
 ## 🧩 Key Algorithms
-- **Regression** → Linear Regression, Logistic Regression.  
-- **Classification** → Decision Trees, Random Forest, SVM, k‑NN, Naive Bayes.  
-- **Clustering** → k‑Means, Hierarchical, DBSCAN.  
-- **Dimensionality Reduction** → PCA, t‑SNE.  
-- **Ensemble Methods** → Bagging, Boosting (AdaBoost, XGBoost, LightGBM).  
-- **Neural Networks** → MLP, CNN, RNN, Transformers (deep learning).  
+- **Regression (continuous output)** → Linear, Logistic  
+- **Classification (categorical output)** → Decision Trees, Random Forest, SVM, k‑NN, Naive Bayes  
+- **Clustering (grouping)** → k‑Means, Hierarchical, DBSCAN  
+- **Dimensionality Reduction (lower‑D)** → PCA (linear), t‑SNE (nonlinear)  
+- **Ensemble Methods (combine models)** → Bagging, Boosting (AdaBoost, XGBoost, LightGBM)  
+- **Neural Networks (layers)** → MLP (dense), CNN (images), RNN (sequences), Transformers (attention)  
 
 ---
 
 ## ⚙️ Workflow
-1. Collect & preprocess data (clean, normalize, split).  
-2. Choose algorithm/model.  
-3. Train model on training set.  
-4. Validate with cross‑validation.  
-5. Evaluate with metrics.  
-6. Tune hyperparameters.  
-7. Deploy model.  
+1. **Data** → collect, clean, preprocess (normalize, split)  
+2. **Model** → choose algorithm  
+3. **Train** → fit on training set  
+4. **Validate** → cross‑validation  
+5. **Evaluate** → metrics  
+6. **Tune** → hyperparameters  
+7. **Deploy** → production use  
 
 ---
 
 ## 📐 Evaluation Metrics
-- **Classification** → Accuracy, Precision, Recall, F1, ROC‑AUC.  
-- **Regression** → MSE, RMSE, MAE, R².  
-- **Clustering** → Silhouette Score, Davies‑Bouldin Index.  
+- **Classification** → Accuracy, Precision, Recall, F1, ROC‑AUC  
+- **Regression** → MSE, RMSE, MAE, R²  
+- **Clustering** → Silhouette Score, Davies‑Bouldin Index  
 
 ---
 
 ## 🛠️ Tools & Libraries
-- **scikit‑learn** → Classical ML.  
-- **TensorFlow / PyTorch** → Deep learning.  
-- **XGBoost / LightGBM / CatBoost** → Gradient boosting.  
-- **Pandas / NumPy** → Data handling.  
-- **Matplotlib / Seaborn** → Visualization.  
+- **scikit‑learn** → classical ML toolkit  
+- **TensorFlow / PyTorch** → deep learning frameworks  
+- **XGBoost / LightGBM / CatBoost** → gradient boosting libraries  
+- **Pandas / NumPy** → data handling (tables, arrays)  
+- **Matplotlib / Seaborn** → visualization  
 
 ---
 
 # ⚡ Pocket Version (super short)
-- **Types**: Supervised, Unsupervised, Semi‑Supervised, RL  
-- **Algorithms**: Regression, Classification, Clustering, PCA, Ensembles, NN  
-- **Workflow**: Data → Model → Train → Validate → Evaluate → Tune → Deploy  
-- **Metrics**: Accuracy, F1, MSE, Silhouette  
-- **Tools**: scikit‑learn, PyTorch, TensorFlow, XGBoost  
+- **Types** → Supervised (labels), Unsupervised (patterns), Semi‑Supervised (mix), RL (rewards)  
+- **Algorithms** → Regression (continuous), Classification (categorical), Clustering (groups), PCA/t‑SNE (reduce), Ensembles, NN  
+- **Workflow** → Data → Model → Train → Validate → Evaluate → Tune → Deploy  
+- **Metrics** → Accuracy, F1, MSE, Silhouette  
+- **Tools** → scikit‑learn, PyTorch, TensorFlow, XGBoost  
 
 ---
