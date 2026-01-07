@@ -55,7 +55,7 @@ graph TD
     - Differentiation: solving derivatives (rate of change).
       - Applications: **Physics** → velocity, acceleration. **Engineering** → max strength, efficiency. **(ML/DL)** → gradient descent for optimization.    
   - <img width="609" height="782" alt="derivative-rules-1624955545" src="https://github.com/user-attachments/assets/ee27a3b2-1a1e-4056-bb53-2a3e029a3b01" />
-  - **Gradient (nD)** → vector of partial derivatives  
+  - **Gradient (nD)** → vector of **partial derivatives** ( PD - measure how a multivariable function changes when only one of its input variables changes).  
   - **Chain Rule** → backpropagation in neural nets  
   - **Integral (area under curve)** → probability distributions
     - Integration: solving integrals (area/accumulation).
