@@ -17,10 +17,12 @@
   - **Applications** → data representation, embeddings, NN weights  
 
 - **Calculus**  
-  - **Derivative (1D)** → slope of function  
+  - **Derivative (1D)** → slope of function
+  - <img width="609" height="782" alt="derivative-rules-1624955545" src="https://github.com/user-attachments/assets/ee27a3b2-1a1e-4056-bb53-2a3e029a3b01" />
   - **Gradient (nD)** → vector of partial derivatives  
   - **Chain Rule** → backpropagation in neural nets  
-  - **Integral (area under curve)** → probability distributions  
+  - **Integral (area under curve)** → probability distributions
+  - <img width="512" height="304" alt="unnamed" src="https://github.com/user-attachments/assets/0cf8a764-1b49-4736-911b-4860216349e4" />
   - **Applications** → optimization, training deep nets  
 
 - **Probability & Statistics**  
