@@ -70,7 +70,10 @@ graph TD
   - **Expectation (mean)** → average outcome  
   - **Variance (spread)** → measure of dispersion  
   - **Covariance (2D)** → relationship between variables  
-  - **Bayes’ Theorem** → conditional probability  
+  - **Bayes’ Theorem** → conditional probability
+    - $P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}$ 
+    - **Meaning:** The probability of event \(A\) given \(B\) equals the likelihood of \(B\) given \(A\), times the prior probability of \(A\), divided by the overall probability of \(B\).  
+    - **Use in AI/ML:** Foundation for probabilistic models, Bayesian inference, and algorithms like Naive Bayes classifiers.  
   - **Applications** → uncertainty, generative models, evaluation  
 
 - **Optimization**  
