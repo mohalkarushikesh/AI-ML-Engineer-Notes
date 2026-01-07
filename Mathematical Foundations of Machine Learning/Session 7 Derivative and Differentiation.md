@@ -18,25 +18,25 @@
 ## 📝 Differentiation Rules
 
 - **Notation**  
-  - \( f'(x), \frac{dy}{dx}, Df(x) \) → all mean derivative of \(f\).  
+  - $f'(x), \frac{dy}{dx}, Df(x)$ → all mean derivative of $f$.  
 
 - **Power Rule**  
-  - \(\frac{d}{dx}(x^n) = n x^{n-1}\)  
+  - $\frac{d}{dx}(x^n) = n x^{n-1}$  
 
 - **Constant Multiple Rule**  
-  - \(\frac{d}{dx}[c \cdot f(x)] = c \cdot f'(x)\)  
+  - $\frac{d}{dx}[c \cdot f(x)] = c \cdot f'(x)$  
 
 - **Sum Rule**  
-  - \(\frac{d}{dx}[f(x) + g(x)] = f'(x) + g'(x)\)  
+  - $\frac{d}{dx}[f(x) + g(x)] = f'(x) + g'(x)$  
 
 - **Product Rule**  
-  - \(\frac{d}{dx}[f(x) \cdot g(x)] = f'(x)g(x) + f(x)g'(x)\)  
+  - $\frac{d}{dx}[f(x) \cdot g(x)] = f'(x)g(x) + f(x)g'(x)$  
 
 - **Quotient Rule**  
-  - \(\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}\)  
+  - $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$  
 
 - **Chain Rule**  
-  - \(\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)\)  
+  - $\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$  
 
 ---
 
