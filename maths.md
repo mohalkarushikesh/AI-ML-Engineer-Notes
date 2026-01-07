@@ -51,21 +51,24 @@
 
 ## 📐 Key Formulas
 - **Gradient Descent Update**:  
-  \[
-  \theta \leftarrow \theta - \alpha \cdot \nabla J(\theta)
-  \]
+$$
+\theta \leftarrow \theta - \alpha \cdot \nabla J(\theta)
+$$
+
 - **Bayes’ Theorem**:  
-  \[
-  P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
-  \]
+$$
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+$$
+
 - **Dot Product**:  
-  \[
-  \mathbf{a} \cdot \mathbf{b} = \sum_i a_i b_i
-  \]
+$$
+\mathbf{a} \cdot \mathbf{b} = \sum_i a_i b_i
+$$
+
 - **Cross‑Entropy Loss**:  
-\[
+$$
 L = -\sum y \log(\hat{y})
-\]
+$$
 
 ---
 
