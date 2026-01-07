@@ -8,7 +8,10 @@
   - **Tensor (nD)** → generalization (2D = matrix, 3D = cube, higher‑D for deep nets)  
   - **Dot Product (1D·1D)** → similarity measure  
   - **Matrix Multiplication (2D×2D)** → combine transformations / weights  
-  - **Eigenvalues/Eigenvectors** → directions of variance (PCA)  
+  - **Eigenvalues** → numbers that tell you *how much variance* (or importance) is captured in a particular direction.  
+  - **Eigenvectors** → the *directions* themselves in which that variance lies.  
+  👉 In **PCA (Principal Component Analysis)**:  
+  - **Eigenvectors** = principal components (new axes) **Eigenvalues** = amount of data variance explained along each axis. So: **Eigenvectors = directions, Eigenvalues = strength of those directions.**  
   - **Applications** → data representation, embeddings, NN weights  
 
 - **Calculus**  
