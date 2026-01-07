@@ -1,5 +1,39 @@
 # 📘 Mathematics for AI/ML Cheatsheet
 
+```mermaid
+graph TD
+    Math["Math"] --> LA["Linear Algebra"]
+    Math --> Calc["Calculus"]
+    Math --> Prob["Probability & Statistics"]
+    Math --> Opt["Optimization"]
+
+    LA --> Vectors["Vectors"]
+    LA --> Matrices["Matrices"]
+    LA --> Factorizations["Matrix factorizations (SVD, eigen)"]
+    LA --> Norms["Norms & distances"]
+
+    Calc --> Deriv["Derivatives"]
+    Calc --> Int["Integrals"]
+
+    Deriv --> Partial["Partial derivatives"]
+    Deriv --> Gradient["Gradient & Jacobian"]
+    Deriv --> Chain["Chain rule (backprop)"]
+
+    Int --> Definite["Definite & indefinite"]
+    Int --> ProbInt["Probability integrals (expectations)"]
+
+    Prob --> RV["Random variables & distributions"]
+    Prob --> ExpectVar["Expectation, variance, covariance"]
+    Prob --> Bayes["Bayes’ rule"]
+    Prob --> Estimation["Estimation & inference (MLE, MAP)"]
+
+    Opt --> Loss["Loss functions"]
+    Opt --> GD["Gradient descent & variants"]
+    Opt --> Convexity["Convexity & constraints"]
+    Opt --> Reg["Regularization"]
+
+```
+
 ## 🧠 Core Areas
 
 - **Linear Algebra** - Math of vectors and matrices, used to **solve systems and transformations.**
