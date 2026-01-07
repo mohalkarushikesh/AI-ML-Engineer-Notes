@@ -59,13 +59,14 @@ graph TD
   - **Chain Rule** → backpropagation in neural nets  
   - **Integral (area under curve)** → probability distributions
     - Integration: solving integrals (area/accumulation).
-      - Applications: **Probability** → expectation values. **ML** → ROC-AUC, continuous loss functions. **Physics** → displacement from velocity.   
+      - Applications: **Probability** → expectation values. **ML** → ROC(Receiver operating charateristics)-AUC, continuous loss functions. **Physics** → displacement from velocity.   
   - <img width="512" height="304" alt="unnamed" src="https://github.com/user-attachments/assets/0cf8a764-1b49-4736-911b-4860216349e4" />
   - **Applications** → optimization, training deep nets  
 
-- **Probability** (Math of uncertainty, measuring likelihood of events.) & **Statistics** (Collecting, analyzing, and interpreting data to find patterns and make decisions.)  
+- **Probability** (Math of uncertainty, measuring likelihood of events.) & **Statistics** (Collecting, analyzing, and **interpreting data** to find patterns and make decisions.)  
   - **Random Variable (1D)** → maps outcomes to numbers  
-  - **Distribution (1D/2D)** → Normal, Bernoulli, Binomial, etc.  
+  - **Distribution (1D/2D)** → Normal, Bernoulli, Binomial, etc.
+  - <img width="1920" height="1080" alt="1_JFtF8HlWSEXWy7lzlMlKNw" src="https://github.com/user-attachments/assets/8c7ce882-3ce5-4d82-9f43-0662dc7e0655" />
   - **Expectation (mean)** → average outcome  
   - **Variance (spread)** → measure of dispersion  
   - **Covariance (2D)** → relationship between variables  
