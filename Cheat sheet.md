@@ -336,6 +336,7 @@ Backpropagation - efficiently calculating how much each weight and bias contribu
 Gradient descent is the process of finding the minimum of a function (the loss function) by iteratively taking steps in the direction of the steepest descent (the negative of the gradient).
 
 --- 
+
 **Print, Bookmark, Conquer!**  
 This cheatsheet is designed for interviews, exams, and daily reference. No fluff. All signal.
 
@@ -349,8 +350,17 @@ This cheatsheet is designed for interviews, exams, and daily reference. No fluff
 - **Normalization** → fix accents, spacing.  
 - **Vectorization** → convert to embeddings/TF‑IDF.  
 
-## 📚 word embeddings in NLP 🚀 Common Methods
-- **Word2Vec** → Skip‑gram, CBOW.  
+---
+
+## 📚 Word Representations in NLP 🚀
+
+### 🔹 Basic (Pre‑Embedding)
+- **One‑Hot Encoding** → Each word = vector of all zeros except one “1” at its index.  
+  - Pros: Simple, unique IDs.  
+  - Cons: Huge sparse vectors, no semantic similarity (all words equally distant).  
+
+### 🔹 Embedding Methods
+- **Word2Vec** → Skip‑gram, CBOW (predict context/word).  
 - **GloVe** → Global co‑occurrence + matrix factorization.  
 - **FastText** → Subword info (handles OOV words).  
 - **ELMo** → Contextual embeddings (bi‑LSTM).  
