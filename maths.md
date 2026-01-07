@@ -2,7 +2,7 @@
 
 ## 🧠 Core Areas
 
-- **Linear Algebra** - Math of vectors and matrices, used to solve systems and transformations. 
+- **Linear Algebra** - Math of vectors and matrices, used to **solve systems and transformations.**
   - **Vector (1D)** → list of numbers \([x_1, x_2, …, x_n]\)  
   - **Matrix (2D)** → grid of numbers (rows × columns)  
   - **Tensor (nD)** → generalization (2D = matrix, 3D = cube, higher‑D for deep nets)  
