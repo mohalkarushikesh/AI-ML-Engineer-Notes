@@ -78,7 +78,7 @@
 |-------------|---------|----------------|
 | **MLP (Feedforward)** | Tabular data | Dense layers |
 | **CNN** | Images, grids | Conv, Pooling, BatchNorm |
-| **RNN** | Sequences | Hidden state |
+| **RNN** | Sequences | Hidden state, Feedback loop |
 | **LSTM / GRU** | Long sequences | Gates (forget, input, output) |
 | **Transformer** | NLP, sequences | Self-Attention, Multi-Head |
 | **GAN** | Generation | Generator + Discriminator |
@@ -331,6 +331,11 @@ v = β2*v + (1-β2)*g²
 
 ---
 
+Backpropagation - efficiently calculating how much each weight and bias contributes to the network's error by propagating the error backward from the output to the input, allowing for systematic adjustments via gradient descent to improve prediction accuracy. It uses the chain rule of calculus to compute gradients layer by layer, making deep learning scalable and effective for complex pattern recognition. 
+
+Gradient descent is the process of finding the minimum of a function (the loss function) by iteratively taking steps in the direction of the steepest descent (the negative of the gradient).
+
+--- 
 **Print, Bookmark, Conquer!**  
 This cheatsheet is designed for interviews, exams, and daily reference. No fluff. All signal.
 
