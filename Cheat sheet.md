@@ -339,6 +339,22 @@ Gradient descent is the process of finding the minimum of a function (the loss f
 **Print, Bookmark, Conquer!**  
 This cheatsheet is designed for interviews, exams, and daily reference. No fluff. All signal.
 
+## ⚡ Steps for text preprocessing** in NLP 🧹 
+- **Lowercasing** → unify text.  
+- **Tokenization** → split into words/subwords.  
+- **Stopword removal** → drop common filler words.  
+- **Stemming/Lemmatization** → reduce to root form.  
+- **Punctuation & special chars removal** → clean text.  
+- **Handling numbers** → keep/remove/normalize.  
+- **Normalization** → fix accents, spacing.  
+- **Vectorization** → convert to embeddings/TF‑IDF.  
+
+## 📚 word embeddings in NLP 🚀 Common Methods
+- **Word2Vec** → Skip‑gram, CBOW.  
+- **GloVe** → Global co‑occurrence + matrix factorization.  
+- **FastText** → Subword info (handles OOV words).  
+- **ELMo** → Contextual embeddings (bi‑LSTM).  
+- **BERT/Transformers** → Deep contextual, bidirectional.  
 
 # 📚 AI & ML Cheat Sheets Collection
 
