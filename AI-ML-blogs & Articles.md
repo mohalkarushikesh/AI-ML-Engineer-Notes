@@ -1,3 +1,23 @@
+### 1. The Pulse (Real-time Viral Tech)
+* **[GitHub Trending (Daily/Python)](https://github.com/trending/python?since=daily)** – The first place breakthroughs appear before the news.
+* **[GitHub Topics: AI-2026](https://github.com/topics/ai-2026)** – A live feed of projects tagged with the current year's innovations.
+* **[GitHub Next](https://githubnext.com/)** – Future-casting experiments directly from GitHub's R&D team.
+
+### 2. The Library (Curated Milestones)
+* **[Awesome-LLM](https://github.com/Hannibal046/Awesome-LLM)** – The "Gold Standard" for tracking every major paper and model release.
+* **[Awesome-AI-Research](https://github.com/topics/ai-research)** – Aggregated feed for technical research repositories.
+* **[Awesome-MCP](https://www.google.com/search?q=https://github.com/modelcontextprotocol/awesome-mcp)** – Essential for tracking the Model Context Protocol, the 2026 standard for AI tool integration.
+
+### 3. The Engines (Top Agent Frameworks)
+* **[MetaGPT](https://github.com/FoundationAgents/MetaGPT)** – Multi-agent framework that simulates a whole software company.
+* **[CrewAI](https://github.com/crewAIInc/crewAI)** – The leader for role-playing collaborative agents.
+* **[LangGraph](https://github.com/langchain-ai/langgraph)** – Crucial for building complex, cyclical agent workflows.
+* **[Aider](https://github.com/paul-gauthier/aider)** – The standard for CLI-based AI pair programming.
+
+### 4. The Business (Market & Ecosystem)
+* **[Awesome-AI-Market-Maps](https://github.com/joylarkin/Awesome-AI-Market-Maps)** – A massive list of 375+ maps tracking AI startups and venture capital trends in 2025–2026.
+* **[500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects)** – A database of real-world use cases and industry implementations of agents.
+
 - https://towardsdatascience.com/
 
 - https://machinelearningmastery.com/blog/
