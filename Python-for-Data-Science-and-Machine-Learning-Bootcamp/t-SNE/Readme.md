@@ -15,7 +15,7 @@
 - In low‑dimensional space, t‑SNE tries to reproduce these probabilities.  
 - The algorithm minimizes the **Kullback–Leibler (KL) divergence** between the two distributions.
 
-<img width="600" height="468" alt="images" src="https://github.com/user-attachments/assets/c1684eec-1fe0-40c7-9b04-5eea7f970169" />
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/3489ec1d-ee7b-4efa-b1ea-b537a1ac85db" />
 
 ---
 
