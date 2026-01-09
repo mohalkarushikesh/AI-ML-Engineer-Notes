@@ -41,6 +41,10 @@ A **Random Forest** is an ensemble learning method built from multiple decision 
 
 ---
 
+<img width="1400" height="713" alt="0_YEwFetXQGPB8aDFV" src="https://github.com/user-attachments/assets/e8170878-1bb8-47aa-8a05-2448fbad1118" />
+
+---
+
 ### **4. Classification vs. Regression**
 | **Task**         | **Explanation** |
 |-----------------|----------------|
