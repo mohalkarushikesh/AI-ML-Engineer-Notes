@@ -4,6 +4,10 @@ Logistic Regression is a **supervised learning algorithm** used for **classifica
 
 ---
 
+<img widht='600' height='400' src="https://github.com/user-attachments/assets/1da48caa-7645-4f7c-a3ce-31956ef8fa0f">
+
+---
+
 ## **🔸 Examples of Binary Classification**
 1. 📧 **Spam vs Ham Emails** → Classifies whether an email is spam or not  
 2. 💰 **Loan Defaults** → Determines if a loan will default ($\text{Yes/No}$)  
@@ -49,6 +53,9 @@ $$
 - Each classifier predicts whether the input belongs to its class or not  
 - Final prediction is the class with the **highest probability**
 
+<img width='600' height='400' src="https://github.com/user-attachments/assets/c92f7114-4786-41f4-8740-f75a7e55bd28" />
+
+
 ### **2️⃣ Multinomial Logistic Regression (Softmax Regression)**
 - Directly handles **multiclass classification**  
 - Uses **softmax function** to compute probabilities:
@@ -58,6 +65,8 @@ P(y = k \mid x) = \frac{e^{z_k}}{\sum_{j=1}^{K} e^{z_j}}
 $$
 
 - Ensures that $\sum_{k=1}^{K} P(y = k \mid x) = 1$
+
+<img width='600' height='400' src="https://github.com/user-attachments/assets/fa32aa9d-a9f3-425e-9027-d71ab93479e6" />
 
 ---
 
