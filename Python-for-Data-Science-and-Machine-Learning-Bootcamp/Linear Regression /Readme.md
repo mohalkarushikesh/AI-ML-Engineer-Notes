@@ -36,6 +36,10 @@ $$
 
 ---
 
+<img width="630" height="357" alt="Linear-regression-model" src="https://github.com/user-attachments/assets/f35d4861-2598-4808-b5a3-c632eaded0b4" />
+
+---
+
 ## **🔸 Types of Linear Regression**
 
 ### **1️⃣ Simple Linear Regression (SLR)**
@@ -48,6 +52,8 @@ $$
 
 - **Example**: Predicting **salary** based on **years of experience**.
 
+![download](https://github.com/user-attachments/assets/20a0f305-72ac-4985-92be-5612e16a40e9)
+
 ### **2️⃣ Multiple Linear Regression (MLR)**
 - **Uses**: Models relationships between **multiple independent variables ($X_1, X_2, ..., X_n$)** and **one dependent variable ($Y$)**.
 - **Equation**:
@@ -57,6 +63,8 @@ Y = \theta_0 + \theta_1 X_1 + \theta_2 X_2 + \dots + \theta_n X_n + \epsilon
 $$
 
 - **Example**: Predicting **house prices** based on **square footage, number of bedrooms, location, and amenities**.
+
+![download](https://github.com/user-attachments/assets/6b1fd2a4-aacf-4267-8055-f1d7fd2a4470)
 
 ### **3️⃣ Polynomial Regression**
 - **Uses**: Captures **non-linear relationships** by introducing polynomial terms.
@@ -68,6 +76,8 @@ $$
 
 - **Example**: Predicting **growth rate** of bacteria over time when the trend isn’t linear.
 
+<img width="261" height="193" alt="images" src="https://github.com/user-attachments/assets/20585504-3421-476f-a2e3-ce439e5119f8" />
+
 ### **4️⃣ Ridge Regression (L2 Regularization)**
 - **Uses**: Handles **multicollinearity** by **penalizing large coefficients**.
 - **Equation**:
@@ -77,6 +87,8 @@ $$
 $$
 
 - **Example**: Predicting **stock prices** with correlated indicators.
+
+![ridge-regression-in-machine-learning](https://github.com/user-attachments/assets/7ee225c1-69d9-487d-8689-04d9018f2382)
 
 ### **5️⃣ Lasso Regression (L1 Regularization)**
 - **Uses**: Shrinks some coefficients to **zero**, enabling **feature selection**.
@@ -98,6 +110,8 @@ $$
 
 - **Example**: Predicting **sales revenue** using interrelated factors.
 
+<img width="761" height="332" alt="1_q53XbAJdKv_l3sw-sUlCVA" src="https://github.com/user-attachments/assets/2c4a9945-ad08-48e0-8aa6-2e2a69981072" />
+
 ### **7️⃣ Stepwise Regression**
 - **Uses**: **Automates feature selection** by adding/removing predictors based on significance.
 - **Example**: **Medical diagnosis models** using relevant patient data.
@@ -105,6 +119,8 @@ $$
 ### **8️⃣ Quantile Regression**
 - **Uses**: Predicts **percentiles** of dependent variable distribution instead of the mean.
 - **Example**: **Predicting house prices in different market segments**.
+
+<img width="1632" height="936" alt="30e98a39-ac18-446b-adc5-3232f190a2b7_1632x936" src="https://github.com/user-attachments/assets/168fd7e4-32b8-40b8-807c-2860b80ed982" />
 
 ### **9️⃣ Bayesian Regression**
 - **Uses**: Estimates parameters using **probability distributions**, ideal for **small or uncertain data**.
