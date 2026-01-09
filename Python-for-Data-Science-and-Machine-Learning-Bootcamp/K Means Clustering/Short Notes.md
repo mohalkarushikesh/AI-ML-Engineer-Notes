@@ -28,16 +28,16 @@ K‑Means is an **unsupervised machine learning algorithm** used for **clusterin
 ## 📊 Objective Function
 The algorithm minimizes the **total within-cluster variance**:
 
-```math
+$$
 J = \sum_{i=1}^{k} \sum_{x \in C_i} |x - \mu_i|^2
-```
+$$
 
-Where:
-- \(k\) = number of clusters  
-- \(C_i\) = set of points in cluster \(i\)  
-- \(x\) = a data point  
-- \(\mu_i\) = centroid (mean) of cluster \(i\)  
-- \(|x - \mu_i|^2\) = squared Euclidean distance  
+Where:  
+- $k$ = number of clusters  
+- $C_i$ = set of points in cluster $i$  
+- $x$ = a data point  
+- $\mu_i$ = centroid (mean) of cluster $i$  
+- $|x - \mu_i|^2$ = squared Euclidean distance  
 
 ---
 
