@@ -20,22 +20,26 @@
 # ⚙️ Algorithm Steps
 1. **Compute similarities in high‑dimensional space**  
    - Probability that point \(x_j\) is a neighbor of \(x_i\):  
-     $$
-     p_{j|i} = \frac{\exp(-||x_i - x_j||^2 / 2\sigma_i^2)}{\sum_{k \neq i} \exp(-||x_i - x_k||^2 / 2\sigma_i^2)}
-     $$
-   - Symmetrize: \(p_{ij} = (p_{j|i} + p_{i|j}) / 2n\).
+   
+$$
+p_{j|i} = \frac{\exp(-||x_i - x_j||^2 / 2\sigma_i^2)}{\sum_{k \neq i} \exp(-||x_i - x_k||^2 / 2\sigma_i^2)}
+$$
 
-2. **Compute similarities in low‑dimensional space**  
+   - Symmetrize: $(p_{ij} = (p_{j|i} + p_{i|j}) / 2n\)$
+
+3. **Compute similarities in low‑dimensional space**  
    - Use a Student‑t distribution (heavy tails):  
-     $$
-     q_{ij} = \frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq l} (1 + ||y_k - y_l||^2)^{-1}}
-     $$
+   
+$$
+q_{ij} = \frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq l} (1 + ||y_k - y_l||^2)^{-1}}
+$$
 
-3. **Optimize embedding**  
+4. **Optimize embedding**  
    - Minimize KL divergence between \(p_{ij}\) and \(q_{ij}\):  
-     $$
-     KL(P||Q) = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}}
-     $$
+
+$$
+KL(P||Q) = \sum_{i \neq j} p_{ij} \log \frac{p_{ij}}{q_{ij}}
+$$
 
 ---
 
@@ -87,3 +91,12 @@
 - Best used for **exploratory data analysis and visualization**, not for predictive tasks.  
 
 ---
+
+
+# Working 
+
+- **Step 1 (High‑dim space)** → Compute pairwise similarities between points as probabilities (close points = high probability).  
+- **Step 2 (Low‑dim space)** → Place points in 2D/3D using a Student‑t distribution to model distances.  
+- **Step 3 (Optimization)** → Minimize KL divergence so that the low‑dimensional map preserves the neighborhood structure of the high‑dimensional data.  
+
+In short: **t‑SNE converts distances into probabilities and then arranges points in 2D/3D so that neighbors stay neighbors.**  
