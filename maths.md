@@ -92,7 +92,7 @@ graph TD
   - **Combinatorics (counting)** → feature selection, probability spaces  
 
 - **Information Theory** - Quantifies information, communication, and entropy in data and signals.  
-  - **Entropy (uncertainty measure)**  
+  - **Entropy (randomness measure)**  
   - **Cross‑Entropy (loss function)**  
   - **KL Divergence (distribution difference)**  
   - **Applications** → loss functions, uncertainty quantification  
