@@ -11,6 +11,8 @@ It finds the **best boundary (hyperplane)** that separates classes with the **ma
 - **Support Vectors**: Data points closest to the hyperplane; they define the margin and are critical to the model.
 - **Margin**: The distance between the hyperplane and the closest support vectors from each class.
 
+<img width="438" height="242" alt="support-vector-machine-1" src="https://github.com/user-attachments/assets/48d7ed72-e8c8-405b-a8d4-eac2b4c89a88" />
+
 **4. Linear vs. Nonlinear SVM:**
 - **Linear SVM**: Works well when data is linearly separable.
 - **Nonlinear SVM**: Uses **kernel tricks** (like RBF or polynomial) to map data into higher dimensions for separation when data isn’t linearly separable.
