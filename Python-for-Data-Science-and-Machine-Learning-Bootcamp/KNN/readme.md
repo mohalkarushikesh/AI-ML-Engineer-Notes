@@ -25,8 +25,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 - `y`: Target variable (`TARGET CLASS`).
 - `train_test_split()`: Allocates 70% for training and 30% for testing.
 
-<img width="1151" height="628" alt="0_ItVKiyx2F3ZU8zV5" src="https://github.com/user-attachments/assets/2fac7e73-2c6a-4b91-afc9-f1d89355558d" />
-
 ### **4. Training KNN Model**
 - A **KNN classifier** is created with `n_neighbors=1` (using only one neighbor for classification).
 - The classifier is trained using:
