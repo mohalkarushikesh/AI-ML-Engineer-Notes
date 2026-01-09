@@ -25,6 +25,10 @@ $$
 
 ---
 
+<img width='700' height='400' src="https://images.prismic.io/turing/65a540087a5e8b1120d5894f_Bayes_Theory_in_Machine_Learning_3c112b8f9c.webp?auto=format,compress" /> 
+
+---
+
 ## 🔑 Types of Naive Bayes
 1. **Gaussian Naive Bayes**  
    - Assumes continuous features follow a normal distribution.  
@@ -37,6 +41,8 @@ $$
 3. **Bernoulli Naive Bayes**  
    - Features are binary (present/absent).  
    - Useful for spam detection or sentiment analysis.
+
+<img width='700' height='400' src="https://github.com/user-attachments/assets/06cc4c3c-c4d2-4089-ae53-17dc21481a3e" /> 
 
 ---
 
