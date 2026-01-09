@@ -32,3 +32,5 @@ BLEU (Bilingual Evaluation Understudy) is a popular algorithm in Natural Languag
 Dropout 
 
 Backpropogation 
+
+**KL Divergence** (Kullback-Leibler Divergence) **measures the information lost when one probability distribution, \(Q\), is used to approximate another, true distribution, \(P\)**. Also called **relative entropy**, it quantifies the "distance" between \(P\) and \(Q\), indicating how much extra bits are needed to encode data from \(P\) using a code optimized for \(Q\). It's always non-negative, zero only when \(P=Q\), and asymmetric, meaning \(D_{KL}(P||Q)\ne D_{KL}(Q||P)\). 
