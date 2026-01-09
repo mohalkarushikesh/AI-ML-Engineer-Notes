@@ -22,3 +22,13 @@ Riccati difference equations
 **Discretization methods** transform continuous data or systems into discrete forms, commonly used in data mining (e.g., Binning, Clustering, Decision Trees) for handling data, and in engineering/physics (e.g., Finite Difference, Finite Volume, Finite Element Methods) to solve differential equations numerically
 
 BLEU (Bilingual Evaluation Understudy) is a popular algorithm in Natural Language Processing (NLP) that scores machine-translated text by comparing it to professional human translations, measuring precision of n-grams (word sequences) and applying a brevity penalty for short outputs, aiming for high correlation with human judgment of quality. Beyond translation, "Bleu" also refers to various brands, including touchless payment solutions, toxin-free condoms, and men's fragrances like Bleu de Chanel. 
+
+**Contrastive learning** is a self-supervised method where models learn by comparing data, pulling similar items (positive pairs, often augmented views of the same data) closer in an embedding space while pushing dissimilar items (negative pairs) apart, teaching the model to understand inherent data structure without explicit labels. It's foundational in training powerful models for computer vision, NLP, and drug discovery, allowing adaptation from large unlabeled datasets to specific tasks through fine-tuning. 
+
+**Contrastive learning** is a self-supervised method where models learn by comparing data, pulling similar items (positive pairs, often augmented views of the same data) closer in an embedding space while pushing dissimilar items (negative pairs) apart, teaching the model to understand inherent data structure without explicit labels. It's foundational in training powerful models for computer vision, NLP, and drug discovery, allowing adaptation from large unlabeled datasets to specific tasks through fine-tuning. 
+
+**Autoencoders** | Main Components and Architecture of AutoencoderAutoencoders are unsupervised neural networks that learn efficient data representations by compressing input into a low-dimensional "latent space" (encoder) and then reconstructing the original data from it (decoder). 
+
+Dropout 
+
+Backpropogation 
