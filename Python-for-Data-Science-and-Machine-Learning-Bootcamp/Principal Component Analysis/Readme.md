@@ -79,3 +79,8 @@
 
 ---
 
+## Applicaitons
+  - Image Compression
+  - Data Visualization
+  - Noise Filtering
+  - Healthcare 
