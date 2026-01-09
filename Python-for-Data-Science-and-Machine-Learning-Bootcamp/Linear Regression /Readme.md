@@ -88,7 +88,7 @@ $$
 
 - **Example**: Predicting **stock prices** with correlated indicators.
 
-![ridge-regression-in-machine-learning](https://github.com/user-attachments/assets/7ee225c1-69d9-487d-8689-04d9018f2382)
+<img width="761" height="332" src="https://github.com/user-attachments/assets/7ee225c1-69d9-487d-8689-04d9018f2382" />
 
 ### **5️⃣ Lasso Regression (L1 Regularization)**
 - **Uses**: Shrinks some coefficients to **zero**, enabling **feature selection**.
@@ -120,7 +120,7 @@ $$
 - **Uses**: Predicts **percentiles** of dependent variable distribution instead of the mean.
 - **Example**: **Predicting house prices in different market segments**.
 
-<img width="1632" height="936" alt="30e98a39-ac18-446b-adc5-3232f190a2b7_1632x936" src="https://github.com/user-attachments/assets/168fd7e4-32b8-40b8-807c-2860b80ed982" />
+<img width="832" height="336" alt="30e98a39-ac18-446b-adc5-3232f190a2b7_1632x936" src="https://github.com/user-attachments/assets/168fd7e4-32b8-40b8-807c-2860b80ed982" />
 
 ### **9️⃣ Bayesian Regression**
 - **Uses**: Estimates parameters using **probability distributions**, ideal for **small or uncertain data**.
