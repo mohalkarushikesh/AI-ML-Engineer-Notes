@@ -3,6 +3,8 @@
 ## 📖 Definition
 K‑Means is an **unsupervised machine learning algorithm** used for **clustering**. It partitions data into *k* clusters such that points within the same cluster are more similar to each other than to points in other clusters.
 
+- **K‑Means → k is fixed too, but centroids update during training.**
+
 ---
 
 ## 🎯 Goal
