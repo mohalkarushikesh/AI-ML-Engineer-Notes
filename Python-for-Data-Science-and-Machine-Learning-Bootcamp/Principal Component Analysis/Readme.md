@@ -74,7 +74,7 @@
 
 ## ✅ In Short
 - **PCA = dimensionality reduction tool**.  
-- **Not a classifier/regressor itself** → but a preprocessing technique.  
+- **Not a classifier/regressor itself** → **but a preprocessing technique.**  
 - **Applicable across supervised, unsupervised, and semi‑supervised tasks** → whenever feature reduction or variance capture is useful.  
 
 ---
