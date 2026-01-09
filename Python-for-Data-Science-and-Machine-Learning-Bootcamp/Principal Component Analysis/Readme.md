@@ -18,7 +18,7 @@
 - The **sample space** is defined by the number of variables.  
 - Example: If a dataset has 4 variables, the sample space is **4‑dimensional**.  
 
-`https://github.com/user-attachments/assets/8b7b0dd5-0043-414f-be57-90ac96dca72d`
+<img width='700' height='400' src="https://github.com/user-attachments/assets/8b7b0dd5-0043-414f-be57-90ac96dca72d" /> 
 
 ---
 
@@ -28,7 +28,7 @@
   - The **second principal component** captures the next greatest variance, and so on.  
 - This process allows us to **reduce the number of variables** used in analysis while retaining most of the information.  
 
-`https://github.com/user-attachments/assets/f6497092-5c6b-43a1-b719-6e0acc596452`
+<img width='700' height='400' src="https://github.com/user-attachments/assets/f6497092-5c6b-43a1-b719-6e0acc596452" />
 
 ---
 
@@ -36,7 +36,7 @@
 - Principal components are **uncorrelated** because they are orthogonal in the sample space.  
 - PCA can be extended to **higher dimensions**, where each new component explains progressively less variance.  
 
-`https://github.com/user-attachments/assets/363e978c-a6ee-4e48-ba81-89fe4ccb7efd`
+<img <img width='700' height='400' src="https://github.com/user-attachments/assets/363e978c-a6ee-4e48-ba81-89fe4ccb7efd" /> 
 
 ---
 
