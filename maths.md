@@ -79,7 +79,8 @@ graph TD
 - **Optimization**  
   - **Gradient Descent (iterative)** → update parameters step by step  
   - **Stochastic Gradient Descent (SGD)** → mini‑batch updates  
-  - **Convex Functions** → global minima easier to find  
+  - **Convex Functions** (curves upward) → Local min = Global min	
+  - **Concave Functions** (curves downward) → Local max = Global max
   - **Lagrange Multipliers** → constrained optimization  
   - **Applications** → training ML/DL models  
 
