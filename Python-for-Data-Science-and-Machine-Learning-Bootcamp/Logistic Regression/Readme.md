@@ -4,14 +4,14 @@ Logistic Regression is a **supervised learning algorithm** used for **classifica
 
 ---
 
-<img widht='600' height='400' src="https://github.com/user-attachments/assets/1da48caa-7645-4f7c-a3ce-31956ef8fa0f">
+<img width='600' height='400' src="https://github.com/user-attachments/assets/1da48caa-7645-4f7c-a3ce-31956ef8fa0f">
 
 ---
 
 ## **🔸 Examples of Binary Classification**
 1. 📧 **Spam vs Ham Emails** → Classifies whether an email is spam or not  
 2. 💰 **Loan Defaults** → Determines if a loan will default ($\text{Yes/No}$)  
-3. 🏥 **Disease Diagnosis** → Predicts the presence or absence of a disease
+3. 🏥 **Disease Diagnosis** → Predicts the presence or absence of a disease  
 
 ---
 
@@ -24,7 +24,16 @@ $$
 $$
 
 - As $z \to \infty$, $\theta(z) \to 1$  
-- As $z \to -\infty$, $\theta(z) \to 0$
+- As $z \to -\infty$, $\theta(z) \to 0$  
+
+This makes logistic regression ideal for modeling probabilities.
+
+---
+
+## **🔸 Decision Boundary**
+- Logistic regression outputs probabilities.  
+- A **threshold** (commonly 0.5) is applied to decide the class label.  
+- Example: If $P(y=1|x) > 0.5$, classify as **positive class**; otherwise, **negative class**.
 
 ---
 
@@ -35,7 +44,7 @@ A table used to evaluate classification performance:
 - $TP$ → True Positives (correctly predicted positive class)  
 - $TN$ → True Negatives (correctly predicted negative class)  
 - $FP$ → False Positives (Type I Error)  
-- $FN$ → False Negatives (Type II Error)
+- $FN$ → False Negatives (Type II Error)  
 
 ### ❌ **Error Rate**
 - Measures the proportion of incorrect predictions:
@@ -44,29 +53,62 @@ $$
 \text{Error Rate} = \frac{FP + FN}{\text{Total Predictions}}
 $$
 
+### ✅ Other Metrics
+- **Accuracy**: $(TP + TN) / \text{Total Predictions}$  
+- **Precision**: $TP / (TP + FP)$  
+- **Recall (Sensitivity)**: $TP / (TP + FN)$  
+- **F1 Score**: Harmonic mean of precision and recall.  
+
 ---
 
-## **🔸 Multiclass Classification with Logistic Regression**
+## **🔸 Types of Logistic Regression**
 
-### **1️⃣ One-vs-Rest (OvR) / One-vs-All (OvA)**
-- Train $k$ binary classifiers for $k$ classes  
-- Each classifier predicts whether the input belongs to its class or not  
-- Final prediction is the class with the **highest probability**
+### 1️⃣ **Binary Logistic Regression**
+- Two possible outcomes (Yes/No, 0/1).  
+- Uses the sigmoid function.  
+
+<img width="600" height="400" alt="LogisticRegression_43_1" src="https://github.com/user-attachments/assets/c47f02fe-d65a-4a61-b84e-4f3069926cd6" />
+
+
+### 2️⃣ **Multiclass Logistic Regression**
+- More than two categories.  
+- Two main strategies:
+  - **One-vs-Rest (OvR)** → Train $k$ binary classifiers for $k$ classes.  
+  - **Multinomial Logistic Regression (Softmax Regression)** → Train a single model using the softmax function.  
 
 <img width='600' height='400' src="https://github.com/user-attachments/assets/c92f7114-4786-41f4-8740-f75a7e55bd28" />
 
+---
 
-### **2️⃣ Multinomial Logistic Regression (Softmax Regression)**
-- Directly handles **multiclass classification**  
-- Uses **softmax function** to compute probabilities:
+### 3️⃣ **Ordinal Logistic Regression**
+- Target variable has **ordered categories** (e.g., satisfaction levels: poor, fair, good, excellent).  
+- Models cumulative probabilities.  
 
-$$
-P(y = k \mid x) = \frac{e^{z_k}}{\sum_{j=1}^{K} e^{z_j}}
-$$
+<img width="600" height="400" alt="images" src="https://github.com/user-attachments/assets/99ab3bf4-6bdd-4f93-b874-8627c6244222" />
 
-- Ensures that $\sum_{k=1}^{K} P(y = k \mid x) = 1$
+
+### 4️⃣ **Multinomial Logistic Regression (Nominal)**
+- Target variable has **unordered categories** (e.g., predicting fruit type: apple, banana, orange).  
+- Uses softmax to assign probabilities across classes.  
 
 <img width='600' height='400' src="https://github.com/user-attachments/assets/fa32aa9d-a9f3-425e-9027-d71ab93479e6" />
+
+---
+
+## **🔸 Advantages of Logistic Regression**
+- Simple and interpretable.  
+- Outputs probabilities, not just class labels.  
+- Efficient to train, even on large datasets.  
+- Works well for linearly separable data.  
+- Provides insights into feature importance via coefficients.  
+
+---
+
+## **🔸 Limitations**
+- Assumes linear relationship between features and log-odds.  
+- Struggles with complex, non-linear boundaries.  
+- Sensitive to multicollinearity (correlated features).  
+- Not ideal for very high-dimensional sparse data compared to SVMs or deep learning.  
 
 ---
 
@@ -107,6 +149,15 @@ Logistic Regression is frequently used in Kaggle competitions for classification
 | [Loan Default Prediction](https://github.com/jayinai/kaggle-regression) | Predict loan repayment behavior |
 | [Restaurant Revenue Prediction](https://github.com/jayinai/kaggle-regression) | Forecast restaurant sales using features |
 
-You can explore more on [Kaggle’s Logistic Regression competitions page](https://www.kaggle.com/competitions?tagIds=13404-Logistic+Regression).
+---
+
+# ✅ Summary
+- Logistic Regression is a **probabilistic classifier** using the **sigmoid function**.  
+- Works best for **binary classification**, extended to multiclass via **OvR** or **Softmax**.  
+- Variants include **binary, multinomial, and ordinal logistic regression**.  
+- Evaluation uses confusion matrix, precision, recall, F1 score, and accuracy.  
+- Advantages: simple, interpretable, efficient.  
+- Limitations: assumes linearity, struggles with complex boundaries.  
+- Still a strong baseline model in both academia and Kaggle competitions.  
 
 ---
