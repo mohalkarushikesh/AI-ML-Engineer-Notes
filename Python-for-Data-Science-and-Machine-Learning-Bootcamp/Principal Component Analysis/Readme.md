@@ -54,3 +54,26 @@
 - **Challenge**: interpreting the meaning of components in real-world terms.  
 
 ---
+
+# 🔹 PCA in Short
+
+- **Principal Component Analysis (PCA)** is a **dimensionality reduction algorithm**.  
+- It transforms data into a new coordinate system where the axes (principal components) capture maximum variance.  
+- **Key property**: Components are orthogonal (uncorrelated).
+
+---
+
+## 📊 Where PCA is Applied
+- **Supervised Learning** → Preprocessing step to reduce features before classification/regression (e.g., logistic regression, SVM).  
+- **Unsupervised Learning** → Used to visualize and compress high‑dimensional data (e.g., clustering with K‑Means).  
+- **Semi‑Supervised Learning** → Helps reduce dimensionality when labels are partially available, improving efficiency and generalization.
+
+---
+
+## ✅ In Short
+- **PCA = dimensionality reduction tool**.  
+- **Not a classifier/regressor itself** → but a preprocessing technique.  
+- **Applicable across supervised, unsupervised, and semi‑supervised tasks** → whenever feature reduction or variance capture is useful.  
+
+---
+
