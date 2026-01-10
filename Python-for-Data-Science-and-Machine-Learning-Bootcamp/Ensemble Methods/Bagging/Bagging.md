@@ -27,6 +27,8 @@
 4. **Final Output**  
    - The ensemble prediction is more robust and less sensitive to noise compared to a single model.
 
+<img width='700' hegight='400' src="https://github.com/user-attachments/assets/583ce702-0e6f-4c19-95b1-9f84b8352e7a" /> 
+
 ---
 
 ## 🔸 Mathematical Intuition
