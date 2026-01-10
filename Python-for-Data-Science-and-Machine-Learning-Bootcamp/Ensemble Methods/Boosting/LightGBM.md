@@ -26,6 +26,8 @@ Here’s a **complete, in‑depth overview of LightGBM (Light Gradient Boosting 
 4. **Parallel & GPU Support**  
    - LightGBM supports multi‑threading and GPU acceleration, making it ideal for very large datasets.  
 
+<img width="850" height="398" alt="Schematic-diagram-of-LightGBM-algorithm" src="https://github.com/user-attachments/assets/335e2108-2f84-471d-98a6-3e7b0642a0d4" />
+
 ---
 
 ## 🔹 Key Features
