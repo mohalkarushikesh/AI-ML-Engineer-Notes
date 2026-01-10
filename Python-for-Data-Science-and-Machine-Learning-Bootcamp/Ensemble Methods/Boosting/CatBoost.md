@@ -22,6 +22,8 @@
 4. **Symmetric Tree Growth**  
    - Builds balanced trees (same depth on both sides), which improves efficiency and reduces overfitting compared to leaf‑wise growth.  
 
+<img width="850" height="616" alt="The-flow-diagram-of-the-CatBoost-model" src="https://github.com/user-attachments/assets/97e21b02-c22b-48ab-a155-6f33cf295dfa" />
+
 ---
 
 ## 🔹 Key Features
