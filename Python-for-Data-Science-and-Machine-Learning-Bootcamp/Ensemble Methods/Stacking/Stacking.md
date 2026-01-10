@@ -22,6 +22,8 @@
 4. **Final Prediction**  
    - The meta‑model outputs the final prediction, leveraging the strengths of all base learners.  
 
+<img width="1235" height="539" alt="stacking" src="https://github.com/user-attachments/assets/1f28b2ca-9680-4659-9f20-b6ba2c37ed51" />
+
 ---
 
 ## 🔹 Key Characteristics
