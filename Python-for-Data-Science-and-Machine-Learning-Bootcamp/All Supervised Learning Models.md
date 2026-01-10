@@ -402,7 +402,7 @@ Segmenting **customers into high-spenders, mid-range, and budget shoppers**.
 
 ## **6️⃣ Principal Component Analysis (PCA)**
 **📌 What It Is:**  
-A dimensionality reduction technique that removes redundancy while preserving variance.
+**A dimensionality reduction technique that removes redundancy while preserving variance.**
 
 **📌 Equation:**  
 Eigenvalue decomposition of covariance matrix:
