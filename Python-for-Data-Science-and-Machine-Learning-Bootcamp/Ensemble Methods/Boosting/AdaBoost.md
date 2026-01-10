@@ -32,6 +32,8 @@
    - Formula:  
      $H(x) = \text{sign}\left(\sum_{t=1}^{T} \alpha_t h_t(x)\right)$  
 
+<img width="850" height="538" alt="The-graphical-representation-of-an-Adaboost-model" src="https://github.com/user-attachments/assets/b72b3f71-cf1a-4953-9f35-5a8391f73b86" />
+
 ---
 
 ## 🔹 Key Characteristics
