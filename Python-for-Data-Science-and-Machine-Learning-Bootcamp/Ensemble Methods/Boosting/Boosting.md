@@ -15,6 +15,8 @@
 5. **Repeat**: Train additional learners sequentially, each correcting the mistakes of the previous ones.  
 6. **Combine Models**: Aggregate predictions using weighted voting (classification) or weighted average (regression).
 
+<img width="850" height="520" alt="1_4XuD6oRrgVqtaSwH-cu6SA" src="https://github.com/user-attachments/assets/50cd074e-f5a6-4388-8af1-137fb508102e" />
+
 ---
 
 ## 🔸 Mathematical Intuition
