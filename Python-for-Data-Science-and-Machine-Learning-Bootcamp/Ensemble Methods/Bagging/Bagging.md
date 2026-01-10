@@ -30,15 +30,18 @@
 ---
 
 ## 🔸 Mathematical Intuition
-- Suppose we train \(M\) models \(f_1, f_2, \dots, f_M\).  
+- Suppose we train $(M\)$ models $(f_1, f_2, \dots, f_M\)$  
 - For regression:  
-  $$
-  \hat{f}(x) = \frac{1}{M} \sum_{m=1}^{M} f_m(x)
-  $$
+
+$$
+\hat{f}(x) = \frac{1}{M} \sum_{m=1}^{M} f_m(x)
+$$
+
 - For classification:  
-  $$
-  \hat{y} = \text{mode}\{f_1(x), f_2(x), \dots, f_M(x)\}
-  $$
+
+$$
+\hat{y} = \text{mode}\{f_1(x), f_2(x), \dots, f_M(x)\}
+$$
 
 ---
 
