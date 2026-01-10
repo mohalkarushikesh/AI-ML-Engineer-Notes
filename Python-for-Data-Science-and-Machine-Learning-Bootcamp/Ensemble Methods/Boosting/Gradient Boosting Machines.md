@@ -25,6 +25,8 @@
 5. **Repeat Iteratively**  
    - Continue adding learners until a stopping criterion is met (e.g., number of trees, minimal improvement).  
 
+<img width="870" height="458" alt="Flow-diagram-of-gradient-boosting-machine-learning-method-The-ensemble-classifiers" src="https://github.com/user-attachments/assets/8c51c94a-4217-44d0-bbb0-898bef7ff936" />
+
 ---
 
 # 🔹 Mathematical Intuition
