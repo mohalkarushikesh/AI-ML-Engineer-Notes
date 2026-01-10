@@ -28,6 +28,8 @@
 5. **Final Prediction**  
    - Weighted sum of all weak learners, similar to GBM but optimized for efficiency.  
 
+<img width="714" height="603" alt="Schematic-illustration-of-the-XGboost-model" src="https://github.com/user-attachments/assets/d8f22902-9d4f-43b0-b6a9-92054d273970" />
+
 ---
 
 # 🔹 Key Features
