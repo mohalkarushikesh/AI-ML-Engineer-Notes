@@ -19,11 +19,12 @@
 
 ## 🔸 Mathematical Intuition
 For classification (AdaBoost style):  
-- Each weak learner \(h_t(x)\) is assigned a weight \(\alpha_t\) based on its accuracy.  
+- Each weak learner $(h_t(x)\)$ is assigned a weight $(\alpha_t\)$ based on its accuracy.  
 - Final prediction:  
-  $$
-  H(x) = \text{sign}\left(\sum_{t=1}^{T} \alpha_t h_t(x)\right)
-  $$
+
+$$
+H(x) = \text{sign}\left(\sum_{t=1}^{T} \alpha_t h_t(x)\right)
+$$
 
 ---
 
