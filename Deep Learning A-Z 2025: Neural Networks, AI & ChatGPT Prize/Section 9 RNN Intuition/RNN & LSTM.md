@@ -27,7 +27,7 @@ Regularization prevents **overfitting**, where a model memorizes training data i
 - **Early Stopping**: Halts training when validation loss stops improving  
 - **Data Augmentation**: Expands dataset with transformations (flip, rotate, zoom)
 
-These techniques help models stay flexible and robust on unseen data.
+✅ These techniques help models stay flexible and robust on unseen data.
 
 ---
 
@@ -37,43 +37,51 @@ These techniques help models stay flexible and robust on unseen data.
 An RNN is a neural network designed for **sequential data**. It maintains a hidden state that evolves over time, allowing it to "remember" previous inputs.
 
 ### 📈 Why Use RNNs?
-- Ideal for **time-series**, **language**, **speech**, and **sequential tasks**
-- Captures **temporal dependencies** across inputs
+- Ideal for **time-series**, **language**, **speech**, and **sequential tasks**  
+- Captures **temporal dependencies** across inputs  
+
+<img width="929" height="304" alt="types" src="https://github.com/user-attachments/assets/d7db921b-b937-4dcb-a356-e8d0c2f99770" /> 
 
 ### 🔄 RNN Architectures
-- **One-to-Many**: One input → multiple outputs (e.g., image captioning)
-- **Many-to-One**: Multiple inputs → one output (e.g., sentiment analysis)
-- **Many-to-Many**: Sequence in → sequence out (e.g., translation)
+- **One-to-One**: Single input → single output  
+- **One-to-Many**: One input → multiple outputs (e.g., image captioning)  
+- **Many-to-One**: Multiple inputs → one output (e.g., sentiment analysis)  
+- **Many-to-Many (Tx = Ty)**: Sequence in → sequence out (e.g., translation)  
+- **Many-to-Many (Tx ≠ Ty)**: Input/output sequence lengths differ (e.g., speech-to-text)  
 
-📷 [Visual RNN representation](https://www.researchgate.net/figure/A-visual-representation-of-a-single-block-in-a-recurrent-neural-network-RNN-Taken-from_fig2_336607800)
+<img width="929" height="304" alt="types" src="https://github.com/user-attachments/assets/c22fd729-2fd4-419a-a8fb-d5f05a9edd61" />
 
 ---
 
 ## 🎯 Cost Function & Optimization
 
 - **Cost Function**: Measures error between predicted and actual values  
-  $$C = \frac{1}{2}(\hat{y} - y)^2$$
-- **Global Minimum**: The lowest point on the cost surface—represents the optimal solution
+
+$$
+C = \frac{1}{2}(\hat{y} - y)^2
+$$
+
+- **Global Minimum**: The lowest point on the cost surface — represents the optimal solution.
 
 ---
 
 ## ⚠️ Vanishing & Exploding Gradients in RNNs
 
 ### Vanishing Gradient
-- **Cause**: Small recurrent weights (`Wrec`) shrink gradients over time  
+- **Cause**: Small recurrent weights ($W_{rec}$) shrink gradients over time  
 - **Effect**: Slow learning, poor long-term memory  
 - **Solutions**:
-  - Careful weight initialization
-  - **Echo State Networks**
-  - **LSTM networks** (set `Wrec ≈ 1`)
+  - Careful weight initialization  
+  - **Echo State Networks**  
+  - **LSTM networks** (set $W_{rec} \approx 1$)
 
 ### Exploding Gradient
-- **Cause**: Large `Wrec` values amplify gradients  
+- **Cause**: Large $W_{rec}$ values amplify gradients  
 - **Effect**: Unstable training  
 - **Solutions**:
-  - Truncated backpropagation
-  - Gradient clipping
-  - Penalty terms
+  - Truncated backpropagation  
+  - Gradient clipping  
+  - Penalty terms  
 
 ---
 
@@ -88,7 +96,7 @@ LSTM is a specialized RNN architecture designed to **remember long-term dependen
 - **Gates**:
   - **Forget Gate**: Decides what to discard  
   - **Input Gate**: Decides what to store  
-  - **Output Gate**: Decides what to pass forward
+  - **Output Gate**: Decides what to pass forward  
 
 📷 [LSTM architecture diagram](https://www.researchgate.net/figure/A-Long-short-term-memory-LSTM-unit-architecture_fig1_356018554)
 
@@ -109,9 +117,9 @@ Each gate uses element-wise operations to control the flow of information.
 
 ## 📚 How LSTM Works & Visualization
 
-- [*The Unreasonable Effectiveness of Recurrent Neural Networks* – Andrej Karpathy (2015)](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
-- [*Visualizing and Understanding Recurrent Networks* – Andrej Karpathy et al. (2015)](https://arxiv.org/abs/1506.02078)
-- [*LSTM: A Search Space Odyssey* – Klaus Greff et al. (2015)](https://arxiv.org/abs/1503.04069)
+- [*The Unreasonable Effectiveness of Recurrent Neural Networks* – Andrej Karpathy (2015)](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)  
+- [*Visualizing and Understanding Recurrent Networks* – Andrej Karpathy et al. (2015)](https://arxiv.org/abs/1506.02078)  
+- [*LSTM: A Search Space Odyssey* – Klaus Greff et al. (2015)](https://arxiv.org/abs/1503.04069)  
 
 ---
 
@@ -120,37 +128,48 @@ Each gate uses element-wise operations to control the flow of information.
 - **Bidirectional LSTM**: Processes input in both directions  
 - **Stacked LSTM**: Multiple LSTM layers for deeper learning  
 - **CNN-LSTM**: Combines convolutional and sequential processing  
-- **Attention-based LSTM**: Focuses on relevant parts of the sequence
+- **Attention-based LSTM**: Focuses on relevant parts of the sequence  
 
 ---
 
-## Feature scaling 
+## 📊 Feature Scaling
 
-- Min-Max Scaling transforms your feature values so that they fall between a specified range—usually 0 to 1.
-- Formula: Xscaled = (X - Xmin) / (Xmax - Xmin)
-- Benefits: Makes training more stable & Prevents feature dominance
+### 🔹 Min-Max Scaling
+Transforms feature values to a fixed range (usually [0, 1]).  
 
-**Standardization** is a feature scaling technique that transforms the data to have a mean of 0 and a standard deviation of 1. This process is also known as Z-score normalization. It is especially useful for algorithms that assume the data is centered around zero.
+$$
+X_{scaled} = \frac{X - X_{min}}{X_{max} - X_{min}}
+$$  
 
-**Formula:**
+✅ Benefits: Makes training more stable & prevents feature dominance.
 
-$z = \frac{x - \mu}{\sigma}$
+---
 
-Where:
+### 🔹 Standardization (Z-score Normalization)
+Centers data around mean 0 and standard deviation 1.  
+
+$$
+z = \frac{x - \mu}{\sigma}
+$$  
+
+Where:  
 - $x$ = original value  
 - $\mu$ = mean of the feature  
-- $\sigma$ = standard deviation of the feature  
+- $\sigma$ = standard deviation  
 
+---
 
-**Normalization** is a feature scaling technique that rescales the values of a feature to a fixed range, typically [0, 1]. This is useful when you want all features to have the same scale, especially for algorithms that use distance metrics or gradient-based optimization.
+### 🔹 Normalization (Min-Max Normalization)
+Rescales values to [0, 1].  
 
-**Formula (Min-Max Normalization):**
+$$
+x' = \frac{x - x_{min}}{x_{max} - x_{min}}
+$$  
 
-$x' = \frac{x - x_{min}}{x_{max} - x_{min}}$
-
-Where:
+Where:  
 - $x$ = original value  
 - $x_{min}$ = minimum value of the feature  
 - $x_{max}$ = maximum value of the feature  
 - $x'$ = normalized value (between 0 and 1)
 
+---
