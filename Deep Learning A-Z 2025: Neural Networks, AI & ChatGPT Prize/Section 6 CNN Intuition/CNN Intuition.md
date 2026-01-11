@@ -152,6 +152,10 @@ It allows CNNs to learn **non-trivial patterns** and complex functions rather th
 
 ---
 
+![unnamed8PDPDZ_1_1ZBHFR](https://github.com/user-attachments/assets/31572f51-a1bf-4d27-a73b-6519c0eb0826)
+
+---
+
 ## 🎯 Extra Topics
 
 ### 🎯 **Softmax & Cross-Entropy**
