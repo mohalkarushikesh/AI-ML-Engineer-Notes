@@ -13,12 +13,42 @@
 
 ## 📈 Regression Loss Functions
 
-| Loss Function | Formula | Best For | Pros | Cons |
-|---------------|---------|----------|------|------|
-| **MSE (Mean Squared Error)** | $\frac{1}{n} \sum (y_i - \hat{y}_i)^2$ | General regression | Penalizes large errors | Sensitive to outliers |
-| **RMSE (Root Mean Squared Error)** | $\sqrt{\frac{1}{n} \sum (y_i - \hat{y}_i)^2}$ | Interpretability | Same units as target | Still sensitive to outliers |
-| **MAE (Mean Absolute Error)** | $\frac{1}{n} \sum |y_i - \hat{y}_i|$ | Robust regression | Less sensitive to outliers | Non-differentiable at 0 |
-| **Huber Loss** | Combines MSE and MAE | Mixed error profiles | Robust and smooth | Requires tuning delta |
+
+### ✅ Regression Loss Functions
+
+| Loss Function | Best For | Pros | Cons |
+|---------------|----------|------|------|
+| **MSE (Mean Squared Error)** | General regression | Penalizes large errors | Sensitive to outliers |
+| **RMSE (Root Mean Squared Error)** | Interpretability | Same units as target | Still sensitive to outliers |
+| **MAE (Mean Absolute Error)** | Robust regression | Less sensitive to outliers | Non-differentiable at 0 |
+| **Huber Loss** | Mixed error profiles | Robust and smooth | Requires tuning $\delta$ |
+
+---
+
+### 📐 Formulas
+
+---
+
+- **MSE**:  
+  $MSE = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2$
+
+- **RMSE**:  
+  $RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}$
+
+- **MAE**:  
+  $MAE = \frac{1}{n} \sum_{i=1}^n \left| y_i - \hat{y}_i \right|$
+
+- **Huber Loss**:  
+
+$$
+L_\delta(y, \hat{y}) = 
+\begin{cases}
+\tfrac{1}{2}(y_i - \hat{y}_i)^2 & \text{if } \left| y_i - \hat{y}_i \right| \leq \delta \\
+\delta \left( \left| y_i - \hat{y}_i \right| - \tfrac{1}{2}\delta \right) & \text{otherwise}
+\end{cases}
+$$
+
+---
 
 ---
 
