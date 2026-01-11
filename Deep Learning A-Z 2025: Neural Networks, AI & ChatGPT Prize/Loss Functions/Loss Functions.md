@@ -30,11 +30,14 @@
   $MAE = \frac{1}{n} \sum_{i=1}^n \left| y_i - \hat{y}_i \right|$
 
 - **Huber Loss**:  
-  $L_\delta(y, \hat{y}) = 
-  \begin{cases}
-  \tfrac{1}{2}(y_i - \hat{y}_i)^2 & \text{if } \left| y_i - \hat{y}_i \right| \leq \delta \\
-  \delta \left( \left| y_i - \hat{y}_i \right| - \tfrac{1}{2}\delta \right) & \text{otherwise}
-  \end{cases}$
+
+$$
+L_\delta(y, \hat{y}) = 
+\begin{cases}
+\tfrac{1}{2}(y_i - \hat{y}_i)^2 & \text{if } \left| y_i - \hat{y}_i \right| \leq \delta \\
+\delta \left( \left| y_i - \hat{y}_i \right| - \tfrac{1}{2}\delta \right) & \text{otherwise}
+\end{cases}
+$$
 
 ---
 
