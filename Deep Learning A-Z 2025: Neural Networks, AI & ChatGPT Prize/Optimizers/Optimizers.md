@@ -30,9 +30,13 @@
 - **Gradient Descent**:  
   $$w_{t+1} = w_t - \eta \cdot \nabla L(w_t)$$  
 
+<img width="400" height="300" src="https://github.com/user-attachments/assets/6dd1dab1-9fd1-4b39-936d-3ef9ef80a618" /> 
+
 - **Momentum**:  
   $$v_t = \beta v_{t-1} + \eta \cdot \nabla L(w_t)$$  
   $$w_{t+1} = w_t - v_t$$  
+
+<img width="600" height="600" src="https://github.com/user-attachments/assets/55adb431-df56-4477-8dcb-52d89987fc73" /> 
 
 - **Adagrad**:  
   $$w_{t+1} = w_t - \frac{\eta}{\sqrt{G_t + \epsilon}} \cdot \nabla L(w_t)$$  
@@ -60,6 +64,8 @@ w_{t+1} = w_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t
 $$  
 
 ---
+
+![1_Y2KPVGrVX9MQkeI8Yjy59Q](https://github.com/user-attachments/assets/d75670a9-3be8-4c31-8d3c-3c61ea912064)
 
 ## 🧪 Choosing the Right Optimizer
 
