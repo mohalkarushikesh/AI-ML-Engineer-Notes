@@ -11,7 +11,7 @@ LSTM is a specialized RNN architecture designed to **remember long-term dependen
   - **Input Gate**: Decides what to store  
   - **Output Gate**: Decides what to pass forward  
 
-📷 [LSTM architecture diagram](https://www.researchgate.net/figure/A-Long-short-term-memory-LSTM-unit-architecture_fig1_356018554)
+<img width="723" height="477" alt="A-Long-short-term-memory-LSTM-unit-architecture" src="https://github.com/user-attachments/assets/8a629f96-d4a2-4eda-83c5-4a6850c5d29b" />
 
 ### 🧪 Pointwise Operations
 Each gate uses element-wise operations to control the flow of information.
