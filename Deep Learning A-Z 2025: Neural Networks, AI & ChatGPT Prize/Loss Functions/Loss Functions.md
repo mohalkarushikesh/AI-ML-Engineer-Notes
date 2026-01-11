@@ -55,10 +55,57 @@ $$
 
 ## 🔍 Specialized Loss Functions
 
-- **KL Divergence** → Difference between two probability distributions.  
-- **Contrastive Loss** → Learns similarity/dissimilarity between pairs.  
-- **Triplet Loss** → Optimizes embeddings using anchor, positive, and negative samples.  
-- **Dice / IoU Loss** → Measures overlap, used in segmentation tasks.  
+---
+
+- **KL Divergence** → Difference between two probability distributions  
+
+$$
+D_{KL}(P \parallel Q) = \sum_{i} P(i) \cdot \log \frac{P(i)}{Q(i)}
+$$
+
+---
+
+- **Contrastive Loss** → Learns similarity/dissimilarity between pairs  
+
+$$
+L = \tfrac{1}{2} \cdot y \cdot d^2 + \tfrac{1}{2} \cdot (1-y) \cdot \max(0, m - d)^2
+$$  
+
+where $y \in \{0,1\}$, $d = \|x_1 - x_2\|$, $m =$ margin
+
+---
+
+- **Triplet Loss** → Optimizes embeddings using anchor, positive, and negative samples  
+
+$$
+L = \max \big(0, \; d(a, p) - d(a, n) + \alpha \big)
+$$  
+
+where $d(\cdot)$ is a distance function, $\alpha =$ margin
+
+---
+
+- **Dice Loss** → Measures overlap between predicted mask and ground truth  
+
+$$
+Dice = \frac{2 \cdot |X \cap Y|}{|X| + |Y|}
+$$  
+
+$$
+L_{Dice} = 1 - Dice
+$$
+
+---
+
+- **IoU Loss** → Intersection over Union for segmentation tasks  
+
+$$
+IoU = \frac{|X \cap Y|}{|X \cup Y|}
+$$  
+
+$$
+L_{IoU} = 1 - IoU
+$$
 
 ---
 
