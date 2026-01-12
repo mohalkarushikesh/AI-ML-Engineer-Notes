@@ -14,7 +14,8 @@
 - Anomaly detection
 - Dimensionality reduction
 
-<img width="828" height="546" alt="image" src="https://github.com/user-attachments/assets/33773610-2a83-403c-afb2-238bf0347036" />
+<img width='700' height='500' src="https://github.com/user-attachments/assets/67273a75-c5a6-4203-b807-40095da4083c" /> 
+
 
 🔗 Additional Reading:  
 [Neural Networks Are Impressively Good at Compression – Malte Skarupke (2016)](https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/)
