@@ -97,6 +97,7 @@ graph TD
     U --> V[ReLU7]
     V --> W[Dropout7]
     W --> X[FC8: 1000 units (Output)]
+
 ```
 
 ---
