@@ -1,33 +1,125 @@
-# 🧠 Neural Network Family Tree
+# 🧠 Neural Network Family Tree (Complete)
 
 ## Artificial Neural Networks (ANN)
 - Broad category of brain-inspired computational models.
 
-### ├─ Feedforward Neural Networks (FNN)
-- No cycles; data flows in one direction.
+---
+
+### 1. Feedforward Neural Networks (FNN)
+- Data flows in one direction, no cycles.
   - **Multilayer Perceptron (MLP)** — Vanilla network
   - **Radial Basis Function Networks (RBFN)**
+  - **Extreme Learning Machines (ELM)**
 
-### ├─ Convolutional Neural Networks (CNN)
+---
+
+### 2. Convolutional Neural Networks (CNN)
 - Specialized for spatial data (images).
   - **LeNet**
   - **AlexNet**
+  - **VGGNet**
   - **ResNet**
   - **EfficientNet**
+  - **Capsule Networks (CapsNet)**
 
-### ├─ Recurrent Neural Networks (RNN)
-- Designed for sequential data.
+---
+
+### 3. Recurrent Neural Networks (RNN)
+- Designed for sequential/temporal data.
+  - **Vanilla RNN**
   - **LSTM (Long Short-Term Memory)**
   - **GRU (Gated Recurrent Unit)**
   - **Bidirectional RNN**
+  - **Echo State Networks (ESN)** / Reservoir Computing
 
-### ├─ Self-Organizing Maps (SOM)
+---
+
+### 4. Graph Neural Networks (GNN)
+- Operate directly on graph structures.
+  - **GCN (Graph Convolutional Network)**
+  - **Graph Attention Network (GAT)**
+  - **GraphSAGE**
+  - **Message Passing Neural Networks (MPNN)**
+
+---
+
+### 5. Autoencoders
+- Unsupervised learning; dimensionality reduction & feature learning.
+  - **Vanilla Autoencoder**
+  - **Variational Autoencoder (VAE)**
+  - **Denoising Autoencoder**
+  - **Sparse Autoencoder**
+  - **Contractive Autoencoder**
+
+---
+
+### 6. Boltzmann Machines
+- Stochastic recurrent networks.
+  - **Restricted Boltzmann Machine (RBM)**
+  - Basis for **Deep Belief Networks (DBN)**
+
+---
+
+### 7. Deep Belief Networks (DBN)
+- Stack of RBMs trained layer by layer.
+
+---
+
+### 8. Self-Organizing Maps (SOM)
 - Unsupervised learning; dimensionality reduction.
 
-### ├─ Generative Adversarial Networks (GAN)
+---
+
+### 9. Generative Adversarial Networks (GAN)
 - Two networks (generator + discriminator) compete to generate realistic data.
+  - **Vanilla GAN**
+  - **Conditional GAN**
+  - **CycleGAN**
+  - **StyleGAN**
 
-### └─ Transformers
+---
+
+### 10. Transformers
 - Attention-based architecture for NLP and vision.
-  - Used in models like BERT, GPT, ViT
+  - **BERT**
+  - **GPT family**
+  - **Vision Transformer (ViT)**
+  - **T5**
+  - **XLNet**
 
+---
+
+### 11. Probabilistic Models
+- **Markov Chains** — probabilistic sequence models
+- **Hidden Markov Models (HMMs)** — widely used in speech recognition, bioinformatics
+- **Bayesian Neural Networks (BNN)** — uncertainty-aware models
+
+---
+
+### 12. Memory-Augmented / Meta-Learning Networks
+- Combine neural nets with external memory or meta-learning.
+  - **Neural Turing Machines (NTM)**
+  - **Differentiable Neural Computers (DNC)**
+  - **Meta-Attention Networks (MAN)**
+
+---
+
+### 13. Spiking Neural Networks (SNN)
+- Biologically inspired, event-driven models.
+
+---
+
+### 14. Other Emerging Architectures
+- **Liquid Neural Networks** — adaptive, dynamic models for time-varying data.
+- **Reinforcement Learning Architectures** — policy networks, value networks.
+- **Hybrid Models** — combining symbolic AI with neural nets.
+
+---
+
+## ✅ Summary
+- **ANN** is the umbrella.  
+- **MLP (vanilla network)** is the simplest feedforward type.  
+- The tree expands into CNNs, RNNs, GNNs, Autoencoders, Boltzmann/DBN, SOM, GANs, Transformers, probabilistic models, memory-augmented networks, spiking networks, and emerging designs.  
+- With this, you now have the **full landscape of neural network families** — classical, modern, and cutting-edge.
+
+---
