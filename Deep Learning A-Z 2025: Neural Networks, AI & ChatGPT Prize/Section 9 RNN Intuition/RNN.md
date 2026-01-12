@@ -40,7 +40,7 @@ An RNN is a neural network designed for **sequential data**. It maintains a hidd
 - Ideal for **time-series**, **language**, **speech**, and **sequential tasks**  
 - Captures **temporal dependencies** across inputs  
 
-<img width="929" height="304" alt="types" src="https://github.com/user-attachments/assets/d7db921b-b937-4dcb-a356-e8d0c2f99770" /> 
+<img width="772" height="462" alt="information-15-00517-g001" src="https://github.com/user-attachments/assets/163d0793-187d-4707-a0fb-d501538c395b" />
 
 ### 🔄 RNN Architectures
 - **One-to-One**: Single input → single output  
