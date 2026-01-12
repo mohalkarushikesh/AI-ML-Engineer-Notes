@@ -15,18 +15,17 @@
 2. **Hidden Layers**  
    - One or more fully connected layers.  
    - Each neuron computes:  
-     $$
-     z = \sum w_i x_i + b
-     $$
-     $$
-     a = f(z)
-     $$
+
+     $$z = \sum w_i x_i + b$$
+
+     $$a = f(z)$$
+
      where $f$ is an activation function (ReLU, Sigmoid, Tanh).  
 
 3. **Output Layer**  
    - Produces final prediction (classification probabilities or regression values).  
 
-`https://github.com/user-attachments/assets/aba18c16-742d-461d-aa92-506a6339114a`
+<img width='700' height='500' src="https://github.com/user-attachments/assets/aba18c16-742d-461d-aa92-506a6339114a" /> 
 
 ---
 
@@ -45,19 +44,16 @@
 
 ## 📐 Key Formulas
 - **Neuron Output**:  
-  $$
-  a = f\left(\sum w_i x_i + b\right)
-  $$  
+
+  $$a = f\left(\sum w_i x_i + b\right)$$  
 
 - **Error (MSE example)**:  
-  $$
-  L = \frac{1}{n} \sum (y_i - \hat{y}_i)^2
-  $$  
+
+  $$L = \frac{1}{n} \sum (y_i - \hat{y}_i)^2$$  
 
 - **Weight Update (Gradient Descent)**:  
-  $$
-  w_{new} = w_{old} - \eta \cdot \frac{\partial L}{\partial w}
-  $$  
+
+  $$w_{new} = w_{old} - \eta \cdot \frac{\partial L}{\partial w}$$  
 
 ---
 
