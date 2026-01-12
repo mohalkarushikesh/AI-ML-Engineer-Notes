@@ -13,9 +13,9 @@
 - **Message Passing Framework:**  
   - Each node updates its representation by aggregating information from its neighbors.  
   - General formula:  
-    \[
-    h_v^{(k)} = \text{UPDATE}^{(k)}\Big(h_v^{(k-1)}, \text{AGGREGATE}^{(k)}(\{h_u^{(k-1)} : u \in \mathcal{N}(v)\})\Big)
-    \]  
+
+    $$h_v^{(k)} = \text{UPDATE}^{(k)}\Big(h_v^{(k-1)}, \text{AGGREGATE}^{(k)}(\{h_u^{(k-1)} : u \in \mathcal{N}(v)\})\Big)$$
+      
     where \(h_v^{(k)}\) is the embedding of node \(v\) at layer \(k\).
 
 - **Graph Convolution:**  
@@ -88,9 +88,9 @@ Here’s a clear breakdown of the **Graph Neural Network (GNN) architecture** in
      - **Aggregation function:** Combine messages (sum, mean, max, attention).
      - **Update function:** Update node embedding using aggregated info.
    - Formula (layer \(k\)):
-     \[
-     h_v^{(k)} = \text{UPDATE}^{(k)}\Big(h_v^{(k-1)}, \text{AGGREGATE}^{(k)}(\{h_u^{(k-1)} : u \in \mathcal{N}(v)\})\Big)
-     \]
+     
+     $$h_v^{(k)} = \text{UPDATE}^{(k)}\Big(h_v^{(k-1)}, \text{AGGREGATE}^{(k)}(\{h_u^{(k-1)} : u \in \mathcal{N}(v)\})\Big)$$
+     
 
 3. **Readout Layer**
    - Converts node embeddings into final outputs:
