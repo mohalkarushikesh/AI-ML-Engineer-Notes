@@ -2,7 +2,7 @@
 
 ---
 
-[Deep Learning Crash Course Link...](https://www.youtube.com/watch?v=VyWAvY2CF9c)
+[Deep Learning Crash Course Youtube Link...](https://www.youtube.com/watch?v=VyWAvY2CF9c)
 
 ## 📘 High-Level Topics Covered
 
