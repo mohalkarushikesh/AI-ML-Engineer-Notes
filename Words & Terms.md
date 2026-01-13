@@ -36,3 +36,5 @@ Backpropogation
 **KL Divergence** (Kullback-Leibler Divergence) **measures the information lost when one probability distribution, \(Q\), is used to approximate another, true distribution, \(P\)**. Also called **relative entropy**, it quantifies the "distance" between \(P\) and \(Q\), indicating how much extra bits are needed to encode data from \(P\) using a code optimized for \(Q\). It's always non-negative, zero only when \(P=Q\), and asymmetric, meaning \(D_{KL}(P||Q)\ne D_{KL}(Q||P)\). 
 
 Perplexity : is a Hyperparameter, can be seen measure for how many neighbors we want to include for each points. 
+
+Grokking - A training phenomenon where a neural network suddenly transitions from "memorizing" (overfitting) the training data to "generalizing" (performing perfectly on unseen data).
