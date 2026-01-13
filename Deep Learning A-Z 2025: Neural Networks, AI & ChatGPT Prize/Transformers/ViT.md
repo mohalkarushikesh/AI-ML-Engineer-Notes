@@ -1,7 +1,3 @@
-Here are **clean, exam + interview + implementation–ready notes on Vision Transformer (ViT)**, structured for fast revision 👇
-
----
-
 # Vision Transformer (ViT) – Complete Notes
 
 ## 1. What is ViT?
@@ -34,6 +30,9 @@ Here are **clean, exam + interview + implementation–ready notes on Vision Tran
 ```
 Image → Patches → Linear Projection → Transformer Encoder → MLP Head
 ```
+
+<img width="930" height="485" alt="17683301038072460380198431343339" src="https://github.com/user-attachments/assets/25bad9af-c514-4d23-bfb3-6631330672e3" />
+
 
 ---
 
