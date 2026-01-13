@@ -1,3 +1,6 @@
+
+https://youtube.com/@leonpetrou?si=dSpiPg7bS-FFmtze
+
 ### 1. The Pulse (Real-time Viral Tech)
 * **[GitHub Trending (Daily/Python)](https://github.com/trending/python?since=daily)** – The first place breakthroughs appear before the news.
 * **[GitHub Topics: AI-2026](https://github.com/topics/ai-2026)** – A live feed of projects tagged with the current year's innovations.
