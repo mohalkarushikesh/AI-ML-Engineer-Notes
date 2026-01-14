@@ -43,7 +43,7 @@ Send context + question to LLM
 Grounded, accurate answer
 ```
 
-<img width="1500" height="1126" alt="Advanced-RAG" src="https://github.com/user-attachments/assets/d28acac6-d11f-46b4-a507-1f88a405c90f" />
+<img width="1500" height="626" alt="Advanced-RAG" src="https://github.com/user-attachments/assets/d28acac6-d11f-46b4-a507-1f88a405c90f" />
 
 ---
 
