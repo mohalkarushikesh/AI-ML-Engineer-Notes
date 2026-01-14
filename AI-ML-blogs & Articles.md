@@ -1,3 +1,4 @@
+https://analyticsindiamag.com/
 
 https://youtube.com/@leonpetrou?si=dSpiPg7bS-FFmtze
 
