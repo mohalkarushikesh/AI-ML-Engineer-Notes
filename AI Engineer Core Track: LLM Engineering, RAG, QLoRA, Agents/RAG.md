@@ -170,12 +170,12 @@ LLM (GPT / LLaMA / Mistral)
 
 If we continue step-by-step:
 
-1️⃣ Text embeddings deeply
-2️⃣ Chunking strategies
-3️⃣ FAISS hands-on
-4️⃣ Prompt grounding techniques
-5️⃣ Evaluation of RAG (precision, recall, faithfulness)
-6️⃣ RAG + agents (advanced)
+- 1️⃣ Text embeddings deeply
+- 2️⃣ Chunking strategies
+- 3️⃣ FAISS hands-on
+- 4️⃣ Prompt grounding techniques
+- 5️⃣ Evaluation of RAG (precision, recall, faithfulness)
+- 6️⃣ RAG + agents (advanced)
 
 ---
 
