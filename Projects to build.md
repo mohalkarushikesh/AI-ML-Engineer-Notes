@@ -1,3 +1,18 @@
+- Build your own linear regression 
+-  Build you own neural network 
+- Real time face recognition system 
+- Automated ML pipeline 
+- language model from scrach - N-gram/Bi-gram => transformer 
+- A/B testing framework 
+- Image generation system 
+- Multi Language NLP pipeline 
+- Real Time fraud detection system 
+- Build you Own AutoML
+- MLOps Pipeline 
+- Distibuted ML system 
+
+---
+
 - Next Word Prediction Model with Neural Networks
 
 - Covid-19 Detection
