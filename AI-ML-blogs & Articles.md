@@ -1,3 +1,6 @@
+
+https://github.com/karpathy/ng-video-lecture
+
 https://github.com/tavily-ai
 
 https://analyticsindiamag.com/
