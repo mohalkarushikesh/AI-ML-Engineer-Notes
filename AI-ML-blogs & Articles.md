@@ -1,7 +1,13 @@
 TLDR AI 
 
+The Rundown Ai
+
 The Batch
 
+Papers with Code
+
+
+AI-focused blogs and news sites
 
 https://github.com/karpathy/ng-video-lecture
 
