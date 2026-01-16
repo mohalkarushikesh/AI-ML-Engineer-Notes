@@ -1,3 +1,7 @@
+TLDR AI 
+
+The Batch
+
 
 https://github.com/karpathy/ng-video-lecture
 
