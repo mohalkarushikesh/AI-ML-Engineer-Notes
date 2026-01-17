@@ -1,7 +1,3 @@
-Here’s a **clear, production-focused vLLM cheat sheet** — this is **inference at scale**, not training.
-
----
-
 # ⚡ vLLM Cheat Sheet (High-Performance LLM Inference)
 
 ---
@@ -245,14 +241,4 @@ Usually paired with:
 
 ---
 
-## 🧭 What Next?
 
-I can give you:
-
-1. **vLLM vs TGI deep comparison**
-2. **vLLM + RAG full prod architecture**
-3. **Kubernetes deployment YAML**
-4. **Cost optimization tricks**
-5. **Java/Spring Boot calling vLLM**
-
-Just say 🔥
