@@ -53,6 +53,15 @@ print(result)  # {'msg': 'Hello World'}
 
 ---
 
+## Advanced Concepts
+
+- **Cyclic Graphs**: Agents repeatedly call tools and refine information (e.g., research) until a condition is met, unlike simple DAGs.
+- **Orchestrator-Worker Models**: An orchestrator sends tasks (e.g., sections of a document) to specialized workers, collects their outputs in shared state, and synthesizes a final result.
+- **Agent Swarms**: Multiple agents interact, handing off conversations based on intent (e.g., flight assistant to hotel assistant).
+- **State Management**: Graphs use a shared State (like MessagesState) that nodes read from and write to, enabling memory and complex interactions. 
+
+---
+
 ## 🤖 Agent Patterns
 - **Single Agent**: One graph controlling all logic.  
 - **Multi-Agent**: Multiple graphs interacting.  
