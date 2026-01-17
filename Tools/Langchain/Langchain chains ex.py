@@ -291,3 +291,51 @@ result = chain.invoke({"feedback": review})
 # Output the result
 print(result)
 
+
+```
+# 📊 Feedback Sentiment Branching Logic
+
+Start
+  │
+  ▼
+[Input: Feedback Text]
+  │
+  ▼
+[Classification Chain]
+  │
+  ▼
+Classify sentiment → {positive | negative | neutral | escalate}
+  │
+  ├──► Positive
+  │       │
+  │       ▼
+  │   [Positive Feedback Template]
+  │       │
+  │       ▼
+  │   Generate Thank You Note
+  │
+  ├──► Negative
+  │       │
+  │       ▼
+  │   [Negative Feedback Template]
+  │       │
+  │       ▼
+  │   Generate Response Addressing Issues
+  │
+  ├──► Neutral
+  │       │
+  │       ▼
+  │   [Neutral Feedback Template]
+  │       │
+  │       ▼
+  │   Generate Request for More Details
+  │
+  └──► Escalate
+          │
+          ▼
+      [Escalate Feedback Template]
+          │
+          ▼
+      Generate Message to Human Agent
+
+```
