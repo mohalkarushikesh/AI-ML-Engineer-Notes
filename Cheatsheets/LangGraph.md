@@ -56,9 +56,118 @@ print(result)  # {'msg': 'Hello World'}
 ## Advanced Concepts
 
 - **Cyclic Graphs**: Agents repeatedly call tools and refine information (e.g., research) until a condition is met, unlike simple DAGs.
+
+### 🔄 Cyclic Graph Flow Diagram
+```
+   ┌───► [A]
+   │       │
+   │       ▼
+   │     [B]
+   │       │
+   │       ▼
+   │     [C]
+   │       │
+   │       ▼
+   └──── [D]
+           │
+           ▼
+          [A]  (cycle back to start)
+```
+
+---
+
+### 🔎 Key Idea
+- A **cyclic graph** contains at least one **cycle** (a path that starts and ends at the same node).  
+- In the diagram above: `A → B → C → D → A` forms a cycle.  
+- Cyclic graphs can be **directed** (arrows show direction) or **undirected** (edges without arrows).  
+
+---
+
 - **Orchestrator-Worker Models**: An orchestrator sends tasks (e.g., sections of a document) to specialized workers, collects their outputs in shared state, and synthesizes a final result.
+- Core Idea
+  - Orchestrator: A central coordinator that analyzes the main task, decides how to split it, and assigns subtasks.
+  - Workers: Specialized agents that execute subtasks (e.g., summarization, translation, data extraction).
+  - Aggregation: The orchestrator collects and synthesizes worker outputs into a coherent final result.
+
+```
+[User Request]
+      │
+      ▼
+[Orchestrator Agent]
+      │
+ ┌────┴────┐
+ ▼         ▼
+[Worker A] [Worker B] ... [Worker N]
+      │         │
+      ▼         ▼
+   Subtask   Subtask
+      │         │
+      └────┬────┘
+           ▼
+   [Orchestrator Aggregates Results]
+           │
+           ▼
+      [Final Output]
+```
+
 - **Agent Swarms**: Multiple agents interact, handing off conversations based on intent (e.g., flight assistant to hotel assistant).
+
+### 🐝 Agent Swarm Flow Diagram
+```
+         [Task / Goal]
+              │
+              ▼
+      ┌───────────────┐
+      │   Agent 1     │
+      └───────────────┘
+              │
+      ┌───────────────┐
+      │   Agent 2     │
+      └───────────────┘
+              │
+      ┌───────────────┐
+      │   Agent 3     │
+      └───────────────┘
+              │
+      ┌───────────────┐
+      │   Agent N     │
+      └───────────────┘
+              │
+              ▼
+   [Collective Decision / Output]
+
+```
+
 - **State Management**: Graphs use a shared State (like MessagesState) that nodes read from and write to, enabling memory and complex interactions. 
+
+### 🔄 State Management Flow Diagram
+
+```
+ [User Action / Event]
+            │
+            ▼
+     [Dispatcher / Action]
+            │
+            ▼
+     [State Store / Manager]
+            │
+      ┌─────┴─────┐
+      ▼           ▼
+[Update State]   [Notify Subscribers]
+      │                 │
+      ▼                 ▼
+   [New State]     [UI Components Re-render]
+            │
+            ▼
+      [Updated UI]
+
+- User Action → triggers an event (e.g., button click).
+- Dispatcher/Action → describes what happened.
+- State Store → central place holding the current state.
+- Update State → modifies the state based on the action.
+- Notify Subscribers → components listening to state changes get updated.
+- UI Re-render → reflects the new state in the interface.
+```
 
 ---
 
