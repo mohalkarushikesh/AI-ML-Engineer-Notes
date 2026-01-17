@@ -71,10 +71,10 @@ print(result)  # {'msg': 'Hello World'}
 ---
 
 ## When to Use LangGraph
-- When your AI needs to remember things over time (stateful).
-- When the flow isn't just forward-only (needs loops/cycles).
-- When multiple AI components need to collaborate.
-- When you need fine-grained control over LLM decision-making. 
+- When your AI needs to remember things over time (**stateful**).
+- When the flow isn't just forward-only (**needs loops/cycles**).
+- When multiple AI components **need to collaborate**.
+- When you need **fine-grained control** over LLM decision-making. 
 
 ---
 
