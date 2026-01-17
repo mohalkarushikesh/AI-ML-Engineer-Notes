@@ -1,3 +1,7 @@
+**NLTK (Natural Language Toolkit)** is a powerful Python library for **text processing and NLP tasks**. Below is a structured **cheat sheet** with the most common commands and workflows you’ll use.  
+
+---
+
 ## 📌 NLTK Cheat Sheet
 
 ### 🔹 Installation
