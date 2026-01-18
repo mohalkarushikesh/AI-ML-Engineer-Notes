@@ -17,6 +17,7 @@ These companies own the cloud and hardware that power the entire AI economy.
 ### **Foundational Model & Research Leaders**
 
 These companies develop the core "brains" (LLMs and Multimodal models) used by developers.
+
 6.  **OpenAI:** Creators of ChatGPT and Sora; a central player in generative AI.
 7.  **Anthropic:** Focused on "Constitutive AI" and safety with their Claude model family.
 8.  **Mistral AI:** The European leader in high-performance open-weight models.
@@ -30,6 +31,7 @@ These companies develop the core "brains" (LLMs and Multimodal models) used by d
 ### **Enterprise AI & Data Platforms**
 
 These companies help businesses manage data, build pipelines, and deploy custom ML models.
+
 13. **Databricks:** Unified data and AI platform known for the "Data Lakehouse."
 14. **Palantir:** High-end AI analytics for government defense and large-scale enterprise.
 15. **IBM:** Owners of the **watsonx** platform, focusing on enterprise governance.
@@ -45,6 +47,7 @@ These companies help businesses manage data, build pipelines, and deploy custom 
 ### **Specialized & Vertical AI Leaders**
 
 Companies using AI to transform specific industries like healthcare, finance, or robotics.
+
 22. **Tesla:** Leading AI in physical systems via Autopilot and the Optimus robot.
 23. **Tempus AI:** Applying AI to precision medicine and genomic data.
 24. **PathAI:** Using machine learning to improve pathology and disease diagnosis.
@@ -64,6 +67,7 @@ Companies using AI to transform specific industries like healthcare, finance, or
 ### **Consulting & Implementation Giants**
 
 The partners that help the Fortune 500 integrate AI into their workflows.
+
 35. **Accenture:** Investing billions into its AI and automation practice.
 36. **Deloitte:** Focuses on AI strategy and risk management.
 37. **TCS (Tata Consultancy Services):** Scaling AI services through their Ignio platform.
@@ -96,6 +100,7 @@ Building on the first 50, this next list covers the "second wave" of the AI revo
 ### **The AI Agent & Automation Pioneers**
 
 Companies building "Agentic AI"—systems that don't just chat, but actually execute tasks.
+
 51. **LangChain:** The framework used by almost every developer to build LLM-powered applications.
 52. **CrewAI:** A leading platform for orchestrating multi-agent systems to solve complex tasks.
 53. **Imbue:** Developing AI agents that possess "reasoning" capabilities for coding and logic.
