@@ -42,3 +42,52 @@
 - In crypto, tokenization requires **legal frameworks** and **smart contracts**.
 
 ---
+
+## 🧩 Example Text
+`"I can't believe it's already 2026!"`
+
+---
+
+## 🔠 Tokenization Methods & Examples
+
+- **Whitespace Tokenization**  
+  Splits only on spaces.  
+  → `["I", "can't", "believe", "it's", "already", "2026!"]`
+
+- **Rule-based / Regex Tokenization**  
+  Handles punctuation and contractions more carefully.  
+  → `["I", "ca", "n't", "believe", "it", "'s", "already", "2026", "!"]`
+
+- **Word-level Tokenization**  
+  Each word is a token, punctuation may be separate depending on rules.  
+  → `["I", "can't", "believe", "it's", "already", "2026", "!"]`
+
+- **Subword Tokenization (BPE, WordPiece, SentencePiece)**  
+  Breaks rare or complex words into smaller units.  
+  Example with WordPiece:  
+  → `["I", "can", "'", "t", "believe", "it", "'", "s", "already", "202", "6", "!"]`
+
+- **Character-level Tokenization**  
+  Every character is a token.  
+  → `["I", " ", "c", "a", "n", "'", "t", " ", "b", "e", "l", "i", "e", "v", "e", " ", "i", "t", "'", "s", " ", "a", "l", "r", "e", "a", "d", "y", " ", "2", "0", "2", "6", "!"]`
+
+- **Sentence-level Tokenization**  
+  Splits text into sentences (useful for longer passages).  
+  Example with two sentences:  
+  `"I can't believe it's already 2026! Time flies."`  
+  → `["I can't believe it's already 2026!", "Time flies."]`
+
+---
+
+## 📊 Quick Comparison
+
+| Method              | Example Output (shortened) |
+|---------------------|-----------------------------|
+| Whitespace          | ["I", "can't", "believe"] |
+| Rule-based/Regex    | ["I", "ca", "n't", "believe"] |
+| Word-level          | ["I", "can't", "believe"] |
+| Subword (WordPiece) | ["I", "can", "'", "t", "believe"] |
+| Character-level     | ["I", " ", "c", "a", "n", "'"] |
+| Sentence-level      | ["I can't believe it's already 2026!"] |
+
+---
