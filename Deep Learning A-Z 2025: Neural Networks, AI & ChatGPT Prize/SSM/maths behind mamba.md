@@ -34,7 +34,7 @@ $$y_t = C(u_t) x_t$$
 ---
 
 ## 3. **Linear-Time Complexity**
-- Traditional Transformers: \(O(n^2)\) due to pairwise attention.  
+- Traditional Transformers: $(O(n^2)\)$ due to pairwise attention.  
 - Mamba: Uses **convolutions with structured kernels** derived from the state space equations.  
 - Efficient GPU implementation (similar to FlashAttention) ensures:
 
@@ -43,7 +43,7 @@ $$O(n) \quad \text{time complexity for sequence length } n$$
 ---
 
 ## 4. **Dynamic Gating**
-- A gating function \(g(u_t)\) decides whether to update or skip state transitions.  
+- A gating function $(g(u_t)\)$ decides whether to update or skip state transitions.  
 - Mathematically:
 
 $$x_{t+1} = g(u_t) \cdot (A x_t + B u_t) + (1 - g(u_t)) \cdot x_t$$
@@ -64,7 +64,7 @@ $$x_{t+1} = g(u_t) \cdot (A x_t + B u_t) + (1 - g(u_t)) \cdot x_t$$
 | Component              | Transformer (Attention) | Mamba (SSSM) |
 |------------------------|--------------------------|--------------|
 | Core math              | Dot-product attention   | State-space recurrence |
-| Complexity             | \(O(n^2)\)              | \(O(n)\) |
+| Complexity             | $(O(n^2)\)$             | $(O(n)\)$ |
 | Parameters             | Fixed weights           | Input-dependent matrices |
 | Memory                 | KV-cache heavy          | Efficient, linear |
 | Selectivity            | Global attention        | Dynamic gating |
