@@ -104,3 +104,51 @@ The **Mamba framework** is a new AI architecture for sequence modeling, introduc
 ---
 
 👉 Imagine **Transformers** as a classroom where *every student talks to every other student at once*, while **Mamba** is more like a *teacher keeping track of the class state and updating only when needed*.  
+
+```mermaid
+graph TD
+    subgraph Input_Processing [1. Input Processing]
+        A[Input Sequence: L, D] --> B[Layer Normalization]
+    end
+
+    subgraph Mamba_Block [2. The Mamba Block]
+        B --> C{Split Paths}
+        
+        %% SSM Path
+        subgraph SSM_Path [Selective SSM Path]
+            C --> D1[Linear Projection]
+            D1 --> D2[1D Convolution]
+            D2 --> D3[SiLU Activation]
+            
+            subgraph Selection_Mechanism [Selection Mechanism]
+                D3 --> E1[Compute B: s_B x]
+                D3 --> E2[Compute C: s_C x]
+                D3 --> E3[Compute Delta: Softplus]
+            end
+            
+            E3 --> F[Discretization: A, B -> A_bar, B_bar]
+            F --> G[Selective Scan: Hardware-Aware Parallel Scan]
+        end
+
+        %% Gating Path
+        subgraph Gating_Path [Residual/Gating Path]
+            C --> H[Linear Projection]
+            H --> I[SiLU Activation]
+        end
+
+        G --> J[Element-wise Multiplication: Gating]
+        I --> J
+        J --> K[Output Linear Projection]
+    end
+
+    subgraph Output_Stage [3. Output]
+        K --> L[Residual Connection]
+        L --> M[Next Layer / Output]
+    end
+
+    %% Styling
+    style Selection_Mechanism fill:#f9f,stroke:#333,stroke-width:2px
+    style G style:fill:#bbf,stroke:#333,stroke-width:2px
+```
+
+- https://excalidraw.com/#json=hztVtrk2e2VqyPi0bxRw_,_g96a8QENWOASUOSOvk99g
