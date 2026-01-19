@@ -2,12 +2,12 @@ The **Mamba framework** is a new AI architecture for sequence modeling, introduc
 
 ---
 
-# 🐍 Mamba Framework Notes
+# 🐍 Mamba Framework 
 
 ## 🔑 Core Concept
 - **Type:** Selective State Space Model (SSSM).  
 - **Goal:** Efficient sequence modeling without relying on self-attention.  
-- **Key Feature:** Input-dependent parameters that allow *content-aware computation*.  
+- **Key Feature:** Input-dependent parameters that allow **content-aware computation**.  
 - **Efficiency:** Achieves **linear-time throughput** compared to the quadratic cost of Transformers.
 
 ---
