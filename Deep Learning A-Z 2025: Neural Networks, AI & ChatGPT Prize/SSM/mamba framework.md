@@ -18,9 +18,9 @@ The **Mamba framework** is a new AI architecture for sequence modeling, introduc
   - KV-cache grows rapidly, overwhelming GPU memory.  
   - Models often lose track of global information.  
 - **Mamba’s Solution:**  
-  - Uses state-space modeling with selective updates.  
-  - Scales better for long contexts.  
-  - Optimized for GPU hardware (leveraging techniques like FlashAttention).
+  - Uses state-space modeling with **selective updates**.  
+  - Scales better for **long contexts**.  
+  - Optimized for GPU hardware (leveraging techniques like **FlashAttention**).
 
 ---
 
