@@ -1,3 +1,34 @@
+### **1. For the "Daily Digest" (Newsletter)**
+
+If you want the news to come to you, **[The Rundown AI](https://www.therundown.ai/)** is the current industry leader. It is a daily newsletter that distills the most important AI news, tool releases, and research into a 5-minute read. It’s used by professionals at companies like Microsoft and Tesla specifically to avoid "looking here and there."
+
+* **Best for:** Busy people who want a curated "cheat sheet" every morning.
+* **Alternative:** **[TLDR AI](https://tldr.tech/ai)** if you want even shorter, more technical bullet points.
+
+---
+
+### **2. For Real-Time Browsing (Aggregator)**
+
+If you want a website you can visit anytime to see what is trending right *now*, **[There’s An AI For That (TAAFT)](https://theresanaiforthat.com/)** is the largest aggregator. While it started as a tool directory, it has evolved into a massive hub for AI news, timelines of model releases, and daily trends.
+
+* **Best for:** Seeing which new tools and models are launching in real-time.
+
+---
+
+### **3. For the "Pro" Researcher (Search Engine)**
+
+If you have a specific question or want to catch up on a specific niche (e.g., "What happened in AI medical imaging this week?"), use **[Perplexity AI](https://www.perplexity.ai/)**. Unlike a standard search engine, it acts as a real-time news researcher, citing its sources so you can verify the news instantly.
+
+* **Best for:** Deep-diving into a topic without clicking through 10 different blog posts.
+
+---
+
+### **4. For Technical Breakthroughs (Developer Choice)**
+
+If you are a developer or researcher and only care about actual code and model releases, **[Hugging Face](https://huggingface.co/)** (specifically their "Trending" and "Paper" sections) is the only site you need. It is where the actual code is posted before it ever hits the news.
+
+---
+
 - On google gemini - latest research papers in ai ml
 
 TLDR AI 
