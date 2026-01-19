@@ -158,5 +158,5 @@ Sentence: *“I love AI”* → translate to French.
 
 <img width="2741" height="1699" alt="image" src="https://github.com/user-attachments/assets/23e27b43-f43d-4b1c-b150-87a68fb9f713" />
 
-
+- https://excalidraw.com/#json=mX2U-Js-7YZ0ZMR3T_Dnk,b7HVPWuRLFdcvAqpCplwzg
 
