@@ -156,6 +156,7 @@ Sentence: *“I love AI”* → translate to French.
 - **Interpretability**: Attention weights are informative but not fully explainable.  
 
 
-<img width="3000" height="4000" alt="image" src="https://github.com/user-attachments/assets/1f285707-7812-4651-b2da-cb84f518d9c0" />
+<img width="2741" height="1699" alt="image" src="https://github.com/user-attachments/assets/23e27b43-f43d-4b1c-b150-87a68fb9f713" />
+
 
 
