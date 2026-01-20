@@ -92,62 +92,7 @@ $$\text{Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$
 - The word with highest probability is chosen as output.  
 - Process repeats until sequence ends.  
 
-<!--
-<img width="850" height="952" alt="The-Transformer-model-architecture" src="https://github.com/user-attachments/assets/f1f2d5b2-81a1-402a-a347-24bfe430865f" />
---> 
-
-```mermaid
-graph TD
-    %% Encoder Section
-    subgraph Encoder_Stack [ENCODER - N Layers]
-        direction TB
-        E_In[Input Tokens] --> E_Emb[Input Embedding + Positional Encoding]
-        
-        subgraph Enc_Block [Encoder Block]
-            E_MHA[Multi-Head Self-Attention] --> E_Add1[Add & LayerNorm]
-            E_Emb --> E_MHA
-            E_Emb -.-> E_Add1
-            
-            E_Add1 --> E_FFN[Feed Forward Network]
-            E_FFN --> E_Add2[Add & LayerNorm]
-            E_Add1 -.-> E_Add2
-        end
-        E_Add2 --> Enc_Out[Encoder Context Vectors]
-    end
-
-    %% Decoder Section
-    subgraph Decoder_Stack [DECODER - N Layers]
-        direction TB
-        D_In[Target Tokens / Shifted Right] --> D_Emb[Output Embedding + Positional Encoding]
-        
-        subgraph Dec_Block [Decoder Block]
-            D_Mask[Masked Multi-Head Self-Attention] --> D_Add1[Add & LayerNorm]
-            D_Emb --> D_Mask
-            D_Emb -.-> D_Add1
-            
-            %% The Bridge
-            D_Add1 --> D_Cross[Multi-Head Cross-Attention]
-            Enc_Out -- "Provides K, V" --> D_Cross
-            D_Cross --> D_Add2[Add & LayerNorm]
-            D_Add1 -.-> D_Add2
-            
-            D_Add2 --> D_FFN[Feed Forward Network]
-            D_FFN --> D_Add3[Add & LayerNorm]
-            D_Add2 -.-> D_Add3
-        end
-    end
-
-    %% Final Output
-    D_Add3 --> Linear[Linear Projection]
-    Linear --> Softmax[Softmax Layer]
-    Softmax --> Final[Output Probabilities]
-
-    %% Styling
-    style Enc_Block fill:#f0f4ff,stroke:#2b5797
-    style Dec_Block fill:#fff4f0,stroke:#e67e22
-    style D_Cross fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style D_Mask fill:#fce4ec,stroke:#c2185b
-```
+![1_xzvpKDgLm2A-D9C04V4rOw](https://github.com/user-attachments/assets/efaec0e4-637b-4c3f-9b93-3fabc3c60c8d)
 
 ---
 
@@ -212,6 +157,6 @@ Sentence: *“I love AI”* → translate to French.
 
 <!--
 <img width="2741" height="1699" alt="image" src="https://github.com/user-attachments/assets/23e27b43-f43d-4b1c-b150-87a68fb9f713" />
---> 
-- https://excalidraw.com/#json=mX2U-Js-7YZ0ZMR3T_Dnk,b7HVPWuRLFdcvAqpCplwzg
 
+- https://excalidraw.com/#json=mX2U-Js-7YZ0ZMR3T_Dnk,b7HVPWuRLFdcvAqpCplwzg
+--> 
