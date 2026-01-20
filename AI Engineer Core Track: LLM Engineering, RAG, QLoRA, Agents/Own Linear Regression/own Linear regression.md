@@ -1,4 +1,4 @@
-# 🧠 Technical Deep Dive: The Mathematics of Linear Regression
+# 🧠 Deep Dive: The Mathematics of Linear Regression
 
 This project implements a **Multivariate Linear Regression** model using **Batch Gradient Descent** and **Tikhonov Regularization (L2)**. Below is the step-by-step mathematical breakdown of the logic executed in the `fit()` and `predict()` methods.
 
@@ -120,3 +120,13 @@ The  score implemented in the `score()` method is the "Coefficient of Determinat
 4. **Backward Pass**: Calculate the gradients (the slope of the error).
 5. **Optimization**: Step down the slope using the learning rate.
 6. **Repeat**: Do this for `n_iters` until the loss curve flattens.
+
+### OUtput 
+```
+Final Weights: [2.75459415]
+Final Bias: 4.2251
+R-squared Score: 0.9334
+
+```
+
+<img width="1536" height="754" alt="Figure_1" src="https://github.com/user-attachments/assets/0a4f4e66-eab2-4746-9f22-2ac27ad54327" />
