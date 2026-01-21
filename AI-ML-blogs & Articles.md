@@ -1,3 +1,5 @@
+https://github.com/owainlewis/awesome-artificial-intelligence
+
 https://github.com/dzyim/ilya-sutskever-recommended-reading
 
 [The Rundown AI](https://www.therundown.ai/)**
