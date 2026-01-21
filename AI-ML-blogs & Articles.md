@@ -1,3 +1,5 @@
+https://github.com/dzyim/ilya-sutskever-recommended-reading
+
 [The Rundown AI](https://www.therundown.ai/)**
 
 [TLDR AI](https://tldr.tech/ai)**
