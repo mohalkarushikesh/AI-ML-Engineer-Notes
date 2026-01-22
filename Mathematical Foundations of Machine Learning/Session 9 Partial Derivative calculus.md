@@ -1,3 +1,9 @@
+<img width="1012" height="522" alt="image" src="https://github.com/user-attachments/assets/d9cb1067-54f7-45ef-8e04-fdd1f30fa99a" />
+
+
+<img width="975" height="458" alt="image" src="https://github.com/user-attachments/assets/0c6b092f-9474-4d8e-bc7d-95c4a42ea0c3" />
+
+
 # 📘 Session 9: Partial Derivative Calculus
 
 ## 1️⃣ Intro to Calculus
@@ -461,6 +467,9 @@ which is the exact regression line we derived earlier.
 
 <img width="1091" height="559" alt="image" src="https://github.com/user-attachments/assets/cd908261-e53f-4a27-be4e-fa5d32b5ad45" />
 
+first order, 2nd order and mixted 
+
+<img width="1080" height="554" alt="image" src="https://github.com/user-attachments/assets/10cea342-b985-441d-bca8-0f718eef8705" />
 
 # ex for partial derivative 
 
