@@ -58,3 +58,5 @@
 - **Partial Derivatives** → essential for ML optimization, backpropagation, and multivariable calculus.
 
 ---
+
+<img width="1110" height="579" alt="image" src="https://github.com/user-attachments/assets/32afdcc5-3b0b-4702-b2f2-421c2ae5dab3" />
