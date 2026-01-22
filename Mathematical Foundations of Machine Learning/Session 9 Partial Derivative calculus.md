@@ -278,3 +278,179 @@ This is a rare case in real-world data, but it’s a great illustration of how r
 Would you like me to extend this example to a non-perfect dataset (say, points like (1,2), (2,2.5), (3,4)) so you can see how regression minimizes error when the line doesn’t fit perfectly?
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/356afaa6-66b4-43d9-8ae6-58f9d4d376d0" />
+
+
+## MSE 
+
+<img width="1050" height="209" alt="image" src="https://github.com/user-attachments/assets/1b0dc032-ec9e-4097-bbdb-b36f8c4bae15" />
+
+
+## **Batch Gradient Descent for Regression** step by step, mathematically and conceptually.  
+
+---
+
+## 📌 1. Setup
+We have:
+- Dataset: \((x_i, y_i)\) for \(i = 1, 2, \dots, n\).  
+- Hypothesis (linear regression):
+  \[
+  \hat{y}_i = \mathbf{w}^T \mathbf{x}_i + b
+  \]
+
+---
+
+## 📌 2. Loss Function
+We use **Mean Squared Error (MSE)**:
+\[
+L(w, b) = \frac{1}{n} \sum_{i=1}^n \big(\hat{y}_i - y_i\big)^2
+\]
+
+---
+
+## 📌 3. Gradients
+To minimize \(L\), compute partial derivatives:
+
+- Gradient w.r.t. weights:
+\[
+\frac{\partial L}{\partial w_j} = \frac{2}{n} \sum_{i=1}^n \big(\hat{y}_i - y_i\big) x_{ij}
+\]
+
+- Gradient w.r.t. bias:
+\[
+\frac{\partial L}{\partial b} = \frac{2}{n} \sum_{i=1}^n \big(\hat{y}_i - y_i\big)
+\]
+
+---
+
+## 📌 4. Batch Gradient Descent Update Rule
+At each iteration:
+\[
+w_j \leftarrow w_j - \alpha \frac{\partial L}{\partial w_j}, \quad b \leftarrow b - \alpha \frac{\partial L}{\partial b}
+\]
+
+where:
+- \(\alpha\) = learning rate  
+- Updates are computed using **all training samples** (that’s why it’s called *batch*).
+
+---
+
+## 📌 5. Numerical Example
+Let’s use the same dataset:  
+\((1,2), (2,3), (3,4)\).  
+Initialize \(w=0, b=0\), learning rate \(\alpha = 0.1\).
+
+### Step 1: Predictions
+\[
+\hat{y} = w \cdot x + b = 0
+\]
+So predictions = \([0,0,0]\).
+
+### Step 2: Errors
+\[
+\hat{y} - y = [0-2, 0-3, 0-4] = [-2, -3, -4]
+\]
+
+### Step 3: Gradients
+- For \(w\):
+\[
+\frac{\partial L}{\partial w} = \frac{2}{3} \big((-2)(1) + (-3)(2) + (-4)(3)\big)
+\]
+\[
+= \frac{2}{3}(-2 - 6 - 12) = \frac{2}{3}(-20) = -\frac{40}{3} \approx -13.33
+\]
+
+- For \(b\):
+\[
+\frac{\partial L}{\partial b} = \frac{2}{3}(-2 - 3 - 4) = \frac{2}{3}(-9) = -6
+\]
+
+### Step 4: Update
+\[
+w \leftarrow 0 - 0.1(-13.33) = 1.333
+\]
+\[
+b \leftarrow 0 - 0.1(-6) = 0.6
+\]
+
+---
+
+## ✅ After First Iteration
+The model is:
+\[
+\hat{y} = 1.333x + 0.6
+\]
+
+With more iterations, \(w\) and \(b\) converge to the exact solution \(w=1, b=1\).
+
+---
+
+So **batch gradient descent** means:  
+- Compute gradients using the **entire dataset** each step.  
+- Update parameters simultaneously.  
+- Repeat until convergence.
+
+---
+
+Got it 👍 — let’s implement **Batch Gradient Descent for Linear Regression** in Python step by step.  
+
+Here’s a clean, minimal example:
+
+```python
+import numpy as np
+
+# Sample dataset
+X = np.array([1, 2, 3])   # features
+y = np.array([2, 3, 4])   # targets
+
+# Initialize parameters
+w = 0.0   # weight
+b = 0.0   # bias
+alpha = 0.1   # learning rate
+epochs = 1000 # number of iterations
+
+n = len(X)
+
+# Batch Gradient Descent
+for epoch in range(epochs):
+    # Predictions
+    y_pred = w * X + b
+    
+    # Errors
+    error = y_pred - y
+    
+    # Gradients
+    dw = (2/n) * np.dot(error, X)
+    db = (2/n) * np.sum(error)
+    
+    # Update parameters
+    w -= alpha * dw
+    b -= alpha * db
+    
+    # Optional: print progress every 100 steps
+    if epoch % 100 == 0:
+        loss = np.mean(error**2)
+        print(f"Epoch {epoch}: Loss={loss:.4f}, w={w:.4f}, b={b:.4f}")
+
+print("\nFinal model:")
+print(f"y = {w:.4f} * x + {b:.4f}")
+```
+
+---
+
+### 🔎 Explanation
+- **Initialization:** Start with \(w=0, b=0\).  
+- **Prediction:** Compute \(\hat{y} = w \cdot x + b\).  
+- **Error:** Difference between prediction and actual values.  
+- **Gradients:** Derived from MSE loss.  
+- **Update:** Adjust \(w, b\) using learning rate.  
+- **Repeat:** Iterate until convergence.  
+
+For the dataset \((1,2), (2,3), (3,4)\), the algorithm converges to:
+\[
+y = 1 \cdot x + 1
+\]
+which is the exact regression line we derived earlier.
+
+---
+
+
