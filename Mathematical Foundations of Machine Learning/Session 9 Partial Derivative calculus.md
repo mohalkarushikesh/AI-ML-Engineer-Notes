@@ -453,4 +453,16 @@ which is the exact regression line we derived earlier.
 
 ---
 
+## BACKPROPOGRATION
+
+<img width="1102" height="610" alt="image" src="https://github.com/user-attachments/assets/e616cb8f-1500-4595-8f29-e697a680bc8f" />
+
+## Higher oder partial derivative 
+
+<img width="1091" height="559" alt="image" src="https://github.com/user-attachments/assets/cd908261-e53f-4a27-be4e-fa5d32b5ad45" />
+
+
+# ex for partial derivative 
+
+
 
