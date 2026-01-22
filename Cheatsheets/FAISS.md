@@ -137,19 +137,17 @@ print(I)                         # indices of nearest neighbors
 flowchart TD
     A[Raw Data: Text, Image, Audio] --> B[Embedding Model]
     B --> C[Vector Embeddings]
-    C --> D[Vector Database Storage + Indexing]
-    D --> E[Similarity Search (cosine, dot product)]
+    C --> D[Vector Database Storage and Indexing]
+    D --> E[Similarity Search using cosine or dot product]
     E --> F[Top-k Results with Metadata]
     F --> G[Applications: Search, Recommendations, RAG]
     
     subgraph User Query
-        H[User Input] --> I[Embedding Model (Query)]
+        H[User Input] --> I[Embedding Model for Query]
         I --> J[Query Vector]
         J --> E
     end
 ```
-
----
 
 # 🎯 Key Takeaways
 - **Vector databases** store semantic meaning, not raw text.  
