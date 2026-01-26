@@ -11,6 +11,8 @@
   - **Definite integral:** $\int_a^b f(x)\,dx$ → gives a numerical value (area between $a$ and $b$).
   - **Indefinite integral:** $\int f(x)\,dx$ → gives a function (antiderivative).
 
+<img width="1116" height="542" alt="image" src="https://github.com/user-attachments/assets/9a7193f2-1243-48b9-bf01-32998115cc66" />
+
 - **Fundamental Theorem of Calculus:**
   - Links differentiation and integration.
   - If $F'(x) = f(x)$, then $\int_a^b f(x)\,dx = F(b) - F(a)$.
