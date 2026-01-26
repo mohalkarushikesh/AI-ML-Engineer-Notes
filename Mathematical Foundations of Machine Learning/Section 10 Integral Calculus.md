@@ -20,6 +20,8 @@
 ## 🔹 Role in AI & ML
 Integral calculus appears in several key areas:
 
+<img width="1233" height="697" alt="image" src="https://github.com/user-attachments/assets/7f441c3c-7e7a-48dd-8378-ff137bf99df1" />
+
 ### 1. **Probability & Statistics**
 - Probability density functions (PDFs) require integration to compute probabilities:
   - $P(a \leq X \leq b) = \int_a^b f(x)\,dx$
