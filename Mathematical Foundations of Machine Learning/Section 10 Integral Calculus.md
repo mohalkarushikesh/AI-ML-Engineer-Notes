@@ -4,6 +4,9 @@
 
 ## 📘 Integral Calculus Basics
 - **Definition:** Integral calculus deals with the accumulation of quantities, often represented as the area under a curve.
+
+<img width="1192" height="679" alt="image" src="https://github.com/user-attachments/assets/175a085e-df4f-42fe-b4ba-607da3e07181" />
+
 - **Two types of integrals:**
   - **Definite integral:** $\int_a^b f(x)\,dx$ → gives a numerical value (area between $a$ and $b$).
   - **Indefinite integral:** $\int f(x)\,dx$ → gives a function (antiderivative).
@@ -178,3 +181,32 @@ Machine Learning Algorithms
 ---
 
 ✅ This flow shows how integral calculus underpins the **mathematical backbone of AI/ML**: starting from probability distributions, moving through expectations, shaping loss functions, and finally guiding algorithms.
+
+
+**ROC (Receiver Operating Characteristic):**
+
+---
+
+## 🔹 ROC in Short
+- **Definition:** A graphical plot that shows the performance of a binary classifier.  
+- **Axes:**
+  - **X-axis:** False Positive Rate (FPR) = $\frac{\text{False Positives}}{\text{False Positives + True Negatives}}$  
+  - **Y-axis:** True Positive Rate (TPR) = $\frac{\text{True Positives}}{\text{True Positives + False Negatives}}$  
+- **Curve:** Plots TPR vs. FPR at different threshold values.  
+- **Diagonal line:** Represents random guessing.  
+- **Closer to top-left corner:** Better classifier performance.  
+
+---
+
+## 🔹 AUC (Area Under Curve)
+- **AUC-ROC:** Single number summary of ROC curve.  
+- **Range:** 0.5 (random) → 1.0 (perfect classifier).  
+- **Interpretation:** Higher AUC = better model discrimination ability.
+
+---
+
+✅ **In short:** ROC curve shows the trade-off between sensitivity (TPR) and specificity (1−FPR). AUC quantifies overall performance.  
+
+<img width="1173" height="681" alt="image" src="https://github.com/user-attachments/assets/782b22f7-efa5-482c-9e48-3525495f5e5f" />
+
+How to calculate AUC => Integral calculus 
