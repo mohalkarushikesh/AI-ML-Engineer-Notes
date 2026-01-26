@@ -13,6 +13,12 @@
 
 <img width="1116" height="542" alt="image" src="https://github.com/user-attachments/assets/9a7193f2-1243-48b9-bf01-32998115cc66" />
 
+<img width="1198" height="618" alt="image" src="https://github.com/user-attachments/assets/3e9660d7-5d62-41eb-9e63-b4b948e7709d" />
+
+<img width="1224" height="621" alt="image" src="https://github.com/user-attachments/assets/05000320-176b-4738-bfa3-2537b96ba539" />
+
+<img width="1228" height="603" alt="image" src="https://github.com/user-attachments/assets/dc7da672-b65b-483b-ac2f-2a863675a9aa" />
+
 - **Fundamental Theorem of Calculus:**
   - Links differentiation and integration.
   - If $F'(x) = f(x)$, then $\int_a^b f(x)\,dx = F(b) - F(a)$.
