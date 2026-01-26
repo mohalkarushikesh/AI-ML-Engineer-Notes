@@ -162,9 +162,68 @@ Below are detailed, in-depth notes on the **NumPy** library in Python, a foundat
   ```python
   from numpy.linalg import det, inv
   A = np.array([[1, 2], [3, 4]])
+  # Determinant formula: det = (p*s) - (q*r)
   print(det(A))   # -2.0
   print(inv(A))   # [[-2. ,  1. ], [ 1.5, -0.5]]
   ```
+#### Matrix (2*2)
+
+```math
+A = \begin{bmatrix} p & q \\ r & s \end{bmatrix}
+```
+##### Determinant (2*2)
+
+$$\det(A) = ps - qr$$
+
+##### Inverse (2*2)
+
+$$A^{-1} = \frac{1}{\det(A)} \begin{bmatrix} s & -q \\ -r & p \end{bmatrix}$$
+
+#### Matrix (3*3)
+
+```math
+A = \begin{bmatrix} 
+a & b & c \\ 
+d & e & f \\ 
+g & h & i 
+\end{bmatrix}
+```
+
+#### Determinant
+
+$$\det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)$$
+
+---
+
+#### Inverse
+
+$$A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)$$
+
+where **adj(A)** is the transpose of the cofactor matrix.  
+Explicitly, each entry is replaced by its cofactor, then transposed.
+
+---
+
+#### N×N Matrix
+
+#### Determinant
+Defined recursively using **cofactor expansion**:
+
+$$\det(A) = \sum_{j=1}^{n} (-1)^{1+j} a_{1j} \cdot \det(M_{1j})$$
+
+where $(M_{1j}\)$ is the minor matrix obtained by removing row 1 and column $(j\)$ .
+
+---
+
+#### Inverse
+
+$$A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)$$
+
+with  
+
+$$text{adj}(A) = \big( C_{ij} \big)^T$$
+
+where $(C_{ij} = (-1)^{i+j} \det(M_{ij})\)$ is the cofactor of element $(a_{ij}\)$ .
 
 ---
 
