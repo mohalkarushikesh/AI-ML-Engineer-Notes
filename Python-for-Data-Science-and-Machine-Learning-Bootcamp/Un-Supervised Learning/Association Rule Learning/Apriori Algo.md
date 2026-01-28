@@ -9,18 +9,17 @@
 ### 🔹 Key Concepts
 1. **Itemset:** A collection of one or more items.  
 2. **Support:** Frequency of occurrence of an itemset in the dataset.  
-   \[
+```math
    \text{Support}(A) = \frac{\text{Number of transactions containing A}}{\text{Total transactions}}
-   \]
-3. **Confidence:** Likelihood that item $B$ is purchased when item $A$ is purchased.  
-   \[
+```
+4. **Confidence:** Likelihood that item $B$ is purchased when item $A$ is purchased.  
+```math
    \text{Confidence}(A \rightarrow B) = \frac{\text{Support}(A \cup B)}{\text{Support}(A)}
-   \]
-4. **Lift:** Strength of a rule compared to random chance.  
-   \[
+```
+6. **Lift:** Strength of a rule compared to random chance.  
+```math
    \text{Lift}(A \rightarrow B) = \frac{\text{Confidence}(A \rightarrow B)}{\text{Support}(B)}
-   \]
-
+```
 ---
 
 ### 🔹 Working Steps
