@@ -479,6 +479,11 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
   - Algorithms:
     - [Self-training](https://scikit-learn.org/stable/whats_new/v0.24.html#id17): trains on labeled data, then uses confident predictions to label unlabeled data.
     - [Label Propagation](https://scikit-learn.org/stable/modules/semi_supervised.html#label-propagation): spreads labels through a graph based on similarity.
+
+      Propagation update : 
+      ```math
+        Y^{(t+1)} = \alpha W Y^{(t)} + (1 - \alpha) Y^{(0)}
+      ```
     - [Label Spreading](https://scikit-learn.org/stable/modules/semi_supervised.html#label-spreading): similar to label propagation but uses a normalized graph Laplacian.
     - [Co-training](https://spotintelligence.com/2023/12/28/semi-supervised-machine-learning-made-simple-5-algorithms-how-to-python-tutorial/): trains two classifiers on different views of the data and shares confident predictions.
     - [Semi-Supervised SVM (S3VM)](https://pages.cs.wisc.edu/~jerryzhu/pub/sslicml07.pdf): extends SVM to use both labeled and unlabeled data.
