@@ -4,7 +4,7 @@
 - ICA is a computational method for separating a multivariate signal into **independent non-Gaussian components**.
 - It’s often described as a **blind source separation** technique.
 
-##### Stattical Indepence Concept : Statistical independence refers to the idea that two random variables: X and Y are independent if knowing one does not affect the probability of the other. Mathematically, this means the joint probability of X and Y is equal to the product of their individual probabilities.
+##### Statistical Indepence Concept : Statistical independence refers to the idea that two random variables: X and Y are independent if knowing one does not affect the probability of the other. Mathematically, this means the joint probability of X and Y is equal to the product of their individual probabilities.
 
 <img width="772" height="189" alt="image" src="https://github.com/user-attachments/assets/de0afccb-8e23-413d-8212-9034e40784fa" />
 
