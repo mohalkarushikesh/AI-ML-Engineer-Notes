@@ -40,7 +40,9 @@ $$A = U \Sigma V^T$$
 ### 🔹 Example
 Suppose we have a $3 \times 2$ matrix:
 
-$$A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 1 & 1 \end{bmatrix}$$
+```math
+A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 1 & 1 \end{bmatrix}
+```
 
 SVD decomposes it into:
 
