@@ -123,3 +123,64 @@ $S = W X$
 ✅ **In short:** ICA takes mixtures (like two voices recorded together) and mathematically separates them into independent signals using statistical independence and non-Gaussianity.
 
 ---
+
+
+Here’s a **hands-on Python example using ICA** to separate mixed signals — exactly like the cocktail party problem we discussed:
+
+```python
+import numpy as np
+from sklearn.decomposition import FastICA
+import matplotlib.pyplot as plt
+
+# Step 1: Create synthetic source signals
+np.random.seed(0)
+n_samples = 2000
+time = np.linspace(0, 8, n_samples)
+
+s1 = np.sin(2 * time)          # Signal 1: sine wave
+s2 = np.sign(np.sin(3 * time)) # Signal 2: square wave
+S = np.c_[s1, s2]
+
+# Step 2: Mix signals with a random matrix
+A = np.array([[1, 2], [3, 4]])  # Mixing matrix
+X = S @ A.T                     # Observed mixtures
+
+# Step 3: Apply ICA
+ica = FastICA(n_components=2)
+S_ = ica.fit_transform(X)       # Recovered signals
+A_ = ica.mixing_                # Estimated mixing matrix
+
+# Step 4: Plot results
+plt.figure(figsize=(9, 6))
+
+plt.subplot(3, 1, 1)
+plt.title("Original Signals")
+plt.plot(S)
+
+plt.subplot(3, 1, 2)
+plt.title("Mixed Signals (Observed)")
+plt.plot(X)
+
+plt.subplot(3, 1, 3)
+plt.title("Recovered Signals (ICA)")
+plt.plot(S_)
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+### 🔹 What happens here:
+1. We generate two independent signals (sine + square wave).  
+2. We mix them using a matrix \(A\).  
+3. ICA tries to **recover the original independent sources** from the mixtures.  
+4. The plots show:
+   - Top: original signals  
+   - Middle: mixed signals (what microphones record)  
+   - Bottom: recovered signals (ICA output)  
+
+---
+
+✅ This demonstrates how ICA can separate independent sources from mixtures — the same principle applies to audio, EEG, finance, and more.
+
