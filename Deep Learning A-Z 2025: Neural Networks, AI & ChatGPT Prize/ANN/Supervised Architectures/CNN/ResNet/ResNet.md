@@ -31,7 +31,7 @@
 5. **Fully Connected + Softmax**  
    - Dense layer for classification (1000 ImageNet classes).  
 
-<img width="688" height="267" alt="The-structure-of-the-ResNet34-CNN-Network-The-input-of-the-network-is-the-preprocessed" src="https://github.com/user-attachments/assets/fe65dadf-4d8a-43b4-ad90-f1c3c9dc4712" />
+<img width="800" height="450" alt="The-structure-of-the-ResNet34-CNN-Network-The-input-of-the-network-is-the-preprocessed" src="https://github.com/user-attachments/assets/fe65dadf-4d8a-43b4-ad90-f1c3c9dc4712" />
 
 ---
 
