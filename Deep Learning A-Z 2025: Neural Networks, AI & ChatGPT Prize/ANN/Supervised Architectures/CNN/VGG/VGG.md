@@ -27,7 +27,7 @@
 4. **Output Layer**  
    - Softmax classifier for 1000 categories.  
 
-<img width='1200' height= '400' src="https://github.com/user-attachments/assets/8f1527a2-75e1-435f-9785-b7daaef9ce52" />
+<img width='1200' height= '450' src="https://github.com/user-attachments/assets/8f1527a2-75e1-435f-9785-b7daaef9ce52" />
 
 ---
 
