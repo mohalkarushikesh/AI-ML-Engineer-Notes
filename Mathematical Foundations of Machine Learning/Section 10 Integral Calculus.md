@@ -5,22 +5,22 @@
 ## 📘 Integral Calculus Basics
 - **Definition:** Integral calculus deals with the accumulation of quantities, often represented as the area under a curve.
 
-<img width="1192" height="679" alt="image" src="https://github.com/user-attachments/assets/175a085e-df4f-42fe-b4ba-607da3e07181" />
+<img width="1192" height="250" alt="image" src="https://github.com/user-attachments/assets/175a085e-df4f-42fe-b4ba-607da3e07181" />
 
 - **Two types of integrals:**
   - **Definite integral:** $\int_a^b f(x)\,dx$ → gives a numerical value (area between $a$ and $b$).
 
-<img width="1198" height="673" alt="image" src="https://github.com/user-attachments/assets/92433049-ba58-462b-806d-637389e546f0" />
+<img width="1198" height="250" alt="image" src="https://github.com/user-attachments/assets/92433049-ba58-462b-806d-637389e546f0" />
 
-<img width="1271" height="663" alt="image" src="https://github.com/user-attachments/assets/53d4d663-64ec-4779-86d2-bcae857814e9" />
+<img width="1271" height="250" alt="image" src="https://github.com/user-attachments/assets/53d4d663-64ec-4779-86d2-bcae857814e9" />
 
-<img width="1266" height="672" alt="image" src="https://github.com/user-attachments/assets/89906952-aee9-43f4-a67a-ee198b4a5497" />
+<img width="1266" height="250" alt="image" src="https://github.com/user-attachments/assets/89906952-aee9-43f4-a67a-ee198b4a5497" />
 
-<img width="1285" height="675" alt="image" src="https://github.com/user-attachments/assets/dbf0282b-a855-49f8-8447-3cdfb22ad131" />
+<img width="1285" height="250" alt="image" src="https://github.com/user-attachments/assets/dbf0282b-a855-49f8-8447-3cdfb22ad131" />
 
 Ex: 
 
-<img width="1160" height="700" alt="image" src="https://github.com/user-attachments/assets/547631d2-cec8-47a8-af1d-30ea32109eda" />
+<img width="1160" height="250" alt="image" src="https://github.com/user-attachments/assets/547631d2-cec8-47a8-af1d-30ea32109eda" />
 
 Through python
 
@@ -28,19 +28,23 @@ Through python
 from scipy.integrate import quad # quadrature = numerical integration 
 ```
 
-<img width="1286" height="627" alt="image" src="https://github.com/user-attachments/assets/3b25e54e-9c7a-474d-afbf-50dee2710d98" />
+<img width="1286" height="250" alt="image" src="https://github.com/user-attachments/assets/3b25e54e-9c7a-474d-afbf-50dee2710d98" />
 
 ### Finding the Area Under the Curve (AUC) using Receiver operating charateristics (ROC)
 
+<img width="1276" height="250" alt="image" src="https://github.com/user-attachments/assets/c7546226-6e8b-493e-9a76-ec01d8bdddd4" />
+
+
+
   - **Indefinite integral:** $\int f(x)\,dx$ → gives a function (antiderivative).
 
-<img width="1116" height="542" alt="image" src="https://github.com/user-attachments/assets/9a7193f2-1243-48b9-bf01-32998115cc66" />
+<img width="1116" height="250" alt="image" src="https://github.com/user-attachments/assets/9a7193f2-1243-48b9-bf01-32998115cc66" />
 
-<img width="1198" height="618" alt="image" src="https://github.com/user-attachments/assets/3e9660d7-5d62-41eb-9e63-b4b948e7709d" />
+<img width="1198" height="250" alt="image" src="https://github.com/user-attachments/assets/3e9660d7-5d62-41eb-9e63-b4b948e7709d" />
 
-<img width="1224" height="621" alt="image" src="https://github.com/user-attachments/assets/05000320-176b-4738-bfa3-2537b96ba539" />
+<img width="1224" height="250" alt="image" src="https://github.com/user-attachments/assets/05000320-176b-4738-bfa3-2537b96ba539" />
 
-<img width="1228" height="603" alt="image" src="https://github.com/user-attachments/assets/dc7da672-b65b-483b-ac2f-2a863675a9aa" />
+<img width="1228" height="250" alt="image" src="https://github.com/user-attachments/assets/dc7da672-b65b-483b-ac2f-2a863675a9aa" />
 
 - **Fundamental Theorem of Calculus:**
   - Links differentiation and integration.
@@ -51,7 +55,7 @@ from scipy.integrate import quad # quadrature = numerical integration
 ## 🔹 Role in AI & ML
 Integral calculus appears in several key areas:
 
-<img width="1233" height="697" alt="image" src="https://github.com/user-attachments/assets/7f441c3c-7e7a-48dd-8378-ff137bf99df1" />
+<img width="1233" height="250" alt="image" src="https://github.com/user-attachments/assets/7f441c3c-7e7a-48dd-8378-ff137bf99df1" />
 
 ### 1. **Probability & Statistics**
 - Probability density functions (PDFs) require integration to compute probabilities:
@@ -240,6 +244,6 @@ Machine Learning Algorithms
 
 ✅ **In short:** ROC curve shows the trade-off between sensitivity (TPR) and specificity (1−FPR). AUC quantifies overall performance.  
 
-<img width="1173" height="681" alt="image" src="https://github.com/user-attachments/assets/782b22f7-efa5-482c-9e48-3525495f5e5f" />
+<img width="1173" height="300" alt="image" src="https://github.com/user-attachments/assets/782b22f7-efa5-482c-9e48-3525495f5e5f" />
 
 How to calculate AUC => Integral calculus 
