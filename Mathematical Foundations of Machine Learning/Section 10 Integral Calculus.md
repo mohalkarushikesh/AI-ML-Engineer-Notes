@@ -9,6 +9,29 @@
 
 - **Two types of integrals:**
   - **Definite integral:** $\int_a^b f(x)\,dx$ → gives a numerical value (area between $a$ and $b$).
+
+<img width="1198" height="673" alt="image" src="https://github.com/user-attachments/assets/92433049-ba58-462b-806d-637389e546f0" />
+
+<img width="1271" height="663" alt="image" src="https://github.com/user-attachments/assets/53d4d663-64ec-4779-86d2-bcae857814e9" />
+
+<img width="1266" height="672" alt="image" src="https://github.com/user-attachments/assets/89906952-aee9-43f4-a67a-ee198b4a5497" />
+
+<img width="1285" height="675" alt="image" src="https://github.com/user-attachments/assets/dbf0282b-a855-49f8-8447-3cdfb22ad131" />
+
+Ex: 
+
+<img width="1160" height="700" alt="image" src="https://github.com/user-attachments/assets/547631d2-cec8-47a8-af1d-30ea32109eda" />
+
+Through python
+
+```
+from scipy.integrate import quad # quadrature = numerical integration 
+```
+
+<img width="1286" height="627" alt="image" src="https://github.com/user-attachments/assets/3b25e54e-9c7a-474d-afbf-50dee2710d98" />
+
+### Finding the Area Under the Curve (AUC) using Receiver operating charateristics (ROC)
+
   - **Indefinite integral:** $\int f(x)\,dx$ → gives a function (antiderivative).
 
 <img width="1116" height="542" alt="image" src="https://github.com/user-attachments/assets/9a7193f2-1243-48b9-bf01-32998115cc66" />
