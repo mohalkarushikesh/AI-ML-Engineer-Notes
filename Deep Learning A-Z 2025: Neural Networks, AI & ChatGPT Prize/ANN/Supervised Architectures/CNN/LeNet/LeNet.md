@@ -53,19 +53,7 @@
 
 ---
 
-
-Since image generation isn’t available right now, let me sketch out the **LeNet architecture flow in text form** so you can visualize it clearly:
-
-```mermaid
-flowchart TD
-    A[Input: 32x32 Image] --> B[Conv C1: 6 filters]
-    B --> C[Pool S2: Avg Pooling]
-    C --> D[Conv C3: 16 filters]
-    D --> E[Pool S4: Avg Pooling]
-    E --> F[FC Layer C5]
-    F --> G[FC Layer F6]
-    G --> H[Output: Softmax 10 classes]
-```
+<img width="952" height="480" alt="lenet-min" src="https://github.com/user-attachments/assets/917a746d-ed2f-4a7c-be0d-af3d932e2804" />
 
 ---
 
