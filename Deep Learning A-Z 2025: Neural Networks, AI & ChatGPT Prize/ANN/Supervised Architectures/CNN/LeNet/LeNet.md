@@ -7,30 +7,130 @@
 
 ---
 
-### 🔹 Structure
-1. **Input Layer**  
-   - Grayscale image (e.g., 32×32 pixels).  
+### 🔹 Architecture
 
-2. **Convolutional Layer (C1)**  
-   - 6 filters of size 5×5.  
-   - Produces 6 feature maps.  
+<img width="952" height="480" alt="lenet-min" src="https://github.com/user-attachments/assets/917a746d-ed2f-4a7c-be0d-af3d932e2804" />
 
-3. **Pooling Layer (S2)**  
+***
+
+## 1. Input Image
+
+*   **Size:** `32 × 32 × 1`
+    *   32 × 32 → height and width of the image
+    *   1 → number of channels (grayscale image)
+
+***
+
+## 2. Convolutional Layer (C1)
+
+The convolutional layer is defined by these hyperparameters:
+
+| Parameter | Meaning              | Value |
+| --------- | -------------------- | ----- |
+| `n_c`     | Number of filters    | 6     |
+| `F`       | Filter (kernel) size | 5 × 5 |
+| `P`       | Padding              | 0     |
+| `S`       | Stride               | 1     |
+
+***
+
+#### Filters (Kernels)
+
+*   There are **6 filters**
+*   Each filter has size:
+        5 × 5 × 1
+    *   5 × 5 → spatial size
+    *   1 → depth must match input channels
+
+Each filter slides across the image and produces **one feature map**.
+
+***
+
+#### Output Size Calculation
+
+The output spatial size is computed using:
+
+$$
+\text{Output size} = \frac{N - F + 2P}{S} + 1
+$$
+
+Where:
+
+*   $$N = 32$$
+*   $$F = 5$$
+*   $$P = 0$$
+*   $$S = 1$$
+
+$$
+\frac{32 - 5 + 0}{1} + 1 = 28
+$$
+
+✅ **Output size:** `28 × 28 × 6`
+
+*   28 × 28 → height and width
+*   6 → one feature map per filter
+
+***
+
+#### Trainable Parameters (Weights + Bias)
+
+### Weights
+
+*   Each filter has:
+        5 × 5 × 1 = 25 weights
+*   For 6 filters:
+        25 × 6 = 150 weights
+
+#### Bias
+
+*   One bias per filter:
+        6 biases
+
+#### ✅ Total Trainable Parameters
+
+    150 (weights) + 6 (biases) = 156
+
+That’s why the diagram shows:
+
+    5 × 5 × 1 × 6 + 6 = 156
+
+***
+
+#### Connections
+
+![C1_Convolutional-Layer](https://github.com/user-attachments/assets/f6f4de71-703c-4257-b1c2-878ff94590ba)
+
+## 3. **Pooling Layer (S2)**  
    - Average pooling (subsampling).  
    - Reduces spatial dimensions.  
 
-4. **Convolutional Layer (C3)**  
+![Pooling-Layer-](https://github.com/user-attachments/assets/053d1417-ff07-443b-a1ae-238329a0c117)
+
+
+## 4. **Convolutional Layer (C3)**  
    - 16 filters of size 5×5.  
    - Produces 16 feature maps.  
 
-5. **Pooling Layer (S4)**  
+![Convolutional-Layer-2](https://github.com/user-attachments/assets/70391eae-1a8a-4068-80ee-0ba03d1f277a)
+
+## 5. **Pooling Layer (S4)**  
    - Average pooling again.  
 
-6. **Fully Connected Layers (C5, F6)**  
+![S4_Pooling-Laye](https://github.com/user-attachments/assets/1b4fda1c-eaa2-4066-9476-7207799b9207)
+
+## 6. **Convolutional Layer (C5)**  
+   
+![C5_-Fully-Connected-laye](https://github.com/user-attachments/assets/8b216970-fa1b-4728-9eb0-8b6de5c73c88)
+
+## 7. **Fully Connected Layers (C5)**  
    - Dense layers for classification.  
 
-7. **Output Layer**  
+![f6_-Fully-Connected-Laye](https://github.com/user-attachments/assets/262bb9d8-2a54-44b9-b3de-b8e41bedb0fe)
+
+## 8. **Output Layer**  
    - Softmax classifier (e.g., 10 classes for digits 0–9).  
+
+![file](https://github.com/user-attachments/assets/f39668e5-fc87-42da-990e-ef17de77dca8)
 
 ---
 
@@ -53,141 +153,7 @@
 
 ---
 
-<img width="952" height="480" alt="lenet-min" src="https://github.com/user-attachments/assets/917a746d-ed2f-4a7c-be0d-af3d932e2804" />
-
----
-
 ✅ **This flow shows:**  
 - Input image → convolution → pooling → deeper convolution → pooling → fully connected layers → output.  
 - It’s the classic CNN pipeline that inspired modern architectures like AlexNet, VGG, and ResNet.  
 
-
-
-Here’s the **mathematical backbone of LeNet** — the operations that happen layer by layer:
-
----
-
-## 📘 Maths Behind LeNet
-
-### 1. **Convolution Layers (C1, C3)**
-- Operation:  
-```math
-  y_{i,j}^{(k)} = \sum_{m=0}^{f-1} \sum_{n=0}^{f-1} x_{i+m, j+n} \cdot w_{m,n}^{(k)} + b^{(k)}
-```
-  - $(x\)$ : input pixel values  
-  - $(w\)$ : filter weights  
-  - $(b\)$ : bias term  
-  - $(f\)$ : filter size (5×5 in LeNet)  
-- Produces **feature maps** by sliding filters over the input image.
-
----
-
-### 2. **Pooling Layers (S2, S4)**
-- LeNet used **average pooling** (subsampling).  
-- Operation:
-```math
-  y_{i,j} = \frac{1}{p^2} \sum_{m=0}^{p-1} \sum_{n=0}^{p-1} x_{i \cdot p + m, j \cdot p + n}
-```
-  - $(p\)$ : pooling window size (2×2 in LeNet).  
-- Reduces spatial dimensions while retaining important features.
-
----
-
-### 3. **Fully Connected Layers (C5, F6)**
-- Standard dense layer:  
-```math
-  y = W \cdot x + b
-```
-  - $(W\)$ : weight matrix  
-  - $(x\)$ : flattened input vector  
-  - $(b\)$ : bias  
-- Each neuron connects to **all inputs** from the previous layer.
-
----
-
-### 4. **Activation Functions**
-- LeNet used **sigmoid** or **tanh** (not ReLU).  
-- Sigmoid:  
-```math
-  \sigma(z) = \frac{1}{1 + e^{-z}}
-```
-- Tanh:  
-```math
-  \tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}
-```
-
----
-
-### 5. **Output Layer (Softmax)**
-- For classification into 10 digits (0–9).  
-- Operation:  
-```math
-  P(y=i|x) = \frac{e^{z_i}}{\sum_{j=1}^{10} e^{z_j}}
-```
-  - Converts raw scores into probabilities.
-
----
-
-## 🔹 Summary
-- **Convolution:** weighted sums over local regions.  
-- **Pooling:** dimension reduction by averaging.  
-- **Fully Connected:** matrix multiplication.  
-- **Activation:** nonlinear transformation (sigmoid/tanh).  
-- **Softmax:** probability distribution over classes.  
-
----
-
-Perfect — let’s break down the **parameter count layer by layer in LeNet-5** (the most cited version).  
-
----
-
-## 📘 Parameter Count in LeNet-5
-
-### 1. **Conv Layer C1**
-- Input: $(32 \times 32 \times 1\)$ (grayscale image)  
-- Filters: 6 filters, each $(5 \times 5\)$  
-- Parameters per filter: $(5 \times 5 \times 1 + 1 = 26\)$ (weights + bias)  
-- Total: $(26 \times 6 = 156\)$  
-
----
-
-### 2. **Conv Layer C3**
-- Input: $(14 \times 14 \times 6\)$
-- Filters: 16 filters, each $(5 \times 5\)$  
-- Parameters per filter: $(5 \times 5 \times 6 + 1 = 151\)$
-- Total: $(151 \times 16 = 2,416\)$  
-
----
-
-### 3. **Fully Connected Layer C5**
-- Input: $(5 \times 5 \times 16 = 400\)$  
-- Neurons: 120  
-- Parameters: $(400 \times 120 + 120 = 48,120\)$  
-
----
-
-### 4. **Fully Connected Layer F6**
-- Input: 120  
-- Neurons: 84  
-- Parameters: $(120 \times 84 + 84 = 10,164\)$  
-
----
-
-### 5. **Output Layer**
-- Input: 84  
-- Neurons: 10 (digits 0–9)  
-- Parameters: $(84 \times 10 + 10 = 850\)$  
-
----
-
-## 🔹 Total Parameters
-```math
-156 + 2,416 + 48,120 + 10,164 + 850 = 61,706
-```
-
-So **LeNet-5 has ~61,700 trainable parameters** — tiny compared to modern CNNs (AlexNet has ~60 million, ResNet-50 has ~25 million).  
-
----
-
-✅ **Key Insight:**  
-LeNet was small enough to run on 1990s hardware, yet powerful enough to prove CNNs could outperform traditional vision methods.  
