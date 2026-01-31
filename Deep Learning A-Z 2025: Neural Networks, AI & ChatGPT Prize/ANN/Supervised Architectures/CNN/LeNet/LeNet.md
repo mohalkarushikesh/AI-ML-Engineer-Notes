@@ -1,11 +1,6 @@
-Got it 👍
-You want the **same level of deep, step-by-step explanation as C1**, but for **every layer of LeNet**, **without removing or changing the images**. Below is a **layer-wise deep dive**, continuing exactly in the same spirit.
+# 📘 LeNet-5 Architecture 
 
----
-
-# 📘 LeNet-5 Architecture — **Layer-by-Layer Deep Explanation**
-
-(Images remain as-is; explanation focuses on **what is happening mathematically & conceptually**.)
+<img width="952" height="480" alt="lenet-min" src="https://github.com/user-attachments/assets/1185edb2-379d-4f06-b1b5-ebc657e4a3ba" />
 
 ---
 
@@ -28,23 +23,85 @@ You want the **same level of deep, step-by-step explanation as C1**, but for **e
 
 ---
 
-## 2️⃣ Convolutional Layer — **C1** ✅ (already explained by you)
+## 2️⃣ Convolutional Layer — **C1** ✅ 
 
-**Output:**
+![C1_Convolutional-Layer](https://github.com/user-attachments/assets/204db142-de6c-48d4-aa99-f0026ee0edfa)
 
-```
-28 × 28 × 6
-```
 
-* 6 learned edge/curve detectors
-* Each filter sees the **entire input depth (1 channel)**
-* Activation: **tanh / sigmoid**
+##### Convolutional Layer Settings
 
-📌 Key idea:
+The convolutional layer is defined by these hyperparameters:
 
-> C1 learns **low-level features** like edges and simple curves.
+| Parameter | Meaning              | Value |
+| --------- | -------------------- | ----- |
+| `n_c`     | Number of filters    | 6     |
+| `F`       | Filter (kernel) size | 5 × 5 |
+| `P`       | Padding              | 0     |
+| `S`       | Stride               | 1     |
 
----
+***
+
+##### Filters (Kernels)
+
+*   There are **6 filters**
+*   Each filter has size:
+        5 × 5 × 1
+    *   5 × 5 → spatial size
+    *   1 → depth must match input channels
+
+Each filter slides across the image and produces **one feature map**.
+
+***
+
+##### Output Size Calculation
+
+The output spatial size is computed using:
+
+$$
+\text{Output size} = \frac{N - F + 2P}{S} + 1
+$$
+
+Where:
+
+*   $$N = 32$$
+*   $$F = 5$$
+*   $$P = 0$$
+*   $$S = 1$$
+
+$$
+\frac{32 - 5 + 0}{1} + 1 = 28
+$$
+
+✅ **Output size:** `28 × 28 × 6`
+
+*   28 × 28 → height and width
+*   6 → one feature map per filter
+
+***
+
+#####  Trainable Parameters (Weights + Bias)
+
+##### Weights
+
+*   Each filter has:
+        5 × 5 × 1 = 25 weights
+*   For 6 filters:
+        25 × 6 = 150 weights
+
+##### Bias
+
+*   One bias per filter:
+        6 biases
+
+##### ✅ Total Trainable Parameters
+
+    150 (weights) + 6 (biases) = 156
+
+That’s why the diagram shows:
+
+    5 × 5 × 1 × 6 + 6 = 156
+
+***
 
 ## 3️⃣ Pooling Layer — **S2 (Subsampling Layer)**
 
@@ -339,9 +396,9 @@ Activation: **tanh**
 
 ### Softmax Formula
 
-[
+```math
 P(y=i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
-]
+```
 
 📌 Produces:
 
@@ -384,32 +441,6 @@ P(y=i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
 
 > **Edges → Shapes → Parts → Digits**
 
----
-
-If you want next:
-
-* 🔥 **LeNet vs AlexNet (why ReLU changed everything)**
-* 🔥 **PyTorch implementation layer-by-layer**
-* 🔥 **Why average pooling died**
-* 🔥 **Backprop flow in LeNet**
-
-Just tell me.
-
-## 6. **Convolutional Layer (C5)**  
-   
-![C5_-Fully-Connected-laye](https://github.com/user-attachments/assets/8b216970-fa1b-4728-9eb0-8b6de5c73c88)
-
-## 7. **Fully Connected Layers (C5)**  
-   - Dense layers for classification.  
-
-![f6_-Fully-Connected-Laye](https://github.com/user-attachments/assets/262bb9d8-2a54-44b9-b3de-b8e41bedb0fe)
-
-## 8. **Output Layer**  
-   - Softmax classifier (e.g., 10 classes for digits 0–9).  
-
-![file](https://github.com/user-attachments/assets/f39668e5-fc87-42da-990e-ef17de77dca8)
-
----
 
 ### 🔹 Characteristics
 - **Activation Function:** Sigmoid or tanh (ReLU wasn’t popular yet).  
