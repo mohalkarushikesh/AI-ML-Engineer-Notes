@@ -1,8 +1,3 @@
-Below is a **corrected, structured, and deeper version of your ResNet notes**.
-I have **NOT removed any images** and I’ve **kept your structure**, only **fixed inaccuracies, added missing theory, clarified math, and improved flow**.
-
----
-
 ## 📘 ResNet Architecture (2015, Microsoft Research)
 
 **Paper:** *Deep Residual Learning for Image Recognition*
@@ -30,28 +25,29 @@ Before ResNet, simply **stacking more layers** caused:
 
 Instead of learning a **direct mapping**:
 
-[
-H(x)
-]
+$H(x)$
 
 ResNet forces the network to learn a **residual**:
 
-[
-F(x) = H(x) - x
-]
+$F(x) = H(x) - x$
 
 So the original function becomes:
 
-[
-H(x) = F(x) + x
-]
+$H(x) = F(x) + x$
 
 ➡️ If identity mapping is optimal, the network can simply learn
-[
-F(x) = 0
-]
+
+$F(x) = 0$
 
 This makes **deep networks much easier to optimize**.
+
+![skip\_connection](https://github.com/user-attachments/assets/ab669a97-6ea7-4c7a-b4fb-a0939b77bbf1)
+
+---
+
+### ResNet-34 Architecture
+
+<img width="800" height="450" alt="The-structure-of-the-ResNet34-CNN-Network-The-input-of-the-network-is-the-preprocessed" src="https://github.com/user-attachments/assets/fe65dadf-4d8a-43b4-ad90-f1c3c9dc4712" />
 
 ---
 
@@ -77,16 +73,14 @@ This aggressively reduces spatial size early.
 
 Each block follows:
 
-[
-y = F(x, W) + x
-]
+$y = F(x, W) + x$
 
 Where:
 
 * (x) → input (identity shortcut)
 * (F(x, W)) → stacked convolutions
 * Addition happens **element-wise**
-
+  
 ---
 
 ### 🔹 Types of Residual Blocks
@@ -162,9 +156,7 @@ When dimensions of (x) and (F(x)) differ:
 
 #### ✅ Option 2: Linear Projection (Most common)
 
-[
-y = F(x) + W_s x
-]
+$y = F(x) + W_s x
 
 * (W_s): 1×1 convolution
 * Matches channels and spatial size
@@ -187,16 +179,6 @@ y = F(x) + W_s x
 
 ---
 
-## 🔹 Residual Connection Visuals (UNCHANGED)
-
-### 1 Residual Block
-
-![skip\_connection](https://github.com/user-attachments/assets/ab669a97-6ea7-4c7a-b4fb-a0939b77bbf1)
-
-### ResNet-34 Structure
-
-<img width="800" height="450" alt="The-structure-of-the-ResNet34-CNN-Network-The-input-of-the-network-is-the-preprocessed" src="https://github.com/user-attachments/assets/fe65dadf-4d8a-43b4-ad90-f1c3c9dc4712" />
-
 ### Overall ResNet Architecture
 
 <img width="1123" height="487" alt="ResNet" src="https://github.com/user-attachments/assets/25683087-5883-44ff-875c-100c434c575e" />
@@ -208,16 +190,14 @@ y = F(x) + W_s x
 ### Gradient Flow
 
 For residual layer:
-[
-y = F(x) + x
-]
+
+$y = F(x) + x$
 
 Gradient:
-[
-\frac{\partial L}{\partial x} = \frac{\partial L}{\partial y} \left(1 + \frac{\partial F}{\partial x}\right)
-]
 
-➡️ Even if ( \frac{\partial F}{\partial x} \approx 0 ),
+$\frac{\partial L}{\partial x} = \frac{\partial L}{\partial y} \left(1 + \frac{\partial F}{\partial x}\right)$
+
+➡️ Even if $\frac{\partial F}{\partial x} \approx 0 )$ ,
 gradient can still flow via **identity path**.
 
 ✅ Solves vanishing gradient
@@ -280,15 +260,7 @@ gradient can still flow via **identity path**.
 
 ---
 
-## 🔹 Final Summary (Interview-Ready)
+## 🔹 Final Summary 
 
 > **ResNet introduced residual learning using identity skip connections, allowing networks to learn residual functions instead of full mappings. This solved the degradation and vanishing gradient problems, enabling extremely deep neural networks and becoming the foundation of modern computer vision architectures.**
 
----
-
-If you want next:
-
-* 🔥 **ResNet vs DenseNet vs EfficientNet**
-* 🔥 **Why ResNet still beats ViT in low-data regimes**
-* 🔥 **PyTorch implementation from scratch**
-* 🔥 **Interview Q&A (FAANG-level)**
