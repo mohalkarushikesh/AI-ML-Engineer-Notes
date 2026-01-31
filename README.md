@@ -780,7 +780,7 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
       - [LeNet](https://www.geeksforgeeks.org/computer-vision/lenet-5-architecture/) LetNet5  5 conv layers, early CNN for digit recognition.
       - [AlexNet](https://www.geeksforgeeks.org/machine-learning/ml-getting-started-with-alexnet/)  8 layers (5 conv + 3 FC), introduced ReLU, dropout, GPU training.
       - [VGG](https://www.geeksforgeeks.org/computer-vision/vgg-net-architecture-explained/) numbers = depth (13/16 conv + 3 FC).
-      - [ResNet](https://www.geeksforgeeks.org/deep-learning/residual-networks-resnet-deep-learning/) numbers = depth (18, 34, 50, etc.), innovation = skip connections.
+      - [ResNet](https://www.geeksforgeeks.org/deep-learning/residual-networks-resnet-deep-learning/) numbers = depth (18, 34, 50, etc.), innovation = skip connections (residual connections) .
       - [Inception (GoogLeNet)](https://www.geeksforgeeks.org/machine-learning/understanding-googlenet-model-cnn-architecture/)  22 layers, innovation = multi-scale filters.
       - [MobileNet](https://www.geeksforgeeks.org/machine-learning/image-recognition-with-mobilenet/)  lightweight, innovation = depthwise separable convolutions.
       - [EfficientNet](https://www.geeksforgeeks.org/computer-vision/efficientnet-architecture/)  scalable, innovation = compound scaling.
