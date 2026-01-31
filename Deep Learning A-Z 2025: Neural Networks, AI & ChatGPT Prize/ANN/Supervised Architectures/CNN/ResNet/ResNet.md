@@ -156,7 +156,7 @@ When dimensions of (x) and (F(x)) differ:
 
 #### ✅ Option 2: Linear Projection (Most common)
 
-$y = F(x) + W_s x
+$y = F(x) + W_s x$
 
 * (W_s): 1×1 convolution
 * Matches channels and spatial size
