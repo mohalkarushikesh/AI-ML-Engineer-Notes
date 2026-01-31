@@ -790,19 +790,19 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         ```
 
     - **Recurrent Neural Networks (RNNs)**: model sequential data using feedback loops. Issue: Vanishing gradients.
-      - [Vanilla RNN](https://www.geeksforgeeks.org/machine-learning/introduction-to-recurrent-neural-network/)
-      - [Gated Recurrent Unit (GRU)](https://www.geeksforgeeks.org/machine-learning/gated-recurrent-unit-networks/)
-      - [Bidirectional RNN](https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/)
+      - [Vanilla RNN](https://www.geeksforgeeks.org/machine-learning/introduction-to-recurrent-neural-network/) — The simplest recurrent network, processes sequences step by step but struggles with long-term dependencies.  
+      - [Gated Recurrent Unit (GRU)](https://www.geeksforgeeks.org/machine-learning/gated-recurrent-unit-networks/) — A variant of RNN with gating mechanisms, more efficient than LSTM while handling vanishing gradients.  
+      - [Bidirectional RNN](https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/) — Reads sequences both forward and backward, capturing past and future context simultaneously.  
         ```math
         h_t = f(W_h h_{t-1} + W_x x_t + b)
         ```
 
     - **Long Short-Term Memory (LSTM)**: handles long-term dependencies in sequences.
-      - [Vanilla LSTM](https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/)
-      - [Stacked LSTM](https://towardsdatascience.com/stacked-long-short-term-memory-networks-4b8b0a4e21b4)
-      - [Bidirectional LSTM](https://towardsdatascience.com/bidirectional-lstm-for-text-classification-85c5d849b49c)
-      - [CNN-LSTM](https://www.geeksforgeeks.org/cnn-lstm-models/)
-      - **Peephole LSTM**: Adds cell state to gates.
+      - [Vanilla LSTM](https://www.analyticsvidhya.com/blog/2017/12/fundamentals-of-deep-learning-introduction-to-lstm/) — Standard LSTM architecture with input, forget, and output gates to handle long-term dependencies.  
+      - [Stacked LSTM](https://towardsdatascience.com/stacked-long-short-term-memory-networks-4b8b0a4e21b4) — Multiple LSTM layers stacked to capture more complex sequence patterns.  
+      - [Bidirectional LSTM](https://towardsdatascience.com/bidirectional-lstm-for-text-classification-85c5d849b49c) — Processes sequences in both forward and backward directions for richer context.  
+      - [CNN-LSTM](https://www.geeksforgeeks.org/cnn-lstm-models/) — Combines CNNs for feature extraction with LSTMs for sequence modeling, useful in video and text tasks.  
+      - [Peephole LSTM](https://www.mdpi.com/2227-7390/11/15/3386) — Extends standard LSTM by allowing gates to access the cell state directly, improving timing-based sequence modeling.  
         ```math
         f_t = \sigma(W_f x_t + U_f h_{t-1} + b_f)  
         i_t = \sigma(W_i x_t + U_i h_{t-1} + b_i)  
