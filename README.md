@@ -1100,22 +1100,22 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
   - **Transfer Learning**
     - [Fine-tuning pre-trained models](https://www.tensorflow.org/tutorials/images/transfer_learning): adapts models trained on large datasets to new tasks by updating weights.
     - Common models: VGG, ResNet, BERT
-    - **Knowledge Distillation**: Transfer from teacher to student model.
+    - [Knowledge Distillation](https://neptune.ai/blog/knowledge-distillation): Transfer from teacher to student model.
 
   - **Generative Models**
-    - [GANs (Generative Adversarial Networks)](https://www.analyticsvidhya.com/blog/2019/03/introduction-generative-adversarial-networks-gans/): train a generator and discriminator in a minimax game.
+    - [GANs (Generative Adversarial Networks)](https://www.geeksforgeeks.org/deep-learning/generative-adversarial-network-gan/): train a generator and discriminator in a minimax game.
     ```math
     \min_G \max_D V(D,G) = \mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]
     ```
-    - **Diffusion Models**: Iterative denoising for generation (e.g., Stable Diffusion).
+    - [Diffusion Models](https://www.ibm.com/think/topics/diffusion-models): Iterative denoising for generation (e.g., Stable Diffusion).
 
-    - [VAEs (Variational Autoencoders)](https://www.geeksforgeeks.org/variational-autoencoder-introduction/): learn latent distributions for generative reconstruction.
+    - [VAEs (Variational Autoencoders)](https://www.geeksforgeeks.org/machine-learning/variational-autoencoders/): learn latent distributions for generative reconstruction.
     ```math
     \mathcal{L} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - D_{KL}(q(z|x) || p(z))
     ```
 
   - **Transformers**
-    - [Attention mechanisms](https://www.geeksforgeeks.org/attention-mechanism-in-neural-networks/): focus on relevant input parts during processing.
+    - [Attention mechanisms](https://www.geeksforgeeks.org/artificial-intelligence/ml-attention-mechanism/): focus on relevant input parts during processing.
     - [Self-attention](https://jalammar.github.io/illustrated-transformer/): computes attention within a sequence.
     ```math
     \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
@@ -1123,7 +1123,7 @@ A well-documented Jupyter Notebook with model performance metrics, visualization
 
     - [BERT](https://huggingface.co/docs/transformers/model_doc/bert.html): bidirectional transformer for language understanding.
     - [GPT](https://huggingface.co/docs/transformers/model_doc/gpt2.html): autoregressive transformer for text generation.
-    - **Llama Models**: Open-source large language models.
+    - [Llama Models](https://www.datacamp.com/tutorial/llama-3-3-tutorial): Open-source large language models.
 
 ---
 
