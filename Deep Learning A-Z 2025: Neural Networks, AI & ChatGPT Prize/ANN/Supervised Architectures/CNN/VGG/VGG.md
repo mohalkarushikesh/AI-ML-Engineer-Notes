@@ -65,7 +65,13 @@
 - Extremely **large parameter count** → heavy memory and compute requirements.  
 - Training is slow compared to modern architectures.  
 
----
+
+### 🔹Uses 
+- Transfer Learning
+
+### 🔹 Applications 
+- Robut feature extraction
+- Data Augmentation
 
 ✅ **In short:** VGG proved that **depth matters** in CNNs. By stacking small filters, it achieved high accuracy, but at the cost of massive parameter size.
 
