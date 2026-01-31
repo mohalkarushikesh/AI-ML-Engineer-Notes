@@ -812,15 +812,15 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         ```
         
     - **Transformers**: use attention mechanisms for sequence modeling. Enhanced: Multi-head attention.
-      - [Vanilla Transformer](https://huggingface.co/learn/nlp-course/chapter3/4)
-      - [BERT](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270)
-      - [GPT](https://www.simplilearn.com/tutorials/deep-learning-tutorial/gpt)
-      - [T5](https://huggingface.co/docs/transformers/model_doc/t5.html)
-      - [Vision Transformer (ViT)](https://learnopencv.com/introduction-to-vision-transformers-vit/)
-      - **XLNet**: Permutation-based pretraining.
-          ```math
-          \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-          ```
+      - [Vanilla Transformer]("https://rohitbandaru.github.io/blog/Transformer-Design-Guide-Pt1/")  Original encoder-decoder Transformer architecture (Vaswani et al., 2017) using self-attention instead of recurrence/convolutions.  
+      - [BERT](https://www.bing.com/search?q="https%3A%2F%2Ftowardsdatascience.com%2Fa-complete-guide-to-bert-with-code-2024-54b21a9b6270")  Bidirectional Encoder Representations from Transformers; pre-trained with masked language modeling and next sentence prediction.  
+      - [GPT](https://www.bing.com/search?q="https%3A%2F%2Fwww.simplilearn.com%2Ftutorials%2Fdeep-learning-tutorial%2Fchatgpt-tutorial")  Autoregressive Transformer for text generation; trained to predict the next token in a sequence.  
+      - [T5](https://www.bing.com/search?q="https%3A%2F%2Fhuggingface.co%2Fdocs%2Ftransformers%2Fmodel_doc%2Ft5")  Treats all NLP tasks as text-to-text problems (translation, summarization, QA, etc.) with task-specific prefixes.  
+      - [Vision Transformer](https://www.bing.com/search?q="https%3A%2F%2Flearnopencv.com%2Fvision-transformer-vit-architecture%2F")  Applies Transformer architecture to images by splitting them into patches and using self-attention for global context.  
+      - [XLNet](https://www.bing.com/search?q="https%3A%2F%2Fwww.geeksforgeeks.org%2Fxlnet-autoregressive-pretraining-for-language-understanding%2F")  Permutation-based language modeling; combines strengths of autoregressive (GPT) and autoencoding (BERT) approaches for better context capture.  
+        ```math
+        \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+        ```
 
     - **Encoder-Decoder Networks**: map input sequences to output sequences.
       - [Seq2Seq (RNN-based)](https://machinelearningmastery.com/encoder-decoder-long-short-term-memory-networks/)
