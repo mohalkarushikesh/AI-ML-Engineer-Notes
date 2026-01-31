@@ -35,6 +35,27 @@
 
 ---
 
+<img width="1123" height="487" alt="ResNet" src="https://github.com/user-attachments/assets/25683087-5883-44ff-875c-100c434c575e" />
+
+- Residual Connections: Enable very deep networks by allowing gradients to flow through identity shortcuts, reducing the vanishing gradient problem.
+- Identity Mapping: Simplifies training by learning residual functions instead of full mappings.
+- Depth: Supports extremely deep architectures for improved image recognition performance.
+
+### working 
+
+H(x)=F(x)+x
+
+- 1 Residual Block
+
+  ![skip_connection](https://github.com/user-attachments/assets/ab669a97-6ea7-4c7a-b4fb-a0939b77bbf1)
+
+- 2 Skip (Shortcut) Connection
+- 3 Handling Dimension Mismatch
+   - zero padding
+   - linear projection    
+- 4 Stacking Residual Blocks
+- Global Average Pooling (GAP)
+
 ### 🔹 Maths Behind Residual Connections
 - Standard layer:  
 ```math
@@ -64,7 +85,13 @@
 
 ### 🔹 Weaknesses
 - Still computationally heavy compared to newer architectures (e.g., EfficientNet).  
-- Large memory footprint.  
+- Large memory footprint.
+
+### 🔹 Challenges 
+- Vanishing/Exploding Gradient Problem
+- Degradation Problem 
+   - Performance Plateau
+   - Accuracy Degredation 
 
 ---
 
