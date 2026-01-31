@@ -1,4 +1,4 @@
-Since we just jumped from the social lives of AI agents to the mechanics of **Recurrent Neural Networks (RNNs)**, let’s get into the "memory" of deep learning.
+# **Recurrent Neural Networks (RNNs)**
 
 RNNs are designed for **sequential data** (where the order matters, like text, audio, or stock prices). Unlike standard neural networks, they have loops that allow information to persist.
 
@@ -17,15 +17,33 @@ The formula for the hidden state is:
 
 ---
 
+![nfa-](https://github.com/user-attachments/assets/caec8b16-1e07-4fab-b6a6-cc4d3362c6e1)
+
+---
+
 ## 2. RNN Architectures
 
 Depending on the input and output, RNNs can be mapped differently:
 
 | Type | Example |
 | --- | --- |
+| **One-to-One** | 
 | **One-to-Many** | Image Captioning (One image  sequence of words). |
 | **Many-to-One** | Sentiment Analysis (Sequence of words  one star rating). |
 | **Many-to-Many** | Machine Translation (English sentence  French sentence). |
+
+---
+
+![recurrent_neural_network](https://github.com/user-attachments/assets/fc14c4ee-704e-4e7f-8deb-b900569b711c)
+
+---
+
+## Variants of Recurrent Neural Networks (RNNs)
+
+1. Vanilla RNN
+2. Bidirectional RNNs
+3. Long Short-Term Memory Networks (LSTMs)
+4. Gated Recurrent Units (GRUs)
 
 ---
 
