@@ -1017,31 +1017,35 @@ L = -\sum_{i=1}^{C} y_i \log(\hat{y}_i)
 ---
 
 #### 🛡️ Regularization Techniques
-
-- [Dropout](https://www.geeksforgeeks.org/dropout-in-neural-networks/): randomly disables neurons during training to prevent overfitting.
+- [Dropout](https://www.geeksforgeeks.org/dropout-in-neural-networks/) randomly disables neurons during training to prevent overfitting.
   ```math
   \hat{y} = f(W \cdot (x \cdot r))
   ```
-Where \( r \sim \text{Bernoulli}(p) \) is the dropout mask.
+Where $( r \sim \text{Bernoulli}(p) \)$ is the dropout mask.
 
-- [Batch normalization](https://www.geeksforgeeks.org/batch-normalization-in-neural-networks/): normalizes layer inputs to stabilize learning.
+- [Batch normalization](https://www.geeksforgeeks.org/deep-learning/what-is-batch-normalization-in-deep-learning/) normalizes layer inputs to stabilize learning.
   ```math
   \hat{x} = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} \cdot \gamma + \beta
   ```
 
-- [L1/L2 regularization](https://www.geeksforgeeks.org/l1-and-l2-regularization/): penalizes large weights to reduce model complexity.
+- [L1 regularization (Lasso)](https://www.geeksforgeeks.org/machine-learning/regularization-in-machine-learning/) Adds absolute weight values to loss  
+
   ```math
-  L_{L1} = \lambda \sum |w_i|  
+  L_{L1} = \lambda \sum |w_i|
+  ```
+- [L2 regularization (Ridge)](https://www.geeksforgeeks.org/machine-learning/regularization-in-machine-learning/) Adds squared weight values  
+  ```math
   L_{L2} = \lambda \sum w_i^2
   ```
 
-- [Early stopping](https://www.geeksforgeeks.org/early-stopping-in-machine-learning/): halts training when validation performance stops improving.
+- [Early stopping](https://www.geeksforgeeks.org/machine-learning/regularization-by-early-stopping/) halts training when validation performance stops improving.
 
-- [Gradient clipping](https://www.geeksforgeeks.org/gradient-clipping-in-deep-learning/): limits gradient magnitude to prevent exploding gradients.
+- [Gradient clipping](https://www.geeksforgeeks.org/deep-learning/understanding-gradient-clipping/) limits gradient magnitude to prevent exploding gradients.
   ```math
   g = \frac{g}{\max(1, \frac{||g||}{\text{threshold}})}
   ```
-- **Label Smoothing**: Softens hard labels to reduce overconfidence.
+- [Label Smoothing](https://www.geeksforgeeks.org/machine-learning/what-is-label-smoothing/) Softens hard labels to reduce overconfidence.
+- [Data Augmentation](https://www.ibm.com/think/topics/data-augmentation#1759735860) Expands dataset with transformations (flip, rotate, zoom)
 
 ### 📘 Resources
 - #### 📖 Books
