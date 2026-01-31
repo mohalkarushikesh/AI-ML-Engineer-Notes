@@ -824,8 +824,8 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
 
     - **Encoder-Decoder Networks**: map input sequences to output sequences.
       - [Seq2Seq (RNN-based)](https://machinelearningmastery.com/encoder-decoder-long-short-term-memory-networks/)
-      - [Transformer-based Encoder-Decoder](https://www.analyticsvidhya.com/blog/2022/09/encoder-decoder-architecture-of-transformers/)
-      - [CNN Encoder with RNN Decoder](https://medium.com/@arindamganguly07/image-captioning-using-cnns-and-rnns-a-tutorial-on-deep-learning-624f7966ac71)
+      - [Transformer-based Encoder-Decoder](https://www.geeksforgeeks.org/deep-learning/architecture-and-working-of-transformers-in-deep-learning/)
+      - [CNN Encoder with RNN Decoder](https://www.kaggle.com/code/tanreinama/cnn-rnn-encoder-decoder-model-mxnet)
 
     - **Deep Q-Networks (DQNs)**: use neural networks to approximate Q-values.
       - [Vanilla DQN](https://neptune.ai/blog/deep-q-learning-dqn)
