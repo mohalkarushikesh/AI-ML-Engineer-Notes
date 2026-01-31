@@ -1,3 +1,5 @@
+https://github.com/darkdevil3610/100-AI-Machine-learning-Deep-learning-Computer-vision-NLP
+
 - Build your own linear regression 
 -  Build you own neural network 
 - Real time face recognition system 
