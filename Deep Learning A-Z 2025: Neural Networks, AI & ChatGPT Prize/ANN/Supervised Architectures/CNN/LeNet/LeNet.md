@@ -191,9 +191,9 @@ Unlike modern pooling, **LeNet pooling has parameters**.
 
 ### Output Size
 
-[
+$$
 \frac{14 - 5}{1} + 1 = 10
-]
+$$
 
 ```
 10 × 10 × 16
