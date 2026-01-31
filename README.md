@@ -790,8 +790,8 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         ```
 
     - **Recurrent Neural Networks (RNNs)**: model sequential data using feedback loops. Issue: Vanishing gradients.
-      - [Vanilla RNN](https://www.geeksforgeeks.org/recurrent-neural-networks-rnns/)
-      - [Gated Recurrent Unit (GRU)](https://www.geeksforgeeks.org/gated-recurrent-unit-gru/)
+      - [Vanilla RNN](https://www.geeksforgeeks.org/machine-learning/introduction-to-recurrent-neural-network/)
+      - [Gated Recurrent Unit (GRU)](https://www.geeksforgeeks.org/machine-learning/gated-recurrent-unit-networks/)
       - [Bidirectional RNN](https://www.geeksforgeeks.org/bidirectional-recurrent-neural-network/)
         ```math
         h_t = f(W_h h_{t-1} + W_x x_t + b)
