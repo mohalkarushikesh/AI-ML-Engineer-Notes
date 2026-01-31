@@ -812,12 +812,12 @@ This roadmap provides a **deep and structured path** to master Artificial Intell
         ```
         
     - **Transformers**: use attention mechanisms for sequence modeling. Enhanced: Multi-head attention.
-      - [Vanilla Transformer]("https://rohitbandaru.github.io/blog/Transformer-Design-Guide-Pt1/") Original encoder-decoder Transformer architecture (Vaswani et al., 2017) using self-attention instead of recurrence/convolutions.  
-      - [BERT]("https://www.geeksforgeeks.org/nlp/explanation-of-bert-model-nlp/") Bidirectional Encoder Representations from Transformers; pre-trained with masked language modeling and next sentence prediction.  
-      - [GPT]("https://www.geeksforgeeks.org/artificial-intelligence/introduction-to-generative-pre-trained-transformer-gpt/") Autoregressive Transformer for text generation; trained to predict the next token in a sequence.  
-      - [T5]("https://www.geeksforgeeks.org/nlp/t5-text-to-text-transfer-transformer/") Treats all NLP tasks as text-to-text problems (translation, summarization, QA, etc.) with task-specific prefixes.  
-      - [Vision Transformer]("https://www.geeksforgeeks.org/deep-learning/vision-transformer-vit-architecture/") Applies Transformer architecture to images by splitting them into patches and using self-attention for global context.  
-      - [XLNet](https://www.geeksforgeeks.org/nlp/xlnet-autoregressive-pretraining-for-language-understanding/") Permutation-based language modeling; combines strengths of autoregressive (GPT) and autoencoding (BERT) approaches for better context capture.  
+      - [Vanilla Transformer](https://rohitbandaru.github.io/blog/Transformer-Design-Guide-Pt1/) Original encoder-decoder Transformer architecture (Vaswani et al., 2017) using self-attention instead of recurrence/convolutions.  
+      - [BERT](https://www.geeksforgeeks.org/nlp/explanation-of-bert-model-nlp/) Bidirectional Encoder Representations from Transformers; pre-trained with masked language modeling and next sentence prediction.  
+      - [GPT](https://www.geeksforgeeks.org/artificial-intelligence/introduction-to-generative-pre-trained-transformer-gpt/) Autoregressive Transformer for text generation; trained to predict the next token in a sequence.  
+      - [T5](https://www.geeksforgeeks.org/nlp/t5-text-to-text-transfer-transformer/) Treats all NLP tasks as text-to-text problems (translation, summarization, QA, etc.) with task-specific prefixes.  
+      - [Vision Transformer](https://www.geeksforgeeks.org/deep-learning/vision-transformer-vit-architecture/) Applies Transformer architecture to images by splitting them into patches and using self-attention for global context.  
+      - [XLNet](https://www.geeksforgeeks.org/nlp/xlnet-autoregressive-pretraining-for-language-understanding/) Permutation-based language modeling; combines strengths of autoregressive (GPT) and autoencoding (BERT) approaches for better context capture.  
         ```math
         \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
         ```
