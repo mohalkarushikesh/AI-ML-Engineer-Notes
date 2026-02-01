@@ -1,5 +1,6 @@
-- **Giving the gpt a eyes** 
-
+- **Giving the gpt a eyes** : question answering 
+- **Object talker** : Even non-living objects can talk to human 
+   
 https://github.com/darkdevil3610/100-AI-Machine-learning-Deep-learning-Computer-vision-NLP
 
 - Build your own linear regression 
