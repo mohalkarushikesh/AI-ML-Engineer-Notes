@@ -41,7 +41,7 @@ This is the correct, working repo:
 git clone https://github.com/kompallik/ATLASSIAN-MCP.git
 git clone https://github.com/sooperset/mcp-atlassian.git
 git clone https://github.com/modelcontextprotocol/servers.git
-cd mcp-atlassian
+cd folder
 ```
 
 ---
