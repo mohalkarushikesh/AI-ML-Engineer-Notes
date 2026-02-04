@@ -132,30 +132,6 @@ Claude will automatically load tools like:
 
 ---
 
-# 🟩 6. Connect to Cursor
-
-Create or edit:
-
-```
-.cursor/mcp.json
-```
-
-Add:
-
-```json
-{
-  "servers": {
-    "atlassian": {
-      "url": "http://localhost:3000"
-    }
-  }
-}
-```
-
-Restart Cursor.
-
----
-
 # 🧪 7. Usage Examples
 
 ### 🔍 Search Jira issues
