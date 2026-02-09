@@ -123,3 +123,68 @@
 - With this, you now have the **full landscape of neural network families** — classical, modern, and cutting-edge.
 
 ---
+
+```mermaid
+graph TD
+    %% Root
+    DL[Deep Learning Models]
+
+    %% Main Branches
+    DL --> Supervised[Supervised/Discrim]
+    DL --> Unsupervised[Unsupervised/Rep]
+    DL --> Generative[Generative Models]
+    DL --> Specialized[Specialized & Hybrid]
+
+    %% Supervised/Discriminative
+    Supervised --> CNN[Convolutional - CNN]
+    Supervised --> RNN[Recurrent - RNN]
+    Supervised --> MLP[Multi-Layer Perceptron]
+
+    CNN --> VGG[VGGNet]
+    CNN --> ResNet[ResNet/Skip Conn]
+    CNN --> Inception[Inception/GoogLeNet]
+    CNN --> EfficientNet[EfficientNet]
+    CNN --> YOLO[YOLO - Detection]
+    CNN --> UNet[U-Net - Segmen]
+
+    RNN --> LSTM[LSTM - Long Memory]
+    RNN --> GRU[Gated Recurrent Unit]
+    RNN --> BRNN[Bi-Directional RNN]
+
+    %% Unsupervised/Representation
+    Unsupervised --> AE[Autoencoders - AE]
+    Unsupervised --> SOM[Self-Org Maps]
+    Unsupervised --> DBN[Deep Belief Networks]
+
+    AE --> VAE[Variational AE]
+    AE --> DAE[Denoising AE]
+    AE --> SAE[Sparse AE]
+
+    %% Generative
+    Generative --> GAN[Adv. Networks - GAN]
+    Generative --> Diffusion[Diffusion Models]
+    Generative --> Transformer[Transformers]
+
+    GAN --> DCGAN[Deep Conv GAN]
+    GAN --> CycleGAN[Style Transfer]
+    GAN --> StyleGAN[High-Res Faces]
+
+    Diffusion --> StableDiff[Stable Diffusion]
+    Diffusion --> DALL-E[DALL-E]
+
+    Transformer --> Encoder[BERT - Encoder only]
+    Transformer --> Decoder[GPT - Decoder only]
+    Transformer --> T5[T5 - Enc-Dec]
+    Transformer --> ViT[Vision Transformers]
+
+    %% Specialized
+    Specialized --> RL[Deep Reinforcement]
+    Specialized --> GNN[Graph Neural Nets]
+    Specialized --> SNN[Spiking Neural Nets]
+
+    RL --> DQN[Deep Q-Networks]
+    RL --> PPO[Prox. Policy Opt]
+    
+    GNN --> GCN[Graph Conv Nets]
+    GNN --> GAT[Graph Atten Nets]
+```
