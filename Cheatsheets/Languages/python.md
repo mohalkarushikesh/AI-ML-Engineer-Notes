@@ -53,6 +53,61 @@ person = {"name": "Alice", "age": 25}
 person["age"]      # 25
 ```
 
+Here’s a handy **methods** for the four main Python data structures:
+
+---
+
+## 📋 List (`nums = [1, 2, 3]`)
+- `append(x)` → add element at end  
+- `insert(i, x)` → insert at position  
+- `remove(x)` → remove first occurrence  
+- `pop(i)` → remove and return element at index (default last)  
+- `sort()` → sort in place  
+- `reverse()` → reverse in place  
+- `extend(iterable)` → add multiple elements  
+- `index(x)` → find position of element  
+- `count(x)` → count occurrences  
+
+---
+
+## 🔗 Tuple (`point = (3, 4)`)
+- Immutable → no modification methods.  
+- Supports: `count(x)`, `index(x)`  
+- Can be sliced, iterated, unpacked.  
+
+---
+
+## 🔑 Set (`s = {1, 2, 3}`)
+- `add(x)` → add element  
+- `remove(x)` → remove element (error if not found)  
+- `discard(x)` → remove element (no error if missing)  
+- `pop()` → remove and return arbitrary element  
+- `clear()` → empty set  
+- `union(other)` → combine sets  
+- `intersection(other)` → common elements  
+- `difference(other)` → elements not in other  
+- `issubset(other)` / `issuperset(other)` → check relations  
+
+---
+
+## 📖 Dictionary (`person = {"name": "Alice", "age": 25}`)
+- `keys()` → all keys  
+- `values()` → all values  
+- `items()` → key-value pairs  
+- `get(key, default)` → safe lookup  
+- `update(dict)` → merge/update entries  
+- `pop(key)` → remove and return value  
+- `popitem()` → remove and return last inserted pair  
+- `clear()` → empty dictionary  
+
+---
+
+👉 In short:  
+- **List** → ordered, mutable, many methods for adding/removing.  
+- **Tuple** → ordered, immutable, only lookup methods.  
+- **Set** → unordered, unique elements, strong in math operations.  
+- **Dict** → key-value mapping, flexible for lookups and updates.  
+
 ---
 
 ## 🛠️ Functions
