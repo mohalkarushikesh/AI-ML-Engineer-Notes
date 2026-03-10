@@ -34,7 +34,8 @@ Depending on the input and output, RNNs can be mapped differently:
 
 ---
 
-![recurrent_neural_network](https://github.com/user-attachments/assets/fc14c4ee-704e-4e7f-8deb-b900569b711c)
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/66ae7023-61bd-4323-841c-f7dc24b8f855" />
+
 
 ---
 
