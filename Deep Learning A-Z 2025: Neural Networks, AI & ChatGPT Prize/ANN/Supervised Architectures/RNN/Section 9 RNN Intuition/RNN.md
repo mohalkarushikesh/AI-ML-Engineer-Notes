@@ -36,6 +36,12 @@ Depending on the input and output, RNNs can be mapped differently:
 
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/66ae7023-61bd-4323-841c-f7dc24b8f855" />
 
+---
+
+### Forward Propogation: 
+
+<img width="1330" height="617" alt="image" src="https://github.com/user-attachments/assets/7fe00d00-dae5-4b42-8caf-aa6248597646" />
+
 
 ---
 
