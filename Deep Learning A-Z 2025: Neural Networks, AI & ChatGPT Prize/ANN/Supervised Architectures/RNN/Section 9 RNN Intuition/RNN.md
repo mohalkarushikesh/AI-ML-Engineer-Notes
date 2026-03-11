@@ -57,6 +57,19 @@ Depending on the input and output, RNNs can be mapped differently:
 <img width="1237" height="642" alt="image" src="https://github.com/user-attachments/assets/6017ac34-7cab-4266-9ea0-4e70e9df05f6" />
 <img width="1159" height="261" alt="image" src="https://github.com/user-attachments/assets/a5dca014-e8bd-4fb4-9f22-492496354e74" />
 
+---
+### Problems with RNN's 
+
+<img width="1425" height="440" alt="image" src="https://github.com/user-attachments/assets/7d275e37-b379-4c8c-8a82-756724851208" />
+<img width="1359" height="537" alt="image" src="https://github.com/user-attachments/assets/76093b1c-c825-4ff2-abd1-1fb0e53fd403" />
+<img width="1185" height="217" alt="image" src="https://github.com/user-attachments/assets/f680fc77-8de6-402a-9918-53684e390d71" />
+<img width="1294" height="658" alt="image" src="https://github.com/user-attachments/assets/c732c114-9428-47ca-8d73-963274b391dc" />
+
+<img width="1273" height="178" alt="image" src="https://github.com/user-attachments/assets/84d45c6b-f85c-4ea1-bdd9-5e69e8ba188b" />
+<img width="1363" height="666" alt="image" src="https://github.com/user-attachments/assets/5c6614ce-945f-4b22-bb63-4e1108d8ef77" />
+<img width="1380" height="666" alt="image" src="https://github.com/user-attachments/assets/0d9d2526-e105-4162-b9b2-2af677b3a344" />
+<img width="1401" height="301" alt="image" src="https://github.com/user-attachments/assets/eb3ff0cb-8488-4a4c-aea3-eedf5e2c9a65" />
+
 
 ---
 
