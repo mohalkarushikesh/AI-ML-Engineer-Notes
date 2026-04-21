@@ -79,6 +79,7 @@ https://swimm.io/learn/large-language-models/transformer-model-the-basics-and-7-
 - [BAIR Blog](https://bair.berkeley.edu/blog)
 - [Anthropic Blog](https://www.anthropic.com/index/blog)
 - [Gradient](https://thegradient.pub)
+- [Pyshine](https://pyshine.com/)
 
 ### 💼 Finance & Economics
 - [Finshots](https://finshots.in)
