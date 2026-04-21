@@ -80,6 +80,7 @@ https://swimm.io/learn/large-language-models/transformer-model-the-basics-and-7-
 - [Anthropic Blog](https://www.anthropic.com/index/blog)
 - [Gradient](https://thegradient.pub)
 - [Pyshine](https://pyshine.com/)
+- [bdtechtalks](https://bdtechtalks.com/)
 
 ### 💼 Finance & Economics
 - [Finshots](https://finshots.in)
