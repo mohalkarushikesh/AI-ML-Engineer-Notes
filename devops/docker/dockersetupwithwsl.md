@@ -17,3 +17,62 @@ echo \
 
 5. Verify the Installation
 	sudo docker run hello-world
+
+
+You want Docker to **only start when you manually start it** — and stay stopped otherwise. This means **disabling Docker's auto-start on boot**.
+
+---
+
+### Disable Docker Auto-start
+
+```bash
+sudo systemctl disable docker
+sudo systemctl disable docker.socket
+```
+
+---
+
+### This means:
+- ✅ Docker will **stay stopped** when your PC boots
+- ✅ You can **manually start** it whenever you need it
+- ✅ When done, it goes back to stopped after reboot
+
+---
+
+### When you WANT to use Docker:
+
+**Start it manually:**
+```bash
+sudo systemctl start docker
+```
+
+**Stop it when done:**
+```bash
+sudo systemctl stop docker
+```
+
+**Check its current status:**
+```bash
+sudo systemctl status docker
+```
+
+---
+
+### Verify auto-start is disabled:
+```bash
+sudo systemctl is-enabled docker
+# Should output: disabled
+```
+
+---
+
+### Quick Reference
+
+| Command | Purpose |
+|---------|---------|
+| `sudo systemctl disable docker` | Stop auto-start on boot |
+| `sudo systemctl start docker` | Start Docker manually |
+| `sudo systemctl stop docker` | Stop Docker manually |
+| `sudo systemctl status docker` | Check if running or stopped |
+
+This way Docker is fully under **your control** and won't run in the background unnecessarily.
