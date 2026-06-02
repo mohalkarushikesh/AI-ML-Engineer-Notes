@@ -152,3 +152,6 @@ Solution — create a new container correctly
 This time it will have OpenStdin: true and Tty: true, so bash will stay alive when you start/stop it.
 Then to reuse it next time:
 - bashsudo docker start -i my_ubuntu
+
+Since you exited without stopping, the container is still running! Just attach back to it:
+ - bash :  sudo docker attach my_ubuntu
