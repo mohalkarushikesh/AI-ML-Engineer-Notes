@@ -147,11 +147,19 @@
 | `U` (In Use) | At least one container (running or stopped) was created from this image — cannot delete the image until the container is removed |
 
 
+---
 Solution — create a new container correctly
-- bashsudo docker run -it --name my_ubuntu ubuntu bash
+```
+sudo docker run -it --name my_ubuntu ubuntu bash
+````
+
 This time it will have OpenStdin: true and Tty: true, so bash will stay alive when you start/stop it.
 Then to reuse it next time:
-- bashsudo docker start -i my_ubuntu
+```
+sudo docker start -i my_ubuntu
+```
 
 Since you exited without stopping, the container is still running! Just attach back to it:
- - bash :  sudo docker attach my_ubuntu
+```
+sudo docker attach my_ubuntu
+```
