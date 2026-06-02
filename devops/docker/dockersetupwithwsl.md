@@ -76,3 +76,7 @@ sudo systemctl is-enabled docker
 | `sudo systemctl status docker` | Check if running or stopped |
 
 This way Docker is fully under **your control** and won't run in the background unnecessarily.
+
+Why Docker is Still Running
+
+- Docker is disabled (won't auto-start on next boot) but it's still running now because disabling only affects future boots — it doesn't stop the currently running instance.
