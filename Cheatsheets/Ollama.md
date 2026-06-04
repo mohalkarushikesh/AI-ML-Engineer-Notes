@@ -7,7 +7,19 @@ Here’s a **clean, practical Ollama cheat sheet** you can use daily 👇
 
 ### 🔹 Install & Verify
 
+
+
 ```bash
+Step 1: Install Ollama via WSL 
+curl -fsSL https://ollama.com/install.sh | sh
+   - Debian/Ubuntu: sudo apt-get install zstd
+
+Step 2: Start the Service
+  sudo systemctl start ollama
+
+Step 3: Run a Model
+ollama run llama3
+
 ollama --version
 ollama list
 ```
