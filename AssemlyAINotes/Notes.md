@@ -68,7 +68,7 @@ R2 : R square (coefficient of determination)
 
 cosine similarity: very similar to classification metrics, but it is for regression problems it can deal with real values (tells us how similar two diff vectors are to each other) 
 
-# TRANSFORMERS - https://www.youtube.com/watch?v=_UVfwBqcnbM	
+#### TRANSFORMERS - https://www.youtube.com/watch?v=_UVfwBqcnbM	
 	
 RNNs (can't do true parallelism because of recurrency + vanishing gradients → loss of long context)
 → LSTMs (improved RNNs with gates to better preserve long-term context) - but still fundamentally sequential/recurrent
@@ -107,7 +107,8 @@ output 		z (z1+z2+z3)
 only one output of attention layer 
 ```
 
-![Multi head attention flow](/AssemblyAI/multi_head_attention_flow.svg)
+<img width="680" height="820" alt="multi_head_attention_flow" src="https://github.com/user-attachments/assets/d9bf52fd-0003-4afa-b3fb-515b44545638" />
+
 
 Here's the full flow at a glance. A few key ideas to nail it down:
 
