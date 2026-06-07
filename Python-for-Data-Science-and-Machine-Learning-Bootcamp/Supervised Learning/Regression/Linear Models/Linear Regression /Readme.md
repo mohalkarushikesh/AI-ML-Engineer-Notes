@@ -88,7 +88,12 @@ $$
 
 - **Example**: Predicting **stock prices** with correlated indicators.
 
-<img width="761" height="332" src="https://github.com/user-attachments/assets/7ee225c1-69d9-487d-8689-04d9018f2382" />
+<img width="761" height="232" src="https://github.com/user-attachments/assets/7ee225c1-69d9-487d-8689-04d9018f2382" />
+
+#### Correlatioin 
+- Correlation is a statistical measure that describes the size and direction of a relationship between two or more variables.
+
+<img width="700" height="350" alt="correlation" src="https://github.com/user-attachments/assets/f91f5190-4cfc-4844-8f2e-0c861c0cdb2e" />
 
 ### **5️⃣ Lasso Regression (L1 Regularization)**
 - **Uses**: Shrinks some coefficients to **zero**, enabling **feature selection**.
