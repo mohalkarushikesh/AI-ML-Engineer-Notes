@@ -155,3 +155,10 @@ Applications:
 	- Question Answering
 	- Named entity recognition 
 	- text classification/summarization 
+
+
+## classification - when we know the classes we want to predict and have a training data with true labels avaiable 
+
+## clustering - when don't have any labels and want to find unknown labels 
+
+
