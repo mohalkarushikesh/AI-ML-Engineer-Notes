@@ -15,7 +15,7 @@ Vanishing gradient : On the other hand, if the steps are excessively small, it r
 
 
 
-# Assembly AI 
+## Assembly AI 
 
 Natural Language Processing (NLP) is a branch of Artificial Intelligence that gives computers the ability to read, understand, and generate human language
 
@@ -29,7 +29,7 @@ solution		train more 				introduce more data
 		increase more complexity			use regularization 
 		try diff model/architecture 			try diff model/architecture 
 
-# classifications metrics:
+## classifications metrics:
 
 accuracy  = correct instances/no of instance
 
@@ -53,7 +53,7 @@ cross entropy - calculates distance between 2 probability distributions
 	sparse categorical cross entropy
 
 
-regression evalution metrics ; 
+## regression evalution metrics ; 
 
 MAE - sum of all the errors but they are absolute values 
 
@@ -75,9 +75,9 @@ RNNs (can't do true parallelism because of recurrency + vanishing gradients → 
 → Transformers (full parallelism via self-attention, no recurrence, excellent long-range context)
 
 ```
-embeddings - n length vectors (in transformers they are using 512 length vectors)
+Embeddings - n length vectors (in transformers they are using 512 length vectors)
 
-normalization layers - normalize the output 
+Normalization layers - normalize the output 
 
 normal multi head attention - all the words are compared to every other word that are inputted that are in a sentence 
 
@@ -86,13 +86,13 @@ mask multi head attention - only the words coming are compared to that word in t
 scaled dot product - 
 
 input embeddings are multiple with q k v 
-input 		i 						love 							you
+input 		i 								love 							you
 embeddings
-queries 	q1						q2								q3	
-keys 		k1						k2								k3	
-value 		(q1*k1 + q1*k2+q3*k3)
+queries 	q1								q2								q3	
+keys 		k1								k2								k3	
+value 		(q1*k1 + q1*k2 + q1*k3)   (q2*k1 + q2*k2 + q2*k3)			(q3*k1 + q3*k2 + q3*k3)
 score		
-	/ 8 
+	/ 8 (devide by 8)
 SoftMax 
 multipy all value vectors with this weights (softmax)
 			wv1		wv2
@@ -102,7 +102,7 @@ output 		z (z1+z2+z3)
 
 		z1.....z8
 
-	concatenate z1...z8 * another weight matrix 
+		concatenate z1...z8 * another weight matrix 
 
 only one output of attention layer 
 ```
@@ -124,9 +124,9 @@ positional encodings
 
 sine and cosine functions in diff frequencies 
 
-# Transfer learning 
+## Transfer learning 
 
-# Word embeddings 
+## Word embeddings 
 - represent text into numbers 
 - embeddings aim to represent the word in a dense vector, while making sure that similar words are close to each other in the embedding space 
 	- one-hot encoding : 
