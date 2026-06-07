@@ -161,4 +161,10 @@ Applications:
 
 ## clustering - when don't have any labels and want to find unknown labels 
 
+## Normalization: Collapse input to be between 0 and 1 
+
+## Stadardization: change their values so that their mean is 0 and variance equals to 1 
+
+
+
 
