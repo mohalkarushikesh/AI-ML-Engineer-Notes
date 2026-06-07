@@ -165,6 +165,11 @@ Applications:
 
 ## Stadardization: change their values so that their mean is 0 and variance equals to 1 
 
+## Regularization - to overcome the overfitting (high variance i.e validation performance is low)
+
+
+## Batch Noralization: Insted of only normalizing our inputs then feeding the data into our network we normalize all the outputs/ all the layers in our network - normalize the data, and feed output of prev layer to the next layer.
+
 
 
 
