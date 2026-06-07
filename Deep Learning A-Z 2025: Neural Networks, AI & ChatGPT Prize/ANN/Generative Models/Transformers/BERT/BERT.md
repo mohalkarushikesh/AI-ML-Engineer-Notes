@@ -40,6 +40,9 @@ BERT understands **bank** differently based on context.
 | BERT-base    | 12     | 768         | 12    |
 | BERT-large   | 24     | 1024        | 16    |
 
+
+<img width="640" height="509" alt="image" src="https://github.com/user-attachments/assets/079765f5-e23d-4879-b2f2-8a52557ce0fb" />
+
 ---
 
 ### 4. Input Representation
