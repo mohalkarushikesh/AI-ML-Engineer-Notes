@@ -1,200 +1,501 @@
-Here’s a **practical LangSmith cheat sheet** — the observability/debugging/testing platform for LLM apps from the LangChain team.📊 It helps you trace, evaluate, improve, and ship LLM-powered systems reliably. ([LangChain Blog][1])
+# LangSmith Cheatsheet
+
+> Observability, testing, and evaluation platform for LLM applications built with LangChain (or any framework).
 
 ---
 
-# 🧠 LangSmith Cheat Sheet
-
----
-
-## 🚀 What Is LangSmith
-
-**LangSmith** is a unified platform that provides:
-
-* **Tracing & observability** for LLM apps
-* **Prompt testing & versioning**
-* **Evaluation & metrics dashboards**
-* **Debugging tools for chains/agents**
-* **API + UI + CLI visibility**
-  Works *with or without* LangChain code. ([LangChain Blog][1])
-
----
-
-## 📦 Quick Setup
-
-### 1. Create Account
-
-* Go to **smith.langchain.com** and sign up. ([LangChain Docs][2])
-
-### 2. Get API Key
-
-* **Settings → API Keys → Create**
-* Store the key securely (PAT or service key). ([LangChain Docs][2])
-
-### 3. Set Environment Variables
+## Installation & Setup
 
 ```bash
-export LANGSMITH_API_KEY="YOUR_API_KEY"
+pip install langsmith
+pip install langchain-langsmith   # LangChain integration
 ```
 
-(Optional) set workspace/project if needed. ([LangChain Docs][2])
+```python
+import os
+
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_API_KEY"]    = "ls__..."
+os.environ["LANGCHAIN_PROJECT"]    = "my-project"   # optional, default: "default"
+os.environ["LANGCHAIN_ENDPOINT"]   = "https://api.smith.langchain.com"  # default
+```
 
 ---
 
-## 🕵️ Core Features
+## Tracing
 
-### 🔍 1. **Tracing / Observability**
+### Auto-tracing (LangChain)
 
-Track every operation in your LLM app:
+Set the env vars above — all LangChain/LCEL runs are traced automatically with zero code changes.
 
-* Model inputs & outputs
-* Token usage
-* Latency & costs
-* Tool calls
-* Chains/agent steps
-* Errors and patterns
-  Just set `LANGSMITH_TRACING=true` and send traces to LangSmith. ([LangChain Docs][3])
+### `@traceable` decorator (any framework)
 
-**With LangChain**:
+```python
+from langsmith import traceable
+
+@traceable
+def my_llm_call(prompt: str) -> str:
+    # works with OpenAI, Anthropic, or any SDK
+    response = openai_client.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": prompt}],
+    )
+    return response.choices[0].message.content
+
+result = my_llm_call("What is LangSmith?")
+```
+
+### `@traceable` with metadata
+
+```python
+@traceable(
+    name="my_pipeline",          # display name in UI
+    tags=["production", "v2"],
+    metadata={"user_id": "u123"},
+    run_type="chain",            # "chain" | "llm" | "tool" | "retriever" | "embedding"
+)
+def pipeline(query: str) -> str:
+    ...
+```
+
+### Context manager (manual spans)
+
+```python
+from langsmith import trace
+
+with trace("my_span", run_type="chain", tags=["debug"]) as run:
+    result = do_something()
+    run.end(outputs={"result": result})
+```
+
+### Wrap OpenAI client
 
 ```python
 from langsmith.wrappers import wrap_openai
+import openai
 
-client = wrap_openai(openai.OpenAI())
+client = wrap_openai(openai.Client())
+# All calls through `client` are now traced automatically
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{"role": "user", "content": "Hello"}],
+)
 ```
 
-Now all LLM usage is auto-logged to LangSmith. ([LangSmith Docs][4])
+### Wrap Anthropic client
 
----
+```python
+from langsmith.wrappers import wrap_anthropic
+import anthropic
 
-### 🧪 2. **Evaluations (Evals)**
-
-Run systematic evaluations:
-
-* Create evaluation datasets
-* Use **prebuilt evaluators** (LLM-as-judge, ranking, etc.)
-* Compare models & prompts over time
-  Works with openevals or custom suites. ([LangChain Docs][5])
-
----
-
-### ✍️ 3. **Prompt Engineering**
-
-* Create/edit prompts from UI or SDK
-* Version control your prompts
-* Test variations easily in the Playground
-* Produce better responses from your models
-  Supports SDK & UI workflows. ([LangChain Docs][6])
-
----
-
-## 💻 LangSmith CLI – `langsmith-fetch`
-
-Fetch trace data directly from your terminal:
-
-Install:
-
-```bash
-pip install langsmith-fetch
+client = wrap_anthropic(anthropic.Anthropic())
 ```
 
-Examples:
+### Disable tracing temporarily
 
-```bash
-# Fetch recent traces
-langsmith-fetch traces --project-uuid YOUR_UUID
+```python
+from langsmith import utils
+utils.tracing_is_enabled()   # check status
 
-# Fetch last 5
-langsmith-fetch traces --project-uuid YOUR_UUID --limit 5
-
-# Save into directory
-langsmith-fetch threads ./my-data --limit 50
+# Disable for a block
+import os
+os.environ["LANGCHAIN_TRACING_V2"] = "false"
 ```
-
-Each trace/thread is exported as JSON — great for offline debugging or building datasets. ([LangChain Docs][7])
 
 ---
 
-## 🛠 SDK Quick Examples
-
-### 🐍 Python Prompt Push
+## LangSmith Client
 
 ```python
 from langsmith import Client
-from langchain_core.prompts import ChatPromptTemplate
 
-client = Client()
-
-prompt = ChatPromptTemplate([
-    ("system", "You are a helpful guy."),
-    ("user", "{question}")
-])
-
-client.push_prompt("my_prompt", object=prompt, tags=["test"])
+client = Client(
+    api_key="ls__...",
+    api_url="https://api.smith.langchain.com",  # default
+)
 ```
 
-Prompt will be stored & visible in LangSmith. ([LangSmith Docs][8])
+---
+
+## Projects
+
+```python
+# List projects
+projects = client.list_projects()
+for p in projects:
+    print(p.name, p.id)
+
+# Create project
+client.create_project("my-new-project", description="RAG pipeline evals")
+
+# Delete project
+client.delete_project(project_name="old-project")
+```
 
 ---
 
-## 🧠 Common Env & Flags
+## Runs
 
-| Env Variable             | Purpose                      |
-| ------------------------ | ---------------------------- |
-| `LANGSMITH_API_KEY`      | Auth                         |
-| `LANGSMITH_TRACING`      | Enable trace logging         |
-| `LANGSMITH_WORKSPACE_ID` | (Optional) specify workspace |
+```python
+# List runs in a project
+runs = client.list_runs(
+    project_name="my-project",
+    run_type="chain",               # filter by type
+    filter='eq(status, "error")',   # filter expression
+    limit=50,
+)
 
----
+for run in runs:
+    print(run.id, run.name, run.status, run.total_tokens)
 
-## 📊 Common Workflows
+# Get a specific run
+run = client.read_run(run_id="<uuid>")
 
-### 🐞 Debugging a Chain
+# Get run URL
+url = client.get_run_url(run=run)
 
-1. Run your LLM app with tracing on
-2. Open LangSmith dashboard
-3. Inspect trace steps → find the step causing errors
-4. Edit prompt/chain → re-run → repeat
+# Share a run (create public link)
+share_token = client.share_run(run_id="<uuid>")
 
-### 🧪 Eval Across Models
+# Update run (add feedback programmatically)
+client.update_run(run_id="<uuid>", extra={"custom_key": "value"})
+```
 
-1. Create dataset of inputs & expected outputs
-2. Run multiple models on dataset
-3. View evaluator scores in LangSmith UI
-4. Save best model/prompt combo
+### Run Filter Expressions
 
----
+```python
+# Runs with errors
+'eq(status, "error")'
 
-## 🧩 Integrations
+# Runs longer than 5 seconds
+'gt(latency, 5)'
 
-* Works with LangChain, LangGraph, or raw SDK (Python/TS) apps
-* Wrap clients like OpenAI to auto trace
-* Can be paired with monitoring stacks plus self-hosting for enterprise ([LangChain][9])
+# Runs with a specific tag
+'has(tags, "production")'
 
----
+# Runs in a date range
+'and(gte(start_time, "2024-01-01"), lte(start_time, "2024-12-31"))'
 
-## 🧠 Tips & Gotchas
-
-✅ You can **fetch trace data programmatically** via CLI and pipe to tools. ([LangChain Docs][7])
-✅ Useful for **regression tests** across prompt versions.
-⚠️ Security: watch out for malicious shared agents that may leak keys if you “Try It” from hubs (patched now). ([The Hacker News][10])
-
----
-
-## 🧾 Summary (One-Liner)
-
-**LangSmith** = observability + prompt management + evaluation + debugging platform for building **production-grade LLM applications** with visibility into every call and outcome. ([LangChain Blog][1])
+# Runs containing a keyword in input
+'like(inputs.question, "%langsmith%")'
+```
 
 ---
 
-If you want, I can also give you **LangSmith + LangChain code examples** tailored for your Java/ML backend projects.
+## Feedback
 
-[1]: https://blog.langchain.com/announcing-langsmith?utm_source=chatgpt.com "Announcing LangSmith, a unified platform for debugging, testing, evaluating, and monitoring your LLM applications"
-[2]: https://docs.langchain.com/langsmith/home?utm_source=chatgpt.com "LangSmith docs - Docs by LangChain"
-[3]: https://docs.langchain.com/langsmith/trace-openai?utm_source=chatgpt.com "Trace with OpenAI - Docs by LangChain"
-[4]: https://docs.smith.langchain.com/reference/python/wrappers/langsmith.wrappers._openai.wrap_openai?utm_source=chatgpt.com "wrap_openai — 🦜️🛠️ LangSmith documentation"
-[5]: https://docs.langchain.com/langsmith/prebuilt-evaluators?utm_source=chatgpt.com "How to use prebuilt evaluators - Docs by LangChain"
-[6]: https://docs.langchain.com/langsmith/prompt-engineering-quickstart?utm_source=chatgpt.com "Prompt engineering quickstart - Docs by LangChain"
-[7]: https://docs.langchain.com/langsmith/langsmith-fetch?utm_source=chatgpt.com "LangSmith Fetch - Docs by LangChain"
-[8]: https://docs.smith.langchain.com/prompt_engineering/quickstarts/quickstart_sdk?utm_source=chatgpt.com "Prompt Engineering Quick Start (SDK) | 🦜️🛠️ LangSmith"
-[9]: https://www.langchain.com/langsmith?utm_source=chatgpt.com "LangSmith - Observability"
-[10]: https://thehackernews.com/2025/06/langchain-langsmith-bug-let-hackers.html?utm_source=chatgpt.com "LangSmith Bug Could Expose OpenAI Keys and User Data via Malicious Agents"
+```python
+# Add feedback to a run
+client.create_feedback(
+    run_id="<uuid>",
+    key="correctness",          # feedback key
+    score=1,                    # numeric score (0–1 recommended)
+    comment="Great answer!",
+    value="correct",            # optional string label
+)
+
+# Thumbs up / down
+client.create_feedback(run_id="<uuid>", key="thumbs", score=1)
+client.create_feedback(run_id="<uuid>", key="thumbs", score=0)
+
+# List feedback for a run
+feedback = client.list_feedback(run_ids=["<uuid>"])
+
+# Feedback keys in use
+keys = client.list_feedback_definitions()
+```
+
+---
+
+## Datasets
+
+```python
+# Create a dataset
+dataset = client.create_dataset(
+    dataset_name="qa-pairs",
+    description="Question-answer evaluation set",
+    data_type="kv",   # "kv" | "llm" | "chat"
+)
+
+# Add examples
+client.create_examples(
+    inputs=[
+        {"question": "What is LangSmith?"},
+        {"question": "What is LangChain?"},
+    ],
+    outputs=[
+        {"answer": "LangSmith is an observability platform."},
+        {"answer": "LangChain is an LLM application framework."},
+    ],
+    dataset_id=dataset.id,
+)
+
+# Add single example
+client.create_example(
+    inputs={"question": "Capital of France?"},
+    outputs={"answer": "Paris"},
+    dataset_name="qa-pairs",
+)
+
+# List datasets
+datasets = client.list_datasets()
+
+# Read a dataset
+dataset = client.read_dataset(dataset_name="qa-pairs")
+
+# List examples in a dataset
+examples = list(client.list_examples(dataset_name="qa-pairs"))
+
+# Delete a dataset
+client.delete_dataset(dataset_name="old-dataset")
+
+# Create dataset from existing runs
+dataset = client.create_dataset("from-runs")
+client.create_examples(
+    inputs=[run.inputs for run in runs],
+    outputs=[run.outputs for run in runs],
+    dataset_id=dataset.id,
+)
+```
+
+### Upload CSV as dataset
+
+```python
+import pandas as pd
+
+df = pd.read_csv("eval_data.csv")
+client.upload_dataframe(
+    df,
+    name="csv-dataset",
+    input_keys=["question"],
+    output_keys=["answer"],
+)
+```
+
+---
+
+## Evaluation
+
+### `evaluate()` — standard eval
+
+```python
+from langsmith.evaluation import evaluate
+
+def my_app(inputs: dict) -> dict:
+    answer = chain.invoke(inputs["question"])
+    return {"answer": answer}
+
+def correctness_evaluator(run, example) -> dict:
+    predicted = run.outputs["answer"]
+    expected  = example.outputs["answer"]
+    score = 1 if expected.lower() in predicted.lower() else 0
+    return {"key": "correctness", "score": score}
+
+results = evaluate(
+    my_app,
+    data="qa-pairs",               # dataset name or id
+    evaluators=[correctness_evaluator],
+    experiment_prefix="baseline",  # optional label
+    num_repetitions=1,
+    max_concurrency=4,
+)
+
+print(results.to_pandas())
+```
+
+### LLM-as-Judge evaluator
+
+```python
+from langsmith.evaluation import LangChainStringEvaluator
+
+# Built-in criteria evaluators
+criteria_eval = LangChainStringEvaluator(
+    "criteria",
+    config={
+        "criteria": {
+            "helpfulness": "Is the response helpful and informative?",
+        }
+    }
+)
+
+qa_eval = LangChainStringEvaluator("qa")           # checks answer correctness
+cot_qa_eval = LangChainStringEvaluator("cot_qa")   # chain-of-thought QA eval
+
+results = evaluate(
+    my_app,
+    data="qa-pairs",
+    evaluators=[criteria_eval, qa_eval],
+)
+```
+
+### Custom LLM evaluator
+
+```python
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+
+def llm_evaluator(run, example) -> dict:
+    llm = ChatOpenAI(model="gpt-4o", temperature=0)
+    prompt = ChatPromptTemplate.from_template(
+        "Rate the answer 0-1 for correctness.\n"
+        "Question: {question}\nAnswer: {answer}\nExpected: {expected}\n"
+        "Return only a number."
+    )
+    chain = prompt | llm
+    result = chain.invoke({
+        "question": example.inputs["question"],
+        "answer": run.outputs["answer"],
+        "expected": example.outputs["answer"],
+    })
+    score = float(result.content.strip())
+    return {"key": "llm_correctness", "score": score}
+```
+
+### Compare experiments
+
+```python
+# View in UI: Projects → Experiments → Compare
+# Or programmatically:
+results_a = evaluate(my_app_v1, data="qa-pairs", experiment_prefix="v1")
+results_b = evaluate(my_app_v2, data="qa-pairs", experiment_prefix="v2")
+```
+
+---
+
+## Online Evaluation (Auto-feedback on traces)
+
+```python
+# Define an evaluator that runs automatically on new traces
+# Set up in LangSmith UI: Projects → Automations → Add Evaluator
+# Or via API:
+
+from langsmith.schemas import RunEvaluatorResult
+from langsmith.evaluation import RunEvaluator
+
+class MyOnlineEvaluator(RunEvaluator):
+    def evaluate_run(self, run, example=None) -> RunEvaluatorResult:
+        score = 1 if "sorry" not in run.outputs.get("output", "") else 0
+        return RunEvaluatorResult(
+            key="no_apology",
+            score=score,
+        )
+```
+
+---
+
+## Prompt Hub
+
+```python
+from langchain import hub
+
+# Pull a prompt
+prompt = hub.pull("rlm/rag-prompt")
+
+# Pull specific version
+prompt = hub.pull("rlm/rag-prompt:abc123")
+
+# Push a prompt
+hub.push("my-username/my-prompt", prompt, new_repo_is_public=False)
+
+# List available prompts (UI: smith.langchain.com/hub)
+```
+
+---
+
+## Annotations & Human Review
+
+```python
+# Create an annotation queue in the UI or API
+queue = client.create_annotation_queue(
+    name="human-review",
+    description="Manual review of edge cases",
+)
+
+# Add runs to queue
+client.add_runs_to_annotation_queue(
+    queue_id=queue.id,
+    run_ids=["<uuid1>", "<uuid2>"],
+)
+
+# List queues
+queues = client.list_annotation_queues()
+```
+
+---
+
+## Monitoring & Metrics
+
+Access in LangSmith UI under **Projects → Monitor**:
+
+| Metric | Description |
+|--------|-------------|
+| Latency (p50/p99) | Response time percentiles |
+| Token usage | Input / output / total tokens |
+| Error rate | % of failed runs |
+| Feedback scores | Average score per feedback key |
+| Run volume | Traces per hour/day |
+
+```python
+# Fetch aggregate stats programmatically
+stats = client.get_run_stats(
+    project_name="my-project",
+    run_type="chain",
+    start_time="2024-01-01",
+)
+```
+
+---
+
+## Async Support
+
+```python
+from langsmith import AsyncClient
+
+client = AsyncClient()
+
+async def main():
+    run = await client.aread_run(run_id="<uuid>")
+    await client.acreate_feedback(run_id="<uuid>", key="score", score=1)
+    results = [r async for r in client.alist_runs(project_name="my-project")]
+```
+
+---
+
+## Environment Variable Reference
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `LANGCHAIN_TRACING_V2` | Enable tracing | `false` |
+| `LANGCHAIN_API_KEY` | LangSmith API key | — |
+| `LANGCHAIN_PROJECT` | Project name | `"default"` |
+| `LANGCHAIN_ENDPOINT` | API endpoint | `https://api.smith.langchain.com` |
+| `LANGCHAIN_HIDE_INPUTS` | Redact run inputs | `false` |
+| `LANGCHAIN_HIDE_OUTPUTS` | Redact run outputs | `false` |
+
+---
+
+## Self-Hosted (LangSmith Server)
+
+```bash
+# Pull and run with Docker Compose
+git clone https://github.com/langchain-ai/langsmith-sdk
+cd langsmith-sdk/ops
+docker compose up
+
+# Point client to local instance
+os.environ["LANGCHAIN_ENDPOINT"] = "http://localhost:1984"
+```
+
+---
+
+## Tips & Gotchas
+
+- Set `LANGCHAIN_PROJECT` per environment (`dev`, `staging`, `production`) to keep traces organized.
+- Use `@traceable` on non-LangChain code (raw OpenAI, Anthropic, custom pipelines) to get full visibility.
+- `wrap_openai()` / `wrap_anthropic()` is the easiest way to trace SDK calls without changing business logic.
+- `evaluate()` runs examples concurrently — set `max_concurrency` to avoid rate limits.
+- Feedback `score` should be numeric (0–1) for aggregation to work in the monitoring dashboard.
+- Dataset examples are immutable once created; delete and re-add to update them.
+- Use `experiment_prefix` in `evaluate()` to label runs meaningfully before comparing in the UI.
+- Tracing adds ~1–5 ms latency per run; use `LANGCHAIN_TRACING_V2=false` in latency-critical paths.
+- LangSmith stores traces for 14 days on the free plan; upgrade for longer retention.
