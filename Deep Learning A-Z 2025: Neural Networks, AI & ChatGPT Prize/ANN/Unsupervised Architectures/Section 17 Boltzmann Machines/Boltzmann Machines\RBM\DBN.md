@@ -257,7 +257,7 @@ Sources: [GeeksforGeeks](https://www.geeksforgeeks.org/artificial-intelligence/w
 
 ---
 
-## 🔬 In-depth Look at Restricted Boltzmann Machines
+## 🔬 Restricted Boltzmann Machines
 
 ### 🧠 Intuition Behind RBMs
 RBMs learn to capture patterns in data by modeling the joint probability distribution of inputs (visible units) and latent features (hidden units). Training allows them to discover correlations and useful representations—especially in unsupervised settings.
