@@ -4,8 +4,8 @@ LSTM is a specialized RNN architecture designed to **remember long-term dependen
 
 ### 🧬 LSTM Cell Components
 - **x**: Current input  
-- **h**: Previous hidden state  
-- **c**: Cell state (memory)  
+- **h**: Previous **hidden state** (Short-Term Memory)
+- **c**: Cell state (Long-Term Memory)  
 - **Gates**:
   - **Forget Gate**: Decides what to discard  
   - **Input Gate**: Decides what to store  
