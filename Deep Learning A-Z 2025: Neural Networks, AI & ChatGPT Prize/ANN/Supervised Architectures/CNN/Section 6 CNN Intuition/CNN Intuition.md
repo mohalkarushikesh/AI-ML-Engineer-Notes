@@ -297,23 +297,13 @@ Pooling reduces the spatial dimensions of feature maps by representing neighbori
 
 ## CNN Workflow
 
-1. **Convolution**
+1. **Convolution** : Generates new feature maps.
 
-   * Generates new feature maps.
+2. **Activation (Non-linearity)** : Introduces non-linear properties (e.g., ReLU).
 
-2. **Activation (Non-linearity)**
+3. **Pooling** :  Reduces the size of feature maps.
 
-   * Introduces non-linear properties (e.g., ReLU).
+4. **Flatten** : Converts feature maps into a one-dimensional vector.
 
-3. **Pooling**
-
-   * Reduces the size of feature maps.
-
-4. **Flatten**
-
-   * Converts feature maps into a one-dimensional vector.
-
-5. **Fully Connected Layer**
-
-   * Performs classification or prediction.
+5. **Fully Connected Layer** : Performs classification or prediction.
 
