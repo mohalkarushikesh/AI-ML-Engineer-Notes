@@ -70,8 +70,74 @@ Where:
 - $\mu$ = mean of the feature  
 - $\sigma$ = standard deviation  
 
-<img width="850" height="300" alt="image" src="https://github.com/user-attachments/assets/4c420a32-8426-4db3-8060-a0b0337e332f" />
+<img width="1000" height="374" alt="image" src="https://github.com/user-attachments/assets/32884409-e310-4ae0-b05f-ea1c7947f8b1" />
 
+# Standard Deviation
+
+**Standard deviation** is a statistical measure that quantifies the amount of variation or dispersion of a set of data points around their average (mean). A **low standard deviation** indicates that data points cluster tightly around the mean, while a **high standard deviation** indicates wider, more spread-out values.
+
+## Why Standard Deviation Matters
+
+- **Direct Scaling:** Unlike variance (which measures squared deviations), standard deviation returns to the original units of your data, making it easier to interpret and apply.
+
+- **Risk Assessment:** In finance, it acts as a primary benchmark for asset volatility.
+
+- **The 68-95-99.7 Rule:** In a standard bell curve:
+  - Approximately **68%** of data falls within one standard deviation of the mean.
+  - Approximately **95%** falls within two standard deviations.
+  - Approximately **99.7%** falls within three standard deviations.
+
+## How It's Calculated
+
+Standard deviation (\(\sigma\)) is mathematically the **square root of the variance**. Calculating it manually involves the following steps:
+
+1. Calculate the **average (mean)** of the dataset.
+2. Subtract the mean from each individual data point and square the result to remove negative values.
+3. Find the average of those squared results (this is the **variance**).
+4. Take the square root of the variance.
+
+## Formula
+
+For a population:
+
+$\sigma = \sqrt{\frac{\sum_{i=1}^{N}(x_i-\mu)^2}{N}}$
+
+Where:
+
+- $sigma$ = Population standard deviation
+  $x_i$ = Individual data point
+- $mu$ = Population mean
+- $N$ = Number of data points
+
+For a sample:
+
+$s = \sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}$
+
+Where:
+
+- $s$ = Sample standard deviation
+- $x_i$ = Individual data point
+- $bar{x}$ = Sample mean
+- $n$ = Sample size
+
+## Practical Uses
+
+Standard deviation is widely used across several disciplines:
+
+- **Finance:** Measures an investment's risk; higher deviations correspond to greater price fluctuations.
+
+- **Healthcare and Science:** Helps researchers define a "normal" range (e.g., blood pressure or height) and determine statistical significance.
+
+- **Quality Control:** Used to monitor manufacturing processes and maintain consistency.
+
+- **Data Analysis and Machine Learning:** Assesses variability and aids in feature scaling and anomaly detection.
+
+## Key Takeaways
+
+- Standard deviation measures how spread out data points are around the mean.
+- A lower value indicates less variability, while a higher value indicates greater variability.
+- It is the square root of variance, making it easier to interpret because it uses the same units as the original data.
+- The **68-95-99.7 rule** provides a quick way to understand distributions that follow a normal curve.
 ---
 
 ### 🔹 Normalization (Min-Max Normalization)
