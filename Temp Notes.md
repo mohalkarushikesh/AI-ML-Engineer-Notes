@@ -1,3 +1,6 @@
+## Sparcity : Saves computational memory and speeds up processing by ignoring zeros during calculations.
+- Can be structured (e.g., pruning/cutting entire neurons/nodes) or unstructured (random individual weights).
+
 # Why Do CNNs Use Many Filters on Small Images?
 
 If you are asking about **Artificial Intelligence and Machine Learning (Convolutional Neural Networks / CNNs)**, a small image is passed through a large number of filters to progressively extract complex features like edges, shapes, and textures while keeping memory usage manageable.
