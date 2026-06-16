@@ -19,15 +19,4 @@ Limitations and Advancements
 • Capacity: Classic discrete Hopfield networks have a limited memory storage capacity, roughly calculated as 0.15 × N (where N is the number of neurons). Overloading the network can result in "spurious states" or false memories. 
 • Modern Hopfield Networks: Advanced continuous variations have been developed that overcome traditional capacity limitations. These modern versions are mathematically equivalent to the self-attention mechanisms used in contemporary transformer models. [2, 6, 8, 9]  
 
-AI responses may include mistakes.
-
-[1] https://en.wikipedia.org/wiki/Hopfield_network
-[2] https://www.geeksforgeeks.org/machine-learning/hopfield-neural-network/
-[3] https://www.doc.ic.ac.uk/~ae/papers/Hopfield-networks-15.pdf
-[4] https://www.sciencedirect.com/topics/computer-science/hopfield-network
-[5] https://www.sciencedirect.com/topics/mathematics/hopfield-network
-[6] https://towardsdatascience.com/hopfield-networks-neural-memory-machines-4c94be821073/
-[7] https://www.youtube.com/watch?v=1WPJdAW-sFo
-[8] https://ml-jku.github.io/hopfield-layers/
-[9] https://arxiv.org/abs/2008.02217
-
+[Reference-Medium](https://changsin.medium.com/understanding-the-hopfield-network-with-examples-ae7972c1c696)
