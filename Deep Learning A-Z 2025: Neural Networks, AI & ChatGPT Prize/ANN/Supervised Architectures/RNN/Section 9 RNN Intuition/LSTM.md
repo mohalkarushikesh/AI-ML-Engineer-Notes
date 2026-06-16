@@ -70,6 +70,8 @@ Where:
 - $\mu$ = mean of the feature  
 - $\sigma$ = standard deviation  
 
+<img width="850" height="300" alt="image" src="https://github.com/user-attachments/assets/4c420a32-8426-4db3-8060-a0b0337e332f" />
+
 ---
 
 ### 🔹 Normalization (Min-Max Normalization)
