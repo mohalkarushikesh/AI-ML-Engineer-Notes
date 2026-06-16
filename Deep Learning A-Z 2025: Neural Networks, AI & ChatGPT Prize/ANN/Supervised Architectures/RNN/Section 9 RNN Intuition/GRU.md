@@ -12,6 +12,8 @@ Instead of the complex multi-cell state used in older **Long Short-Term Memory (
 
 <img width="850" height="405" alt="image" src="https://github.com/user-attachments/assets/5918d1bf-939b-4a96-b565-9eb68de1a500" />
 
+<img width="1384" height="533" alt="image" src="https://github.com/user-attachments/assets/c218c5fc-9d1d-49ec-a06f-4877d1d8dc5f" />
+
 ## GRU vs. LSTM
 
 | Feature | LSTM | GRU |
