@@ -251,3 +251,69 @@ Where:
 
 🎓 _Recommended Read_:  
 **"The 9 Deep Learning Papers you need to know about (Understanding the CNN part - 3)"** – Adit Deshpande (2016)
+
+
+---
+## Temp Notes
+
+# CNN Notes
+
+## Convolution Layer
+
+* Applies filters (kernels) to the input image.
+* Generates **feature maps**.
+* Feature maps become the input to the next layer.
+* As image size decreases through convolution and pooling layers, the number of filters is usually increased.
+
+---
+
+## Pooling Layer
+
+Pooling reduces the spatial dimensions of feature maps by representing neighboring values with a single value.
+
+### Max Pooling
+
+* Uses a window (e.g., 2×2).
+* Selects the **maximum value** within the window.
+* Slides across the feature map and repeats the operation.
+
+### Average Pooling
+
+* Uses a window (e.g., 2×2).
+* Computes the **average value** within the window.
+* Reduces dimensions while preserving overall information.
+
+> **Note:** Pooling does **not** create new feature maps. It only downsamples and compresses the existing feature maps.
+
+---
+
+## Flatten Layer
+
+* Applied after the final pooling layer.
+* Converts the 2D feature maps into a 1D vector.
+* The flattened vector is passed to fully connected layers for classification.
+
+---
+
+## CNN Workflow
+
+1. **Convolution**
+
+   * Generates new feature maps.
+
+2. **Activation (Non-linearity)**
+
+   * Introduces non-linear properties (e.g., ReLU).
+
+3. **Pooling**
+
+   * Reduces the size of feature maps.
+
+4. **Flatten**
+
+   * Converts feature maps into a one-dimensional vector.
+
+5. **Fully Connected Layer**
+
+   * Performs classification or prediction.
+
