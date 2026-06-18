@@ -1,4 +1,4 @@
-# 🧠 Mathematical Foundations of Machine Learning
+# 🧠 Course 1st Mathematical Foundations of Machine Learning
 
 ## 📘 Course Title
 **Essential Linear Algebra and Calculus Hands-On in NumPy, TensorFlow, and PyTorch**
