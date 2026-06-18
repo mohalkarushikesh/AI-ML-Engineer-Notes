@@ -1,4 +1,4 @@
-# 🐍 Python for Data Science and Machine Learning Bootcamp
+# 🐍 Course 2nd Python for Data Science and Machine Learning Bootcamp
 
 ## 📘 Overview
 Learn how to use **NumPy, Pandas, Seaborn, Matplotlib, Plotly, Scikit-Learn, TensorFlow**, and more to perform data analysis, visualization, and machine learning with Python.
