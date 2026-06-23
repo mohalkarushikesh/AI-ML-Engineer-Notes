@@ -1,5 +1,3 @@
-Good next steps to level this up progressively:
-
 ## Level 2 — Use Your Own Real Documents
 Instead of a hardcoded string, load actual files:
 ```python
@@ -55,4 +53,3 @@ if query:
 Level 2 (real docs) → Level 3 (persist) → Level 4 (chat) → Level 5 (UI)
 ```
 
-Which level do you want to build next?
