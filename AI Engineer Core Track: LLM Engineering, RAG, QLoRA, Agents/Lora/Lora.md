@@ -4,6 +4,10 @@
 
 ---
 
+[Lora Blog](https://www.ibm.com/think/topics/lora)
+
+---
+
 ## Core Concept
 
 Instead of updating all model weights during fine-tuning:
