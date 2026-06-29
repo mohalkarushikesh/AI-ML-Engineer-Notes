@@ -6,17 +6,8 @@ Folders appear with a **green background** in the WSL terminal because the `LS_C
 
 ### Solution
 
-Reset the directory color to the default **bold blue**:
+Add this to end of the .bashrc file
 
-```bash
-export LS_COLORS='di=01;34'
 ```
-
-**Explanation:**
-
-* `LS_COLORS` → Controls colors for `ls --color`.
-* `di` → Directory color.
-* `01` → Bold.
-* `34` → Blue.
-
-**Result:** Directories are displayed in **bold blue** instead of a green background.
+LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
+```
