@@ -34,6 +34,16 @@ What it does:
 - max_steps per episode: 100
 - early stopping criterion: mean of last 100 training rewards > 8
 
+
+### Sanity Evaluation 
+```
+Shape: (500, 6)
+Dtype: float64
+Any NaNs? False
+All zeros? False
+Min/Max: -18.169783011133653 20.0
+```
+
 ### Training Logs (sample)
 ```
 Episode 0, Epsilon: 1.000, Avg Reward (last 100): -415.00
