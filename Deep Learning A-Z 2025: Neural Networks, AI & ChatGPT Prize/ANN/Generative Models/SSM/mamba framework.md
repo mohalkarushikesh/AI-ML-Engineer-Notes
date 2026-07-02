@@ -153,10 +153,18 @@ graph TD
 
 - https://excalidraw.com/#json=hztVtrk2e2VqyPi0bxRw_,_g96a8QENWOASUOSOvk99g
 ---
-### Why Mamba over transformers 
+### Why Mamba Happened: The Transformer Bottleneck
 
 - **The Attention Problem**: Transformers use self-attention, meaning every token is compared to every other token in a sequence. As context length (tokens) grows, memory and processing requirements explode quadratically.
 
 - **Context Fragmentation**: To avoid out-of-memory errors, long documents must be split into chunks, resulting in the model losing continuity across the entire sequence.
 
 - **KV Cache**: At inference, Transformers must store previously generated tokens (the KV cache), which rapidly consumes VRAM.
+
+### What is Mamba?
+
+- **Linear Complexity**: Mamba processes data step-by-step and updates its internal memory (hidden state) with each new token, scaling linearly rather than quadratically.
+
+- **Selective Context**: Unlike older SSMs that treated all information equally, Mamba uses hardware-aware parallel algorithms and selective mechanisms to filter out noise, actively choosing which tokens to remember or forget.
+
+- **No KV Cache**: It requires constant memory during inference, allowing for faster processing and ultra-long context handling (like analyzing whole genomes, hours of video, or entire novels).
