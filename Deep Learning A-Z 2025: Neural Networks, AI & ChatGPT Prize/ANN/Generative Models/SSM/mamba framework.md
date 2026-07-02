@@ -155,8 +155,8 @@ graph TD
 ---
 ### Why Mamba over transformers 
 
-- The Attention Problem: Transformers use self-attention, meaning every token is compared to every other token in a sequence. As context length (tokens) grows, memory and processing requirements explode quadratically.
+- **The Attention Problem**: Transformers use self-attention, meaning every token is compared to every other token in a sequence. As context length (tokens) grows, memory and processing requirements explode quadratically.
 
-- Context Fragmentation: To avoid out-of-memory errors, long documents must be split into chunks, resulting in the model losing continuity across the entire sequence.
+- **Context Fragmentation**: To avoid out-of-memory errors, long documents must be split into chunks, resulting in the model losing continuity across the entire sequence.
 
-- KV Cache: At inference, Transformers must store previously generated tokens (the KV cache), which rapidly consumes VRAM.
+- **KV Cache**: At inference, Transformers must store previously generated tokens (the KV cache), which rapidly consumes VRAM.
