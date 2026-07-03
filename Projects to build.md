@@ -31,3 +31,9 @@ https://github.com/darkdevil3610/100-AI-Machine-learning-Deep-learning-Computer-
 - Network_embedding
 
 - https://github.com/gaoisbest/NLP-Projects
+
+
+
+- Real-time face filter or deepfake-style face swap — point a webcam, instant transformation
+- Live neural style transfer — watch yourself get painted like Van Gogh in real time
+- AI that roasts you based on a photo or your code
