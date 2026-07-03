@@ -119,8 +119,8 @@ Here's the full flow at a glance. A few key ideas to nail it down:
 **The W₀ matrix** at the end projects the concatenated heads back to the model's original dimension, letting the network learn how to *combine* what each head found.
 
 positional encodings
-	1. learn positional encodings 
-	2. fixed positional encodings	- recommended (they have advantage to being able to handle length of the sentences, we haven't seen in training set)
+	1. Learn positional encodings  - Position embeddings are learned during training.
+	2. Sinusoidal (fixed) positional encodings  - Uses sine and cosine functions of different frequencies.
 
 sine and cosine functions in diff frequencies 
 
