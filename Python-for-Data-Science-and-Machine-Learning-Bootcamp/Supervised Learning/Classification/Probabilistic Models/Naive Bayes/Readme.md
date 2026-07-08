@@ -17,6 +17,12 @@ $$
 
 ---
 
+$$
+\text{Posterior} = \frac{\text{Likelihood} \times \text{Prior}}{\text{Evidence}}
+$$
+
+---
+
 - **Naive Assumption**: All features are independent given the class.  
 
 $$
