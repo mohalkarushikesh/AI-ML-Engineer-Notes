@@ -1,6 +1,6 @@
 import numpy as np 
 
-class Perceptron:
+class perceptron:
     def __init__(self, l_r = 0.01, n_iters=1000):
         self.lr = l_r 
         self.n_iters = n_iters
@@ -28,17 +28,16 @@ class Perceptron:
         return self._step_funct(linear_output)
 
 if __name__ == "__main__":
-    X = np.array([[0, 0], [0,1], [1,0], [1,1]])
-    y = np.array([0, 1, 1, 1])
+    X = np.array([[0, 0], [0,1], [1,0], [1,1]]) 
+    y = np.array([0, 1, 1, 1])  
     
-    clf = Perceptron(l_r=0.1, n_iters=10)
+    clf = perceptron(l_r=0.1, n_iters=10)
     clf.fit(X, y)
 
     print("Learned Weights: ", clf.weights)    
     print("Learned Bias: ", clf.bias)
     print("Predictions: ", clf.predict(X))
     
-    
-        
-        
-     
+# OR = 0, 1, 1, 1
+# AND = 0, 0, 0, 1 
+# XOR = 0, 1, 1, 0 (motivates MLPs)
