@@ -4,7 +4,7 @@ class perceptron:
     def __init__(self, l_r = 0.01, n_iters=1000):
         self.lr = l_r 
         self.n_iters = n_iters
-        self.weights = None 
+        self.weights = None     
         self.bias = None 
         
     def _step_funct(self, x):
@@ -18,14 +18,14 @@ class perceptron:
         for _ in range(self.n_iters):
             for _idx, x_i in enumerate(X):
                 linear_output = np.dot(x_i, self.weights) + self.bias 
-                y_predicted = self._step_funct(linear_output)
-                update = self.lr * (y[_idx] - y_predicted)
+                y_predicted = self._step_funct(linear_output)       # guess, then compare to the true y
+                update = self.lr * (y[_idx] - y_predicted)          # learn from the error
                 self.weights += update * x_i
                 self.bias += update             
         
     def predict(self, X):
         linear_output = np.dot(X, self.weights) + self.bias 
-        return self._step_funct(linear_output)
+        return self._step_funct(linear_output)                      # just output the class, no learning
 
 if __name__ == "__main__":
     X = np.array([[0, 0], [0,1], [1,0], [1,1]]) 
