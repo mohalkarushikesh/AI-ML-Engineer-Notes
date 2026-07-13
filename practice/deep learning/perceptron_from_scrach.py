@@ -11,12 +11,13 @@ class perceptron:
         return np.where(x >= 0, 1, 0)
                    
     def fit(self, X, y):
-        n_features = X.shape[1]
+        # shape[0] = how many samples, shape[1] = how many features. You index [1] here because the weight vector has to match the number of features.
+        n_features = X.shape[1]                                     # the [1] is an index, picking the second number out of the shape.
         self.weights = np.zeros(n_features)
         self.bias = 0.0        
         
         for _ in range(self.n_iters):
-            for _idx, x_i in enumerate(X):
+            for _idx, x_i in enumerate(X):                          # Enumerate : both the index and the item as you loop, instead of just the item.
                 linear_output = np.dot(x_i, self.weights) + self.bias 
                 y_predicted = self._step_funct(linear_output)       # guess, then compare to the true y
                 update = self.lr * (y[_idx] - y_predicted)          # learn from the error
