@@ -1,24 +1,18 @@
 # Perceptron from scratch — Implement a single neuron with NumPy to solve a linearly separable problem (e.g., AND/OR gates); code the forward pass and weight updates by hand.
 
-"""
-A single-layer perceptron implemented from scratch with NumPy.
+# A single-layer perceptron implemented from scratch with NumPy.
 
-The perceptron is the simplest neural network: one layer of weights, no hidden
-units, and a hard step activation. It is a BINARY LINEAR CLASSIFIER — it learns
-a straight line (hyperplane) that separates two classes.
+# The perceptron is the simplest neural network: one layer of weights, no hidden units, and a hard step activation. It is a BINARY LINEAR CLASSIFIER — it learns
+# a straight line (hyperplane) that separates two classes.
 
-Pipeline:
-    1. Initialize weights and bias
-    2. Compute the weighted sum of the input features  (linear combination)
-    3. Pass that sum through a step activation function  -> predicted class (0/1)
-    4. Nudge the parameters whenever a sample is misclassified
+# 1. Initialize weights and bias
+# 2. Compute the weighted sum of the input features  (linear combination)
+# 3. Pass that sum through a step activation function  -> predicted class (0/1)
+# 4. Nudge the parameters whenever a sample is misclassified
 
-Note: it only converges if the data is LINEARLY SEPARABLE (e.g. OR, AND).
-XOR is NOT linearly separable and cannot be solved by a single perceptron.
-"""
+# Note: it only converges if the data is LINEARLY SEPARABLE (e.g. OR, AND). XOR is NOT linearly separable and cannot be solved by a single perceptron.
 
 import numpy as np
-
 
 class Perceptron:
     def __init__(self, learning_rate=0.01, n_iters=1000):
@@ -89,22 +83,18 @@ if __name__ == "__main__":
     print("Learned Bias:", clf.bias)
     print("Predictions:", clf.predict(X))
 
-
-# =============================================================================
-# NOTES
-# =============================================================================
 # Example run:
 #   Learned Weights: [0.1 0.1]
 #   Learned Bias:    -0.1
 #   Predictions:     [0 1 1 1]   -> matches y, so the OR gate is learned
-#
+
 # How the learned parameters classify each input:
 #   decision boundary -> 0.1*x1 + 0.1*x2 - 0.1 >= 0
 #   [0,0]: -0.1  < 0  -> 0
 #   [0,1]:  0.0 >= 0  -> 1
 #   [1,0]:  0.0 >= 0  -> 1
 #   [1,1]:  0.1 >= 0  -> 1
-#
+
 # Key ideas:
 #   - Converges only when the classes are LINEARLY SEPARABLE.
 #     OR and AND work; XOR does NOT (needs a hidden layer / MLP).
@@ -114,7 +104,7 @@ if __name__ == "__main__":
 #     instead of gradient descent / backprop.
 #   - learning_rate only scales the step size; for a plain perceptron it does
 #     not change WHETHER it converges, only how fast the weights grow.
-#
+
 # Try next:
 #   - Swap y to the AND gate ([0,0,0,1]) — still learnable.
 #   - Swap y to XOR ([0,1,1,0]) — watch it fail to converge (motivates MLPs).
