@@ -1,11 +1,12 @@
 fine tuning : 
-
-	sft : 
-		1. full fine tune 
-		2. prompt-response pairs
-		3. partial fine tune 
-	peft : 
-		1. LoRA : (Low-Rank Adaptation): Instead of altering all model weights, LoRA decomposes the weight updates into two smaller, low-rank matrices. This makes training incredibly fast and much cheaper to run.
-		2. QLoRA (Quantized LoRA): A memory-efficient variant of LoRA that compresses the base model into 4-bit precision. This allows massive models (like 70B+ parameters) to be fine-tuned on a single consumer-grade GPU.
-		3. 
-		
+- sft : 
+	- full fine tune 
+	- instruction fine tuning - prompt-response pairs
+	- partial fine tune 
+- peft : 
+	- LoRA : (Low-Rank Adaptation): Instead of altering all model weights, LoRA decomposes the weight updates into two smaller, low-rank matrices. This makes training incredibly fast and much cheaper to run.
+	- QLoRA (Quantized LoRA): A memory-efficient variant of LoRA that compresses the base model into 4-bit precision. This allows massive models (like 70B+ parameters) to be fine-tuned on a single consumer-grade GPU.
+	- Prompt Tuning / Prefix Tuning: Prepends a small set of trainable, virtual tokens to the input text, adapting the model's behavior while keeping the underlying model's weights completely unchanged.
+- preference alignment : 
+	- RLHF (Reinforcement Learning from Human Feedback): Used to align AI models with human values, ethics, and preferences. It utilizes a reward model based on human ratings to optimize model outputs using reinforcement learning (e.g., PPO).
+	- DPO (Direct Preference Optimization): A simpler alignment method that directly optimizes the model using a dataset of "chosen" and "rejected" responses, bypassing the need to build a separate reward model.
