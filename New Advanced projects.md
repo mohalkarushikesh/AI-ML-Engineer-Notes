@@ -1,10 +1,19 @@
+1. **AI Agents : Models that don't just answer questions but can:**
+
+> Plan tasks
+> Use tools
+> Browse applications
+> Execute workflows autonomously
+
+
+
 Here's a spread of genuinely advanced AI/ML projects, organized by what skill they force you to develop. "Advanced" here means projects where the hard part isn't calling an API but engineering the system around it.
 
 **LLM / NLP systems**
 
 Build a retrieval-augmented generation system from scratch that actually handles the hard parts: chunking strategy, hybrid search (dense + BM25), reranking, and handling contradictory sources. The naive version is a weekend tutorial; the advanced version is making retrieval quality measurable and tuning it. Pair it with an eval harness so you can prove improvements rather than vibe-check them.
 
-Fine-tune a small open model (Llama, Qwen, Mistral) with LoRA/QLoRA on a domain-specific task, then quantize it and deploy it to run on constrained hardware. The learning is in the full loop: dataset curation, training instability, evaluation, and the accuracy-vs-latency tradeoffs of quantization.
+**Fine-tune a small open model (Llama, Qwen, Mistral) with LoRA/QLoRA on a domain-specific task**, then quantize it and deploy it to run on constrained hardware. The learning is in the full loop: dataset curation, training instability, evaluation, and the accuracy-vs-latency tradeoffs of quantization.
 
 Build an agent that uses tools and can recover from its own mistakes. Multi-step reasoning, tool calling, error handling, and guardrails against loops. The interesting engineering is in observability and making failures debuggable.
 
