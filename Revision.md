@@ -290,3 +290,24 @@ Common interview curveballs:
 ---
 
 *Tip: For a strong interview, be able to (a) define each concept in one sentence, (b) explain the intuition, and (c) give a tradeoff or when-to-use. Interviewers probe depth by asking "why" repeatedly — prepare two layers deep on your strongest topics.*
+
+
+---
+---
+
+Tier 1 — study hardest (this is where you'll be grilled)
+
+All of Part 2 (Deep Learning): activations, backprop, optimizers, vanishing/exploding gradients, batch norm, dropout, weight init. Be able to explain and reason about tradeoffs.
+Architectures in depth: CNNs (ResNet skip connections, why they work), RNN→LSTM→Transformer evolution, and self-attention mechanics from Part 3.
+Training practicalities: learning-rate schedules, batch size effects, mixed precision, gradient clipping, handling overfitting.
+
+Tier 2 — very likely, second priority
+
+Deployment / MLOps — this is the ML-engineer-specific part my guide is currently light on (more below).
+Model optimization for serving: quantization, pruning, distillation, ONNX/TensorRT, batching, latency vs throughput.
+Classic ML (Part 1) as baseline — they'll expect you to know metrics, bias/variance, regularization cold, but won't go deep on SVM kernels.
+
+Tier 3 — good to have, lighter
+
+LLM/GenAI concepts (Part 3): know transformers and attention well (Tier 1), but RAG/LoRA/prompting are "nice to mention" unless the role is GenAI-flavored.
+Research-level derivations: only if senior/PhD-track.
