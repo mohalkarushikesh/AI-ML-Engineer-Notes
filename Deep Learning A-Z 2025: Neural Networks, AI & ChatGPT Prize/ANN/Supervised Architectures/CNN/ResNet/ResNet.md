@@ -1,3 +1,7 @@
+**Skip connections (short):** they add the input of a block directly to its output (`output = F(x) + x`). **This gives gradients a shortcut path straight back through the network**, so they don't vanish in very deep nets — letting you train 100+ layer models. The block only has to learn the *residual* (the change), which is easier than learning the full mapping.
+
+Interview one-liner: *"They add a shortcut (x + F(x)) so gradients flow directly backward — enabling very deep networks and fixing vanishing gradients/degradation."*
+
 ## 📘 ResNet Architecture (2015, Microsoft Research)
 
 **Paper:** *Deep Residual Learning for Image Recognition*
