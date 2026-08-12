@@ -142,28 +142,30 @@ A focused revision sheet for ML/DL/GenAI interviews. Each section has **core con
 1. **Q: Why do we need non-linear activation functions?**
    A: Without them a deep network collapses into a single linear transformation; non-linearity lets it approximate complex functions.
 
-2. **Q: What causes vanishing gradients and how do you fix them?**
+   Alt expln : stacking linear layers just gives another linear function — W₂(W₁x) = Wx, so any depth collapses to a single linear layer. Non-linearity is what lets the network learn complex, curved decision boundaries and approximate arbitrary functions.
+
+3. **Q: What causes vanishing gradients and how do you fix them?**
    A: Repeated multiplication of small derivatives (e.g. sigmoid) through many layers. Fixes: ReLU/GELU, He init, batch norm, residual/skip connections, LSTMs for sequences.
 
-3. **Q: How does dropout work and why does it help?**
+4. **Q: How does dropout work and why does it help?**
    A: Randomly deactivates neurons each training step, forcing redundancy and preventing co-adaptation → acts like training an ensemble → reduces overfitting. Disabled at inference (weights scaled).
 
-4. **Q: Explain batch normalization.**
+5. **Q: Explain batch normalization.**
    A: Normalizes each layer's inputs (mean 0, var 1) over the mini-batch, then scales/shifts with learnable params. Stabilizes and speeds training, reduces sensitivity to init.
 
-5. **Q: Adam vs SGD — when use which?**
+6. **Q: Adam vs SGD — when use which?**
    A: Adam converges fast with little tuning, great default (esp. NLP/transformers). Well-tuned SGD+momentum often generalizes better on vision tasks and is standard for large CNNs.
 
-6. **Q: What makes CNNs suited to images?**
+7. **Q: What makes CNNs suited to images?**
    A: Parameter sharing (same filter across the image) drastically cuts params, local receptive fields capture spatial structure, and pooling gives translation invariance.
 
-7. **Q: Why do ResNets use skip connections?**
+8. **Q: Why do ResNets use skip connections?**
    A: They let gradients flow directly through identity paths, easing training of very deep nets and combating vanishing gradients / degradation.
 
-8. **Q: LSTM vs vanilla RNN?**
+9. **Q: LSTM vs vanilla RNN?**
    A: LSTM adds a gated cell state (forget/input/output gates) that preserves information over long sequences, solving the RNN's vanishing-gradient memory problem.
 
-9. **Q: You're overfitting a neural net. List five things to try.**
+10. **Q: You're overfitting a neural net. List five things to try.**
    A: More data / augmentation, dropout, L2 weight decay, early stopping, reduce model size, batch norm.
 
 ---
