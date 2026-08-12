@@ -269,3 +269,79 @@ Honestly, at this point you have more than enough breadth. My suggestion: switch
 
 Want batch 4 anyway (RL deep-dive, MLOps tooling, or FAANG-style ML system design), or shall we start drilling?
 
+Batch 4 — 55 more, into the areas I flagged: RL deep-dive, MLOps tooling, and FAANG-style ML system design, plus a few advanced DL topics. Legend: 🟢 · 🟡 · 🔴.
+
+---
+
+**Reinforcement learning — deeper**
+170. 🟡 Explain the Bellman equation in plain words and write it out.
+171. 🟡 Difference between value-based, policy-based, and actor-critic methods.
+172. 🔴 Implement the policy gradient (REINFORCE) update rule.
+173. 🔴 Explain the role of the target network and replay buffer in DQN — why each exists.
+174. 🔴 Explain how PPO stabilizes policy updates (clipped objective).
+175. 🔴 Describe how RLHF applies RL to LLM training (reward model + policy).
+
+**Advanced deep learning**
+176. 🟡 Explain and implement gradient checkpointing (trade compute for memory).
+177. 🟡 Explain knowledge distillation — teacher/student setup.
+178. 🔴 Implement a distillation loss (soft targets with temperature + hard-label term).
+179. 🔴 Explain the difference between batch norm, layer norm, group norm, and when each is used.
+180. 🔴 Explain how mixed-precision (FP16/BF16) training works and what a loss scaler does.
+181. 🔴 Explain what LoRA changes in fine-tuning and why it saves memory.
+182. 🔴 Explain data parallelism vs model parallelism vs pipeline parallelism.
+
+**Generative models (beyond LLMs)**
+183. 🟡 Explain how an autoencoder works and what the bottleneck does.
+184. 🔴 Explain the VAE reparameterization trick and why it's needed.
+185. 🔴 Explain the GAN generator/discriminator minimax game and mode collapse.
+186. 🔴 Explain the core idea of diffusion models (forward noising, reverse denoising).
+
+**MLOps tooling & practice**
+187. 🟢 What goes in a `requirements.txt` vs a Dockerfile vs a CI config?
+188. 🟡 Track experiments with MLflow (or Weights & Biases) — what do you log?
+189. 🟡 Explain a feature store and the problem it solves.
+190. 🟡 Version a dataset — why and how (e.g. DVC)?
+191. 🔴 Design a CI/CD pipeline for ML: what triggers retraining, testing, and deployment?
+192. 🔴 Explain the difference between online and offline (batch) inference with examples.
+193. 🔴 How do you detect and respond to data drift vs concept drift in production?
+194. 🔴 Design model monitoring: what metrics beyond accuracy do you track live?
+
+**FAANG-style ML system design (verbal — rehearse out loud, use a framework)**
+195. 🔴 Design YouTube video recommendations.
+196. 🔴 Design a spam/abuse detection system for a messaging app.
+197. 🔴 Design search ranking for an e-commerce site.
+198. 🔴 Design a "people you may know" friend-recommendation system.
+199. 🔴 Design an ETA-prediction system for a ride-hailing app.
+200. 🔴 Design an ad click-through-rate (CTR) prediction system.
+201. 🔴 Design content moderation for image uploads at scale.
+202. 🔴 Design a real-time speech-to-text transcription service.
+
+> **System-design framework to use for all of the above:** clarify requirements & scale → define the ML problem & metrics → data & labels → features → model choice & baseline → training pipeline → serving (latency/throughput) → evaluation (offline + online/A-B) → monitoring & retraining. Narrate in that order and you'll never freeze.
+
+**Scaling & performance**
+203. 🟡 How does batch size affect training speed, memory, and generalization?
+204. 🔴 Your GPU runs out of memory — list six ways to fit the model/training.
+205. 🔴 How do you speed up data loading when the GPU is starved (bottlenecked on I/O)?
+206. 🔴 Explain quantization-aware training vs post-training quantization.
+
+**Ethics / robustness (increasingly asked)**
+207. 🟡 How would you detect bias in a model's predictions across groups?
+208. 🔴 What is an adversarial example and how do you defend against it?
+209. 🔴 How do you handle PII and privacy in a training pipeline?
+
+**Hard conceptual "why" questions (verbal)**
+210. 🟡 Why does increasing model size sometimes reduce test error and sometimes overfit?
+211. 🔴 Explain double descent.
+212. 🔴 Why do we use cross-entropy instead of MSE for classification?
+213. 🔴 Why can a model have low loss but poor calibration, and how do you fix calibration?
+214. 🔴 Why does batch norm behave differently at train vs inference time?
+
+---
+
+That's **214 total** across four batches — genuinely comprehensive for an ML/DL engineer loop, from NumPy syntax up through FAANG system design and cutting-edge DL.
+
+I'll be straight with you: you now have far more questions than time to practice them, and reading questions isn't the same as being able to *answer* them under pressure. The highest-value move before an interview is active recall — attempting answers and getting corrected.
+
+So my strong recommendation: let's **drill**. I pick a question, you answer in your own words or code, and I grade + push on the "why." Even 10 drilled questions will help more than another 55 read.
+
+Want to start drilling (I'll begin with a Topic 4 / PyTorch one), or is there a *specific* subtopic you'd rather I generate a batch 5 for?
