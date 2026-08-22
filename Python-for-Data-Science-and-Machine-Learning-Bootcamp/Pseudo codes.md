@@ -75,14 +75,12 @@ return majority class
 
 ```text
 For each class C:
-    calculate P(C)
-
+    calculate P(C)                          # Prior Probability 
     For each feature:
-        calculate P(feature | C)
+        calculate P(feature | C)            # Conditional Probability
 
-For each possible class:
-    score = P(C) * product(P(feature | C))
-
+For each class C:
+    score = log(P(C)) + sum of log(P(feature | C)) over all features
 return class with highest score
 ```
 
