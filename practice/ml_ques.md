@@ -3,13 +3,13 @@ Here are hands-on machine learning practice exercises organized by level. Each i
 ## Beginner
 
 1. **Iris classification** — Train a k-NN or decision tree on the classic Iris dataset; visualize decision boundaries and report accuracy.
+2. **House price prediction** — Use linear regression on a housing dataset (e.g., Boston/California) to predict prices; interpret the coefficients.
 ---   
-3. **House price prediction** — Use linear regression on a housing dataset (e.g., Boston/California) to predict prices; interpret the coefficients.
-4. **Train/test split & cross-validation** — Take any dataset and demonstrate how accuracy changes with different splits and k-fold cross-validation.
-5. **Data preprocessing pipeline** — Handle missing values, encode categorical variables (one-hot / label encoding), and scale features (StandardScaler vs. MinMaxScaler).
-6. **Confusion matrix & metrics** — Build a binary classifier and compute accuracy, precision, recall, F1, and plot a confusion matrix by hand, then verify with sklearn.
-7. **Overfitting demo** — Fit polynomial regression of increasing degree and visually show underfitting vs. overfitting on train vs. test error.
-8. **Titanic survival prediction** — The classic starter: clean the data, engineer a few features, and train logistic regression.
+3. **Train/test split & cross-validation** — Take any dataset and demonstrate how accuracy changes with different splits and k-fold cross-validation.
+4. **Data preprocessing pipeline** — Handle missing values, encode categorical variables (one-hot / label encoding), and scale features (StandardScaler vs. MinMaxScaler).
+5. **Confusion matrix & metrics** — Build a binary classifier and compute accuracy, precision, recall, F1, and plot a confusion matrix by hand, then verify with sklearn.
+6. **Overfitting demo** — Fit polynomial regression of increasing degree and visually show underfitting vs. overfitting on train vs. test error.
+7. **Titanic survival prediction** — The classic starter: clean the data, engineer a few features, and train logistic regression.
 
 ## Medium
 
