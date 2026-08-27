@@ -51,8 +51,7 @@ if __name__ == "__main__":
     print("Predictions:    ", model.predict(X)) # should match y: [0, 1, 1, 1]
     
     
-    """
-    ==========================================================================================
+"""
 Epoch:  10/300 | Traning Loss: 2.2107
 Epoch:  20/300 | Traning Loss: 2.0256
 .
