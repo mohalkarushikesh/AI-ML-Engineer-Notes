@@ -1,43 +1,46 @@
-import numpy as np 
+import numpy as np
 
-class perceptron:
-    def __init__(self, l_r = 0.01, n_iters=1000):
-        self.lr = l_r 
+class Perceptron:
+    def __init__(self, lr=0.01, n_iters=1000):   # __init__, not __self__
+        self.lr = lr
         self.n_iters = n_iters
-        self.weights = None     
-        self.bias = None 
-        
-    def _step_funct(self, x):
-        return np.where(x >= 0, 1, 0)
-                   
+        self.weights = None
+        self.bias = None
+
+    def step_funct(self, x):
+        return np.where(x >= 0, 1, 0)            # return the result
+
     def fit(self, X, y):
-        # shape[0] = how many samples, shape[1] = how many features. You index [1] here because the weight vector has to match the number of features.
-        n_features = X.shape[1]                                     # the [1] is an index, picking the second number out of the shape.
+        X = np.array(X, dtype=float)             # ensure numpy array
+        y = np.array(y)
+        n_features = X.shape[1]
         self.weights = np.zeros(n_features)
-        self.bias = 0.0        
-        
+        self.bias = 0.0
+
         for _ in range(self.n_iters):
-            for _idx, x_i in enumerate(X):                          # Enumerate : both the index and the item as you loop, instead of just the item.
-                linear_output = np.dot(x_i, self.weights) + self.bias 
-                y_predicted = self._step_funct(linear_output)       # guess, then compare to the true y
-                update = self.lr * (y[_idx] - y_predicted)          # learn from the error
+            for idx, x_i in enumerate(X):
+                linear_output = np.dot(x_i, self.weights) + self.bias
+                y_predicted = self.step_funct(linear_output)
+                update = self.lr * (y[idx] - y_predicted)   # parentheses, not brackets
                 self.weights += update * x_i
-                self.bias += update             
-        
+                self.bias += update
+
     def predict(self, X):
-        linear_output = np.dot(X, self.weights) + self.bias 
-        return self._step_funct(linear_output)                      # just output the class, no learning
+        X = np.array(X, dtype=float)
+        linear_output = np.dot(X, self.weights) + self.bias
+        return self.step_funct(linear_output)
+
 
 if __name__ == "__main__":
-    X = np.array([[0, 0], [0,1], [1,0], [1,1]]) 
-    y = np.array([0, 1, 1, 1])  
-    
-    clf = perceptron(l_r=0.1, n_iters=10)
-    clf.fit(X, y)
+    X = [[0, 0], [0, 1], [1, 0], [1, 1]]         # all rows length 2
+    y = [0, 1, 1, 1]                             # this is OR logic
 
-    print("Learned Weights: ", clf.weights)    
-    print("Learned Bias: ", clf.bias)
-    print("Predictions: ", clf.predict(X))
+    model = Perceptron(lr=0.01, n_iters=10)
+    model.fit(X, y)
+
+    print("Learned Weights:", model.weights)
+    print("Learned Bias:   ", model.bias)
+    print("Predictions:    ", model.predict(X))
     
 # OR = 0, 1, 1, 1
 # AND = 0, 0, 0, 1 
