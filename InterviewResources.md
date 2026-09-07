@@ -45,6 +45,4 @@ Your own repo. Genuinely. The signal interviewers want is specific: whether you 
 
 **Don't prep like it's 2023.** Spending your time on gradient descent and CNN architectures is called the single most common mistake, when roughly 75% of modern AI engineering interviews are about RAG, evaluation, and agentic systems.
 
-**Some of these sites sell "interview co-pilot" tools** that feed you real-time answers during live interviews. Their written content is fine — skip the products. Getting caught ends the process, and it won't help you in the job.
-
 Bookmark this. Then close it until you have a date.
