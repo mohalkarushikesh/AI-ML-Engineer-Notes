@@ -53,16 +53,21 @@
 - **Translation/Summarization** → BLEU, ROUGE, METEOR.
 - **Language Models** → Perplexity.
 
-Precision = of the documents you retrieved, how many were relevant?
+---
+- BLEU = Bilingual Evaluation Understudy
+- ROUGE = Recall-Oriented Understudy for Gisting Evaluation
+
+- Precision = of the documents you retrieved, how many were relevant?
 → relevant retrieved / total retrieved
-Recall = of all the relevant documents that exist, how many did you find?
+- Recall = of all the relevant documents that exist, how many did you find?
 → relevant retrieved / total relevant in the collection
  
-BLEU — precision-oriented. Of the n-grams the machine produced, how many appear in the reference? Used mainly for machine translation. Asks: "Is what I generated correct?"
-ROUGE — recall-oriented. Of the n-grams in the reference, how many did the machine capture? Used mainly for summarization. Asks: "Did I cover what I should have?"
+- BLEU — precision-oriented. Of the n-grams the machine produced, how many appear in the reference? Used mainly for machine translation. Asks: "Is what I generated correct?"
+- ROUGE — recall-oriented. Of the n-grams in the reference, how many did the machine capture? Used mainly for summarization. Asks: "Did I cover what I should have?"
+
 The logic behind the split:
-Translation → you don't want to add wrong/extra words → penalize junk → precision (BLEU)
-Summarization → you don't want to miss key content → reward coverage → recall (ROUGE)
+- Translation → you don't want to add wrong/extra words → penalize junk → precision (BLEU)
+- Summarization → you don't want to miss key content → reward coverage → recall (ROUGE)
  
 ---
 
