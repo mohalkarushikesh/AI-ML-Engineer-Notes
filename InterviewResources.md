@@ -1,3 +1,33 @@
+Got it — AIML Engineer interview in 1 month, studying evenings + weekends. Here's a realistic plan assuming ~2 hrs on weekdays and ~4–5 hrs on weekends. The key is: don't try to learn everything, cover the high-frequency stuff well.
+
+**Week 1 — ML foundations (the stuff always asked)**
+Evenings: bias-variance, overfitting/regularization (L1/L2), gradient descent, loss functions, train/val/test splits, cross-validation. Core algorithms — linear/logistic regression, decision trees, random forest, SVM, KNN, k-means. Know *when and why*, not just definitions.
+Weekend: evaluation metrics end-to-end — precision/recall/F1, ROC-AUC, confusion matrix, plus BLEU/ROUGE (you've got these already). Do 1 small notebook to keep hands warm.
+
+**Week 2 — Deep learning + NLP**
+Evenings: neural net basics, backprop, activations, optimizers (Adam/SGD), CNNs, RNN/LSTM, then transformers + attention (very high frequency for AIML roles now). Embeddings, tokenization.
+Weekend: LLMs — how they're trained, fine-tuning vs prompting, RAG, hallucination, context windows. This is where a lot of current AIML interviews focus.
+
+**Week 3 — Coding + system/ML design**
+Evenings: DSA on a schedule — arrays, strings, hashmaps, two pointers, trees. ~2 LeetCode easy-medium per night. Also practice writing ML from scratch in NumPy (e.g. linear regression, k-means).
+Weekend: ML system design — how to design a recommender, a spam classifier, a search ranker. Framework: data → features → model → eval → serving → monitoring. Also brush up SQL and pandas.
+
+**Week 4 — Consolidate + mock**
+Evenings: revise your own notes only (no new topics), redo weak areas, review your projects deeply — you *will* be grilled on anything on your resume.
+Weekend: 2–3 full mock interviews (Pramp, a friend, or self-recorded). Prep behavioral answers (STAR format) and questions to ask them.
+
+**Daily non-negotiables**
+- Maintain one running notes doc — writing it down beats re-reading.
+- Spend a little time each night reviewing yesterday's topic (spaced repetition beats cramming).
+- Guard sleep. Tired-brain studying after 9-to-5 gives fake progress.
+
+One thing that changes the plan a lot: **how senior is the role, and do you already have ML project experience, or are you transitioning in?** Tell me and I'll tighten the focus — e.g. more LLM/production for a senior role, more fundamentals + one strong project if you're transitioning.
+
+If it'd help, I can turn this into a checkable day-by-day tracker you can tick off each evening.
+
+---
+---
+
 Here's the library. **But read this first:** this is a reference shelf to pull from once you have a real interview date — not a to-do list for this week. This week is still just the conversation plus two evenings on your own repo.
 
 ## 0. Start here (free, and highest value for you)
