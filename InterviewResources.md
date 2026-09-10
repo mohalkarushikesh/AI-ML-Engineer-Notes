@@ -37,6 +37,8 @@ Your own repo. Genuinely. The signal interviewers want is specific: whether you 
 ## 1. AI Engineer question banks
 
 - **DataCamp** — 30 RAG interview questions, foundational to advanced. Also has separate sets for LLMs, generative AI, and agentic AI.
+  - https://www.geeksforgeeks.org/nlp/what-is-retrieval-augmented-generation-rag/
+  - https://github.com/KalyanKS-NLP/RAG-Interview-Questions-and-Answers-Hub
 - **InterviewBit LLM guide** — transformers, LoRA/QLoRA/PEFT, RAG pipelines, tokenization, embeddings, hallucination mitigation, LLM system design, deployment.
 - **Let's Data Science** — 50 questions across transformer fundamentals through safety/alignment, sourced from real 2026 interview loops.
 - **ayautomate** — 40 questions with strong/weak sample answers, a scoring rubric, and take-home ideas. The rubric is the useful part; you can self-grade.
