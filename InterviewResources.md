@@ -41,7 +41,7 @@ Your own repo. Genuinely. The signal interviewers want is specific: whether you 
 - **Let's Data Science** — 50 questions across transformer fundamentals through safety/alignment, sourced from real 2026 interview loops.
 - **ayautomate** — 40 questions with strong/weak sample answers, a scoring rubric, and take-home ideas. The rubric is the useful part; you can self-grade.
 - **CallSphere** — 8 hard questions from real loops at frontier labs, with what the interviewer is actually testing. Note their most-asked 2026 question: **RAG vs fine-tuning vs both** — and they want a decision framework, not a definition. Have an answer ready.
-
+- **NLP** - (https://www.geeksforgeeks.org/nlp/advanced-natural-language-processing-interview-question/)
 ## 2. Evaluation (your biggest gap — prioritise this)
 
 - **Ragas** — the RAG Triad: Faithfulness (does the answer contradict the source), Answer Relevance, Context Relevance.
