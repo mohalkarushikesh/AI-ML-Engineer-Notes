@@ -286,3 +286,23 @@ LLMs *cannot* be trusted to do arithmetic or to "know" tax law from memory — b
 **What You Will Learn**
 - How to build a multi-agent LangGraph pipeline that *separates probabilistic reasoning from deterministic computation* — the LLM reads and explains, a rules engine does the math.
 - How to ground high-stakes domain answers in authoritative sources with RAG so every de
+
+---
+
+**1. Transformer-from-scratch (recommended) — "NanoScope"**
+
+- Train a small GPT-style decoder from scratch in pure PyTorch on a local corpus — no HF, no downloads, which is exactly why it survives your network.
+
+- What it teaches: the internals behind every other project you have — attention, positional encoding, the training loop, LR warmup/cosine schedule, mixed precision, gradient accumulation, checkpointing, and eval (loss curves + sampling).
+- Why it fits your portfolio: you've used transformers everywhere; this is the one project that shows you can build one. Byte-level or a tiny BPE tokenizer you write yourself → zero external assets.
+- Scope: ~character/word LM on a local text file, single-GPU or even CPU-trainable at small scale. Ships with a training CLI, config, and a sample.py.
+
+**2. Computer-vision CNN — a new modality**
+
+- A production-style image classifier/detector trained in PyTorch — e.g. a document-type or insurance-damage classifier (ties directly into your InsuranceClaim stub).
+
+- What it teaches: data pipelines + augmentation, CNN architecture (ResNet-style), transfer learning, Grad-CAM explainability, ONNX export, and a FastAPI serving endpoint — matching the "real, servable" style of your other projects.
+- Constraint note: transfer learning wants pretrained weights (torchvision pulls from download.pytorch.org, which may be reachable even though HF isn't). Fallback is train-from-scratch on synthetic/local images, or bundle weights manually.
+- My pick: start with #1 (NanoScope) — it's the sharpest gap (it teaches the fundamentals underpinning all your LLM work), it's fully offline so your network constraints don't bite, and it's a strong portfolio signal. Add #2 if you want a second modality (vision) beyond NLP.
+
+Want me to scaffold one of these — a proper project directory with README, pyproject.toml, training loop, and tests in the same style as your existing projects?
