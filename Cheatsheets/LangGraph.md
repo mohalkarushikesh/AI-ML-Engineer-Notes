@@ -25,6 +25,14 @@ pip install langchain-openai   # or any LLM provider
 
 ---
 
+## Application's
+
+1. Multi-Agent Orchestration
+2. Human in the loop workflows
+3. Long running and State full chatbots
+4. Complex task automation and loops
+5. Dynamic routing and Triage 
+
 ## Minimal Example
 
 ```python
