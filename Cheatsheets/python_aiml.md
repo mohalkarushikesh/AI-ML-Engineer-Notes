@@ -24,6 +24,11 @@ isinstance(age, int)
 
 ## 2. Data Structures
 
+- List → Ordered, mutable collection that allows duplicate values.
+- Tuple → Ordered, immutable collection that allows duplicate values.
+- Set → Unordered, mutable collection that stores unique values only.
+- Dictionary → Key-value pair collection with unique keys and mutable values.
+
 ### List
 ```python
 nums = [1, 2, 3, 4]
