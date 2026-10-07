@@ -1,75 +1,193 @@
-This in-depth Floci Cheatsheet covers CLI commands, environment variables, data persistence, and direct service configurations for the Floci AWS Emulator. [1] (https://floci.io/aws/), [2] (https://github.com/floci-io/floci-cli), [3] (https://floci.io/aws/)
-🚀 1. Core Lifecycle Commands
-Manage the lifecycle of the local AWS emulator using the floci binary. [1] (https://github.com/floci-io/floci-cli)
-Command	Description
-floci doctor	Runs local environment diagnostics (Docker access, paths).
-floci start	Launches the Floci AWS emulator container on background port 4566.
-floci env	Prints the dummy local AWS environment configurations.
-eval $(floci env)	Crucial: Sets the active shell environment variable pointers to your local endpoint.
-floci status	Displays container state, server runtime stats, and health.
-floci logs --follow	Streams active Docker logs from the emulator.
-floci stop	Tears down and cleanly removes the active emulator container.
-floci wait	Blocks execution loop until services pass health-checks (ideal for CI pipelines).
-💾 2. Multi-Cloud Expansion
-Floci isn't limited to AWS; it provides multi-cloud cross-compatibility under the same binary interface using prefixed targeting flags. [1] (https://github.com/floci-io/floci-cli)
-bash
-# Google Cloud Platform (Port 4588)
-floci gcp start && eval $(floci gcp env)
+# 🚀 Floci AWS Emulator Cheatsheet
 
-# Microsoft Azure (Port 4577)
-floci az start && eval $(floci az env)
+This in-depth **Floci Cheatsheet** covers CLI commands, environment variables, data persistence, direct AWS service configurations, and SDK integrations for the **Floci AWS Emulator**.
 
-# Oracle Cloud Infrastructure (Port 4599)
-floci oci start && floci oci setup && eval $(floci oci env)
-Use code with caution.
-📦 3. Persistence & Snapshots
-By default, Floci drops everything to memory on termination for speed. Use these patterns to persist development data across stack teardowns. [1] (https://github.com/floci-io/floci), [2] (https://floci.io/aws/)
-• Launch with disk storage:bash
+**References:**
+
+* [Floci AWS](https://floci.io/aws/)
+* [Floci CLI GitHub](https://github.com/floci-io/floci-cli)
+* [Floci Getting Started](https://floci.io/floci/getting-started/quick-start/)
+
+---
+
+## 🚀 1. Core Lifecycle Commands
+
+Manage the lifecycle of the local AWS emulator using the `floci` binary.
+
+| Command               | Description                                                                  |
+| --------------------- | ---------------------------------------------------------------------------- |
+| `floci doctor`        | Runs local environment diagnostics (Docker access, paths).                   |
+| `floci start`         | Launches the Floci AWS emulator container on background port `4566`.         |
+| `floci env`           | Prints the dummy local AWS environment configurations.                       |
+| `eval $(floci env)`   | Sets the active shell environment variables to the local endpoint.           |
+| `floci status`        | Displays container state, server runtime stats, and health.                  |
+| `floci logs --follow` | Streams active Docker logs from the emulator.                                |
+| `floci stop`          | Tears down and cleanly removes the active emulator container.                |
+| `floci wait`          | Blocks execution until services pass health checks; useful for CI pipelines. |
+
+### ⚡ Typical Startup
+
+```bash
+floci doctor
+floci start
+eval $(floci env)
+floci status
+```
+
+---
+
+## ☁️ 2. Multi-Cloud Expansion
+
+Floci supports multi-cloud environments under the same binary interface using cloud-specific commands.
+
+### Google Cloud Platform
+
+```bash
+floci gcp start
+eval $(floci gcp env)
+```
+
+**Default port:** `4588`
+
+### Microsoft Azure
+
+```bash
+floci az start
+eval $(floci az env)
+```
+
+**Default port:** `4577`
+
+### Oracle Cloud Infrastructure
+
+```bash
+floci oci start
+floci oci setup
+eval $(floci oci env)
+```
+
+**Default port:** `4599`
+
+---
+
+## 💾 3. Persistence & Snapshots
+
+By default, Floci stores state in memory for fast development.
+
+### Enable Persistent Storage
+
+```bash
 floci start --persist ./data
-Use code with caution.
-• Capture a static mock dataset snapshot:bash
+```
+
+### Save a Snapshot
+
+```bash
 floci snapshot save microservices-v1
-Use code with caution.
-• Restore state immediately:bash
+```
+
+### Restore a Snapshot
+
+```bash
 floci snapshot restore microservices-v1
-Use code with caution.
-🛠️ 4. Direct AWS CLI Integrations
-Once eval $(floci env) is hooked, use standard aws syntax. If you are not utilizing the automated environment hook, manually append --endpoint-url http://localhost:4566 to your queries. [1] (https://floci.io/floci/getting-started/quick-start/), [2] (https://github.com/floci-io/floci-cli), [3] (https://floci.io/aws/)
-Simple Storage Service (S3) [1] (https://floci.io/floci/getting-started/quick-start/)
-bash
-# Create local bucket
+```
+
+### 📌 Persistence Workflow
+
+```bash
+floci start --persist ./data
+# Create your resources...
+
+floci snapshot save microservices-v1
+
+# Later...
+floci snapshot restore microservices-v1
+```
+
+---
+
+## 🛠️ 4. AWS CLI Integration
+
+After running:
+
+```bash
+eval $(floci env)
+```
+
+you can use the standard AWS CLI commands against the local Floci environment.
+
+If you don't use the environment hook, manually specify:
+
+```bash
+--endpoint-url http://localhost:4566
+```
+
+---
+
+### 🪣 Amazon S3
+
+#### Create a Bucket
+
+```bash
 aws s3 mb s3://my-test-bucket
+```
 
-# Upload a local file 
+#### Upload a File
+
+```bash
 aws s3 cp document.json s3://my-test-bucket/
+```
 
-# List contents
+#### List Bucket Contents
+
+```bash
 aws s3 ls s3://my-test-bucket/
-Use code with caution.
-Simple Queue Service (SQS) [1] (https://floci.io/floci/getting-started/quick-start/)
-bash
-# Create a standard queue
-aws sqs create-queue --queue-name processing-queue
+```
 
-# Send an arbitrary JSON body payload
+---
+
+### 📬 Amazon SQS
+
+#### Create a Queue
+
+```bash
+aws sqs create-queue \
+  --queue-name processing-queue
+```
+
+#### Send a Message
+
+```bash
 aws sqs send-message \
   --queue-url http://localhost:4566/000000000000/processing-queue \
   --message-body '{"status": "pending", "id": 1045}'
-Use code with caution.
-DynamoDB Tables [1] (https://floci.io/floci/getting-started/quick-start/)
-bash
-# Create table with a primary key hash
+```
+
+---
+
+### 🗄️ Amazon DynamoDB
+
+#### Create a Table
+
+```bash
 aws dynamodb create-table \
   --table-name UserProfile \
   --attribute-definitions AttributeName=UserId,AttributeType=S \
   --key-schema AttributeName=UserId,KeyType=HASH \
   --billing-mode PAY_PER_REQUEST
-Use code with caution.
-🧩 5. Code Client Initialization
-To link code directly to Floci, override the target runtime URLs to target the emulator endpoint. [1] (https://floci.io/floci/getting-started/aws-setup/), [2] (https://github.com/floci-io/floci)
-Python (boto3) [1] (https://floci.io/floci/getting-started/aws-setup/)
-python
+```
+
+---
+
+## 🧩 5. Code Client Initialization
+
+You can connect your applications directly to Floci by overriding the AWS service endpoint.
+
+### 🐍 Python — Boto3
+
+```python
 import boto3
+
 
 def get_floci_client(service_name):
     return boto3.client(
@@ -80,20 +198,106 @@ def get_floci_client(service_name):
         aws_secret_access_key="mock-secret"
     )
 
+
 s3_client = get_floci_client("s3")
-Use code with caution.
-Node.js (AWS SDK v3)
-javascript
+```
+
+---
+
+### 🟨 Node.js — AWS SDK v3
+
+```javascript
 const { S3Client } = require("@aws-sdk/client-s3");
 
 const s3 = new S3Client({
   endpoint: "http://localhost:4566",
   region: "us-east-1",
-  credentials: { accessKeyId: "mock", secretAccessKey: "mock" },
-  forcePathStyle: true // Mandatory flag for local S3 resolution
+  credentials: {
+    accessKeyId: "mock",
+    secretAccessKey: "mock"
+  },
+  forcePathStyle: true
 });
-Use code with caution.
-🌐 6. Visual Console
-Floci has an embedded Web Console UI available right on your local port layer. Navigate your browser directly to inspect active resources interactively: [1] (https://floci.io/)
-👉 http://localhost:4566/_floci/ui (or fallback address http://localhost:4500/console/aws) [1] (https://floci.io/)
-Would you like me to write a Docker Compose template incorporating Floci, or do you need a custom Terraform provider block configuration to map infrastructure as code onto this local setup?
+```
+
+> **Note:** `forcePathStyle: true` is used for local S3 endpoint resolution.
+
+---
+
+## 🌐 6. Visual Console
+
+Floci provides a local Web Console UI for inspecting active resources.
+
+### Primary Console
+
+```text
+http://localhost:4566/_floci/ui
+```
+
+### Fallback Console
+
+```text
+http://localhost:4500/console/aws
+```
+
+Open the URL in your browser after starting Floci to inspect your local AWS resources.
+
+---
+
+## ⚡ 7. Quick Start
+
+For a basic local AWS development environment:
+
+```bash
+# Check environment
+floci doctor
+
+# Start Floci
+floci start
+
+# Configure AWS CLI
+eval $(floci env)
+
+# Wait for services
+floci wait
+
+# Check status
+floci status
+```
+
+Then test S3:
+
+```bash
+aws s3 mb s3://my-test-bucket
+aws s3 cp document.json s3://my-test-bucket/
+aws s3 ls s3://my-test-bucket/
+```
+
+---
+
+## 📌 Quick Reference
+
+| Category         | Command / URL                     |
+| ---------------- | --------------------------------- |
+| Diagnose         | `floci doctor`                    |
+| Start            | `floci start`                     |
+| Environment      | `eval $(floci env)`               |
+| Status           | `floci status`                    |
+| Logs             | `floci logs --follow`             |
+| Stop             | `floci stop`                      |
+| Health Check     | `floci wait`                      |
+| AWS Endpoint     | `http://localhost:4566`           |
+| Web Console      | `http://localhost:4566/_floci/ui` |
+| Persistent Data  | `floci start --persist ./data`    |
+| Snapshot Save    | `floci snapshot save <name>`      |
+| Snapshot Restore | `floci snapshot restore <name>`   |
+
+---
+
+## 🔗 References
+
+* [Floci AWS](https://floci.io/aws/)
+* [Floci CLI](https://github.com/floci-io/floci-cli)
+* [Floci GitHub](https://github.com/floci-io/floci)
+* [Floci Quick Start](https://floci.io/floci/getting-started/quick-start/)
+* [Floci AWS Setup](https://floci.io/floci/getting-started/aws-setup/)
