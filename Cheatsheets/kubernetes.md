@@ -1,5 +1,7 @@
 # Kubernetes Cheatsheet
 
+- Kubernetes (also known as K8s) is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
+- Originally developed by Google, it serves as a central system to coordinate clusters of computers, ensuring that software containers run efficiently, scale up or down based on web traffic, and automatically recover from crashes.
 ---
 
 ## Core Concepts
