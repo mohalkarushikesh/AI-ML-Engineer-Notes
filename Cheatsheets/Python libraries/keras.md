@@ -1,5 +1,12 @@
 ## 📌 Keras Cheat Sheet
 
+Define: Keras is a high-level, open-source Python API used to build and train artificial neural networks quickly and easily. 
+
+## Key Details
+
+* Purpose: It simplifies deep learning by letting developers create neural networks with minimal, readable code rather than writing complex low-level math. 
+* Framework Integration: It was originally independent but now serves as the official high-level deep learning API for TensorFlow (tf.keras), while also supporting multi-backend engines like JAX and PyTorch in Keras 3.
+
 ### 🔹 Imports
 ```python
 import tensorflow as tf
