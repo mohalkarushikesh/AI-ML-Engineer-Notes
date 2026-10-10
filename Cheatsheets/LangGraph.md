@@ -332,6 +332,178 @@ graph.add_conditional_edges("agent", tools_condition)
 
 ---
 
+## Tool Calling — Complete Flow
+
+Tool calling lets an LLM **request** a function with structured arguments. The application executes that function and sends its result back to the model. The model does not execute Python or access tools by itself.
+
+### 1. Define tools
+
+Use `@tool` to expose a Python function. The function name, type hints, and docstring help the model understand when and how to call it.
+
+```python
+from langchain_core.tools import tool
+
+@tool
+def multiply(a: int, b: int) -> int:
+    """Multiply two integers and return the product."""
+    return a * b
+
+@tool
+def lookup_order(order_id: str) -> str:
+    """Look up an order by its ID."""
+    # Replace with your real, authorized data lookup.
+    return f"Order {order_id}: processing"
+
+tools = [multiply, lookup_order]
+```
+
+**Tool design notes**
+- Give each tool a clear name and a precise docstring.
+- Use type hints so the model can provide structured arguments.
+- Keep tools focused: one tool should do one well-defined task.
+- Validate arguments and handle expected errors inside the tool.
+- Treat tool inputs as untrusted; apply authorization and access checks in code.
+- Do not put secrets or API keys in tool descriptions or model prompts.
+
+### 2. Bind tools to the chat model
+
+```python
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(model="gpt-4o")
+llm_with_tools = llm.bind_tools(tools)
+
+response = llm_with_tools.invoke(
+    "What is 7 multiplied by 6?"
+)
+
+print(response.content)       # May be empty when a tool call is requested
+print(response.tool_calls)    # Structured tool-call requests, if any
+```
+
+`bind_tools()` makes tool schemas available to the model. It does **not** run the functions. The model returns a message containing zero or more `tool_calls`; your application or a graph node must execute them.
+
+### 3. Execute a tool call manually (outside LangGraph)
+
+```python
+from langchain_core.messages import ToolMessage
+
+response = llm_with_tools.invoke("Multiply 7 by 6")
+
+if response.tool_calls:
+    tool_map = {tool.name: tool for tool in tools}
+    tool_messages = []
+
+    for call in response.tool_calls:
+        selected_tool = tool_map[call["name"]]
+        result = selected_tool.invoke(call["args"])
+        tool_messages.append(
+            ToolMessage(
+                content=str(result),
+                tool_call_id=call["id"],
+            )
+        )
+
+    # Send the tool result back to the model so it can respond.
+    final_response = llm_with_tools.invoke([
+        ("human", "Multiply 7 by 6"),
+        response,
+        *tool_messages,
+    ])
+    print(final_response.content)
+else:
+    print(response.content)
+```
+
+The `tool_call_id` links each tool result to the corresponding request. In production, also handle unknown tool names, invalid arguments, tool exceptions, timeouts, and permission checks.
+
+### 4. Tool calling inside LangGraph
+
+This is the common **agent → tools → agent** loop. `ToolNode` executes requested tools and adds their `ToolMessage` results to the message state; `tools_condition` routes to the tools node only when the latest AI message contains tool calls.
+
+```python
+from langgraph.graph import StateGraph, START, END, MessagesState
+from langgraph.prebuilt import ToolNode, tools_condition
+from langchain_core.tools import tool
+from langchain_openai import ChatOpenAI
+
+@tool
+def multiply(a: int, b: int) -> int:
+    """Multiply two integers and return the product."""
+    return a * b
+
+tools = [multiply]
+llm = ChatOpenAI(model="gpt-4o")
+llm_with_tools = llm.bind_tools(tools)
+
+def agent_node(state: MessagesState) -> dict:
+    response = llm_with_tools.invoke(state["messages"])
+    return {"messages": [response]}
+
+builder = StateGraph(MessagesState)
+builder.add_node("agent", agent_node)
+builder.add_node("tools", ToolNode(tools))
+
+builder.add_edge(START, "agent")
+builder.add_conditional_edges("agent", tools_condition)
+builder.add_edge("tools", "agent")
+
+app = builder.compile()
+result = app.invoke({
+    "messages": [("human", "What is 7 multiplied by 6?")]
+})
+
+result["messages"][-1].pretty_print()
+```
+
+**Execution flow**
+
+```text
+START
+  ↓
+agent (model chooses whether to call a tool)
+  ↓
+tools_condition
+  ├── tool_calls present → ToolNode → agent (model sees tool result)
+  └── no tool_calls ───────────────────────────────→ END
+```
+
+The loop can repeat if the model requests more tools. It ends when the model returns a message without tool calls.
+
+### 5. Tool calling with conversation memory
+
+When using a checkpointer, provide a stable `thread_id` so the conversation and tool results can be resumed for that thread.
+
+```python
+from langgraph.checkpoint.memory import MemorySaver
+
+app = builder.compile(checkpointer=MemorySaver())
+config = {"configurable": {"thread_id": "user-123"}}
+
+app.invoke(
+    {"messages": [("human", "Multiply 7 by 6")]},
+    config=config,
+)
+app.invoke(
+    {"messages": [("human", "Now multiply that result by 2")]},
+    config=config,
+)
+```
+
+`MemorySaver` is for local development/testing. Choose a suitable persistent checkpointer for durable production memory.
+
+### Tool-calling gotchas
+
+- A model may answer directly without calling a tool; always check whether `tool_calls` exist.
+- Tool calling depends on support from the selected model/provider and its tool-call format.
+- `ToolNode` can handle multiple tool calls in one AI message; design tools with parallel execution and side effects in mind.
+- Keep tool results concise and return serializable values.
+- Use explicit authorization, input validation, timeouts, and error handling for real tools.
+- For sensitive or irreversible actions, add human approval or a LangGraph interrupt before execution.
+- Tool calling is different from a normal LLM response: the model requests an action, your code executes it, and the result is sent back to the model.
+
+---
+
 ## Prebuilt ReAct Agent
 
 ```python
