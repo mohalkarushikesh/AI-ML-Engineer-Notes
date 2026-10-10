@@ -1,5 +1,3 @@
-Absolutely — here is a **complete, interview-oriented Vector Stores cheat sheet** in Markdown format, covering fundamentals → embeddings → similarity search → indexing → filtering → RAG → production → AWS options → comparisons.
-
 # Vector Stores — AI/ML Engineer Cheat Sheet
 
 > **Purpose:** Quick reference for Vector Databases / Vector Stores used in Semantic Search, RAG, Recommendation Systems, and AI Agents.
@@ -49,6 +47,11 @@ vector search can find:
 ```
 
 because their meanings can be close in vector space.
+
+---
+# how does vector db stores data?
+
+vector database stores data as vector embeddings, which are **long arrays of floating-point numbers** that capture the semantic meaning, context, and relationships of unstructured data like text, images, or audio. Instead of organizing data in rows and columns like a traditional database, **it plots these numbers as coordinates** in a **high-dimensional multi-dimensional space**, clustering semantically similar items close to one another.
 
 ---
 
