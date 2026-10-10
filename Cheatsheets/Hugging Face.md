@@ -1,7 +1,3 @@
-Here’s a **clean, no-BS Hugging Face cheat sheet** — focused on **daily usage, interviews, and real projects** (RAG, LLMs, fine-tuning).
-
----
-
 # 🤗 Hugging Face Cheat Sheet
 
 ---
