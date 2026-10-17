@@ -1,7 +1,3 @@
-Alright, let’s put together a **complete, exam‑friendly notes guide on Artificial Neural Networks (ANNs)**. This will cover definitions, architecture, working, formulas, pros/cons, and applications — all in one place.
-
----
-
 # 🧠 Artificial Neural Networks (ANN) — All in One Notes
 
 ## 🔹 What is ANN?
