@@ -1,5 +1,7 @@
 **Game on.** 🎯
 
+[switch repo](https://github.com/mohalkarushikesh/switch)
+
 You have actually found a potentially strong internal target. From the profile, this manager is not just doing generic "AI"; his work is heavily concentrated around:
 
 * **GenAI / LLMs**
